@@ -1,0 +1,35 @@
+name: Weekly recap (scheduled)
+
+# Publishes Monday morning Spain time on purpose — see docs/anonymity-opsec.md
+# "Posting-time misdirection" for why, and why the timing needs to stay
+# consistent with everything else discretionary this project posts.
+
+on:
+  schedule:
+    - cron: "0 7 * * 1" # 07:00 UTC Monday = 9:00 Spain time (CEST). Drifts
+    # to 8:00 Spain time across the CET (winter) months — see the ops-sec
+    # doc for why that's an acceptable drift rather than something to chase.
+  workflow_dispatch: {}
+
+jobs:
+  weekly-recap:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: server/package-lock.json
+      - run: npm ci
+      - name: Build weekly recap
+        run: npm run recap
+        # TODO: this runs against STATS_PROVIDER=mock today and only prints
+        # to the workflow log — it doesn't post to X or send the newsletter
+        # yet. Once a real stats provider and a newsletter-send mechanism
+        # (e.g. the beehiiv API) are wired up, extend this step to actually
+        # deliver, pulling credentials from repo/environment secrets —
+        # never hardcode them here. See CLAUDE.md "Data vendor decisions."

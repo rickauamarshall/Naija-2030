@@ -1,0 +1,26 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+npm-debug.log*
+server/coverage/
+server/.state/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+scripts/candidates.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp

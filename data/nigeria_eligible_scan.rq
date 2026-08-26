@@ -1,0 +1,60 @@
+# NAIJA26 — Nigeria-eligible, uncapped footballer discovery query
+# Run this at: https://query.wikidata.org
+# Just paste the whole thing in and hit the blue "play" button — no setup required.
+#
+# LOGIC:
+#  1. Find people whose occupation is "association football player" (Q937857)
+#  2. Who are NOT themselves Nigerian citizens (P27 != Q1033)
+#     -> this is the heritage/dual-national filter: born/raised elsewhere,
+#        eligible through family, not already domestic Nigerian players
+#  3. But whose father (P22) OR mother (P25) IS a Nigerian citizen (P27 = Q1033)
+#  4. AND who have never been listed as a member of the senior Nigeria
+#     national football team (Q181930) via "member of sports team" (P54)
+#     -> this is the "not cap-tied to Nigeria" half of the filter.
+#     Note: this only proves they haven't played for Nigeria's SENIOR team
+#     per Wikidata's records — it does NOT check whether they're cap-tied to
+#     a RIVAL country. You still need to read P54 for other countries'
+#     youth/senior teams and apply FIFA's actual eligibility rules by hand
+#     or with a second pass. Wikidata is a discovery net, not a rules engine.
+
+SELECT DISTINCT ?player ?playerLabel ?dob ?clubLabel ?parentLabel ?parentCitizenshipLabel ?otherTeamLabel WHERE {
+
+  ?player wdt:P106 wd:Q937857 .        # occupation: association football player
+
+  # Heritage filter: at least one parent is a Nigerian citizen
+  {
+    ?player wdt:P22 ?parent .          # father
+    ?parent wdt:P27 wd:Q1033 .         # citizenship: Nigeria
+  }
+  UNION
+  {
+    ?player wdt:P25 ?parent .          # mother
+    ?parent wdt:P27 wd:Q1033 .         # citizenship: Nigeria
+  }
+
+  ?parent wdt:P27 ?parentCitizenship .
+
+  # Exclude players who are themselves Nigerian citizens
+  # (we already know about domestic Nigerian players — this query is for
+  # the diaspora/heritage pool specifically)
+  FILTER NOT EXISTS { ?player wdt:P27 wd:Q1033 . }
+
+  # Exclude anyone Wikidata has recorded as ever playing for Nigeria's
+  # SENIOR men's national team
+  FILTER NOT EXISTS { ?player wdt:P54 wd:Q181930 . }
+
+  OPTIONAL { ?player wdt:P569 ?dob . }
+  OPTIONAL { ?player wdt:P54 ?club . }
+
+  # Surface any OTHER national team they're already tied to, so you can
+  # eyeball urgency (senior caps elsewhere = likely cap-tied, youth caps
+  # elsewhere = still a live target)
+  OPTIONAL {
+    ?player wdt:P54 ?otherTeam .
+    ?otherTeam wdt:P31/wdt:P279* wd:Q6979593 .   # instance/subclass of: national association football team
+  }
+
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY DESC(?dob)
+LIMIT 300

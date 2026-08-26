@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAIJA26 — The Super Eagles Shadow Pool</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pitch:#0E3B2E;
+    --pitch-2:#0A2E23;
+    --line:#EDEAD8;
+    --paper:#F1EDE1;
+    --paper-2:#E7E1CF;
+    --ink:#14201A;
+    --ink-soft:#4B564E;
+    --gold:#C99B3F;
+    --gold-soft:#E4C57A;
+    --clay:#A6432D;
+    --clay-soft:#D98B76;
+    --up:#3E7A54;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    margin:0;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+
+  /* ===== TOP TICKER ===== */
+  .ticker{
+    background:var(--ink);
+    color:var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 20px;
+    flex-wrap:wrap;
+    gap:10px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.04em;
+  }
+  .ticker-left{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .ticker .brandmark{
+    font-family:'Oswald',sans-serif;
+    font-size:15px;
+    letter-spacing:0.08em;
+    color:var(--gold-soft);
+    font-weight:600;
+  }
+  .ticker-link{
+    color:var(--line);
+    text-decoration:none;
+    border-bottom:1px solid rgba(237,234,216,0.35);
+    padding-bottom:1px;
+  }
+  .ticker-link:hover{ color:var(--gold-soft); border-bottom-color:var(--gold-soft); }
+  .ticker .views{ opacity:0.75; }
+  .ticker .views b{ color:var(--gold-soft); font-weight:600; }
+
+  /* ===== HEADER ===== */
+  header.masthead{
+    background:linear-gradient(180deg,var(--pitch) 0%,var(--pitch-2) 100%);
+    color:var(--line);
+    padding:36px 28px 28px;
+    position:relative;
+    overflow:hidden;
+  }
+  header.masthead::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(237,234,216,0.035) 0 1px, transparent 1px 64px);
+    pointer-events:none;
+  }
+  .masthead-inner{ position:relative; max-width:1180px; margin:0 auto; }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--gold-soft);
+    letter-spacing:0.12em;
+    margin-bottom:10px;
+  }
+  h1.title{ font-size:clamp(32px,5vw,56px); line-height:0.98; color:var(--line); }
+  h1.title em{ font-style:normal; color:var(--gold-soft); }
+  .sub{ max-width:640px; margin-top:14px; color:#CFE0D6; font-size:15px; line-height:1.5; }
+
+  .clocks{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:14px;
+    margin-top:28px;
+  }
+  .clock-card{
+    background:rgba(20,32,26,0.55);
+    border:1px solid rgba(237,234,216,0.15);
+    border-radius:6px;
+    padding:16px 18px;
+  }
+  .clock-card .label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    color:var(--gold-soft);
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .flip-row{ display:flex; gap:6px; align-items:baseline; flex-wrap:wrap; }
+  .flip{
+    background:var(--line);
+    color:var(--ink);
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:600;
+    font-size:22px;
+    padding:6px 8px;
+    border-radius:3px;
+    min-width:36px;
+    text-align:center;
+    box-shadow:inset 0 -2px 0 rgba(0,0,0,0.15);
+  }
+  .flip-unit{ font-size:10px; color:#CFE0D6; text-align:center; margin-top:4px; letter-spacing:0.06em; }
+  .flip-group{ display:flex; flex-direction:column; align-items:center; }
+  .clock-note{ font-size:11.5px; color:#9FB8AA; margin-top:10px; line-height:1.4; }
+
+  /* ===== NAV ===== */
+  nav.tabs{
+    max-width:1180px; margin:0 auto;
+    display:flex; gap:4px; padding:18px 28px 0;
+  }
+  nav.tabs button{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    font-size:13px;
+    background:none;
+    border:none;
+    border-bottom:3px solid transparent;
+    padding:10px 4px;
+    margin-right:22px;
+    color:var(--ink-soft);
+    cursor:pointer;
+  }
+  nav.tabs button.active{ color:var(--ink); border-bottom-color:var(--gold); }
+
+  main{ max-width:1180px; margin:0 auto; padding:24px 28px 80px; }
+  section.view{ display:none; }
+  section.view.active{ display:block; }
+
+  /* ===== SECTION HEAD ===== */
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-bottom:16px; flex-wrap:wrap; }
+  .section-head h2{ font-size:20px; }
+  .section-head p{ font-size:12.5px; color:var(--ink-soft); max-width:520px; margin-top:4px; }
+  .legend{ display:flex; gap:14px; font-size:11px; font-family:'IBM Plex Mono',monospace; color:var(--ink-soft); flex-wrap:wrap; }
+  .legend span{ display:inline-flex; align-items:center; gap:5px; }
+  .dot{ width:8px; height:8px; border-radius:50%; display:inline-block; }
+
+  /* ===== TWO PANE ===== */
+  .split{
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    gap:22px;
+  }
+  @media (max-width:920px){ .split{ grid-template-columns:1fr; } }
+
+  /* ---- PITCH ---- */
+  .pitch-wrap{
+    background:
+      linear-gradient(180deg, rgba(237,234,216,0.05) 0%, rgba(237,234,216,0) 100%),
+      repeating-linear-gradient(0deg, #14493A 0 44px, #0F3E30 44px 88px);
+    border:1px solid rgba(20,32,26,0.15);
+    border-radius:10px;
+    padding:18px 14px 22px;
+    position:relative;
+    min-height:640px;
+  }
+  .pitch-frame{
+    position:absolute; inset:14px;
+    border:2px solid rgba(237,234,216,0.55);
+    border-radius:4px;
+    pointer-events:none;
+  }
+  .pitch-frame::before{ /* center circle */
+    content:""; position:absolute; top:50%; left:50%; width:90px; height:90px;
+    border:2px solid rgba(237,234,216,0.55); border-radius:50%; transform:translate(-50%,-50%);
+  }
+  .pitch-frame::after{ /* halfway line */
+    content:""; position:absolute; top:50%; left:0; right:0; height:2px; background:rgba(237,234,216,0.55);
+  }
+  .rows{
+    position:relative; z-index:1;
+    display:flex; flex-direction:column; justify-content:space-between;
+    height:600px; padding:10px 0;
+  }
+  .row{ display:flex; justify-content:space-around; align-items:center; gap:8px; }
+  .slot{ display:flex; flex-direction:column; align-items:center; cursor:pointer; }
+  .badge{
+    width:52px; height:52px; border-radius:50%;
+    background:var(--paper);
+    border:3px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:17px;
+    color:var(--ink);
+    transition:transform .15s ease;
+  }
+  .slot:hover .badge{ transform:scale(1.08); }
+  .badge.gk{ border-color:var(--gold-soft); }
+  .slot .name{
+    margin-top:6px; font-size:11.5px; font-weight:600; text-align:center; color:var(--line);
+    max-width:78px; line-height:1.2;
+  }
+  .slot .club{ font-size:9.5px; color:#B9CBBF; margin-top:1px; }
+  .slot .depthcount{
+    margin-top:3px; font-family:'IBM Plex Mono',monospace; font-size:9.5px;
+    color:var(--gold-soft); letter-spacing:0.05em;
+  }
+
+  /* depth drawer */
+  .depth-panel{
+    margin-top:16px;
+    background:var(--paper);
+    border:1px solid var(--paper-2);
+    border-radius:8px;
+    padding:14px 16px;
+    display:none;
+  }
+  .depth-panel.open{ display:block; }
+  .depth-panel h3{ font-size:14px; margin-bottom:8px; }
+  .depth-panel .pos-tag{ font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--gold); }
+  .depth-list{ list-style:none; margin:8px 0 0; padding:0; display:flex; flex-direction:column; gap:6px;}
+  .depth-list li{
+    display:flex; justify-content:space-between; align-items:center;
+    background:#fff; border:1px solid var(--paper-2); border-radius:6px; padding:7px 10px;
+    font-size:13px;
+  }
+  .depth-list li .l{ display:flex; gap:8px; align-items:baseline; }
+  .depth-list li .rank{ font-family:'IBM Plex Mono',monospace; color:var(--ink-soft); font-size:11px; width:16px; }
+  .depth-list li .club{ font-size:11px; color:var(--ink-soft); }
+  .depth-list li .val{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--up); }
+  .depth-list li.flag-age .val{ color:var(--clay); }
+
+  /* ---- BIG BOARD ---- */
+  .board{
+    background:var(--paper);
+    border:1px solid var(--paper-2);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .board-row{
+    display:grid;
+    grid-template-columns:34px 1fr 40px 70px 60px 50px;
+    align-items:center;
+    gap:10px;
+    padding:10px 14px;
+    border-bottom:1px solid var(--paper-2);
+    font-size:13px;
+  }
+  .board-row:last-child{ border-bottom:none; }
+  .board-row.head{
+    font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.06em;
+    color:var(--ink-soft); text-transform:uppercase; background:var(--paper-2);
+  }
+  .rank-num{ font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:14px; }
+  .pname{ font-weight:600; }
+  .pmeta{ font-size:11px; color:var(--ink-soft); }
+  .pos-chip{
+    font-family:'IBM Plex Mono',monospace; font-size:10px; background:var(--pitch); color:var(--line);
+    padding:2px 6px; border-radius:3px; display:inline-block;
+  }
+  .val{ font-family:'IBM Plex Mono',monospace; font-size:12px; }
+  .move{ font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; text-align:right; }
+  .move.up{ color:var(--up); }
+  .move.down{ color:var(--clay); }
+  .move.flat{ color:var(--ink-soft); }
+  .elig-badge{
+    font-family:'IBM Plex Mono',monospace; font-size:9px; padding:1px 5px; border-radius:3px; margin-left:6px;
+  }
+  .elig-open{ background:#E1EEE4; color:var(--up); }
+  .elig-watch{ background:#F6E7D8; color:var(--gold); }
+  .elig-tied{ background:#F1DAD3; color:var(--clay); }
+
+  /* ===== TECH STAFF ===== */
+  .cabinet-groups{ display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:18px; }
+  .cabinet-group h3{
+    font-size:13px; color:var(--gold); font-family:'IBM Plex Mono',monospace;
+    letter-spacing:0.06em; margin-bottom:10px; text-transform:uppercase;
+  }
+  .staff-card{
+    background:var(--paper); border:1px solid var(--paper-2); border-radius:8px;
+    padding:12px 14px; margin-bottom:10px;
+  }
+  .staff-card .name{ font-weight:700; font-size:14px; }
+  .staff-card .role{ font-size:12px; color:var(--ink-soft); margin-top:2px; }
+  .staff-card .tag{
+    display:inline-block; margin-top:8px; font-family:'IBM Plex Mono',monospace; font-size:9.5px;
+    background:var(--pitch); color:var(--line); padding:2px 6px; border-radius:3px;
+  }
+  .staff-card .fit{ font-size:11.5px; margin-top:8px; color:var(--ink-soft); line-height:1.4; }
+  .staff-note{
+    background:#fff; border:1px dashed var(--paper-2); border-radius:8px; padding:14px; font-size:12px;
+    color:var(--ink-soft); margin-top:18px; line-height:1.5;
+  }
+
+  footer{
+    background:var(--ink); color:#9FB8AA; text-align:center; padding:22px; font-size:11.5px;
+    font-family:'IBM Plex Mono',monospace;
+  }
+</style>
+</head>
+<body>
+
+<div class="ticker">
+  <div class="ticker-left">
+    <div class="brandmark">NAIJA26 ⚽ SHADOW POOL</div>
+    <a class="ticker-link" href="https://x.com/SuperEaglesTrkr" target="_blank" rel="noopener">Follow @SuperEaglesTrkr</a>
+    <!-- TODO: replace with the real newsletter signup URL once the publication exists (beehiiv or similar) — see docs/newsletter-plan.md -->
+    <a class="ticker-link" href="https://TODO-newsletter-signup-url.example/subscribe" target="_blank" rel="noopener">Subscribe to the newsletter</a>
+  </div>
+  <div class="views">PAGE VIEWS · <b class="mono" id="viewCount">—</b></div>
+</div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="eyebrow">// TRACKING THE BEST AVAILABLE SUPER EAGLES · CYCLE 2030</div>
+    <h1 class="title">50 PLAYERS. <em>ONE POOL.</em><br>ZERO EXCUSES.</h1>
+    <p class="sub">A public, weekly-updated depth chart of every uncapped or Nigeria-eligible player good enough to wear the shirt — ranked by form, market value, and how much time is left before someone else takes them. Not affiliated with the NFF. Built to pressure it. One fan's call, not a neutral algorithm — see <em>Methodology</em> for how that works.</p>
+
+    <div class="clocks">
+      <div class="clock-card">
+        <div class="label">2030 WCQ Draw / Kickoff (CAF — est.)</div>
+        <div class="flip-row" id="clockQualifiers"></div>
+        <div class="clock-note">CAF has not published the official 2030 qualifying calendar yet. Countdown targets a placeholder date and should be swapped for the real fixture the moment CAF confirms it.</div>
+      </div>
+      <div class="clock-card">
+        <div class="label">Next FIFA Camp Window</div>
+        <div class="flip-row" id="clockCamp"></div>
+        <div class="clock-note">Standard FIFA international window. Confirm actual Super Eagles friendlies/call-ups once NFF releases the invite list.</div>
+      </div>
+      <div class="clock-card">
+        <div class="label">Time since last World Cup appearance</div>
+        <div class="flip-row" id="clockDrought"></div>
+        <div class="clock-note">Missed 2022 and 2026. This clock doesn't stop until we're back.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="active" data-view="pool">Pitch &amp; Pool</button>
+  <button data-view="staff">Technical Staff</button>
+  <button data-view="elsewhere">Elsewhere</button>
+  <button data-view="about">Methodology</button>
+</nav>
+
+<main>
+
+  <!-- ================= POOL VIEW ================= -->
+  <section class="view active" id="pool">
+    <div class="split">
+
+      <!-- PITCH -->
+      <div>
+        <div class="section-head">
+          <div>
+            <h2>Starting XI + Depth <span class="mono" style="color:var(--ink-soft);font-size:13px;">(4-4-2)</span></h2>
+            <p>Tap a shirt to see who's stacked behind them. Green value = trending up this week, red = aging out of the 2030 cycle.</p>
+          </div>
+        </div>
+        <div class="pitch-wrap">
+          <div class="pitch-frame"></div>
+          <div class="rows" id="pitchRows"></div>
+        </div>
+        <div class="depth-panel" id="depthPanel">
+          <span class="pos-tag" id="depthPos"></span>
+          <h3 id="depthTitle"></h3>
+          <ul class="depth-list" id="depthList"></ul>
+        </div>
+      </div>
+
+      <!-- BIG BOARD -->
+      <div>
+        <div class="section-head">
+          <div>
+            <h2>The Big Board <span class="mono" style="color:var(--ink-soft);font-size:13px;">(27–50)</span></h2>
+            <p>Everyone else in the pool, ranked. Risers and fallers update weekly off form, transfer value, and eligibility urgency.</p>
+          </div>
+        </div>
+        <div class="legend">
+          <span><i class="dot" style="background:var(--up)"></i>Uncapped, fully open</span>
+          <span><i class="dot" style="background:var(--gold)"></i>In another youth setup — window closing</span>
+          <span><i class="dot" style="background:var(--clay)"></i>Cap-tied elsewhere</span>
+        </div>
+        <div class="board" id="boardList" style="margin-top:12px;"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= STAFF VIEW ================= -->
+  <section class="view" id="staff">
+    <div class="section-head">
+      <div>
+        <h2>The Nigerian Technical Brain Trust</h2>
+        <p>Nigerian-origin coaches, sporting directors, scouts and performance staff currently working inside federations, leagues and top clubs worldwide — proof the country isn't short of expertise, only of a federation willing to use it.</p>
+      </div>
+    </div>
+    <div class="cabinet-groups" id="staffGroups"></div>
+    <div class="staff-note">
+      <b>How this list should really work:</b> a production version scans NFF/Ministry of Sport org charts plus club &amp; league staff directories (LinkedIn, official federation pages) for Nigerian-born or Nigerian-heritage individuals in technical roles, then a human editor verifies each entry before publish — getting someone's title or availability wrong in public is worse than not listing them. Titles for Akpan and Omosegbon above were supplied directly rather than confirmed on an official public roster page — re-verify against MLS's own staff directory before this goes live. Note the recurring pipeline too: American college soccer (Harvard, in both these cases) → a modest pro career → a league or federation operations role. That's a real, repeatable pathway worth scanning deliberately, not just a coincidence.
+    </div>
+  </section>
+
+  <!-- ================= ELSEWHERE VIEW ================= -->
+  <section class="view" id="elsewhere">
+    <div class="section-head">
+      <div>
+        <h2>Nigerian Descent, Other Flags</h2>
+        <p>Real, talented players of Nigerian heritage already committed — senior caps and all — to other national teams. Not part of the active pool: this list exists so nobody mistakes wishful thinking for a live target.</p>
+      </div>
+    </div>
+    <div id="elsewhereList" style="display:flex;flex-direction:column;gap:10px;max-width:640px;"></div>
+  </section>
+
+  <!-- ================= ABOUT VIEW ================= -->
+  <section class="view" id="about">
+    <div class="section-head"><div><h2>Why this exists</h2></div></div>
+    <div class="staff-card" style="max-width:680px;border-left:4px solid var(--gold);">
+      <p style="font-size:14px;line-height:1.7;color:var(--ink);">
+      This project exists to foster honest, constructive discourse about the current state of Nigerian football.
+      The Super Eagles have missed the last two World Cups. The Super Falcons — ten-time African champions —
+      missed automatic qualification for the 2027 World Cup for the first time since the tournament began in 1991.
+      Nigeria has too much talent, too much history, and too much footballing pride for either to be true.
+      This is a public, transparent pool of every player and technical mind Nigeria could call on —
+      including the dual nationals we haven't convinced yet — so our fans have a real reason to wear the
+      green and white with pride, and our federation has no excuse left to hide behind.
+      </p>
+    </div>
+
+    <div class="section-head" style="margin-top:26px;"><div><h2>How the ranking works</h2></div></div>
+    <div class="staff-card" style="max-width:640px;">
+      <p style="font-size:13px;line-height:1.6;color:var(--ink-soft);">
+      Weekly composite score = <b>40% club output</b> (minutes, G/A or position-weighted defensive actions, adjusted for league strength) +
+      <b>30% market value trend</b> (Transfermarkt value and its 90-day delta) +
+      <b>20% eligibility urgency</b> (uncapped players close to a cap-tying appearance elsewhere rank higher, all else equal) +
+      <b>10% age curve</b> (projected form in 2030, not now — this is what pushes 30-somethings down the board over time).
+      Every score is versioned so risers/fallers are visible week over week. Methodology is published in full, on purpose — a credible advocacy tool has to show its work.
+      </p>
+    </div>
+
+    <div class="section-head" style="margin-top:26px;"><div><h2>A note on subjectivity</h2></div></div>
+    <div class="staff-card" style="max-width:640px;border-left:4px solid var(--clay);">
+      <p style="font-size:13px;line-height:1.6;color:var(--ink-soft);">
+      The formula above is a starting point, not a vending machine — final rank and pool placement are one person's editorial call, informed by the score but not bound by it. When I move a player against what the composite score alone would say, that's a judgment call I'm making publicly, not a bug. This is opinionated, advocacy-driven sports commentary — closer to a power rankings column than a neutral database — and it's presented that way on purpose rather than dressed up as objective. The eligibility badges (OPEN/WATCH/TIED) are the one exception: those are fact claims about real people, not opinion, and stay held to the separate human-verification bar described above regardless of what any ranking judgment call decides.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>NAIJA26 IS A FAN-BUILT ADVOCACY PROTOTYPE · NOT AFFILIATED WITH THE NFF, CAF OR FIFA · DATA SHOWN IS ILLUSTRATIVE SAMPLE DATA</footer>
+
+<script>
+/* ---------------- VIEW COUNTER ---------------- */
+(async function(){
+  try{
+    let count = 0;
+    try{
+      const res = await window.storage.get('naija26_views', true);
+      count = parseInt(res.value,10) || 0;
+    }catch(e){ count = 0; }
+    count += 1;
+    await window.storage.set('naija26_views', String(count), true);
+    document.getElementById('viewCount').textContent = count.toLocaleString();
+  }catch(e){
+    document.getElementById('viewCount').textContent = '1';
+  }
+})();
+
+/* ---------------- TABS ---------------- */
+document.querySelectorAll('nav.tabs button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('section.view').forEach(s=>s.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.view).classList.add('active');
+  });
+});
+
+/* ---------------- COUNTDOWN CLOCKS ---------------- */
+function renderFlip(el, days, hrs, mins){
+  const parts = [
+    {v:days, u:'DAYS'},
+    {v:hrs, u:'HRS'},
+    {v:mins, u:'MIN'}
+  ];
+  el.innerHTML = parts.map(p=>`
+    <div class="flip-group">
+      <div class="flip">${String(p.v).padStart(2,'0')}</div>
+      <div class="flip-unit">${p.u}</div>
+    </div>`).join('');
+}
+function diffParts(target){
+  const now = new Date();
+  let ms = target - now;
+  if(ms < 0) ms = 0;
+  const days = Math.floor(ms/86400000);
+  const hrs = Math.floor((ms%86400000)/3600000);
+  const mins = Math.floor((ms%3600000)/60000);
+  return [days,hrs,mins];
+}
+function tick(){
+  // Placeholder est. date for first 2030 CAF qualifier window — clearly flagged as TBC in UI
+  renderFlip(document.getElementById('clockQualifiers'), ...diffParts(new Date('2027-09-01T00:00:00')));
+  // Next standard FIFA window after current date
+  renderFlip(document.getElementById('clockCamp'), ...diffParts(new Date('2026-09-01T00:00:00')));
+  // Time since last WC appearance (Nigeria's last finals: 2018 Russia, opening match June 16 2018)
+  const since = new Date() - new Date('2018-06-16T00:00:00');
+  const d = Math.floor(since/86400000);
+  document.getElementById('clockDrought').innerHTML = `
+    <div class="flip-group"><div class="flip">${d.toLocaleString()}</div><div class="flip-unit">DAYS SINCE 2018</div></div>`;
+}
+tick();
+setInterval(tick, 60000);
+
+/* ---------------- SAMPLE POOL DATA ----------------
+   Illustrative sample set for prototype purposes — mixes well-known
+   current Super Eagles with placeholder dual-national profiles.
+   Swap for the live Transfermarkt/Wikidata feed before shipping. */
+const FORMATION = [
+  {pos:'GK', slots:[
+    {main:{name:'Maduka Okoye', age:26, club:'Udinese', val:'€10m', trend:'up'}, depth:[
+      {name:'Stanley Nwabali', age:29, club:'Chippa United', val:'€1.5m', trend:'flat'},
+      {name:'Adewale Adeyinka', age:23, club:'Nice', val:'€2m', trend:'up'}
+    ]}
+  ]},
+  {pos:'DEF', slots:[
+    {main:{name:'Ola Aina', age:29, club:'Nottingham Forest', val:'€18m', trend:'up'}, depth:[
+      {name:'Bright Osayi-Samuel', age:28, club:'Fenerbahce', val:'€9m', trend:'flat'}
+    ]},
+    {main:{name:'Calvin Bassey', age:26, club:'Fulham', val:'€28m', trend:'up'}, depth:[
+      {name:'Ifeanyi Ndukwe', age:18, club:'Levante (on loan from Liverpool)', val:'€3m', trend:'up', watch:'Tri-national (Nigeria/Austria/Russia). Liverpool signing, currently leaning Austria at youth level — still uncapped at senior level.'},
+      {name:'Tosin Adarabioyo', age:28, club:'Chelsea', val:'€15m', trend:'flat', watch:'Has said "yes" to Nigeria more than once since 2024, then gone quiet each time — reportedly no active contact with the NFF as of mid-2026. Fully uncapped by anyone. Real, but stalled.'}
+    ]},
+    {main:{name:'Honest Ahanor', age:18, club:'Atalanta', val:'€20m', trend:'up', watch:'Currently Italy U21 — Nigeria-eligible, uncapped at senior level. Biggest urgency case in the pool.'}, depth:[
+      {name:'Benjamin Fredrick', age:24, club:'Standard Liège', val:'€3m', trend:'up'}
+    ]},
+    {main:{name:'Zaidu Sanusi', age:27, club:'Porto', val:'€8m', trend:'flat'}, depth:[
+      {name:'Emeka Adiele', age:18, club:'West Ham United', val:'€1.5m', trend:'up', watch:'West Ham academy wing-back, Nigeria-eligible, fully uncapped'}
+    ]}
+  ]},
+  {pos:'MID', slots:[
+    {main:{name:'Alex Iwobi', age:29, club:'Fulham', val:'€22m', trend:'up'}, depth:[
+      {name:'Ethan Nwaneri', age:19, club:'Marseille (loan, Arsenal)', val:'€40m', trend:'up', watch:'Igbo-Nigerian father. England U21 international but uncapped at senior level. Family has reportedly opened the door to NFF talks.'}
+    ]},
+    {main:{name:'Wilfred Ndidi', age:29, club:'Besiktas', val:'€10m', trend:'flat'}, depth:[
+      {name:'Frank Onyeka', age:28, club:'Brentford', val:'€18m', trend:'up'}
+    ]},
+    {main:{name:'Raphael Onyedika', age:24, club:'Club Brugge', val:'€22m', trend:'up'}, depth:[
+      {name:'Peter Etebo', age:30, club:'Al Qadsiah', val:'€3m', trend:'down'}
+    ]},
+    {main:{name:'Rio Ngumoha', age:17, club:'Liverpool', val:'€25m', trend:'up', watch:'2026 Golden Boy nominee. Nigerian father, Guadeloupean mother — was in England\'s World Cup training pool but made zero competitive senior appearances. Fully uncapped, genuinely undecided. Too good to bury in the reserves.'}, depth:[
+      {name:'Samuel Chukwueze', age:26, club:'AC Milan', val:'€20m', trend:'flat'},
+      {name:'Moses Simon', age:30, club:'Nantes', val:'€5m', trend:'flat'}
+    ]}
+  ]},
+  {pos:'FWD', slots:[
+    {main:{name:'Victor Osimhen', age:27, club:'Galatasaray', val:'€75m', trend:'up'}, depth:[
+      {name:'Taiwo Awoniyi', age:28, club:'Nottingham Forest', val:'€20m', trend:'flat'},
+      {name:'Jeff Ekhator', age:19, club:'Juventus', val:'€7m', trend:'up', watch:'Currently Italy U21 — Nigeria-eligible, uncapped at senior level'}
+    ]},
+    {main:{name:'Ademola Lookman', age:28, club:'Atlético Madrid', val:'€45m', trend:'up'}, depth:[
+      {name:'Kelechi Iheanacho', age:29, club:'Sevilla', val:'€6m', trend:'down'}
+    ]}
+  ]}
+];
+
+const BOARD = [
+  {rank:27, name:'Rayan Oyebade', age:19, pos:'DEF', club:'West Ham United', val:'€1.2m', move:-2, elig:'watch', note:'Already turned out for Greece U19 in 2025 after England youth honours — a near-miss case.', verified:true},
+  {rank:28, name:'Samuel Adeniran', age:27, pos:'FWD', club:'LASK', val:'€1.5m', move:1, elig:'open', note:'USA-born, Nigeria-eligible, fully uncapped. Turns 28 in September — depth for now, not a 2030 cornerstone.', verified:true},
+  {rank:29, name:'Oluwaseun Adewumi', age:21, pos:'MID', club:'Hertha BSC (loan, Burnley)', val:'€800k', move:3, elig:'watch', note:'Born Lagos, Nigeria. Austrian citizenship, Austria U21 setup — fully uncapped at senior level.', verified:true},
+  {rank:30, name:'Michael Ndiweni', age:20, pos:'MID', club:'Genk', val:'€3.8m', move:1, elig:'open', verified:false},
+  {rank:31, name:'Josh Eyerinde', age:21, pos:'DEF', club:'Hoffenheim', val:'€5m', move:-1, elig:'open', verified:false},
+  {rank:32, name:'Kingsley Fobi', age:20, pos:'MID', club:'Cercle Brugge', val:'€3m', move:4, elig:'open', verified:false},
+  {rank:33, name:'Godwin Obaje', age:21, pos:'FWD', club:'Sivasspor', val:'€1.8m', move:-1, elig:'open', verified:false},
+  {rank:34, name:'Christian Ndubuisi', age:20, pos:'DEF', club:'KAA Gent', val:'€2m', move:0, elig:'open', verified:false},
+  {rank:35, name:'Chibuike Nwaiwu', age:22, pos:'DEF', club:'Trabzonspor', val:'€2.5m', move:2, elig:'open', verified:false},
+  {rank:36, name:'Tosin Kehinde', age:21, pos:'FWD', club:'Sparta Rotterdam', val:'€2.4m', move:0, elig:'watch', verified:false},
+  {rank:37, name:'Daniel Abiodun', age:20, pos:'GK', club:'Real Sociedad B', val:'€1.2m', move:1, elig:'open', verified:false},
+  {rank:38, name:'Chidi Okonkwo', age:22, pos:'DEF', club:'Norwich City', val:'€2.8m', move:-2, elig:'open', verified:false},
+  {rank:39, name:'Emeka Obiora Jr.', age:21, pos:'MID', club:'Basel', val:'€2.2m', move:1, elig:'watch', verified:false},
+  {rank:40, name:'Tyrique George', age:19, pos:'FWD', club:'Chelsea (loan)', val:'€18m', move:0, elig:'watch', note:'Reported Nigerian heritage — age, exact eligibility status, and parental origin still need verification before this goes further.', verified:'partial'},
+  {rank:41, name:'Chizzy Ezenwata', age:18, pos:'FWD', club:'Chelsea', val:'€3m', move:0, elig:'watch', note:'Reportedly flirted with Nigeria before an England U18 call-up — needs a proper verification pass, not just press mentions.', verified:'partial'},
+  {rank:42, name:'Ugonna Ejiofor', age:23, pos:'FWD', club:'Molde', val:'€1.8m', move:-3, elig:'open', verified:false},
+  {rank:43, name:'Wisdom Osaghae', age:21, pos:'DEF', club:'Vitesse', val:'€1.4m', move:2, elig:'watch', verified:false},
+  {rank:44, name:'Chuka Nwabueze', age:22, pos:'GK', club:'Standard Liège', val:'€1m', move:0, elig:'open', verified:false},
+  {rank:45, name:'Ola Fatukasi', age:21, pos:'MID', club:'Randers', val:'€1.6m', move:-1, elig:'open', verified:false},
+  {rank:46, name:'Marvellous Iheukwumere', age:18, pos:'FWD', club:'Anderlecht U21', val:'€900k', move:6, elig:'watch', verified:false},
+  {rank:47, name:'David Okereke Jr.', age:22, pos:'DEF', club:'Trabzonspor', val:'€1.3m', move:-1, elig:'open', verified:false},
+  {rank:48, name:'Femi Adekanye', age:20, pos:'MID', club:'Slavia Prague', val:'€1.1m', move:1, elig:'open', verified:false},
+  {rank:49, name:'Uche Ibekwe', age:21, pos:'FWD', club:'KV Mechelen', val:'€800k', move:0, elig:'open', verified:false},
+  {rank:50, name:'William Troost-Ekong', age:32, pos:'DEF', club:'Besiktas', val:'€2m', move:-4, elig:'open', note:'Veteran leadership, but the 2030 cycle needs to belong to the players below him, not above him.', verified:true}
+];
+
+const LOST_TO_RIVALS = [
+  {name:'Nnamdi Collins', now:'Germany', detail:'Made senior competitive debut vs Slovakia, Sept 2025 (2026 WCQ) — permanently cap-tied.'},
+  {name:'Carney Chukwuemeka', now:'Austria', detail:'Nigeria was genuinely in the running — born in Vienna to Nigerian parents. Completed a FIFA-approved switch to Austria in March 2026 and debuted vs. Ghana. A real, recent loss, not a hypothetical one.'}
+];
+
+/* Players of Nigerian descent who committed to other senior national teams long
+   before Nigeria could realistically have been in the conversation — informational,
+   not part of the active pool or the "recently lost" urgency list. */
+const DIASPORA_ELSEWHERE = [
+  {name:'Bukayo Saka', team:'England', detail:'Born in Ealing to Yoruba Nigerian parents. Eligible for Nigeria, chose England, debuted 2020.'},
+  {name:'Eberechi Eze', team:'England', detail:'Igbo-Nigerian parents. Debuted for England in 2023, started at the 2026 World Cup.'},
+  {name:'Noni Madueke', team:'England', detail:'Nigerian parents, developed via PSV and Chelsea. Debuted for England Sept 2024.'},
+  {name:'Folarin Balogun', team:'United States', detail:'Born in Brooklyn to Nigerian parents. Used a FIFA one-time switch from England to the USMNT in 2023 — now their starting No. 9.'},
+  {name:'Michael Olise', team:'France', detail:'Nigerian father, Algerian mother. Born and developed in England, debuted for France in 2024.'}
+];
+
+/* ---------------- RENDER PITCH ---------------- */
+const rowsEl = document.getElementById('pitchRows');
+FORMATION.forEach((row, ri)=>{
+  const rowDiv = document.createElement('div');
+  rowDiv.className = 'row';
+  row.slots.forEach((slot, si)=>{
+    const s = document.createElement('div');
+    s.className = 'slot';
+    s.innerHTML = `
+      <div class="badge ${row.pos==='GK'?'gk':''}">${row.pos==='GK'?'GK':slot.main.name.split(' ').map(n=>n[0]).join('').slice(0,2)}</div>
+      <div class="name">${slot.main.name}</div>
+      <div class="club">${slot.main.club} · ${slot.main.age}y</div>
+      <div class="depthcount">+${slot.depth.length} in reserve</div>
+    `;
+    s.addEventListener('click', ()=>openDepth(row.pos, slot));
+    rowDiv.appendChild(s);
+  });
+  rowsEl.appendChild(rowDiv);
+});
+
+function openDepth(pos, slot){
+  const panel = document.getElementById('depthPanel');
+  document.getElementById('depthPos').textContent = pos;
+  document.getElementById('depthTitle').textContent = slot.main.name + ' — depth behind him';
+  const list = document.getElementById('depthList');
+  list.innerHTML = '';
+  const starterLi = document.createElement('li');
+  starterLi.innerHTML = `<div class="l"><span class="rank">①</span><b>${slot.main.name}</b><span class="club">${slot.main.club} · ${slot.main.age}y</span></div><span class="val">${slot.main.val}</span>`;
+  list.appendChild(starterLi);
+  slot.depth.forEach((p,i)=>{
+    const li = document.createElement('li');
+    if(p.trend==='down') li.classList.add('flag-age');
+    li.innerHTML = `<div class="l"><span class="rank">${i+2}</span>${p.name}<span class="club">${p.club} · ${p.age}y</span></div><span class="val">${p.val} ${p.trend==='up'?'▲':p.trend==='down'?'▼':'—'}</span>`;
+    list.appendChild(li);
+    if(p.watch){
+      const note = document.createElement('li');
+      note.style.background = '#F6E7D8';
+      note.style.fontSize = '11px';
+      note.style.color = 'var(--gold)';
+      note.innerHTML = `<div class="l">⚠ ${p.watch}</div>`;
+      list.appendChild(note);
+    }
+  });
+  panel.classList.add('open');
+  panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+/* ---------------- RENDER BIG BOARD ---------------- */
+const boardEl = document.getElementById('boardList');
+const head = document.createElement('div');
+head.className = 'board-row head';
+head.innerHTML = `<div>#</div><div>Player</div><div>Age</div><div>Pos</div><div>Value</div><div style="text-align:right;">Wk</div>`;
+boardEl.appendChild(head);
+
+BOARD.forEach(p=>{
+  const row = document.createElement('div');
+  row.className = 'board-row';
+  const moveClass = p.move>0?'up':p.move<0?'down':'flat';
+  const moveText = p.move>0?`▲${p.move}`:p.move<0?`▼${Math.abs(p.move)}`:'—';
+  const eligClass = p.elig==='open'?'elig-open':p.elig==='watch'?'elig-watch':'elig-tied';
+  const eligLabel = p.elig==='open'?'OPEN':p.elig==='watch'?'WATCH':'TIED';
+  const verifiedBadge = p.verified===true ? '' : p.verified==='partial'
+    ? `<span class="elig-badge" style="background:#F6E7D8;color:var(--gold);">PARTIALLY VERIFIED</span>`
+    : `<span class="elig-badge" style="background:#e8e4d9;color:#8a8375;">UNVERIFIED</span>`;
+  row.innerHTML = `
+    <div class="rank-num">${p.rank}</div>
+    <div>
+      <div class="pname">${p.name}<span class="elig-badge ${eligClass}">${eligLabel}</span>${verifiedBadge}</div>
+      <div class="pmeta">${p.club}${p.note? ' · '+p.note : ''}</div>
+    </div>
+    <div class="mono" style="text-align:center;color:var(--ink-soft);">${p.age}</div>
+    <div><span class="pos-chip">${p.pos}</span></div>
+    <div class="val">${p.val}</div>
+    <div class="move ${moveClass}">${moveText}</div>
+  `;
+  boardEl.appendChild(row);
+});
+
+/* ---------------- RECENTLY LOST PANEL ---------------- */
+const lostWrap = document.createElement('div');
+lostWrap.style.marginTop = '16px';
+lostWrap.style.background = '#F1DAD3';
+lostWrap.style.border = '1px solid #E0BDB2';
+lostWrap.style.borderRadius = '8px';
+lostWrap.style.padding = '12px 14px';
+lostWrap.innerHTML = `<div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--clay);text-transform:uppercase;margin-bottom:8px;">Recently lost / corrected</div>`;
+LOST_TO_RIVALS.forEach(p=>{
+  const row = document.createElement('div');
+  row.style.fontSize = '12.5px';
+  row.style.marginBottom = '6px';
+  row.style.lineHeight = '1.4';
+  row.innerHTML = `<b>${p.name}</b> → now ${p.now}. <span style="color:var(--ink-soft);">${p.detail}</span>`;
+  lostWrap.appendChild(row);
+});
+document.getElementById('boardList').after(lostWrap);
+
+/* ---------------- ELSEWHERE LIST ---------------- */
+const elsewhereEl = document.getElementById('elsewhereList');
+DIASPORA_ELSEWHERE.forEach(p=>{
+  const card = document.createElement('div');
+  card.className = 'staff-card';
+  card.innerHTML = `
+    <div class="name">${p.name} <span class="mono" style="font-size:11px;color:var(--ink-soft);font-weight:400;">→ ${p.team}</span></div>
+    <div class="fit" style="margin-top:6px;">${p.detail}</div>
+  `;
+  elsewhereEl.appendChild(card);
+});
+
+/* ---------------- TECH STAFF DATA ---------------- */
+const STAFF = {
+  "Sporting / Executive Leadership": [
+    {name:'Michael Emenalo', role:'Former Chief Football Executive, Saudi Pro League (PACE) — stepped down June 2026, ex-Chelsea Technical Director', tag:'AVAILABLE NOW', fit:'The single strongest sporting-director hire on paper anywhere in the diaspora right now — literally between jobs as of this summer.'},
+    {name:'Oguchi Onyewu', role:'Assistant Sporting Director, U.S. Soccer Federation', tag:'CURRENTLY EMPLOYED', fit:'Nigerian-American; deep federation-building experience from inside a program that just overhauled itself for a home World Cup.'},
+    {name:'John Obi Mikel', role:'Broadcaster/podcast host (The Obi One); has publicly rejected NFF approaches under current leadership', tag:'WILLING, CONDITIONAL', fit:'Has said repeatedly he will not join under the current board — a credible admin overhaul is the precondition, not a bonus, if the goal is to bring him in.'}
+  ],
+  "Coaching & Player Development": [
+    {name:'Augustine Eguavoen', role:'NFF Technical Director since Nov 2020', tag:'CURRENTLY IN ROLE', fit:'Already inside the federation — the question for this project is whether the technical department has authority or just a title.'}
+  ],
+  "League &amp; Federation Operations": [
+    {name:'Andre Akpan', role:'Senior Director, Sporting Affairs — Major League Soccer', tag:'CURRENTLY EMPLOYED', fit:'Nigerian father, American mother. Former Harvard standout and MLS forward (Rapids, Red Bulls, Revolution) now inside league sporting operations — the football-plus-front-office combination this project keeps looking for.'},
+    {name:'Baba Omosegbon', role:'Director of Competition — Major League Soccer', tag:'CURRENTLY EMPLOYED', fit:'Born in Sokoto, Nigeria. Former Harvard defender and pro (Indy Eleven), Notre Dame Law grad, now runs competition operations at MLS. Football, legal, and administrative fluency in one profile.'}
+  ],
+  "Scouting & Data": [
+    {name:'[Add: diaspora scouts at CIES / club recruitment depts]', role:'Placeholder — verify names', tag:'TO VERIFY', fit:'Slot for Nigerian-origin recruitment analysts working inside European or Saudi club scouting departments.'}
+  ],
+  "Medical & Performance": [
+    {name:'[Add: club-level sports scientists / physios of Nigerian origin]', role:'Placeholder — verify names', tag:'TO VERIFY', fit:'Every top-6 Premier League club has performance staff pipelines worth scanning for Nigerian-origin hires.'}
+  ]
+};
+
+const staffGroupsEl = document.getElementById('staffGroups');
+Object.entries(STAFF).forEach(([group, people])=>{
+  const wrap = document.createElement('div');
+  wrap.className = 'cabinet-group';
+  wrap.innerHTML = `<h3>${group}</h3>`;
+  people.forEach(p=>{
+    const card = document.createElement('div');
+    card.className = 'staff-card';
+    card.innerHTML = `
+      <div class="name">${p.name}</div>
+      <div class="role">${p.role}</div>
+      <div class="tag">${p.tag}</div>
+      <div class="fit">${p.fit}</div>
+    `;
+    wrap.appendChild(card);
+  });
+  staffGroupsEl.appendChild(wrap);
+});
+</script>
+</body>
+</html>
