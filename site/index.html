@@ -564,7 +564,7 @@ const FORMATION = [
       {name:'Ifeanyi Ndukwe', age:18, club:'Levante (on loan from Liverpool)', val:'€3m', trend:'up', watch:'Tri-national (Nigeria/Austria/Russia). Liverpool signing, currently leaning Austria at youth level — still uncapped at senior level.'},
       {name:'Tosin Adarabioyo', age:28, club:'Chelsea', val:'€15m', trend:'flat', watch:'Has said "yes" to Nigeria more than once since 2024, then gone quiet each time — reportedly no active contact with the NFF as of mid-2026. Fully uncapped by anyone. Real, but stalled.'}
     ]},
-    {main:{name:'Honest Ahanor', age:18, club:'Crystal Palace (loan from Chelsea)', val:'€35m', trend:'up', watch:'Two senior caps for Italy already (sub vs Luxembourg, started vs Greece — both friendlies), but still eligible for a FIFA one-time switch (under 21, ≤3 caps). Biggest urgency case in the pool — this is an active, formal mechanism, not just hope.'}, depth:[
+    {main:{name:'Honest Ahanor', age:18, club:'Crystal Palace (loan from Chelsea)', val:'€35m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:2, kind:'friendly', switchEligible:true}, watch:'Sub vs Luxembourg, started vs Greece — both friendlies. Still eligible for a FIFA one-time switch (under 21, ≤3 caps, no competitive caps). Biggest urgency case in the pool — this is an active, formal mechanism, not just hope.'}, depth:[
       {name:'Benjamin Fredrick', age:24, club:'Standard Liège', val:'€3m', trend:'up'}
     ]},
     {main:{name:'Zaidu Sanusi', age:27, club:'Porto', val:'€8m', trend:'flat'}, depth:[
@@ -589,7 +589,7 @@ const FORMATION = [
   {pos:'FWD', slots:[
     {main:{name:'Victor Osimhen', age:27, club:'Galatasaray', val:'€75m', trend:'up'}, depth:[
       {name:'Taiwo Awoniyi', age:28, club:'Nottingham Forest', val:'€20m', trend:'flat'},
-      {name:'Jeff Ekhator', age:19, club:'Juventus', val:'€7m', trend:'up', watch:'Already has one senior cap for Italy (debut vs. Greece, June 7 2026, friendly — recorded an assist), but still eligible for a FIFA one-time switch (born Nov 2006, well under 21, only 1 friendly cap). No longer "uncapped" — this needed correcting everywhere it was repeated.'}
+      {name:'Jeff Ekhator', age:19, club:'Juventus', val:'€7m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:1, kind:'friendly', switchEligible:true}, watch:'Debut vs. Greece, June 7 2026 — recorded an assist. Born Nov 2006, well under 21. No longer "uncapped" — this needed correcting everywhere it was repeated.'}
     ]},
     {main:{name:'Ademola Lookman', age:28, club:'Atlético Madrid', val:'€45m', trend:'up'}, depth:[
       {name:'Kelechi Iheanacho', age:29, club:'Sevilla', val:'€6m', trend:'down'}
@@ -672,6 +672,30 @@ FORMATION.forEach((row, ri)=>{
   rowsEl.appendChild(rowDiv);
 });
 
+/* rivalCaps = {fed, flag, caps, kind:'friendly'|'competitive'|'mixed', switchEligible}
+   Structured so a rival-federation cap count/eligibility read is visible as
+   a badge, not just buried in prose — this project's own eligibility
+   mechanics call, not an official FIFA ruling; still gated by human review
+   like every other elig status on this site. */
+function rivalCapsBadge(rc){
+  if(!rc) return '';
+  const kindLabel = rc.kind==='competitive' ? 'COMPETITIVE' : rc.kind==='mixed' ? 'MIXED' : 'FRIENDLY';
+  const eligLabel = rc.switchEligible ? 'ONE-TIME SWITCH ELIGIBLE' : 'NOT SWITCH-ELIGIBLE';
+  const bg = rc.switchEligible ? '#F6E7D8' : '#F1DAD3';
+  const color = rc.switchEligible ? 'var(--gold)' : 'var(--clay)';
+  return `<span class="elig-badge" style="background:${bg};color:${color};white-space:normal;">${rc.flag} ${rc.caps} CAP${rc.caps===1?'':'S'} FOR ${rc.fed.toUpperCase()} (${kindLabel}) · ${eligLabel}</span>`;
+}
+function renderWatchNote(list, p){
+  if(!p.watch && !p.rivalCaps) return;
+  const note = document.createElement('li');
+  note.style.background = '#F6E7D8';
+  note.style.fontSize = '11px';
+  note.style.color = 'var(--gold)';
+  const badge = rivalCapsBadge(p.rivalCaps);
+  note.innerHTML = `<div class="l">${badge}${p.watch ? `<div style="margin-top:${badge?'4px':'0'};">⚠ ${p.watch}</div>` : ''}</div>`;
+  list.appendChild(note);
+}
+
 function openDepth(pos, slot){
   const panel = document.getElementById('depthPanel');
   document.getElementById('depthPos').textContent = pos;
@@ -681,19 +705,13 @@ function openDepth(pos, slot){
   const starterLi = document.createElement('li');
   starterLi.innerHTML = `<div class="l"><span class="rank">①</span><b>${slot.main.name}</b><span class="club">${slot.main.club} · ${slot.main.age}y</span></div><span class="val">${slot.main.val}</span>`;
   list.appendChild(starterLi);
+  renderWatchNote(list, slot.main);
   slot.depth.forEach((p,i)=>{
     const li = document.createElement('li');
     if(p.trend==='down') li.classList.add('flag-age');
     li.innerHTML = `<div class="l"><span class="rank">${i+2}</span>${p.name}<span class="club">${p.club} · ${p.age}y</span></div><span class="val">${p.val} ${p.trend==='up'?'▲':p.trend==='down'?'▼':'—'}</span>`;
     list.appendChild(li);
-    if(p.watch){
-      const note = document.createElement('li');
-      note.style.background = '#F6E7D8';
-      note.style.fontSize = '11px';
-      note.style.color = 'var(--gold)';
-      note.innerHTML = `<div class="l">⚠ ${p.watch}</div>`;
-      list.appendChild(note);
-    }
+    renderWatchNote(list, p);
   });
   panel.classList.add('open');
   panel.scrollIntoView({behavior:'smooth', block:'nearest'});
@@ -719,7 +737,7 @@ BOARD.forEach(p=>{
   row.innerHTML = `
     <div class="rank-num">${p.rank}</div>
     <div>
-      <div class="pname">${p.name}<span class="elig-badge ${eligClass}">${eligLabel}</span>${verifiedBadge}</div>
+      <div class="pname">${p.name}<span class="elig-badge ${eligClass}">${eligLabel}</span>${verifiedBadge}${rivalCapsBadge(p.rivalCaps)}</div>
       <div class="pmeta">${p.club}${p.note? ' · '+p.note : ''}</div>
     </div>
     <div class="mono" style="text-align:center;color:var(--ink-soft);">${p.age}</div>
