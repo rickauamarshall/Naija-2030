@@ -1,8 +1,8 @@
 {
-  "name": "naija26-server",
+  "name": "naija2030-server",
   "version": "0.1.0",
   "private": true,
-  "description": "Match-day tweet feed and weekly recap service for NAIJA26.",
+  "description": "Match-day tweet feed and weekly recap service for NAIJA 2030.",
   "main": "src/jobs/demo.js",
   "scripts": {
     "test": "node --test",

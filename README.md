@@ -1,4 +1,4 @@
-# NAIJA26 — The Super Eagles Shadow Pool
+# NAIJA 2030 — The Super Eagles Shadow Pool
 
 A public, weekly-updated depth chart of every uncapped or Nigeria-eligible player good enough to wear the Super Eagles shirt — ranked by form, market value, and how much time is left before someone else takes them. Fan-built. Not affiliated with the NFF, CAF, or FIFA.
 

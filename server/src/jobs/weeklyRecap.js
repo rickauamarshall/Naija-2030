@@ -29,7 +29,7 @@ async function buildWeeklyRecap() {
   });
 
   const text = [
-    'NAIJA26 Weekly Recap',
+    'NAIJA 2030 Weekly Recap',
     '',
     ...lines,
     '',

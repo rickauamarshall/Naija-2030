@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NAIJA26 — The Super Eagles Shadow Pool</title>
+<title>NAIJA 2030 — The Super Eagles Shadow Pool</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -322,7 +322,7 @@
 
 <div class="ticker">
   <div class="ticker-left">
-    <div class="brandmark">NAIJA26 ⚽ SHADOW POOL</div>
+    <div class="brandmark">NAIJA 2030 ⚽ SHADOW POOL</div>
     <a class="ticker-link" href="https://x.com/SuperEaglesTrkr" target="_blank" rel="noopener">Follow @SuperEaglesTrkr</a>
     <!-- TODO: replace with the real newsletter signup URL once the publication exists (beehiiv or similar) — see docs/newsletter-plan.md -->
     <a class="ticker-link" href="https://TODO-newsletter-signup-url.example/subscribe" target="_blank" rel="noopener">Subscribe to the newsletter</a>
@@ -468,7 +468,7 @@
 
 </main>
 
-<footer>NAIJA26 IS A FAN-BUILT ADVOCACY PROTOTYPE · NOT AFFILIATED WITH THE NFF, CAF OR FIFA · DATA SHOWN IS ILLUSTRATIVE SAMPLE DATA</footer>
+<footer>NAIJA 2030 IS A FAN-BUILT ADVOCACY PROTOTYPE · NOT AFFILIATED WITH THE NFF, CAF OR FIFA · DATA SHOWN IS ILLUSTRATIVE SAMPLE DATA</footer>
 
 <script>
 /* ---------------- VIEW COUNTER ---------------- */
@@ -476,11 +476,11 @@
   try{
     let count = 0;
     try{
-      const res = await window.storage.get('naija26_views', true);
+      const res = await window.storage.get('naija2030_views', true);
       count = parseInt(res.value,10) || 0;
     }catch(e){ count = 0; }
     count += 1;
-    await window.storage.set('naija26_views', String(count), true);
+    await window.storage.set('naija2030_views', String(count), true);
     document.getElementById('viewCount').textContent = count.toLocaleString();
   }catch(e){
     document.getElementById('viewCount').textContent = '1';
@@ -552,7 +552,7 @@ const FORMATION = [
       {name:'Ifeanyi Ndukwe', age:18, club:'Levante (on loan from Liverpool)', val:'€3m', trend:'up', watch:'Tri-national (Nigeria/Austria/Russia). Liverpool signing, currently leaning Austria at youth level — still uncapped at senior level.'},
       {name:'Tosin Adarabioyo', age:28, club:'Chelsea', val:'€15m', trend:'flat', watch:'Has said "yes" to Nigeria more than once since 2024, then gone quiet each time — reportedly no active contact with the NFF as of mid-2026. Fully uncapped by anyone. Real, but stalled.'}
     ]},
-    {main:{name:'Honest Ahanor', age:18, club:'Atalanta', val:'€20m', trend:'up', watch:'Currently Italy U21 — Nigeria-eligible, uncapped at senior level. Biggest urgency case in the pool.'}, depth:[
+    {main:{name:'Honest Ahanor', age:18, club:'Crystal Palace (loan from Chelsea)', val:'€35m', trend:'up', watch:'Two senior caps for Italy already (sub vs Luxembourg, started vs Greece — both friendlies), but still eligible for a FIFA one-time switch (under 21, ≤3 caps). Biggest urgency case in the pool — this is an active, formal mechanism, not just hope.'}, depth:[
       {name:'Benjamin Fredrick', age:24, club:'Standard Liège', val:'€3m', trend:'up'}
     ]},
     {main:{name:'Zaidu Sanusi', age:27, club:'Porto', val:'€8m', trend:'flat'}, depth:[
@@ -609,12 +609,21 @@ const BOARD = [
   {rank:47, name:'David Okereke Jr.', age:22, pos:'DEF', club:'Trabzonspor', val:'€1.3m', move:-1, elig:'open', verified:false},
   {rank:48, name:'Femi Adekanye', age:20, pos:'MID', club:'Slavia Prague', val:'€1.1m', move:1, elig:'open', verified:false},
   {rank:49, name:'Uche Ibekwe', age:21, pos:'FWD', club:'KV Mechelen', val:'€800k', move:0, elig:'open', verified:false},
-  {rank:50, name:'William Troost-Ekong', age:32, pos:'DEF', club:'Besiktas', val:'€2m', move:-4, elig:'open', note:'Veteran leadership, but the 2030 cycle needs to belong to the players below him, not above him.', verified:true}
+  {rank:50, name:'William Troost-Ekong', age:32, pos:'DEF', club:'Besiktas', val:'€2m', move:-4, elig:'open', note:'Veteran leadership, but the 2030 cycle needs to belong to the players below him, not above him.', verified:true},
+  {rank:51, name:'David Ozoh', age:21, pos:'TBD', club:'Derby County', val:'TBD', move:0, elig:'open', note:'Chose Nigeria over England this week (Sept 2026) — awaiting passport and FIFA clearance to be officially tied. Position and valuation not yet independently verified; sourced from a single conversational report, not primary research.', verified:false},
+  {rank:52, name:'Lesley Ugochukwu', age:22, pos:'MID', club:'Galatasaray', val:'TBD', move:0, elig:'open', note:'Ex-Chelsea. Reportedly actively pursuing a Nigerian passport since July 2026, spotted training with Iheanacho in Owerri over the summer. Not yet formally committed — needs a primary-source verification pass beyond conversational sourcing before this is treated as confirmed.', verified:'partial'}
 ];
 
 const LOST_TO_RIVALS = [
   {name:'Nnamdi Collins', now:'Germany', detail:'Made senior competitive debut vs Slovakia, Sept 2025 (2026 WCQ) — permanently cap-tied.'},
   {name:'Carney Chukwuemeka', now:'Austria', detail:'Nigeria was genuinely in the running — born in Vienna to Nigerian parents. Completed a FIFA-approved switch to Austria in March 2026 and debuted vs. Ghana. A real, recent loss, not a hypothetical one.'}
+];
+
+/* Uncapped/dual-national cases that resolved IN Nigeria's favor — the mirror
+   image of LOST_TO_RIVALS. A player graduates out of the active pool/board
+   once their switch is actually cleared; this panel keeps the receipt. */
+const WON_FROM_RIVALS = [
+  {name:'Arthur Okonkwo', from:'England youth setup', detail:'Wrexham GK. FIFA officially cleared his switch to Nigeria and he is now a regular senior call-up — one of this project\'s clearest wins this year.'}
 ];
 
 /* Players of Nigerian descent who committed to other senior national teams long
@@ -724,6 +733,24 @@ LOST_TO_RIVALS.forEach(p=>{
 });
 document.getElementById('boardList').after(lostWrap);
 
+/* ---------------- RECENT WINS PANEL ---------------- */
+const wonWrap = document.createElement('div');
+wonWrap.style.marginTop = '16px';
+wonWrap.style.background = '#DCEEDD';
+wonWrap.style.border = '1px solid #B7D9BA';
+wonWrap.style.borderRadius = '8px';
+wonWrap.style.padding = '12px 14px';
+wonWrap.innerHTML = `<div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--clay);text-transform:uppercase;margin-bottom:8px;">Recent wins</div>`;
+WON_FROM_RIVALS.forEach(p=>{
+  const row = document.createElement('div');
+  row.style.fontSize = '12.5px';
+  row.style.marginBottom = '6px';
+  row.style.lineHeight = '1.4';
+  row.innerHTML = `<b>${p.name}</b> ← was ${p.from}. <span style="color:var(--ink-soft);">${p.detail}</span>`;
+  wonWrap.appendChild(row);
+});
+lostWrap.after(wonWrap);
+
 /* ---------------- ELSEWHERE LIST ---------------- */
 const elsewhereEl = document.getElementById('elsewhereList');
 DIASPORA_ELSEWHERE.forEach(p=>{
@@ -739,7 +766,7 @@ DIASPORA_ELSEWHERE.forEach(p=>{
 /* ---------------- TECH STAFF DATA ---------------- */
 const STAFF = {
   "Sporting / Executive Leadership": [
-    {name:'Michael Emenalo', role:'Former Chief Football Executive, Saudi Pro League (PACE) — stepped down June 2026, ex-Chelsea Technical Director', tag:'AVAILABLE NOW', fit:'The single strongest sporting-director hire on paper anywhere in the diaspora right now — literally between jobs as of this summer.'},
+    {name:'Michael Emenalo', role:'Former Chief Football Executive, Saudi Pro League (PACE) — stepped down June 2026, ex-Chelsea Technical Director', tag:'AVAILABLE NOW · ALREADY BEING FLOATED', fit:'Not an outside import — 14 caps for Nigeria and a place in the actual 1994 World Cup squad, then a decade running football operations at Chelsea and Monaco, then three years rebuilding a league from the top down at the SPL. Domestic playing legitimacy plus genuinely global executive clout is a rare combination, and it\'s why former Eagle Etim Esin has already publicly called for exactly this. His Chelsea ties are also directly useful: the club just signed Honest Ahanor, one of this site\'s top uncapped targets — Emenalo would walk in with real relationships inside the building that made that deal happen.'},
     {name:'Oguchi Onyewu', role:'Assistant Sporting Director, U.S. Soccer Federation', tag:'CURRENTLY EMPLOYED', fit:'Nigerian-American; deep federation-building experience from inside a program that just overhauled itself for a home World Cup.'},
     {name:'John Obi Mikel', role:'Broadcaster/podcast host (The Obi One); has publicly rejected NFF approaches under current leadership', tag:'WILLING, CONDITIONAL', fit:'Has said repeatedly he will not join under the current board — a credible admin overhaul is the precondition, not a bonus, if the goal is to bring him in.'}
   ],
@@ -751,7 +778,19 @@ const STAFF = {
     {name:'Baba Omosegbon', role:'Director of Competition — Major League Soccer', tag:'CURRENTLY EMPLOYED', fit:'Born in Sokoto, Nigeria. Former Harvard defender and pro (Indy Eleven), Notre Dame Law grad, now runs competition operations at MLS. Football, legal, and administrative fluency in one profile.'}
   ],
   "Scouting & Data": [
+    {name:'Seyi Olofinjana', role:'Head of Scouting (Africa), Chelsea FC — since 2024; ex-Sporting Director, Grasshopper Zürich; ex-Loans Pathway Manager, Wolves', tag:'CURRENTLY EMPLOYED · ALREADY BEING FLOATED', fit:'Played for Nigeria himself, then built a genuine European administration career — UEFA Pro Licence, two master\'s degrees, sporting director experience at a European club. He is Chelsea\'s actual Head of Scouting for Africa right now, which means he likely had direct involvement in Chelsea\'s real signing of Honest Ahanor — the single most relevant possible hire for that specific recruitment case. Also publicly named as a candidate for the NFF presidency itself, not just a technical role — see the Domestic Names section below.'},
     {name:'[Add: diaspora scouts at CIES / club recruitment depts]', role:'Placeholder — verify names', tag:'TO VERIFY', fit:'Slot for Nigerian-origin recruitment analysts working inside European or Saudi club scouting departments.'}
+  ],
+  "Advisory / Strategic": [
+    {name:'Maurice Edu', role:'FOX Sports soccer analyst; part-owner, Ipswich Town FC; investor across multiple football and sports-tech ventures', tag:'CURRENTLY EMPLOYED', fit:'Nigerian-American, 46 USMNT caps, now sits on the investment and media side of the game — his current lane (club ownership, media rights, sports-tech) is exactly the commercial expertise a federation stuck in old-media and old-governance patterns is missing.'}
+  ],
+  "Domestic Names Already in the Conversation": [
+    {name:'Segun Odegbami', role:'Former Green Eagles/Super Eagles great; 1980 AFCON-winning squad; longtime public reform advocate', tag:'PUBLICLY VOCAL, NOT A CANDIDATE', fit:'Not floated for a specific seat, but one of the loudest and most consistent domestic voices demanding the clean break this project is built around. Worth noting so this site isn\'t read as importing outside opinions onto a conversation Nigerians at home have already been having for years.'},
+    {name:'Seyi Olofinjana', role:'(see Scouting & Data above)', tag:'ALSO NAMED FOR THE PRESIDENCY ITSELF', fit:'Listed above under Scouting, but also worth flagging here: multiple domestic outlets have floated him for the NFF presidency directly, with reported backing from figures inside the National Sports Commission — not just a technical seat.'},
+    {name:'Kunle Soname', role:'Remo Stars owner; Bet9ja founder', tag:'REPORTEDLY APPROACHED', fit:'Reported by domestic press as approached to head a reform/normalisation committee, with reluctance cited due to his existing business commitments. A genuine domestic business-side name in circulation, not a diaspora suggestion.'},
+    {name:'Musa Amadu', role:'Former NFF Secretary-General; lawyer; past NFF presidential candidate', tag:'REPORTEDLY TIPPED', fit:'Domestic press has named him as a candidate to head a reform committee, citing his legal background and prior federation experience.'},
+    {name:'Abdulhakeem Uthman Mustapha (SAN)', role:'Senior Advocate of Nigeria', tag:'PROPOSED FOR REFORM BODY', fit:'Named in domestic commentary as a strong legal-chair option for a reform or normalisation body — someone who could give the process authority without belonging to an existing NFF political bloc.'},
+    {name:'Chichi Nwoko', role:'Founder & CEO, Toptier Sports Management', tag:'PROPOSED FOR REFORM BODY', fit:'Named domestically as a commercial-side candidate for a reform body — sponsorship and broadcast-value experience the federation has historically lacked, from someone who came up through the business of sport rather than the usual federation political track.'}
   ],
   "Medical & Performance": [
     {name:'[Add: club-level sports scientists / physios of Nigerian origin]', role:'Placeholder — verify names', tag:'TO VERIFY', fit:'Every top-6 Premier League club has performance staff pipelines worth scanning for Nigerian-origin hires.'}

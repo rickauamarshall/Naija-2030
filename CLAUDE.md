@@ -1,6 +1,6 @@
-# NAIJA26 — working notes for Claude Code
+# NAIJA 2030 — working notes for Claude Code
 
-NAIJA26 is a fan-built, independent tracker of Nigeria's best-available Super Eagles pool for the 2030 World Cup cycle — a public depth chart (26-man pool + a ranked 27–50 "Big Board") that includes uncapped dual nationals who could still be persuaded to switch, plus a diaspora technical-staff directory. It exists to make a public, transparent case that the talent pool is deeper than the results suggest, and to pressure the NFF with receipts rather than vibes. **It is not affiliated with the NFF, CAF, or FIFA, and must never imply otherwise** — site copy, social bios, and any future domain should keep saying so explicitly.
+NAIJA 2030 is a fan-built, independent tracker of Nigeria's best-available Super Eagles pool for the 2030 World Cup cycle — a public depth chart (26-man pool + a ranked 27–50 "Big Board") that includes uncapped dual nationals who could still be persuaded to switch, plus a diaspora technical-staff directory. It exists to make a public, transparent case that the talent pool is deeper than the results suggest, and to pressure the NFF with receipts rather than vibes. **It is not affiliated with the NFF, CAF, or FIFA, and must never imply otherwise** — site copy, social bios, and any future domain should keep saying so explicitly.
 
 This project is deliberately **separate from `fadius-app-dev`** — different repo, different brand, no shared history or cross-references. If you're a session that also has Fadius context loaded, don't mix the two up.
 

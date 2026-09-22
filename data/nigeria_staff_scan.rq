@@ -1,0 +1,89 @@
+# NAIJA 2030 — Nigerian-heritage football STAFF/EXECUTIVE discovery query
+# Run this at: https://query.wikidata.org — paste and hit ▶
+#
+# This is the staff-side counterpart to nigeria_eligible_scan.rq. Read the
+# caveats below before trusting the output — they're more severe here than
+# on the player side.
+#
+# LOGIC:
+#  1. Find people whose occupation is one of: football manager/coach,
+#     sports executive, sports agent, or a small set of related roles
+#     (see the VALUES block — extend it if you find other relevant
+#     occupation QIDs during real use).
+#  2. Who are either Nigerian citizens themselves, OR have a father/mother
+#     who is a Nigerian citizen (the same heritage logic as the player
+#     query — someone doesn't have to be Nigerian-born to be a real find,
+#     see Andre Akpan and Baba Omosegbon, both American-born).
+#
+# THIS QUERY DOES NOT TELL YOU:
+#   - Whether the person has any actual interest in or connection to
+#     Nigerian football specifically (most hits will have none — that's
+#     expected, this is a heritage net, not an intent signal).
+#   - Whether their current employer would even release them / whether
+#     they're open to a conversation.
+#   - Anything about legal, administrative, or executive-track people
+#     whose Wikidata profile is thin or nonexistent — which is MOST of
+#     them. Executives and agents are dramatically less likely to have a
+#     complete Wikidata entry than professional athletes are. Treat a
+#     zero-or-low result count as "Wikidata coverage is thin here," not
+#     "there's nobody out there."
+#
+# GIVEN THAT LAST POINT: for staff discovery specifically, this query
+# should be treated as a secondary/supplementary source, not the primary
+# one. The primary source should be manual + LinkedIn search (see the
+# search-string suggestions at the bottom of this file) combined with
+# scanning club/league staff directory pages directly, the same way real
+# names in the current site (Akpan, Omosegbon, Edu, Onyewu) were found —
+# through news articles and direct research, not a database query.
+
+SELECT DISTINCT ?person ?personLabel ?occupationLabel ?employerLabel ?parentCitizenshipLabel WHERE {
+
+  VALUES ?occupation {
+    wd:Q628099    # football manager / coach (verified QID)
+    wd:Q17501681  # sports executive (unverified QID — check before relying on it)
+    wd:Q13590141  # sports agent (unverified QID — check before relying on it)
+    wd:Q11338576  # scout / talent scout (unverified QID — check before relying on it)
+  }
+  ?person wdt:P106 ?occupation .
+
+  {
+    ?person wdt:P27 wd:Q1033 .   # is a Nigerian citizen
+  }
+  UNION
+  {
+    ?person wdt:P22 ?parent .   # father is a Nigerian citizen
+    ?parent wdt:P27 wd:Q1033 .
+  }
+  UNION
+  {
+    ?person wdt:P25 ?parent .   # mother is a Nigerian citizen
+    ?parent wdt:P27 wd:Q1033 .
+  }
+
+  OPTIONAL { ?person wdt:P108 ?employer . }   # employer, if recorded
+  OPTIONAL {
+    ?person wdt:P22 ?p2 . ?p2 wdt:P27 ?parentCitizenship .
+  }
+
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 200
+
+# ============================================================
+# MANUAL SEARCH STRINGS — use these on LinkedIn and Google
+# alongside (not instead of) the SPARQL query above:
+# ============================================================
+#
+#   site:linkedin.com "sporting director" Nigerian
+#   site:linkedin.com "general manager" football Nigerian-American
+#   "Nigerian descent" "technical director" football -player
+#   "born in Nigeria" OR "Nigerian parents" "director of football"
+#   "Nigerian heritage" scout OR "head of recruitment" football
+#
+# Also worth directly scanning (these have real, published staff
+# directories that are far more complete than Wikidata for this purpose):
+#   - MLS club front-office pages (mlssoccer.com/clubs/*/staff)
+#   - Premier League / EFL club "club staff" or "football operations" pages
+#   - CIES Football Observatory alumni / staff directory
+#   - U.S. Soccer, Canada Soccer executive staff pages (large diaspora pool)
+#   - Agent directories (e.g. major agencies' public "our team" pages)

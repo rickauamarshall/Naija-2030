@@ -22,7 +22,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 WIKIDATA_ENDPOINT = "https://query.wikidata.org/sparql"
 QUERY_PATH = Path(__file__).parent.parent / "data" / "nigeria_eligible_scan.rq"
-USER_AGENT = "Naija26PoolTracker/0.1 (https://github.com/your-org/naija26; contact@example.com)"
+USER_AGENT = "Naija2030PoolTracker/0.1 (https://github.com/rickauamarshall/naija-2030; contact@example.com)"
 
 
 def load_query() -> str:
