@@ -338,14 +338,24 @@
 
     <div class="clocks">
       <div class="clock-card">
-        <div class="label">2030 WCQ Draw / Kickoff (CAF — est.)</div>
-        <div class="flip-row" id="clockQualifiers"></div>
-        <div class="clock-note">CAF has not published the official 2030 qualifying calendar yet. Countdown targets a placeholder date and should be swapped for the real fixture the moment CAF confirms it.</div>
+        <div class="label">Next Match · vs Madagascar (Uyo)</div>
+        <div class="flip-row" id="clockNextMatch"></div>
+        <div class="clock-note">AFCON 2027 Qualifying, Group L, Matchday 1. Fri Sept 25, 2026, 4:00 PM WAT, Godswill Akpabio Stadium.</div>
       </div>
       <div class="clock-card">
-        <div class="label">Next FIFA Camp Window</div>
-        <div class="flip-row" id="clockCamp"></div>
-        <div class="clock-note">Standard FIFA international window. Confirm actual Super Eagles friendlies/call-ups once NFF releases the invite list.</div>
+        <div class="label">AFCON 2027 Qualifying · Matchday 2</div>
+        <div class="flip-row" id="clockAfcon"></div>
+        <div class="clock-note">vs Guinea-Bissau (away, Bissau), Tue Sept 29, 2026. Exact kickoff time not yet confirmed — counting down to matchday.</div>
+      </div>
+      <div class="clock-card">
+        <div class="label">Next Friendly · vs Russia</div>
+        <div class="flip-row" id="clockFriendly"></div>
+        <div class="clock-note">Tue Oct 6, 2026, Nizhny Novgorod Stadium, 6:00 PM Nigerian time. Second meeting in 16 months after the 1-1 draw in Moscow (June 2025).</div>
+      </div>
+      <div class="clock-card">
+        <div class="label">2030 World Cup Qualifiers (CAF)</div>
+        <div class="flip-row" id="clockQualifiers"><div class="flip-group"><div class="flip mono" style="font-size:14px;padding:10px 8px;">DATE TBD</div></div></div>
+        <div class="clock-note">CAF has not published a 2030 qualifying calendar yet. No countdown shown — we don't invent fixture dates. This card updates the moment CAF confirms one.</div>
       </div>
       <div class="clock-card">
         <div class="label">Time since last World Cup appearance</div>
@@ -520,10 +530,12 @@ function diffParts(target){
   return [days,hrs,mins];
 }
 function tick(){
-  // Placeholder est. date for first 2030 CAF qualifier window — clearly flagged as TBC in UI
-  renderFlip(document.getElementById('clockQualifiers'), ...diffParts(new Date('2027-09-01T00:00:00')));
-  // Next standard FIFA window after current date
-  renderFlip(document.getElementById('clockCamp'), ...diffParts(new Date('2026-09-01T00:00:00')));
+  // Confirmed fixtures only — no invented dates. Update these three the moment
+  // NFF/CAF confirm the next window; 2030 WCQ card stays a static "DATE TBD"
+  // until CAF actually publishes a qualifying calendar (see HTML above).
+  renderFlip(document.getElementById('clockNextMatch'), ...diffParts(new Date('2026-09-25T16:00:00+01:00')));
+  renderFlip(document.getElementById('clockAfcon'), ...diffParts(new Date('2026-09-29T00:00:00+01:00')));
+  renderFlip(document.getElementById('clockFriendly'), ...diffParts(new Date('2026-10-06T18:00:00+01:00')));
   // Time since last WC appearance (Nigeria's last finals: 2018 Russia, opening match June 16 2018)
   const since = new Date() - new Date('2018-06-16T00:00:00');
   const d = Math.floor(since/86400000);
@@ -611,7 +623,10 @@ const BOARD = [
   {rank:49, name:'Uche Ibekwe', age:21, pos:'FWD', club:'KV Mechelen', val:'€800k', move:0, elig:'open', verified:false},
   {rank:50, name:'William Troost-Ekong', age:32, pos:'DEF', club:'Besiktas', val:'€2m', move:-4, elig:'open', note:'Veteran leadership, but the 2030 cycle needs to belong to the players below him, not above him.', verified:true},
   {rank:51, name:'David Ozoh', age:21, pos:'TBD', club:'Derby County', val:'TBD', move:0, elig:'open', note:'Chose Nigeria over England this week (Sept 2026) — awaiting passport and FIFA clearance to be officially tied. Position and valuation not yet independently verified; sourced from a single conversational report, not primary research.', verified:false},
-  {rank:52, name:'Lesley Ugochukwu', age:22, pos:'MID', club:'Galatasaray', val:'TBD', move:0, elig:'open', note:'Ex-Chelsea. Reportedly actively pursuing a Nigerian passport since July 2026, spotted training with Iheanacho in Owerri over the summer. Not yet formally committed — needs a primary-source verification pass beyond conversational sourcing before this is treated as confirmed.', verified:'partial'}
+  {rank:52, name:'Lesley Ugochukwu', age:22, pos:'MID', club:'Galatasaray', val:'TBD', move:0, elig:'open', note:'Ex-Chelsea. Reportedly actively pursuing a Nigerian passport since July 2026, spotted training with Iheanacho in Owerri over the summer. Not yet formally committed — needs a primary-source verification pass beyond conversational sourcing before this is treated as confirmed.', verified:'partial'},
+  {rank:53, name:'Isaac James', age:'TBD', pos:'DEF', club:'TBD (Portugal)', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
+  {rank:54, name:'George Ilenikhena', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
+  {rank:55, name:'Moses Usor', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false}
 ];
 
 const LOST_TO_RIVALS = [

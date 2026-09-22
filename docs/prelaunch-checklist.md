@@ -4,6 +4,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 
 ## Site
 - [x] Static prototype (`site/index.html`) — pool depth chart, Big Board, staff directory, "Elsewhere," Methodology tabs
+- [x] Header countdown clocks wired to real, confirmed fixture dates (Madagascar Sept 25, Guinea-Bissau MD2 Sept 29, Russia friendly Oct 6) — 2030 WCQ card stays a static "DATE TBD" since CAF hasn't published a calendar; no fake countdown shown
 - [x] Editorial-stance disclosure (masthead line + Methodology tab "A note on subjectivity") — rankings are opinion informed by the formula, not dictated by it; eligibility badges stay fact-only and human-verified
 - [x] Newsletter signup link in the ticker bar — **placeholder URL, not live yet**
 - [x] X follow link in the ticker bar (`@SuperEaglesTrkr`)
