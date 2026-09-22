@@ -31,7 +31,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 
 ## Newsletter
 - [x] Structure/plan drafted (`newsletter-plan.md`) — built from general newsletter conventions since the Nutmeg Soccer reference page was blocked by network egress in-session; revisit if you paste the actual text in
-- [ ] Platform account created (beehiiv or alternative) — blocks the site's Subscribe link from being real
+- [x] Platform account created (beehiiv) — real publication URL still needed to wire up the site's Subscribe link (currently a TODO placeholder in `site/index.html`)
 - [ ] Graphics/video-clip production workflow — not started; needs either manual design each week or a templated approach
 - [ ] First issue
 
