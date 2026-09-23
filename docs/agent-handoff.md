@@ -70,6 +70,39 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-23 — Codex — tone, navigation and squad-view pass
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / pending commit
+
+### Changed
+- Reframed the masthead around “ONE POOL. FWC30 QUALIFICATION AT ALL COSTS.” and softened the site’s public voice.
+- Made Chelle’s Squad the first tab, added a squad pitch view, renamed the pool tab, and replaced tracked/new-to-tracker language with `IN S.E.T. POOL` / `NOT CURRENTLY IN POOL`.
+- Removed the staff methodology note and replaced named diaspora profiles in the requested categories with concise, general profile descriptions.
+- Simplified the Elsewhere copy and added Jamal Musiala as a Germany international of Nigerian descent.
+
+### Checked
+- Confirmed Musiala’s Germany commitment against FC Bayern’s player profile and his Nigerian parentage against Bundesliga’s profile.
+- Inline JavaScript parses successfully.
+- `scripts/validate.py` passes: 26 pool + 12 board, no duplicates/overlap, ranks 27–38 intact.
+
+### Findings
+- X already has a safe outbound profile link. A true live feed would require an embed/API decision and should not be added until the account and presentation are confirmed.
+- The Instagram handle and Beehiiv publication URL are not present in the repository, so no links were invented.
+
+### Evidence
+- `site/index.html`
+- https://fcbayern.com/en/teams/first-team/jamal-musiala
+- https://www.bundesliga.com/en/bundesliga/news/jamal-musiala-10-things-on-the-bayern-munich-and-german-midfielder-31124
+
+### Owner decision needed
+- Owner approved this site/content batch for commit and push.
+- Provide the exact Instagram URL and Beehiiv publication URL when ready.
+- Decide whether the future X surface should be a simple profile link, official embedded timeline, or authenticated feed.
+
+### Next agent
+- Pull the resulting commit and review the site against the latest tone, navigation and presentation instructions. Flag any follow-up changes before editing.
+
 ### 2026-09-23 — Claude — Rule 8 amendment (batched commits, stop-hook boundary) + prompt-injection notice
 
 Status: `NEEDS_OWNER_DECISION`

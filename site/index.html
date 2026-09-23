@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Super Eagles Tracker — The Super Eagles Shadow Pool</title>
+<title>Super Eagles Tracker: Nigeria's Player Pool</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -322,7 +322,7 @@
 
 <div class="ticker">
   <div class="ticker-left">
-    <div class="brandmark">SUPER EAGLES TRACKER ⚽ SHADOW POOL</div>
+    <div class="brandmark">SUPER EAGLES TRACKER ⚽ ONE POOL</div>
     <a class="ticker-link" href="https://x.com/SuperEaglesTrkr" target="_blank" rel="noopener">Follow @SuperEaglesTrkr</a>
     <!-- TODO: replace with the real newsletter signup URL once the publication exists (beehiiv or similar) — see docs/newsletter-plan.md -->
     <a class="ticker-link" href="https://TODO-newsletter-signup-url.example/subscribe" target="_blank" rel="noopener">Subscribe to the newsletter</a>
@@ -333,8 +333,8 @@
 <header class="masthead">
   <div class="masthead-inner">
     <div class="eyebrow">// TRACKING THE BEST AVAILABLE SUPER EAGLES · CYCLE 2030</div>
-    <h1 class="title"><span id="totalPlayerCount">—</span> PLAYERS. <em>ONE POOL.</em><br>ZERO EXCUSES.</h1>
-    <p class="sub">A public, weekly-updated depth chart of every uncapped or Nigeria-eligible player good enough to wear the shirt — ranked by form, market value, and how much time is left before someone else takes them. Not affiliated with the NFF. Built to pressure it.</p>
+    <h1 class="title"><em>ONE POOL.</em><br>FWC30 QUALIFICATION AT ALL COSTS.</h1>
+    <p class="sub">A weekly view of Nigeria's player pool, including established internationals, emerging players and eligible dual nationals. Form, market value and eligibility context in one place. Independent and not affiliated with the NFF.</p>
 
     <div class="clocks">
       <div class="clock-card">
@@ -367,8 +367,8 @@
 </header>
 
 <nav class="tabs">
-  <button class="active" data-view="pool">Pitch &amp; Pool</button>
-  <button data-view="chelle">Chelle's Squad</button>
+  <button class="active" data-view="chelle">Chelle's Squad</button>
+  <button data-view="pool">Our Pool</button>
   <button data-view="staff">Technical Staff</button>
   <button data-view="elsewhere">Elsewhere</button>
   <button data-view="about">Why This Exists</button>
@@ -377,7 +377,7 @@
 <main>
 
   <!-- ================= POOL VIEW ================= -->
-  <section class="view active" id="pool">
+  <section class="view" id="pool">
     <div class="split">
 
       <!-- PITCH -->
@@ -419,12 +419,16 @@
   </section>
 
   <!-- ================= CHELLE'S SQUAD VIEW ================= -->
-  <section class="view" id="chelle">
+  <section class="view active" id="chelle">
     <div class="section-head">
       <div>
-        <h2>What Chelle Actually Picked</h2>
-        <p>The real, announced squads for this window — cross-checked live against our own pool/board. A green check means we already had them tracked; the gold flag means the NFF's own coach found them before we did.</p>
+        <h2>Chelle's September Friendly Squad</h2>
+        <p>The September selection, with the S.E.T. Pool alongside it.</p>
       </div>
+    </div>
+    <div class="pitch-wrap" style="margin-bottom:24px;">
+      <div class="pitch-frame"></div>
+      <div class="rows" id="chellePitchRows"></div>
     </div>
     <div id="chelleGroups"></div>
   </section>
@@ -434,13 +438,10 @@
     <div class="section-head">
       <div>
         <h2>The Nigerian Technical Brain Trust</h2>
-        <p>Nigerian-origin coaches, sporting directors, scouts and performance staff currently working inside federations, leagues and top clubs worldwide — proof the country isn't short of expertise, only of a federation willing to use it.</p>
+        <p>Nigerian-origin coaches, sporting directors, scouts and performance staff working across federations, leagues and top clubs worldwide.</p>
       </div>
     </div>
     <div class="cabinet-groups" id="staffGroups"></div>
-    <div class="staff-note">
-      <b>How this list should really work:</b> a production version scans NFF/Ministry of Sport org charts plus club &amp; league staff directories (LinkedIn, official federation pages) for Nigerian-born or Nigerian-heritage individuals in technical roles, then a human editor verifies each entry before publish — getting someone's title or availability wrong in public is worse than not listing them. Titles for Akpan and Omosegbon above were supplied directly rather than confirmed on an official public roster page — re-verify against MLS's own staff directory before this goes live. Note the recurring pipeline too: American college soccer (Harvard, in both these cases) → a modest pro career → a league or federation operations role. That's a real, repeatable pathway worth scanning deliberately, not just a coincidence.
-    </div>
   </section>
 
   <!-- ================= ELSEWHERE VIEW ================= -->
@@ -448,7 +449,7 @@
     <div class="section-head">
       <div>
         <h2>Nigerian Descent, Other Flags</h2>
-        <p>Real, talented players of Nigerian heritage already committed — senior caps and all — to other national teams. Not part of the active pool: this list exists so nobody mistakes wishful thinking for a live target.</p>
+        <p>Players of Nigerian descent who represent other national teams.</p>
       </div>
     </div>
     <div id="elsewhereList" style="display:flex;flex-direction:column;gap:10px;max-width:640px;"></div>
@@ -459,13 +460,12 @@
     <div class="section-head"><div><h2>Why this exists</h2></div></div>
     <div class="staff-card" style="max-width:680px;border-left:4px solid var(--gold);">
       <p style="font-size:14px;line-height:1.7;color:var(--ink);">
-      This project exists to foster honest, constructive discourse about the current state of Nigerian football.
-      The Super Eagles have missed the last two World Cups. The Super Falcons — ten-time African champions —
-      missed automatic qualification for the 2027 World Cup for the first time since the tournament began in 1991.
-      Nigeria has too much talent, too much history, and too much footballing pride for either to be true.
-      This is a public, transparent pool of every player and technical mind Nigeria could call on —
-      including the dual nationals we haven't convinced yet — so our fans have a real reason to wear the
-      green and white with pride, and our federation has no excuse left to hide behind.
+      This project supports informed, constructive discussion about Nigerian football.
+      The Super Eagles have missed the last two World Cups. The Super Falcons are ten-time African champions,
+      yet missed automatic qualification for the 2027 World Cup for the first time since the tournament began in 1991.
+      Nigeria has too much talent, history and footballing pride for that record to define the country.
+      This is a public view of the players and technical profiles available to Nigeria, including eligible dual nationals.
+      The aim is to keep the conversation broad, informed and focused on the road to qualification.
       </p>
     </div>
 
@@ -473,7 +473,7 @@
 
 </main>
 
-<footer>SUPER EAGLES TRACKER IS A FAN-BUILT ADVOCACY PROTOTYPE · NOT AFFILIATED WITH THE NFF, CAF OR FIFA · PLAYER DATA IS INDEPENDENTLY RESEARCHED — VERIFICATION STATUS IS SHOWN PER ENTRY, NOT ASSUMED</footer>
+<footer>SUPER EAGLES TRACKER IS A FAN-BUILT INDEPENDENT TRACKER · NOT AFFILIATED WITH THE NFF, CAF OR FIFA · PLAYER DATA IS INDEPENDENTLY RESEARCHED — VERIFICATION STATUS IS SHOWN PER ENTRY</footer>
 
 <script>
 /* ---------------- VIEW COUNTER ---------------- */
@@ -629,6 +629,7 @@ const WON_FROM_RIVALS = [
 const DIASPORA_ELSEWHERE = [
   {name:'Bukayo Saka', team:'England', detail:'Born in Ealing to Yoruba Nigerian parents. Eligible for Nigeria, chose England, debuted 2020.'},
   {name:'Eberechi Eze', team:'England', detail:'Igbo-Nigerian parents. Debuted for England in 2023, started at the 2026 World Cup.'},
+  {name:'Jamal Musiala', team:'Germany', detail:'Born in Stuttgart to a Nigerian father and German mother. Chose Germany in 2021 and became a senior international.'},
   {name:'Noni Madueke', team:'England', detail:'Nigerian parents, developed via PSV and Chelsea. Debuted for England Sept 2024.'},
   {name:'Folarin Balogun', team:'United States', detail:'Born in Brooklyn to Nigerian parents. Used a FIFA one-time switch from England to the USMNT in 2023 — now their starting No. 9.'},
   {name:'Michael Olise', team:'France', detail:'Nigerian father, Algerian mother. Born and developed in England, debuted for France in 2024.'}
@@ -767,12 +768,10 @@ document.getElementById('boardRangeLabel').textContent =
 
 const chelleGroupsEl = document.getElementById('chelleGroups');
 Object.entries(CHELLE_SQUAD).forEach(([groupName, players]) => {
-  const tracked = players.filter(p => POOL_NAMES.has(p.name)).length;
   const wrap = document.createElement('div');
   wrap.className = 'cabinet-group';
   wrap.style.marginBottom = '22px';
-  wrap.innerHTML = `<h3>${groupName}</h3>
-    <p style="font-size:12px;color:var(--ink-soft);margin:2px 0 10px;">${tracked}/${players.length} already on our pool or board.</p>`;
+  wrap.innerHTML = `<h3>${groupName}</h3>`;
   const grid = document.createElement('div');
   grid.style.display = 'grid';
   grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(200px, 1fr))';
@@ -785,12 +784,31 @@ Object.entries(CHELLE_SQUAD).forEach(([groupName, players]) => {
     card.innerHTML = `
       <div class="name" style="font-size:13px;">${p.name}${p.captain ? ' <span class="mono" style="font-size:10px;color:var(--gold);">(C)</span>' : ''}</div>
       <div class="role" style="font-size:11px;">${p.pos}</div>
-      <div class="tag" style="margin-top:6px;background:${onPool ? '#E5EFE7' : '#F6E7D8'};color:${onPool ? 'var(--up)' : 'var(--gold)'};">${onPool ? '✓ ALREADY TRACKED' : '⚠ NEW TO OUR TRACKER'}</div>
+      <div class="tag" style="margin-top:6px;background:${onPool ? '#E5EFE7' : '#F6E7D8'};color:${onPool ? 'var(--up)' : 'var(--gold)'};">${onPool ? 'IN S.E.T. POOL' : 'NOT CURRENTLY IN POOL'}</div>
     `;
     grid.appendChild(card);
   });
   wrap.appendChild(grid);
   chelleGroupsEl.appendChild(wrap);
+});
+
+/* ---------------- CHELLE'S SQUAD PITCH ---------------- */
+const chellePitchRowsEl = document.getElementById('chellePitchRows');
+const septemberSquad = CHELLE_SQUAD[Object.keys(CHELLE_SQUAD)[0]];
+['GK','DEF','MID','FWD'].forEach(pos=>{
+  const rowDiv = document.createElement('div');
+  rowDiv.className = 'row';
+  septemberSquad.filter(p=>p.pos===pos).forEach(player=>{
+    const s = document.createElement('div');
+    s.className = 'slot';
+    s.innerHTML = `
+      <div class="badge ${pos==='GK'?'gk':''}">${pos==='GK'?'GK':player.name.split(' ').map(n=>n[0]).join('').slice(0,2)}</div>
+      <div class="name">${player.name}${player.captain ? ' (C)' : ''}</div>
+      <div class="club">${pos}</div>
+    `;
+    rowDiv.appendChild(s);
+  });
+  chellePitchRowsEl.appendChild(rowDiv);
 });
 
 /* ---------------- RECENTLY LOST PANEL ---------------- */
@@ -845,21 +863,20 @@ DIASPORA_ELSEWHERE.forEach(p=>{
 const STAFF = {
   "Sporting / Executive Leadership": [
     {name:'Michael Emenalo', role:'Former Chief Football Executive, Saudi Pro League (PACE) — stepped down June 2026, ex-Chelsea Technical Director', tag:'AVAILABLE NOW · ALREADY BEING FLOATED', fit:'Not an outside import — 14 caps for Nigeria and a place in the actual 1994 World Cup squad, then a decade running football operations at Chelsea and Monaco, then three years rebuilding a league from the top down at the SPL. Domestic playing legitimacy plus genuinely global executive clout is a rare combination, and it\'s why former Eagle Etim Esin has already publicly called for exactly this. His Chelsea ties are also directly useful: the club just signed Honest Ahanor, one of this site\'s top uncapped targets — Emenalo would walk in with real relationships inside the building that made that deal happen.'},
-    {name:'Oguchi Onyewu', role:'Assistant Sporting Director, U.S. Soccer Federation', tag:'CURRENTLY EMPLOYED', fit:'Nigerian-American; deep federation-building experience from inside a program that just overhauled itself for a home World Cup.'},
+    {name:'Federation-building sporting directors', role:'League, club and federation executives', tag:'PROFILE TO RECRUIT', fit:'There are Nigerian diaspora professionals working across North American, African and European leagues and federations, many with professional playing, front-office or competition experience. The NFF could create a deliberate outreach path for these profiles and make their involvement worthwhile.'},
     {name:'John Obi Mikel', role:'Broadcaster/podcast host (The Obi One); has publicly rejected NFF approaches under current leadership', tag:'WILLING, CONDITIONAL', fit:'Has said repeatedly he will not join under the current board — a credible admin overhaul is the precondition, not a bonus, if the goal is to bring him in.'}
   ],
   "Coaching & Player Development": [
     {name:'Augustine Eguavoen', role:'NFF Technical Director since Nov 2020', tag:'CURRENTLY IN ROLE', fit:'Already inside the federation — the question for this project is whether the technical department has authority or just a title.'}
   ],
   "League &amp; Federation Operations": [
-    {name:'Andre Akpan', role:'Senior Director, Sporting Affairs — Major League Soccer', tag:'CURRENTLY EMPLOYED', fit:'Nigerian father, American mother. Former Harvard standout and MLS forward (Rapids, Red Bulls, Revolution) now inside league sporting operations — the football-plus-front-office combination this project keeps looking for.'},
-    {name:'Baba Omosegbon', role:'Director of Competition — Major League Soccer', tag:'CURRENTLY EMPLOYED', fit:'Born in Sokoto, Nigeria. Former Harvard defender and pro (Indy Eleven), Notre Dame Law grad, now runs competition operations at MLS. Football, legal, and administrative fluency in one profile.'}
+    {name:'League and federation operations profiles', role:'Competition, administration and football operations', tag:'PROFILE TO RECRUIT', fit:'Nigerian diaspora professionals across North America, Africa and Europe bring league, federation, competition and front-office experience alongside football knowledge. The NFF could benefit from a structured way to identify, approach and involve this wider professional network.'}
   ],
   "Scouting & Data": [
     {name:'Seyi Olofinjana', role:'Head of Scouting (Africa), Chelsea FC — since 2024; ex-Sporting Director, Grasshopper Zürich; ex-Loans Pathway Manager, Wolves', tag:'CURRENTLY EMPLOYED · ALREADY BEING FLOATED', fit:'Played for Nigeria himself, then built a genuine European administration career — UEFA Pro Licence, two master\'s degrees, sporting director experience at a European club. He is Chelsea\'s actual Head of Scouting for Africa right now, which means he likely had direct involvement in Chelsea\'s real signing of Honest Ahanor — the single most relevant possible hire for that specific recruitment case. Also publicly named as a candidate for the NFF presidency itself, not just a technical role — see the Domestic Names section below.'}
   ],
   "Advisory / Strategic": [
-    {name:'Maurice Edu', role:'FOX Sports soccer analyst; part-owner, Ipswich Town FC; investor across multiple football and sports-tech ventures', tag:'CURRENTLY EMPLOYED', fit:'Nigerian-American, 46 USMNT caps, now sits on the investment and media side of the game — his current lane (club ownership, media rights, sports-tech) is exactly the commercial expertise a federation stuck in old-media and old-governance patterns is missing.'}
+    {name:'Commercial and strategic profiles', role:'Media, investment, sports and commercial expertise', tag:'PROFILE TO RECRUIT', fit:'Several Nigerian-origin broadcasters, analysts, investors and sports executives combine football knowledge with commercial expertise. A structured advisory network could bring that perspective into federation planning, partnerships and public communication.'}
   ],
   "Domestic Names Already in the Conversation": [
     {name:'Segun Odegbami', role:'Former Green Eagles/Super Eagles great; 1980 AFCON-winning squad; longtime public reform advocate', tag:'PUBLICLY VOCAL, NOT A CANDIDATE', fit:'Not floated for a specific seat, but one of the loudest and most consistent domestic voices demanding the clean break this project is built around. Worth noting so this site isn\'t read as importing outside opinions onto a conversation Nigerians at home have already been having for years.'},
