@@ -8,7 +8,8 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] Renamed the "Methodology" tab to "Why This Exists" and cut the ranking-formula breakdown and "A note on subjectivity" copy per project owner's call — just the mission statement stays. The verified/unverified/partial badges on the Big Board are the actual enforcement mechanism regardless of what explanatory copy sits next to them; this only removed prose, not the gate itself.
 - [x] Newsletter signup link in the ticker bar — **placeholder URL, not live yet**
 - [x] X follow link in the ticker bar (`@SuperEaglesTrkr`)
-- [ ] Real hosting + deploy (Netlify/Vercel/Cloudflare Pages/GitHub Pages) — today it's a local file only, nothing to link X to yet
+- [x] "Chelle's Squad" tab — the real, announced squad for each fixture window, cross-checked live against FORMATION/BOARD (computed at render time from a Set of pool names, not hardcoded) so the tracked/untracked badges can't silently go stale
+- [x] GitHub Pages deploy workflow added (`.github/workflows/pages.yml`) — **one manual step still needed**: repo Settings → Pages → Source → "GitHub Actions" (can't be set from a workflow file, needs a human with repo admin access to click it once). Once that's flipped, the site goes live at the repo's Pages URL on every push to `site/`.
 - [ ] Custom domain, if wanted — WHOIS privacy on registration (see `anonymity-opsec.md`)
 - [ ] Real view counter backend — current one uses the artifact-preview environment's `window.storage`, which won't exist once actually deployed (flagged in the original handover, still open)
 - [ ] Per-player source links (Transfermarkt profile, Wikidata item) so claims are auditable, not just asserted

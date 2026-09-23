@@ -368,6 +368,7 @@
 
 <nav class="tabs">
   <button class="active" data-view="pool">Pitch &amp; Pool</button>
+  <button data-view="chelle">Chelle's Squad</button>
   <button data-view="staff">Technical Staff</button>
   <button data-view="elsewhere">Elsewhere</button>
   <button data-view="about">Why This Exists</button>
@@ -415,6 +416,17 @@
       </div>
 
     </div>
+  </section>
+
+  <!-- ================= CHELLE'S SQUAD VIEW ================= -->
+  <section class="view" id="chelle">
+    <div class="section-head">
+      <div>
+        <h2>What Chelle Actually Picked</h2>
+        <p>The real, announced squads for this window — cross-checked live against our own pool/board. A green check means we already had them tracked; the gold flag means the NFF's own coach found them before we did.</p>
+      </div>
+    </div>
+    <div id="chelleGroups"></div>
   </section>
 
   <!-- ================= STAFF VIEW ================= -->
@@ -712,6 +724,62 @@ BOARD.forEach(p=>{
     <div class="move ${moveClass}">${moveText}</div>
   `;
   boardEl.appendChild(row);
+});
+
+/* ---------------- CHELLE'S ACTUAL SQUAD ----------------
+   Real, sourced call-ups for this window (announced Sept 17, 2026) -
+   not part of the pool/board data model, so it's kept as its own list
+   rather than bolted onto FORMATION/BOARD's fixed-size arrays. Whether
+   each name is already tracked is computed live below, not hardcoded,
+   so this stays honest as the pool/board change. */
+const CHELLE_SQUAD = {
+  "AFCON 2027 Qualifying — vs Madagascar (Sept 25) & Guinea-Bissau (Sept 29)": [
+    {name:'Stanley Nwabali', pos:'GK'}, {name:'Maduka Okoye', pos:'GK'},
+    {name:'Ola Aina', pos:'DEF'}, {name:'Calvin Bassey', pos:'DEF'}, {name:'Bright Osayi-Samuel', pos:'DEF'}, {name:'Semi Ajayi', pos:'DEF'}, {name:'Zaidu Sanusi', pos:'DEF'}, {name:'Isaac James', pos:'DEF'},
+    {name:'Wilfred Ndidi', pos:'MID', captain:true}, {name:'Alex Iwobi', pos:'MID'}, {name:'Raphael Onyedika', pos:'MID'}, {name:'Frank Onyeka', pos:'MID'}, {name:'Moses Simon', pos:'MID'},
+    {name:'Victor Osimhen', pos:'FWD'}, {name:'Ademola Lookman', pos:'FWD'}, {name:'Samuel Chukwueze', pos:'FWD'}, {name:'Akor Adams', pos:'FWD'}, {name:'Tolu Arokodare', pos:'FWD'}, {name:'George Ilenikhena', pos:'FWD'}, {name:'Moses Usor', pos:'FWD'}
+  ],
+  "Friendly vs Russia — Oct 6 (deliberately experimental squad)": [
+    {name:'Stanley Nwabali', pos:'GK'}, {name:'Samuel James', pos:'GK'},
+    {name:'Victory Akpe', pos:'DEF'}, {name:'Abdullahi Bewene', pos:'DEF'},
+    {name:'Wilfred Ndidi', pos:'MID', captain:true}, {name:'Moses Simon', pos:'MID'},
+    {name:'Kelechi Iheanacho', pos:'FWD'}
+  ]
+};
+
+const POOL_NAMES = new Set();
+FORMATION.forEach(row => row.slots.forEach(slot => {
+  POOL_NAMES.add(slot.main.name);
+  slot.depth.forEach(p => POOL_NAMES.add(p.name));
+}));
+BOARD.forEach(p => POOL_NAMES.add(p.name));
+
+const chelleGroupsEl = document.getElementById('chelleGroups');
+Object.entries(CHELLE_SQUAD).forEach(([groupName, players]) => {
+  const tracked = players.filter(p => POOL_NAMES.has(p.name)).length;
+  const wrap = document.createElement('div');
+  wrap.className = 'cabinet-group';
+  wrap.style.marginBottom = '22px';
+  wrap.innerHTML = `<h3>${groupName}</h3>
+    <p style="font-size:12px;color:var(--ink-soft);margin:2px 0 10px;">${tracked}/${players.length} already on our pool or board.</p>`;
+  const grid = document.createElement('div');
+  grid.style.display = 'grid';
+  grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(200px, 1fr))';
+  grid.style.gap = '8px';
+  players.forEach(p => {
+    const onPool = POOL_NAMES.has(p.name);
+    const card = document.createElement('div');
+    card.className = 'staff-card';
+    card.style.padding = '10px 12px';
+    card.innerHTML = `
+      <div class="name" style="font-size:13px;">${p.name}${p.captain ? ' <span class="mono" style="font-size:10px;color:var(--gold);">(C)</span>' : ''}</div>
+      <div class="role" style="font-size:11px;">${p.pos}</div>
+      <div class="tag" style="margin-top:6px;background:${onPool ? '#E5EFE7' : '#F6E7D8'};color:${onPool ? 'var(--up)' : 'var(--gold)'};">${onPool ? '✓ ALREADY TRACKED' : '⚠ NEW TO OUR TRACKER'}</div>
+    `;
+    grid.appendChild(card);
+  });
+  wrap.appendChild(grid);
+  chelleGroupsEl.appendChild(wrap);
 });
 
 /* ---------------- RECENTLY LOST PANEL ---------------- */
