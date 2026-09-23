@@ -41,11 +41,11 @@ To go live, copy `.env.example` to `.env` and fill in real X API + stats-provide
 All player data lives in plain JS arrays near the bottom of `site/index.html`:
 
 - **`FORMATION`** — the 26-man pool (11 starters + 15 reserves), drawn as the pitch depth chart.
-- **`BOARD`** — ranks 27–50, the next tier, with weekly movement arrows.
+- **`BOARD`** — the next tier, ranked, with weekly movement arrows. Size and rank range aren't fixed — run `python3 scripts/validate.py` for the current true count rather than trusting a number here.
 - **`LOST_TO_RIVALS`** / **`DIASPORA_ELSEWHERE`** — informational panels. One is "we were in the running and lost," the other is "never a realistic target." See `CLAUDE.md` for why that distinction matters and must be kept.
 
 There's currently no build step and no backend for the site itself. Editing player data means editing the JS arrays directly — fine at this scale, see `CLAUDE.md`'s "Next steps" for what changes once the pipeline in `scripts/` is built out.
 
 ## Contact / provenance
 
-Built conversationally with Claude (Anthropic) as a working prototype. Player data was populated through a mix of live web research (cross-checked against Transfermarkt, Wikipedia, and news sources) and placeholder filler for volume — several lower-Big-Board entries are explicitly marked unverified. **Before any of this goes live publicly, every entry needs a human verification pass.** See the `verified_by_human` gate in `CLAUDE.md` — it is not optional, especially for eligibility claims about players who are minors.
+Built conversationally with Claude (Anthropic). Player data is populated through live web research, cross-checked against Transfermarkt, club/federation statements, and news sources. It has not always stayed that way — 17 Big Board entries turned out to be fabricated or badly misattributed placeholder filler from early prototyping, and were purged in a verification pass (see git log). A few entries remain explicitly marked `TBD` or `verified:'partial'` pending confirmation, rather than guessed at. **Every entry still needs to survive a human review before being treated as settled**, especially eligibility claims — several candidates in this pool are minors, and a wrong public claim about one is real harm, not a typo. See the `verified_by_human` gate in `CLAUDE.md`.
