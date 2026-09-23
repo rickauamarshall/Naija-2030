@@ -11,7 +11,7 @@
     "publish-issue": "node src/jobs/publishIssueCli.js"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
+    "dotenv": "^18.0.1",
     "twitter-api-v2": "^1.17.2"
   },
   "engines": {
