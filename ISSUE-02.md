@@ -78,3 +78,22 @@ We're not claiming this newsletter is that process. We're claiming someone shoul
 > Full breakdown + free weekly newsletter: [LINK]
 >
 > Built to pressure the NFF, not speak for it.
+
+## Instagram Post
+
+**Caption:**
+> Two Super Eagles squads, one week. 🦅
+>
+> The real one (Madagascar/Guinea-Bissau, this week): Osimhen, Lookman, Iwobi, Chukwueze, Ndidi.
+>
+> The other one (Russia, Oct 6) is an audition — 3 fresh uncapped names getting their first look.
+>
+> Pochettino evaluated 60+ USMNT candidates over 19 months before naming 26. Italy built a whole pipeline to poach dual nationals early — and is running it against Nigeria right now (Ahanor, Ekhator, Koleosho, Kayode).
+>
+> We track the gaps too: 6 names we hadn't caught before this week, now on the board.
+>
+> Link in bio for the full breakdown + the NFF presidency update.
+>
+> #SuperEagles #SuperEaglesTracker #NFF #AFCON2027
+
+**Suggested visual:** a two-panel graphic — left "AFCON SQUAD" with the 5 headline names, right "RUSSIA SQUAD" with the 3 debutants, on-brand palette (pitch green `#0E3B2E`, gold `#C99B3F`, clay `#A6432D`). Still not built — hold on this until the crest redesign lands, so the graphic and the new logo match rather than shipping two different looks back to back.

@@ -75,3 +75,20 @@ Where the dual-national cases actually stand, not where the hope says they stand
 > Full breakdown + free weekly newsletter: [LINK]
 >
 > Built to pressure the NFF, not speak for it.
+
+## Instagram Post
+
+**Caption:**
+> Nigeria's missed 2 straight World Cups. Not for lack of talent — for lack of anyone keeping score. 🦅
+>
+> This is that: a weekly, independent tracker of the pool + the federation trying to reform itself around it.
+>
+> This week: NFF stakeholders agreed on a reform path weeks ago. Still nobody's actually in charge. The name floated to run it — Seyi Olofinjana — is already in our staff tracker.
+>
+> Also: we pulled 17 fake/misattributed names off our own player board this week. Smaller and honest beats bigger and fake — that's the whole standard here.
+>
+> Link in bio for the full breakdown + free weekly newsletter.
+>
+> #SuperEagles #SuperEaglesTracker #NFF #AFCON2027
+
+**Suggested visual:** same note as Issue №2 — hold for the redesigned crest so the first public-facing graphic matches the new logo rather than needing a redo immediately after.
