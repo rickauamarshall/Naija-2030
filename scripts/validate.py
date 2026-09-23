@@ -27,7 +27,7 @@ SITE_PATH = Path(__file__).parent.parent / "site" / "index.html"
 EXPECTED_STARTERS = {"GK": 1, "DEF": 4, "MID": 4, "FWD": 2}
 EXPECTED_RESERVES = {"GK": 2, "DEF": 5, "MID": 5, "FWD": 3}
 EXPECTED_BOARD_RANK_START = 27
-EXPECTED_BOARD_RANK_END = 55
+EXPECTED_BOARD_RANK_END = 38
 
 
 def extract_block(text: str, start_marker: str) -> str:
@@ -80,9 +80,9 @@ def main() -> int:
     if len(formation_names) != 26:
         ok = False
         print(f"FAIL: FORMATION has {len(formation_names)} players, expected 26")
-    if len(board_names) != 29:
+    if len(board_names) != 12:
         ok = False
-        print(f"FAIL: BOARD has {len(board_names)} players, expected 29")
+        print(f"FAIL: BOARD has {len(board_names)} players, expected 12")
 
     ranks = sorted(int(r) for r in re.findall(r"rank:(\d+)", board_block))
     expected_ranks = list(range(EXPECTED_BOARD_RANK_START, EXPECTED_BOARD_RANK_END + 1))

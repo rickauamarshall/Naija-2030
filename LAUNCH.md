@@ -102,11 +102,10 @@ Some genuinely are. Some just got worse.
   friendly caps for Italy already (vs. Luxembourg and Greece), but at 18
   with only 2 caps he remains eligible for FIFA's one-time-switch rule.
   Real, formal mechanism — not just hope.
-- 🔴 **Jeff Ekhator** (Juventus) — correction from our own earlier
-  reporting: he is **not** uncapped anymore. He made his senior Italy debut
-  vs. Greece on June 7, 2026 (a friendly, with an assist) — but with only 1
-  cap and well under 21, he's still eligible for the same one-time-switch
-  mechanism as Ahanor.
+- 🔴 **Jeff Ekhator** (Juventus) — made his senior Italy debut vs. Greece
+  on June 7, 2026 (a friendly, with an assist), so he's not uncapped. But
+  with only 1 cap and well under 21, he's still eligible for the same
+  one-time-switch mechanism as Ahanor.
 - 🔴 **Luca Koleosho, Michael Kayode** — Italy is reportedly moving to lock
   in both as they rebuild.
 - 🔴 **Noah Atubolu** (Freiburg GK) — omitted from Germany's actual World
@@ -145,10 +144,10 @@ match preview, is in the next issue — not repeated here.
 > tracker.
 
 **Tweet 3:**
-> Quick corrections from our own reporting, because accuracy matters more
-> than looking finished: Jeff Ekhator already has a senior Italy cap (not
-> uncapped like we said). Lesley Ugochukwu just got named in France's U21
-> squad — a real setback, not the win we hoped.
+> Two facts worth being precise about: Jeff Ekhator already has a senior
+> Italy cap (June 7, a friendly) — not uncapped, still switch-eligible.
+> And Lesley Ugochukwu just got named in France's U21 squad — a real
+> setback for Nigeria, not the quiet win it looked like in July.
 
 **Tweet 4:**
 > The wins are real too: Arthur Okonkwo's switch was cleared by FIFA back

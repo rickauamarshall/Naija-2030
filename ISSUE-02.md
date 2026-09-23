@@ -45,11 +45,11 @@ The honest takeaway: **Nigeria's talent pool is not the problem.** The gap is pr
 
 ## The NFF Story — Where the Reform Actually Stands
 
-Quick, sourced update since Issue №1:
+Quick, sourced update on where things stand:
 
 - FIFA and CAF sent a joint fact-finding mission to Abuja and completed consultations with NFF stakeholder groups (Players' Union, coaches' association, league bodies, referees' association). Four of the five groups consulted reportedly preferred a **Normalisation Committee** over a Caretaker Committee.
 - Stakeholders have reportedly **agreed in principle** to a normalisation committee running the federation for up to one year, with an eight-member structure recommended by the National Sports Commission to FIFA. Committee members would be barred from contesting the eventual election themselves.
-- The final call now sits with FIFA's Council, based on the mission's report. As of this writing, no public decision has landed yet — expected "in the coming days," which is what we said in Issue №1 too. This is moving slower than the news cycle wants it to.
+- The final call now sits with FIFA's Council, based on the mission's report. As of this writing, no public decision has landed yet — still just "expected in the coming days," the same phrase that's been circulating for over a week now. This is moving slower than the news cycle wants it to.
 - **The name to watch:** Seyi Olofinjana — Chelsea's Head of Scouting for Africa, ex-Super Eagle, and already featured in this site's staff directory — is being reported as the **firm favorite** to take the NFF presidency. If that holds, it's a genuinely interesting outcome: someone with both a real playing career and a real, current European executive job, rather than a purely political appointment.
 - One loose thread: there are conflicting reports about whether a September 27 elective congress goes forward under the *old* structure, or whether it's superseded entirely by the normalisation process. We're not resolving that here — flagging it as unresolved rather than picking a version that sounds cleaner than the reporting actually is.
 

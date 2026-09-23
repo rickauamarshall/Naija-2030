@@ -536,7 +536,7 @@ const FORMATION = [
   {pos:'GK', slots:[
     {main:{name:'Maduka Okoye', age:26, club:'Udinese', val:'€10m', trend:'up'}, depth:[
       {name:'Stanley Nwabali', age:29, club:'Chippa United', val:'€1.5m', trend:'flat'},
-      {name:'Adewale Adeyinka', age:23, club:'Nice', val:'€2m', trend:'up'}
+      {name:'Samuel James', age:'TBD', club:'TBD (Finland)', val:'TBD', trend:'up', watch:'First call-up for the Oct 6 Russia friendly (experimental squad). Replaces a prior entry (Adewale Adeyinka) removed from this slot — he\'s a real player but already a capped senior Super Eagle at Akwa United, not an uncapped reserve; the site had him at the wrong club entirely (Nice) with no such role. Club/profile here still needs independent verification.'}
     ]}
   ]},
   {pos:'DEF', slots:[
@@ -548,10 +548,10 @@ const FORMATION = [
       {name:'Tosin Adarabioyo', age:28, club:'Chelsea', val:'€15m', trend:'flat', watch:'Has said "yes" to Nigeria more than once since 2024, then gone quiet each time — reportedly no active contact with the NFF as of mid-2026. Fully uncapped by anyone. Real, but stalled.'}
     ]},
     {main:{name:'Honest Ahanor', age:18, club:'Crystal Palace (loan from Chelsea)', val:'€35m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:2, kind:'friendly', switchEligible:true}, watch:'Sub vs Luxembourg, started vs Greece — both friendlies. Still eligible for a FIFA one-time switch (under 21, ≤3 caps, no competitive caps). Biggest urgency case in the pool — this is an active, formal mechanism, not just hope.'}, depth:[
-      {name:'Benjamin Fredrick', age:24, club:'Standard Liège', val:'€3m', trend:'up'}
+      {name:'Benjamin Fredrick', age:20, club:'FCV Dender EH', val:'€3m', trend:'up', watch:'Simoiben Academy product (Moses Simon\'s academy). Already made his senior Nigeria debut in the May 2025 Unity Cup final vs. Jamaica — not actually uncapped, unlike most of this depth list. Club corrected from a stale "Standard Liège" listing.'}
     ]},
     {main:{name:'Zaidu Sanusi', age:27, club:'Porto', val:'€8m', trend:'flat'}, depth:[
-      {name:'Emeka Adiele', age:18, club:'West Ham United', val:'€1.5m', trend:'up', watch:'West Ham academy wing-back, Nigeria-eligible, fully uncapped'}
+      {name:'Emeka Adiele', age:18, club:'FC Utrecht (on loan, Burton Albion)', val:'€1.5m', trend:'up', watch:'Left West Ham for Utrecht on a 4-year deal, currently on loan to Burton Albion — club corrected from a stale "West Ham" listing. England U17/U18 international, Nigeria-eligible, fully uncapped at senior level for either.'}
     ]}
   ]},
   {pos:'MID', slots:[
@@ -572,7 +572,7 @@ const FORMATION = [
   {pos:'FWD', slots:[
     {main:{name:'Victor Osimhen', age:27, club:'Galatasaray', val:'€75m', trend:'up'}, depth:[
       {name:'Taiwo Awoniyi', age:28, club:'Nottingham Forest', val:'€20m', trend:'flat'},
-      {name:'Jeff Ekhator', age:19, club:'Juventus', val:'€7m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:1, kind:'friendly', switchEligible:true}, watch:'Debut vs. Greece, June 7 2026 — recorded an assist. Born Nov 2006, well under 21. No longer "uncapped" — this needed correcting everywhere it was repeated.'}
+      {name:'Jeff Ekhator', age:19, club:'Juventus', val:'€7m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:1, kind:'friendly', switchEligible:true}, watch:'Debut vs. Greece, June 7 2026 — recorded an assist. Born Nov 2006, well under 21 — still eligible for a FIFA one-time switch despite that cap.'}
     ]},
     {main:{name:'Ademola Lookman', age:28, club:'Atlético Madrid', val:'€45m', trend:'up'}, depth:[
       {name:'Kelechi Iheanacho', age:29, club:'Sevilla', val:'€6m', trend:'down'}
@@ -584,32 +584,15 @@ const BOARD = [
   {rank:27, name:'Rayan Oyebade', age:19, pos:'DEF', club:'West Ham United', val:'€1.2m', move:-2, elig:'watch', note:'Already turned out for Greece U19 in 2025 after England youth honours — a near-miss case.', verified:true},
   {rank:28, name:'Samuel Adeniran', age:27, pos:'FWD', club:'LASK', val:'€1.5m', move:1, elig:'open', note:'USA-born, Nigeria-eligible, fully uncapped. Turns 28 in September — depth for now, not a 2030 cornerstone.', verified:true},
   {rank:29, name:'Oluwaseun Adewumi', age:21, pos:'MID', club:'Hertha BSC (loan, Burnley)', val:'€800k', move:3, elig:'watch', note:'Born Lagos, Nigeria. Austrian citizenship, Austria U21 setup — fully uncapped at senior level.', verified:true},
-  {rank:30, name:'Michael Ndiweni', age:20, pos:'MID', club:'Genk', val:'€3.8m', move:1, elig:'open', verified:false},
-  {rank:31, name:'Josh Eyerinde', age:21, pos:'DEF', club:'Hoffenheim', val:'€5m', move:-1, elig:'open', verified:false},
-  {rank:32, name:'Kingsley Fobi', age:20, pos:'MID', club:'Cercle Brugge', val:'€3m', move:4, elig:'open', verified:false},
-  {rank:33, name:'Godwin Obaje', age:21, pos:'FWD', club:'Sivasspor', val:'€1.8m', move:-1, elig:'open', verified:false},
-  {rank:34, name:'Christian Ndubuisi', age:20, pos:'DEF', club:'KAA Gent', val:'€2m', move:0, elig:'open', verified:false},
-  {rank:35, name:'Chibuike Nwaiwu', age:22, pos:'DEF', club:'Trabzonspor', val:'€2.5m', move:2, elig:'open', verified:false},
-  {rank:36, name:'Tosin Kehinde', age:21, pos:'FWD', club:'Sparta Rotterdam', val:'€2.4m', move:0, elig:'watch', verified:false},
-  {rank:37, name:'Daniel Abiodun', age:20, pos:'GK', club:'Real Sociedad B', val:'€1.2m', move:1, elig:'open', verified:false},
-  {rank:38, name:'Chidi Okonkwo', age:22, pos:'DEF', club:'Norwich City', val:'€2.8m', move:-2, elig:'open', verified:false},
-  {rank:39, name:'Emeka Obiora Jr.', age:21, pos:'MID', club:'Basel', val:'€2.2m', move:1, elig:'watch', verified:false},
-  {rank:40, name:'Tyrique George', age:19, pos:'FWD', club:'Chelsea (loan)', val:'€18m', move:0, elig:'watch', note:'Reported Nigerian heritage — age, exact eligibility status, and parental origin still need verification before this goes further.', verified:'partial'},
-  {rank:41, name:'Chizzy Ezenwata', age:18, pos:'FWD', club:'Chelsea', val:'€3m', move:0, elig:'watch', note:'Reportedly flirted with Nigeria before an England U18 call-up — needs a proper verification pass, not just press mentions.', verified:'partial'},
-  {rank:42, name:'Ugonna Ejiofor', age:23, pos:'FWD', club:'Molde', val:'€1.8m', move:-3, elig:'open', verified:false},
-  {rank:43, name:'Wisdom Osaghae', age:21, pos:'DEF', club:'Vitesse', val:'€1.4m', move:2, elig:'watch', verified:false},
-  {rank:44, name:'Chuka Nwabueze', age:22, pos:'GK', club:'Standard Liège', val:'€1m', move:0, elig:'open', verified:false},
-  {rank:45, name:'Ola Fatukasi', age:21, pos:'MID', club:'Randers', val:'€1.6m', move:-1, elig:'open', verified:false},
-  {rank:46, name:'Marvellous Iheukwumere', age:18, pos:'FWD', club:'Anderlecht U21', val:'€900k', move:6, elig:'watch', verified:false},
-  {rank:47, name:'David Okereke Jr.', age:22, pos:'DEF', club:'Trabzonspor', val:'€1.3m', move:-1, elig:'open', verified:false},
-  {rank:48, name:'Femi Adekanye', age:20, pos:'MID', club:'Slavia Prague', val:'€1.1m', move:1, elig:'open', verified:false},
-  {rank:49, name:'Uche Ibekwe', age:21, pos:'FWD', club:'KV Mechelen', val:'€800k', move:0, elig:'open', verified:false},
-  {rank:50, name:'William Troost-Ekong', age:32, pos:'DEF', club:'Besiktas', val:'€2m', move:-4, elig:'open', note:'Veteran leadership, but the 2030 cycle needs to belong to the players below him, not above him.', verified:true},
-  {rank:51, name:'David Ozoh', age:21, pos:'MID', club:'Derby County', val:'TBD', move:0, elig:'open', note:'Born Valencia; permanent move to Derby County (from Crystal Palace) completed Sept 2026. Agreed to switch to Nigeria after meeting Chelle toward the end of last season — not a "this week" story, despite how it first got reported to us. Doesn\'t need FIFA clearance, just a letter of release from the English FA (uncapped by England at any level). Chelle is hopeful he\'s cleared before the November window, initially at U23 level for the AFCON U23 qualifiers, not the senior squad.', verified:false},
-  {rank:52, name:'Lesley Ugochukwu', age:22, pos:'MID', club:'Galatasaray (loan from Burnley)', val:'TBD', move:-3, elig:'watch', note:'Real setback: France U21 named him in their squad for 2027 Euro U21 qualifying (announced Sept 18, 2026), despite July reports he\'d started pursuing a Nigerian passport. No official change-of-association step has actually happened yet. His Nigeria tie is through his uncle, ex-Super Eagle Onyekachi Apam. Downgraded from "open" to "watch" — this is trending the wrong way, not confirmed progress.', verified:'partial'},
-  {rank:53, name:'Isaac James', age:'TBD', pos:'DEF', club:'TBD (Portugal)', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
-  {rank:54, name:'George Ilenikhena', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
-  {rank:55, name:'Moses Usor', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false}
+  {rank:30, name:'Chibuike Nwaiwu', age:22, pos:'DEF', club:'Trabzonspor', val:'€6.5m', move:0, elig:'open', note:'Center-back, joined Trabzonspor Jan 2026 (previously Wolfsberger AC, Enyimba, Heartland Owerri). Received a provisional Super Eagles call-up for the 2025 AFCON but hasn\'t made his senior debut yet.', verified:true},
+  {rank:31, name:'Tyrique George', age:19, pos:'FWD', club:'Chelsea (loan)', val:'€18m', move:0, elig:'watch', note:'Reported Nigerian heritage — age, exact eligibility status, and parental origin still need verification before this goes further.', verified:'partial'},
+  {rank:32, name:'Chizzy Ezenwata', age:18, pos:'FWD', club:'Chelsea', val:'€3m', move:0, elig:'watch', note:'Reportedly flirted with Nigeria before an England U18 call-up — needs a proper verification pass, not just press mentions.', verified:'partial'},
+  {rank:33, name:'William Troost-Ekong', age:32, pos:'DEF', club:'Besiktas', val:'€2m', move:-4, elig:'open', note:'Veteran leadership, but the 2030 cycle needs to belong to the players below him, not above him.', verified:true},
+  {rank:34, name:'David Ozoh', age:21, pos:'MID', club:'Derby County', val:'TBD', move:0, elig:'open', note:'Born Valencia; permanent move to Derby County (from Crystal Palace) completed Sept 2026. Agreed to switch to Nigeria after meeting Chelle toward the end of last season — not a "this week" story, despite how it first got reported to us. Doesn\'t need FIFA clearance, just a letter of release from the English FA (uncapped by England at any level). Chelle is hopeful he\'s cleared before the November window, initially at U23 level for the AFCON U23 qualifiers, not the senior squad.', verified:false},
+  {rank:35, name:'Lesley Ugochukwu', age:22, pos:'MID', club:'Galatasaray (loan from Burnley)', val:'TBD', move:-3, elig:'watch', note:'Real setback: France U21 named him in their squad for 2027 Euro U21 qualifying (announced Sept 18, 2026), despite July reports he\'d started pursuing a Nigerian passport. No official change-of-association step has actually happened yet. His Nigeria tie is through his uncle, ex-Super Eagle Onyekachi Apam. Downgraded from "open" to "watch" — this is trending the wrong way, not confirmed progress.', verified:'partial'},
+  {rank:36, name:'Isaac James', age:'TBD', pos:'DEF', club:'TBD (Portugal)', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
+  {rank:37, name:'George Ilenikhena', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
+  {rank:38, name:'Moses Usor', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false}
 ];
 
 const LOST_TO_RIVALS = [
