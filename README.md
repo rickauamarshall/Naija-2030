@@ -6,6 +6,8 @@ Read `CLAUDE.md` first if you're picking this up as a dev (human or agent) — i
 
 For cross-agent coordination, read [`docs/agent-handoff.md`](docs/agent-handoff.md) before starting work. It defines the shared handoff log, approval gates, and the boundary between agent recommendations and project-owner decisions.
 
+For the reproducible cloud development environment and future protected publishing setup, read [`docs/cloud-environment.md`](docs/cloud-environment.md).
+
 ## What's in this repo
 
 | Path | What it is |
