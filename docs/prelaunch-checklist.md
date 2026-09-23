@@ -33,14 +33,14 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] Scheduled GitHub Actions workflow for the weekly recap (Monday morning Spain time — see `anonymity-opsec.md`)
 - [ ] Real stats-provider integration — **nothing auto-posts until this exists**; today's Adeniran/LASK-Celtic line was hand-drafted through the real formatter as a one-off, not pulled from a live feed
 - [ ] Real X API credentials + posting-tier decision (check current pricing/limits before committing to a cadence)
-- [ ] `@SuperEaglesTrkr` account setup per `anonymity-opsec.md` (dedicated email, no personal photo, no early cross-linking, 2FA)
-- [ ] First live post
+- [ ] `@SuperEaglesTrkr` account setup per `anonymity-opsec.md` — account is live (Issue №1 posted), but dedicated-email/no-personal-photo/2FA compliance hasn't been confirmed here, so leaving this open rather than assuming
+- [x] First live post — Issue №1 posted to X. This was a manual post of the pre-drafted thread, not the automated stats feed; "Real stats-provider integration" above is still what's needed before anything auto-posts
 
 ## Newsletter
 - [x] Structure/plan drafted (`newsletter-plan.md`) — built from general newsletter conventions since the Nutmeg Soccer reference page was blocked by network egress in-session; revisit if you paste the actual text in
 - [x] Platform account created (beehiiv) — real publication URL still needed to wire up the site's Subscribe link (currently a TODO placeholder in `site/index.html`)
 - [ ] Graphics/video-clip production workflow — not started; needs either manual design each week or a templated approach
-- [ ] First issue
+- [x] First issue — Issue №1 ("The Origin Issue") posted across newsletter, X, and Instagram
 
 ## Editorial / trust
 - [x] "This is opinion, not a neutral algorithm" made explicit, site-wide
