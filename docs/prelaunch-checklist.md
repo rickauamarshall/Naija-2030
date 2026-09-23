@@ -6,12 +6,12 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] Static prototype (`site/index.html`) — pool depth chart, Big Board, staff directory, "Elsewhere," "Why This Exists" tabs
 - [x] Header countdown clocks wired to real, confirmed fixture dates (Madagascar Sept 25, Guinea-Bissau MD2 Sept 29, Russia friendly Oct 6) — 2030 WCQ card stays a static "DATE TBD" since CAF hasn't published a calendar; no fake countdown shown
 - [x] Renamed the "Methodology" tab to "Why This Exists" and cut the ranking-formula breakdown and "A note on subjectivity" copy per project owner's call — just the mission statement stays. The verified/unverified/partial badges on the Big Board are the actual enforcement mechanism regardless of what explanatory copy sits next to them; this only removed prose, not the gate itself.
-- [x] Newsletter signup link in the ticker bar — **placeholder URL, not live yet**
+- [ ] Live newsletter signup link in the ticker bar — currently a placeholder URL; replace it after the Beehiiv publication URL is finalized
 - [x] X follow link in the ticker bar (`@SuperEaglesTrkr`)
 - [x] "Chelle's Squad" tab — the real, announced squad for each fixture window, cross-checked live against FORMATION/BOARD (computed at render time from a Set of pool names, not hardcoded) so the tracked/untracked badges can't silently go stale
 - [x] Removed two literal `[Add: ...]` placeholder entries from the public Staff tab (Scouting & Data, Medical & Performance) — found by Codex's audit. Tracking the actual research gap here instead of leaving a raw TODO live: **still need real names for** (a) diaspora scouts/recruitment analysts at CIES or club scouting departments, (b) club-level sports scientists/physios of Nigerian origin. Add back as real entries once researched, not as placeholders.
 - [x] Masthead player count and Big Board rank-range header are now computed from the live `FORMATION`/`BOARD` arrays via JS, not hardcoded strings — can't drift out of sync with the data again the way "50 PLAYERS" / "(27–50)" did
-- [x] `server/src/config/pool.js` was badly stale (still had all 17 purged fabricated names, including the Iheukwumere misattribution, plus 6 stale club names) — resynced by hand to match current site data. Its own header comment still flags the real fix: generate this file from `site/index.html` instead of hand-maintaining both in parallel.
+- [x] `server/src/config/pool.js` was badly stale (still had all 17 purged fabricated names, including the Iheukwumere misattribution, plus 6 stale club names) — resynced by hand to match the current 38-player site pool. Its own header comment still flags the real fix: generate this file from `site/index.html` instead of hand-maintaining both in parallel.
 - [x] GitHub Pages deploy workflow added (`.github/workflows/pages.yml`) — **one manual step still needed**: repo Settings → Pages → Source → "GitHub Actions" (can't be set from a workflow file, needs a human with repo admin access to click it once). Once that's flipped, the site goes live at the repo's Pages URL on every push to `site/`.
 - [ ] Custom domain, if wanted — WHOIS privacy on registration (see `anonymity-opsec.md`)
 - [ ] Real view counter backend — current one uses the artifact-preview environment's `window.storage`, which won't exist once actually deployed (flagged in the original handover, still open)
@@ -27,7 +27,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 
 ## Tweet-feed / X automation
 - [x] Position-based formatter (GK/DEF/MID/FWD) — tested, matches the Osimhen reference example exactly
-- [x] Full 50-player pool config (`server/src/config/pool.js`)
+- [x] Current 38-player pool config (`server/src/config/pool.js`)
 - [x] Mock provider, weekly recap aggregation, dry-run demo (`npm run demo`, `npm run recap`)
 - [x] Scheduled GitHub Actions workflow for the weekly recap (Monday morning Spain time — see `anonymity-opsec.md`)
 - [ ] Real stats-provider integration — **nothing auto-posts until this exists**; today's Adeniran/LASK-Celtic line was hand-drafted through the real formatter as a one-off, not pulled from a live feed
