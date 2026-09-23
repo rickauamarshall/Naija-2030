@@ -205,6 +205,13 @@
   }
   .row{ display:flex; justify-content:space-around; align-items:center; gap:8px; }
   .slot{ display:flex; flex-direction:column; align-items:center; cursor:pointer; }
+
+  /* Squad pitch (Chelle's Squad tab) can have more players per position
+     row than the 11-man FORMATION pitch, so it needs to wrap instead of
+     overflowing the fixed-height frame on narrow screens. */
+  .squad-pitch{ min-height:auto; }
+  .squad-pitch .rows{ height:auto; gap:18px; }
+  .squad-pitch .row{ flex-wrap:wrap; row-gap:14px; }
   .badge{
     width:52px; height:52px; border-radius:50%;
     background:var(--paper);
@@ -324,6 +331,7 @@
   <div class="ticker-left">
     <div class="brandmark">SUPER EAGLES TRACKER ⚽ ONE POOL</div>
     <a class="ticker-link" href="https://x.com/SuperEaglesTrkr" target="_blank" rel="noopener">Follow @SuperEaglesTrkr</a>
+    <a class="ticker-link" href="https://www.instagram.com/supereaglestracker" target="_blank" rel="noopener">Follow on Instagram</a>
     <!-- TODO: replace with the real newsletter signup URL once the publication exists (beehiiv or similar) — see docs/newsletter-plan.md -->
     <a class="ticker-link" href="https://TODO-newsletter-signup-url.example/subscribe" target="_blank" rel="noopener">Subscribe to the newsletter</a>
   </div>
@@ -332,7 +340,7 @@
 
 <header class="masthead">
   <div class="masthead-inner">
-    <div class="eyebrow">// TRACKING THE BEST AVAILABLE SUPER EAGLES · CYCLE 2030</div>
+    <div class="eyebrow">// TRACKING THE BEST AVAILABLE SUPER EAGLES · <span id="totalPlayerCount">—</span> PLAYERS TRACKED · CYCLE 2030</div>
     <h1 class="title"><em>ONE POOL.</em><br>FWC30 QUALIFICATION AT ALL COSTS.</h1>
     <p class="sub">A weekly view of Nigeria's player pool, including established internationals, emerging players and eligible dual nationals. Form, market value and eligibility context in one place. Independent and not affiliated with the NFF.</p>
 
@@ -426,7 +434,7 @@
         <p>The September selection, with the S.E.T. Pool alongside it.</p>
       </div>
     </div>
-    <div class="pitch-wrap" style="margin-bottom:24px;">
+    <div class="pitch-wrap squad-pitch" style="margin-bottom:24px;">
       <div class="pitch-frame"></div>
       <div class="rows" id="chellePitchRows"></div>
     </div>
