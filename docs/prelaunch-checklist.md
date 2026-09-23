@@ -3,9 +3,9 @@
 Living done-vs-outstanding tracker — prefer this over re-deriving status from chat history. Update it whenever something here changes state.
 
 ## Site
-- [x] Static prototype (`site/index.html`) — pool depth chart, Big Board, staff directory, "Elsewhere," Methodology tabs
+- [x] Static prototype (`site/index.html`) — pool depth chart, Big Board, staff directory, "Elsewhere," "Why This Exists" tabs
 - [x] Header countdown clocks wired to real, confirmed fixture dates (Madagascar Sept 25, Guinea-Bissau MD2 Sept 29, Russia friendly Oct 6) — 2030 WCQ card stays a static "DATE TBD" since CAF hasn't published a calendar; no fake countdown shown
-- [x] Editorial-stance disclosure (masthead line + Methodology tab "A note on subjectivity") — rankings are opinion informed by the formula, not dictated by it; eligibility badges stay fact-only and human-verified
+- [x] Renamed the "Methodology" tab to "Why This Exists" and cut the ranking-formula breakdown and "A note on subjectivity" copy per project owner's call — just the mission statement stays. The verified/unverified/partial badges on the Big Board are the actual enforcement mechanism regardless of what explanatory copy sits next to them; this only removed prose, not the gate itself.
 - [x] Newsletter signup link in the ticker bar — **placeholder URL, not live yet**
 - [x] X follow link in the ticker bar (`@SuperEaglesTrkr`)
 - [ ] Real hosting + deploy (Netlify/Vercel/Cloudflare Pages/GitHub Pages) — today it's a local file only, nothing to link X to yet

@@ -7,7 +7,8 @@
   "scripts": {
     "test": "node --test",
     "demo": "node src/jobs/demo.js",
-    "recap": "node src/jobs/weeklyRecapCli.js"
+    "recap": "node src/jobs/weeklyRecapCli.js",
+    "publish-issue": "node src/jobs/publishIssueCli.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
