@@ -1,4 +1,4 @@
-# NAIJA 2030 — Issue №2
+# Super Eagles Tracker — Issue №2
 **September 22, 2026**
 
 ## Squad Week: Chelle Names Two Very Different Groups
@@ -106,6 +106,6 @@ We'll have a clean update the moment FIFA rules either way.
 >
 > Link in bio for the full breakdown + the NFF presidency update (yes, there's a real frontrunner now).
 >
-> #SuperEagles #NAIJA2030 #NFF #AFCON2027
+> #SuperEagles #SuperEaglesTracker #NFF #AFCON2027
 
 **Suggested visual:** a simple split-card graphic — left half "AFCON SQUAD" with the 5 headline names, right half "RUSSIA SQUAD" with the 3 debutants, using the site's pitch-green/gold palette. I haven't built this graphic yet — say the word and I'll put together a quick on-brand image, or you can hand-build it in Canva against `assets/profile_badge.png`'s color palette (pitch green `#0E3B2E`, gold `#C99B3F`, clay `#A6432D`).

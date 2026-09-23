@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NAIJA 2030 — The Super Eagles Shadow Pool</title>
+<title>Super Eagles Tracker — The Super Eagles Shadow Pool</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -322,7 +322,7 @@
 
 <div class="ticker">
   <div class="ticker-left">
-    <div class="brandmark">NAIJA 2030 ⚽ SHADOW POOL</div>
+    <div class="brandmark">SUPER EAGLES TRACKER ⚽ SHADOW POOL</div>
     <a class="ticker-link" href="https://x.com/SuperEaglesTrkr" target="_blank" rel="noopener">Follow @SuperEaglesTrkr</a>
     <!-- TODO: replace with the real newsletter signup URL once the publication exists (beehiiv or similar) — see docs/newsletter-plan.md -->
     <a class="ticker-link" href="https://TODO-newsletter-signup-url.example/subscribe" target="_blank" rel="noopener">Subscribe to the newsletter</a>
@@ -478,7 +478,7 @@
 
 </main>
 
-<footer>NAIJA 2030 IS A FAN-BUILT ADVOCACY PROTOTYPE · NOT AFFILIATED WITH THE NFF, CAF OR FIFA · DATA SHOWN IS ILLUSTRATIVE SAMPLE DATA</footer>
+<footer>SUPER EAGLES TRACKER IS A FAN-BUILT ADVOCACY PROTOTYPE · NOT AFFILIATED WITH THE NFF, CAF OR FIFA · DATA SHOWN IS ILLUSTRATIVE SAMPLE DATA</footer>
 
 <script>
 /* ---------------- VIEW COUNTER ---------------- */
@@ -486,11 +486,11 @@
   try{
     let count = 0;
     try{
-      const res = await window.storage.get('naija2030_views', true);
+      const res = await window.storage.get('supereaglestracker_views', true);
       count = parseInt(res.value,10) || 0;
     }catch(e){ count = 0; }
     count += 1;
-    await window.storage.set('naija2030_views', String(count), true);
+    await window.storage.set('supereaglestracker_views', String(count), true);
     document.getElementById('viewCount').textContent = count.toLocaleString();
   }catch(e){
     document.getElementById('viewCount').textContent = '1';

@@ -1,4 +1,4 @@
-# NAIJA 2030 — Launch Package (Issue №1)
+# Super Eagles Tracker — Launch Package (Issue №1)
 
 **Updated Sept 22, 2026** — this file was originally drafted Sept 18 for a
 Friday launch that didn't happen. Several things in the original draft were
@@ -22,16 +22,18 @@ complementary.
    anything sourced from the site into an email.
 3. Set the newsletter's sender name / reply-to to the project alias, not a
    personal address (see `docs/anonymity-opsec.md`).
-4. Decide before sending: is the public-facing brand "NAIJA 2030" or "Super
-   Eagles Tracker"? The site uses NAIJA 2030; your Beehiiv handle and the
-   profile badge both say Super Eagles Tracker. Pick one for the masthead —
-   this draft uses NAIJA 2030 to match the site and Issue №2.
+4. ~~Decide the public-facing brand~~ — done: **Super Eagles Tracker**,
+   matching your Beehiiv handle and the profile badge. The site's copy has
+   been updated to match (it briefly said "NAIJA 2030" from an earlier
+   session's rebrand). The GitHub repo itself is still named `naija-2030`
+   and doesn't need to change — that's just a URL, not the reader-facing
+   brand.
 
 ---
 
 ## Issue №1 — Newsletter (email-ready draft)
 
-# NAIJA 2030 — Issue №1
+# Super Eagles Tracker — Issue №1
 **The Origin Issue**
 
 ## Why This Exists

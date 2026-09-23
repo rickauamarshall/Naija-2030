@@ -29,7 +29,7 @@ async function buildWeeklyRecap() {
   });
 
   const text = [
-    'NAIJA 2030 Weekly Recap',
+    'Super Eagles Tracker Weekly Recap',
     '',
     ...lines,
     '',

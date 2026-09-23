@@ -1,8 +1,8 @@
 {
-  "name": "naija2030-server",
+  "name": "supereaglestracker-server",
   "version": "0.1.0",
   "private": true,
-  "description": "Match-day tweet feed and weekly recap service for NAIJA 2030.",
+  "description": "Match-day tweet feed and weekly recap service for Super Eagles Tracker.",
   "main": "src/jobs/demo.js",
   "scripts": {
     "test": "node --test",

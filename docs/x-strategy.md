@@ -2,7 +2,7 @@
 
 ## Positioning
 
-NAIJA 2030 is a data-forward, receipts-first fan account — not a hot-takes account, not an NFF mouthpiece, not an anonymous complaint page. The voice earns trust the same way the site does: numbers first, sourced, transparent about what's verified vs. not. That's also what makes it *hard to dismiss* — the whole point of "legitimacy for leverage" is that a federation, a journalist, or a rival account can't wave it away as noise. Every post should survive the question "could this be screenshotted and stand up?"
+Super Eagles Tracker is a data-forward, receipts-first fan account — not a hot-takes account, not an NFF mouthpiece, not an anonymous complaint page. The voice earns trust the same way the site does: numbers first, sourced, transparent about what's verified vs. not. That's also what makes it *hard to dismiss* — the whole point of "legitimacy for leverage" is that a federation, a journalist, or a rival account can't wave it away as noise. Every post should survive the question "could this be screenshotted and stand up?"
 
 Bio-level framing (site footer already sets the tone, mirror it in the X bio): *fan-built, independent tracker of Nigeria's best-available Super Eagles pool. Not affiliated with the NFF, CAF, or FIFA.* Say this once, clearly, and don't relitigate it in every post — but never let a post imply official status either.
 
