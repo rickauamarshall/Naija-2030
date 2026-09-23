@@ -45,7 +45,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 ## Editorial / trust
 - [x] "This is opinion, not a neutral algorithm" made explicit, site-wide
 - [x] `verified_by_human` gate preserved for eligibility claims specifically — kept conceptually separate from ranking judgment calls, which are allowed to be subjective
-- [ ] Adeniran's new Big Board rank — waiting on the project owner's call by the weekend
+- [ ] Adeniran's new Big Board rank — still open, awaiting the project owner's ranking call (no fixed date; the pool ranking is still being sorted)
 
 ## Anonymity / ops-sec
 - [x] Scope decided: public-facing only, not the private repo

@@ -1,6 +1,6 @@
-# Super Eagles Tracker — The Super Eagles Shadow Pool
+# Super Eagles Tracker
 
-A public, weekly-updated depth chart of every uncapped or Nigeria-eligible player good enough to wear the Super Eagles shirt — ranked by form, market value, and how much time is left before someone else takes them. Fan-built. Not affiliated with the NFF, CAF, or FIFA.
+A weekly view of Nigeria's Super Eagles player pool — established internationals, emerging players, and eligible dual nationals — ranked by form, market value, and how much time is left before someone else takes them. Fan-built. Not affiliated with the NFF, CAF, or FIFA.
 
 Read `CLAUDE.md` first if you're picking this up as a dev (human or agent) — it has the data model, hard rules, and a validation check to run after any player-data edit.
 
