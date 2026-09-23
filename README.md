@@ -4,6 +4,8 @@ A public, weekly-updated depth chart of every uncapped or Nigeria-eligible playe
 
 Read `CLAUDE.md` first if you're picking this up as a dev (human or agent) — it has the data model, hard rules, and a validation check to run after any player-data edit.
 
+For cross-agent coordination, read [`docs/agent-handoff.md`](docs/agent-handoff.md) before starting work. It defines the shared handoff log, approval gates, and the boundary between agent recommendations and project-owner decisions.
+
 ## What's in this repo
 
 | Path | What it is |
