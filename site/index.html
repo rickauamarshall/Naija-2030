@@ -51,6 +51,8 @@
     font-family:'IBM Plex Mono',monospace;
     font-size:12px;
     letter-spacing:0.04em;
+    position:relative;
+    z-index:5;
   }
   .ticker-left{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
   .ticker .brandmark{
@@ -284,6 +286,7 @@
   .source-links{ margin-top:5px; font-size:10.5px; color:var(--ink-soft); }
   .source-links a{ color:var(--gold); text-decoration:none; border-bottom:1px dotted currentColor; margin-right:8px; }
   .source-links a:hover{ color:var(--clay); }
+  .source-pending{ color:#8a8375; font-style:italic; }
   .pos-chip{
     font-family:'IBM Plex Mono',monospace; font-size:10px; background:var(--pitch); color:var(--line);
     padding:2px 6px; border-radius:3px; display:inline-block;
@@ -330,12 +333,12 @@
 </head>
 <body>
 
-<div class="ticker">
+<div class="ticker" aria-label="Super Eagles Tracker social links">
   <div class="ticker-left">
     <div class="brandmark">SUPER EAGLES TRACKER ⚽ ONE POOL</div>
-    <a class="ticker-link" href="https://x.com/SuperEaglesTrkr" target="_blank" rel="noopener">Follow @SuperEaglesTrkr</a>
-    <a class="ticker-link" href="https://www.instagram.com/supereaglestracker" target="_blank" rel="noopener">Follow on Instagram</a>
-    <a class="ticker-link" href="https://supereaglestracker.beehiiv.com/subscribe" target="_blank" rel="noopener">Subscribe to the newsletter</a>
+    <a class="ticker-link" href="https://x.com/SuperEaglesTrkr" target="_blank" rel="noopener">X · @SuperEaglesTrkr</a>
+    <a class="ticker-link" href="https://www.instagram.com/supereaglestracker" target="_blank" rel="noopener">Instagram · @supereaglestracker</a>
+    <a class="ticker-link" href="https://supereaglestracker.beehiiv.com/subscribe" target="_blank" rel="noopener">Newsletter · Subscribe</a>
   </div>
   <div class="views">PAGE VIEWS · <b class="mono" id="viewCount">—</b></div>
 </div>
@@ -433,12 +436,17 @@
     <div class="section-head">
       <div>
         <h2>Chelle's September Friendly Squad</h2>
-        <p>The September selection, with the S.E.T. Pool alongside it.</p>
+        <p>The September selection, shown in a default 4-4-2 reference shape. Click a position to open that depth group.</p>
       </div>
     </div>
     <div class="pitch-wrap squad-pitch" style="margin-bottom:24px;">
       <div class="pitch-frame"></div>
       <div class="rows" id="chellePitchRows"></div>
+    </div>
+    <div class="depth-panel" id="chelleDepthPanel">
+      <span class="pos-tag" id="chelleDepthPos"></span>
+      <h3 id="chelleDepthTitle"></h3>
+      <ul class="depth-list" id="chelleDepthList"></ul>
     </div>
     <div id="chelleGroups"></div>
   </section>
@@ -645,6 +653,49 @@ const DIASPORA_ELSEWHERE = [
   {name:'Michael Olise', team:'France', detail:'Nigerian father, Algerian mother. Born and developed in England, debuted for France in 2024.'}
 ];
 
+/* Exact Wikidata matches confirmed during the source audit. Keep this map
+   explicit: a search result is not enough when names are ambiguous. */
+const WIKIDATA_SOURCES = {
+  'Honest Ahanor': 'Q129796620', 'Ifeanyi Ndukwe': 'Q135583601',
+  'Benjamin Fredrick': 'Q118957173', 'Emeka Adiele': 'Q138007130',
+  'Ethan Nwaneri': 'Q114027518', 'Frank Onyeka': 'Q56292818',
+  'Peter Etebo': 'Q16733640', 'Samuel Chukwueze': 'Q57017297',
+  'Taiwo Awoniyi': 'Q20932574', 'Kelechi Iheanacho': 'Q15506789',
+  'William Troost-Ekong': 'Q15884045', 'Moses Simon': 'Q15900645',
+  'Wilfred Ndidi': 'Q19587938', 'Bright Osayi-Samuel': 'Q19972631',
+  'Maduka Okoye': 'Q66700393', 'Zaidu Sanusi': 'Q67616315',
+  'Ola Aina': 'Q20730338', 'Alex Iwobi': 'Q21091691',
+  'Ademola Lookman': 'Q21484766', 'Victor Osimhen': 'Q25253293',
+  'Akor Adams': 'Q62059870', 'Calvin Bassey': 'Q97059010',
+  'Tolu Arokodare': 'Q98509530', 'Lesley Ugochukwu': 'Q106366721',
+  'David Ozoh': 'Q116285341', 'Raphael Onyedika': 'Q107985602',
+  'Oluwaseun Adewumi': 'Q112112780', 'Moses Usor': 'Q113451992',
+  'George Ilenikhena': 'Q116060328', 'Tyrique George': 'Q123002942',
+  'Jeff Ekhator': 'Q128895710', 'Chibuike Nwaiwu': 'Q130235116',
+  'Rio Ngumoha': 'Q131466230', 'Rayan Oyebade': 'Q139899308'
+};
+function attachWikidataSource(player){
+  const id = WIKIDATA_SOURCES[player.name];
+  if(!id) return;
+  player.sources = [...(player.sources || []), {label:'Wikidata', url:`https://www.wikidata.org/wiki/${id}`}];
+}
+const VERIFIED_PLAYER_SOURCES = {
+  'George Ilenikhena': {label:'AS Monaco player profile', url:'https://www.asmonaco.com/en/joueurs/george-ilenikhena'},
+  'Moses Usor': {label:'UEFA player profile', url:'https://www.uefa.com/uefachampionsleague/clubs/players/250174644--moses-usor/'},
+  'Stanley Nwabali': {label:'NFF squad announcement', url:'https://thenff.com/international-friendly-ndidi-simon-nwabali-lead-super-eagles-to-nizhny-novgorod-for-russia/'}
+};
+function attachVerifiedPlayerSource(player){
+  const source = VERIFIED_PLAYER_SOURCES[player.name];
+  if(!source || (player.sources || []).some(s=>s.url===source.url)) return;
+  player.sources = [...(player.sources || []), source];
+}
+FORMATION.forEach(row => row.slots.forEach(slot => {
+  attachWikidataSource(slot.main);
+  attachVerifiedPlayerSource(slot.main);
+  slot.depth.forEach(attachWikidataSource);
+  slot.depth.forEach(attachVerifiedPlayerSource);
+}));
+
 /* ---------------- RENDER PITCH ---------------- */
 const rowsEl = document.getElementById('pitchRows');
 FORMATION.forEach((row, ri)=>{
@@ -658,6 +709,7 @@ FORMATION.forEach((row, ri)=>{
       <div class="name">${slot.main.name}</div>
       <div class="club">${slot.main.club} · ${slot.main.age}y</div>
       <div class="depthcount">+${slot.depth.length} in reserve</div>
+      ${sourceLinks(slot.main.sources)}
     `;
     s.addEventListener('click', ()=>openDepth(row.pos, slot));
     rowDiv.appendChild(s);
@@ -684,7 +736,7 @@ const SOURCE_URLS = {
   cafOsimhen: 'https://www.cafonline.com/afcon2025/news/nigeria-confirm-osimhen-absence-for-opening-afcon-2027-qualifiers-as-striker-continues-recovery/'
 };
 function sourceLinks(sources){
-  if(!sources || !sources.length) return '';
+  if(!sources || !sources.length) return '<div class="source-links source-pending">Sources: pending verification</div>';
   return `<div class="source-links">Sources: ${sources.map(source => `<a href="${source.url}" target="_blank" rel="noopener">${source.label} ↗</a>`).join('')}</div>`;
 }
 function renderWatchNote(list, p){
@@ -705,13 +757,13 @@ function openDepth(pos, slot){
   const list = document.getElementById('depthList');
   list.innerHTML = '';
   const starterLi = document.createElement('li');
-  starterLi.innerHTML = `<div class="l"><span class="rank">①</span><b>${slot.main.name}</b><span class="club">${slot.main.club} · ${slot.main.age}y</span></div><span class="val">${slot.main.val}</span>`;
+  starterLi.innerHTML = `<div class="l"><span class="rank">①</span><b>${slot.main.name}</b><span class="club">${slot.main.club} · ${slot.main.age}y</span>${sourceLinks(slot.main.sources)}</div><span class="val">${slot.main.val}</span>`;
   list.appendChild(starterLi);
   renderWatchNote(list, slot.main);
   slot.depth.forEach((p,i)=>{
     const li = document.createElement('li');
     if(p.trend==='down') li.classList.add('flag-age');
-    li.innerHTML = `<div class="l"><span class="rank">${i+2}</span>${p.name}<span class="club">${p.club} · ${p.age}y</span></div><span class="val">${p.val} ${p.trend==='up'?'▲':p.trend==='down'?'▼':'—'}</span>`;
+    li.innerHTML = `<div class="l"><span class="rank">${i+2}</span>${p.name}<span class="club">${p.club} · ${p.age}y</span>${sourceLinks(p.sources)}</div><span class="val">${p.val} ${p.trend==='up'?'▲':p.trend==='down'?'▼':'—'}</span>`;
     list.appendChild(li);
     renderWatchNote(list, p);
   });
@@ -725,6 +777,13 @@ const head = document.createElement('div');
 head.className = 'board-row head';
 head.innerHTML = `<div>#</div><div>Player</div><div>Age</div><div>Pos</div><div>Value</div><div style="text-align:right;">Wk</div>`;
 boardEl.appendChild(head);
+
+FORMATION.forEach(row => row.slots.forEach(slot => {
+  attachWikidataSource(slot.main);
+  slot.depth.forEach(attachWikidataSource);
+}));
+BOARD.forEach(attachWikidataSource);
+BOARD.forEach(attachVerifiedPlayerSource);
 
 BOARD.forEach(p=>{
   const row = document.createElement('div');
@@ -781,8 +840,9 @@ CHELLE_SQUAD[Object.keys(CHELLE_SQUAD)[0]].forEach(p => {
   p.sources = p.name === 'Victor Osimhen'
     ? [...qualifierSources, {label:'CAF injury update', url:SOURCE_URLS.cafOsimhen}]
     : qualifierSources;
+  attachVerifiedPlayerSource(p);
 });
-CHELLE_SQUAD[Object.keys(CHELLE_SQUAD)[1]].forEach(p => { p.sources = russiaSources; });
+CHELLE_SQUAD[Object.keys(CHELLE_SQUAD)[1]].forEach(p => { p.sources = russiaSources; attachVerifiedPlayerSource(p); });
 
 const POOL_NAMES = new Set();
 FORMATION.forEach(row => row.slots.forEach(slot => {
@@ -828,17 +888,40 @@ Object.entries(CHELLE_SQUAD).forEach(([groupName, players]) => {
 /* ---------------- CHELLE'S SQUAD PITCH ---------------- */
 const chellePitchRowsEl = document.getElementById('chellePitchRows');
 const septemberSquad = CHELLE_SQUAD[Object.keys(CHELLE_SQUAD)[0]];
-['GK','DEF','MID','FWD'].forEach(pos=>{
+function openChelleDepth(pos, players){
+  const panel = document.getElementById('chelleDepthPanel');
+  document.getElementById('chelleDepthPos').textContent = pos;
+  document.getElementById('chelleDepthTitle').textContent = `${pos} group · ${players.length} selected`;
+  const list = document.getElementById('chelleDepthList');
+  list.innerHTML = '';
+  players.forEach((player, index) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<div class="l"><span class="rank">${index + 1}</span><b>${player.name}</b><span class="club">Chelle's squad</span>${sourceLinks(player.sources)}</div>`;
+    list.appendChild(li);
+  });
+  panel.classList.add('open');
+  panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+const DEFAULT_442 = [
+  [{label:'GK', pos:'GK'}],
+  [{label:'RB', pos:'DEF'}, {label:'RCB', pos:'DEF'}, {label:'LCB', pos:'DEF'}, {label:'LB', pos:'DEF'}],
+  [{label:'RM', pos:'MID'}, {label:'RCM', pos:'MID'}, {label:'LCM', pos:'MID'}, {label:'LM', pos:'MID'}],
+  [{label:'RST', pos:'FWD'}, {label:'LST', pos:'FWD'}]
+];
+DEFAULT_442.forEach(line=>{
   const rowDiv = document.createElement('div');
   rowDiv.className = 'row';
-  septemberSquad.filter(p=>p.pos===pos).forEach(player=>{
+  line.forEach(({label, pos})=>{
+    const players = septemberSquad.filter(p=>p.pos===pos);
     const s = document.createElement('div');
     s.className = 'slot';
     s.innerHTML = `
-      <div class="badge ${pos==='GK'?'gk':''}">${pos==='GK'?'GK':player.name.split(' ').map(n=>n[0]).join('').slice(0,2)}</div>
-      <div class="name">${player.name}${player.captain ? ' (C)' : ''}</div>
-      <div class="club">${pos}</div>
+      <div class="badge ${pos==='GK'?'gk':''}">${label}</div>
+      <div class="name">${pos} depth</div>
+      <div class="club">${players.length} selected</div>
+      <div class="depthcount">Click to expand</div>
     `;
+    s.addEventListener('click', ()=>openChelleDepth(pos, players));
     rowDiv.appendChild(s);
   });
   chellePitchRowsEl.appendChild(rowDiv);
