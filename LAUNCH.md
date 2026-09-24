@@ -6,13 +6,17 @@
 
 ---
 
-*[Editorial note: recheck this figure against the site's live "days since 2018" counter right before sending — it moves daily.]* It's been 3,022 days since the Super Eagles last played in a World Cup.
+It's been 3,022 days since the Super Eagles last played in a World Cup.
 
-I was born in Nigeria. My family moved to the United States by way of Canada in the early 1990s, and even as transplants in a new place, our sense of Nigerian pride and identity never left us — never more than when we gathered around the television watching the Super Eagles take on the best in the world at the 1994 World Cup, and again at the 1996 Olympics, both hosted right here in the country we'd just moved to.
+I was born in Nigeria, and most of my extended family still lives there. My family moved to the United States by way of Canada in the early 1990s, and even as transplants in a new place, our sense of Nigerian pride and identity never left us — never more than when we gathered around the television watching the Super Eagles take on the best in the world at the 1994 World Cup, and again at the 1996 Olympics, both hosted right here in the country we'd just moved to.
+
+This past year, I found myself working in an official capacity with FIFA at this year's World Cup. Being that close to the game, behind the scenes, only sharpened something I already felt: a real sense of missing out, for the country and for a footballing nation as fervent as Nigeria. Few fanbases show up the way ours does — you see it in our fandom of clubs around the world, wearing shirts we've adopted as our own. We deserved to coalesce around our own team, on the biggest stage the World Cup has ever had, in front of the biggest market it's ever reached. Watching that happen without us, from the inside, made me want to take some personal accountability in tracking the path to the next one.
+
+So I built this — site and newsletter both — as a fan of the national team, but also to foster a wider conversation across the Nigerian community and diaspora about how we actually get better: how our talent, at home and abroad, gets a real chance to shine on the world stage. Watching other African nations compete admirably at this World Cup only sharpened that feeling. Nigeria has some of the best to offer, on the continent and in the world, and a lot of that runs through blood, not borders — which is part of why this site tracks Nigerian ancestry as closely as it tracks the domestic pool, players carrying other flags and other nationalities included. How far Nigerian identity runs through this sport, everywhere it's played, is something worth being proud of.
 
 Nigeria has been a giant of African football for as long as I can remember. But lately, it's a resting giant. Missing the last two World Cups isn't a rough patch — it's a crisis, and it deserves to be treated like one.
 
-That's not a random thing to say before launching a depth chart and a ranked board of players. It's the reason this exists. If the talent is still there — and it plainly is — then someone has to keep honest, public score of it, and of the federation trying to find its way back. That's what this is: a weekly, receipts-first look at the players Nigeria could call on and the federation trying to reform itself around them. Independent. Not affiliated with the NFF, CAF, or FIFA. Let's get into it.
+That's what this is: a weekly, receipts-first look at the players Nigeria could call on and the federation trying to reform itself around them. Independent. This project isn't produced, endorsed, or authorized by the NFF, CAF, or FIFA. Let's get into it.
 
 ## Headlines
 

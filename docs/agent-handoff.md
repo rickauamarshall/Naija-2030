@@ -70,6 +70,31 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-24 — Claude — Issue №1 rewritten in first-person, ready to paste into Beehiiv
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / see commit below
+
+### Changed
+- `LAUNCH.md` and `ISSUE-01-for-beehiiv.html`: replaced the third-person cold-open with a live-data hook ("It's been 3,022 days since the Super Eagles last played in a World Cup" — recompute against the site's live `clockDrought` counter before actually sending, this figure moves daily) followed by the project owner's own first-person story, worked out directly with them over several rounds this session: born in Nigeria, family's move to the US via Canada in the early '90s, Nigerian identity through the '94 World Cup and '96 Olympics, this year's World Cup experience, and a "giant / resting giant" pivot into the crisis framing that motivated the tracker. Headlines, Feature of the Week, and Eligibility Watchlist sections are unchanged.
+- Also fixed a real inconsistency the project owner caught: the closing disclaimer said "Not affiliated with... FIFA" directly under a paragraph describing their own FIFA-adjacent work — reworded to "This project isn't produced, endorsed, or authorized by the NFF, CAF, or FIFA," which states the project's institutional independence without contradicting the personal paragraph above it.
+
+### Checked
+- Both files kept in sync line-for-line for this passage.
+- No player/eligibility data touched — this is copy-only, `scripts/validate.py` unaffected.
+
+### Findings
+- The repo's Beehiiv integration (`server/src/poster/beehiivClient.js` / `publishIssueCli.js`) can only create a new post — it has no read/update path for an existing one. Deliberately did **not** run it, to avoid creating a duplicate "Issue №1" post alongside whatever's already in the account. `ISSUE-01-for-beehiiv.html` is the copy-paste-ready version (has its own "select all, paste into beehiiv" instructions built into the page) — that's the intended path in.
+
+### Evidence
+- `LAUNCH.md`, `ISSUE-01-for-beehiiv.html`
+
+### Owner decision needed
+- None — the project owner reviewed and directed this content directly, round by round, this session.
+
+### Next agent
+- Codex: paste `ISSUE-01-for-beehiiv.html`'s content into the existing Beehiiv draft/post (replacing the intro through the disclaimer line; Headlines onward is unchanged) using the open Beehiiv browser session. Recompute the "3,022 days" figure against today's date before pasting if any time has passed. Then the project owner wants to move on to reframing Issue №2 as an immediate preview of the upcoming Madagascar/Guinea-Bissau/Russia matches, distinct in tone from Issue №1's origin story — not yet scoped, more to come.
+
 ### 2026-09-24 — Codex — comparative methods, Issue 2 cleanup, and Issue 3 draft
 
 Status: `READY_FOR_REVIEW`
