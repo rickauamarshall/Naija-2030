@@ -436,8 +436,8 @@
   <section class="view active" id="chelle">
     <div class="section-head">
       <div>
-        <h2>Chelle's September Friendly Squad</h2>
-        <p>The September selection, shown in a default 4-4-2 reference shape. Click a position to open that depth group.</p>
+        <h2>Chelle's AFCON Qualifying Squad</h2>
+        <p>The current competitive selection, shown in a default 4-4-2 reference shape. Click a position to open that depth group.</p>
       </div>
     </div>
     <div class="pitch-wrap squad-pitch" style="margin-bottom:24px;">
@@ -997,7 +997,7 @@ Object.entries(CHELLE_SQUAD).forEach(([groupName, players]) => {
 
 /* ---------------- CHELLE'S SQUAD PITCH ---------------- */
 const chellePitchRowsEl = document.getElementById('chellePitchRows');
-const septemberSquad = CHELLE_SQUAD[Object.keys(CHELLE_SQUAD)[0]];
+const qualifyingSquad = CHELLE_SQUAD[Object.keys(CHELLE_SQUAD)[0]];
 function openChelleDepth(pos, players){
   const panel = document.getElementById('chelleDepthPanel');
   document.getElementById('chelleDepthPos').textContent = pos;
@@ -1022,7 +1022,7 @@ DEFAULT_442.forEach(line=>{
   const rowDiv = document.createElement('div');
   rowDiv.className = 'row';
   line.forEach(({label, pos})=>{
-    const players = septemberSquad.filter(p=>p.pos===pos);
+    const players = qualifyingSquad.filter(p=>p.pos===pos);
     const s = document.createElement('div');
     s.className = 'slot';
     s.innerHTML = `
