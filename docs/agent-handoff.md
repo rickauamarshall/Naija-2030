@@ -70,6 +70,83 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-24 — Claude — Codex reported not seeing recent pushes; diagnosis for Codex to check
+
+Status: `BLOCKED`
+Branch/commit: `main` / `fd3b6b9`
+
+### Changed
+- Nothing — this entry is diagnostic only, in response to the project owner reporting that Codex said it wasn't seeing anything pushed today (the Issue №1 rewrite, the Issue №2 bridge + regenerated HTML export, and the marketing/monetization handover entry below this one).
+
+### Checked
+- `git ls-remote origin main` (live query, bypasses any local cache) confirms `fd3b6b9` is the actual tip of `main` on GitHub right now.
+- Ran the same check against both the pre-rename URL (`rickauamarshall/naija-2030`) and the renamed one (`rickauamarshall/Naija-2030`) — both resolve to the identical commit `fd3b6b9`. So the push genuinely landed; this isn't a silent failure on the pushing side.
+
+### Findings
+- Since the commits are confirmed present on the actual remote, the gap has to be on Codex's side. Most likely, in rough order of likelihood:
+  1. **Stale fetch** — Codex's local clone (if it has one) hasn't run `git fetch origin main` / `git pull` since before these pushes.
+  2. **Wrong branch or a cached browser view** — worth confirming Codex is actually looking at `main`, not a stale PR/branch view or a browser tab loaded before the pushes (a hard refresh, not just re-reading a cached tab, would rule this out).
+  3. **The account-rename issue this file's own repo history has hit before** (see `CLAUDE.md`): this repo's owner was renamed `MLSMDProgram` → `rickauamarshall`. A session or git credential set that started under the old name can behave inconsistently against the renamed repo depending on how it authenticates, even though the GitHub redirect generally makes plain `git push`/`fetch` work. Worth having Codex run `git remote -v` and confirm exactly what URL and credentials it's actually using.
+
+### Evidence
+- `git ls-remote origin main` and `git ls-remote https://github.com/rickauamarshall/Naija-2030 main`, both returning `fd3b6b9a3cfe74924feb291e4f162fec30ae49be refs/heads/main` at the time of this check.
+
+### Owner decision needed
+- None — this is for Codex to act on directly.
+
+### Next agent
+- Codex: run `git remote -v` and `git fetch origin main` (or hard-refresh the GitHub view, if working from a browser) and report back what it finds, rather than assuming the content isn't there.
+
+### 2026-09-24 — Claude — marketing/monetization handover (planning only, nothing live)
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / see below — some referenced files are still uncommitted
+
+### Changed
+- `docs/prelaunch-checklist.md`: added a **Monetization** section (already committed, `0229131`). Candidate paths: Beehiiv Ad Network (needs subscriber scale), a paid Beehiiv subscriber tier (early access / full Big Board / ad-free — price point undecided), opportunistic affiliate links in newsletter Quick Links, a print-on-demand merch storefront, syndicating the original analysis (Comparative Methods tab, the pool-vs-international-comparison blog piece) to bigger Nigerian outlets as bylined pieces linking back, sponsorships, and betting-affiliate revenue specifically. Suggested lowest-to-highest-friction order: affiliate links → merch → paid tier → ad network → syndication → sponsorships → betting-adjacent.
+- `docs/merch-concepts.md` + `assets/merch/*.svg` (six design previews: tee front/back, hoodie front/back, cap, sticker sheet): **drafted but still uncommitted, and merch is currently on hold per the project owner's explicit call.** Don't treat these as in-progress work to pick up — they're parked until the owner says otherwise.
+
+### Findings
+- Two things flagged deliberately and **not** built into any design: (1) `assets/profile_badge.png` (the circular crest with the AFCON-champion star band) reads like an official federation badge — fine as a social avatar, a different risk level on sellable merchandise given the project's no-real-crest / no-implied-affiliation rule, so none of the merch designs use it. (2) No player counts on physical goods — the pool size has already gone stale in public copy once before (the "50 PLAYERS" bug), and merch can't be live-updated the way the site can.
+- Sponsorships were flagged as blocked on a real question, not just a nice-to-have: sponsors typically need a contracting entity and tax ID, which raises the LLC/business-entity question already sitting (unresolved) in `anonymity-opsec.md`'s "If this takes off" section. That should get resolved deliberately before a sponsor conversation forces it.
+- Betting-affiliate revenue was flagged as the one path most likely to undercut the brand's "independent, not doing this for the NFF's benefit" credibility — recommended sequencing it last, if at all, and only on explicit owner sign-off, not as a default monetization option.
+- My recommended starting point when asked directly: merch storefront + opportunistic affiliate links first — both need no new entity/account-risk decisions and no subscriber scale, unlike the ad network or paid tier.
+
+### Evidence
+- `docs/prelaunch-checklist.md` (Monetization section)
+- `docs/merch-concepts.md`, `assets/merch/*.svg` (uncommitted, on hold)
+
+### Owner decision needed
+- None right now — merch is explicitly paused by the owner's own call; nothing here needs action until they revisit it.
+
+### Next agent
+- Don't pick up merch or monetization work without checking with the project owner first — it's parked, not blocked on technical work.
+
+### 2026-09-24 — Claude — Issue №1 rewritten in first-person, ready to paste into Beehiiv
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / see commit below
+
+### Changed
+- `LAUNCH.md` and `ISSUE-01-for-beehiiv.html`: replaced the third-person cold-open with a live-data hook ("It's been 3,022 days since the Super Eagles last played in a World Cup" — recompute against the site's live `clockDrought` counter before actually sending, this figure moves daily) followed by the project owner's own first-person story, worked out directly with them over several rounds this session: born in Nigeria, family's move to the US via Canada in the early '90s, Nigerian identity through the '94 World Cup and '96 Olympics, this year's World Cup experience, and a "giant / resting giant" pivot into the crisis framing that motivated the tracker. Headlines, Feature of the Week, and Eligibility Watchlist sections are unchanged.
+- Also fixed a real inconsistency the project owner caught: the closing disclaimer said "Not affiliated with... FIFA" directly under a paragraph describing their own FIFA-adjacent work — reworded to "This project isn't produced, endorsed, or authorized by the NFF, CAF, or FIFA," which states the project's institutional independence without contradicting the personal paragraph above it.
+
+### Checked
+- Both files kept in sync line-for-line for this passage.
+- No player/eligibility data touched — this is copy-only, `scripts/validate.py` unaffected.
+
+### Findings
+- The repo's Beehiiv integration (`server/src/poster/beehiivClient.js` / `publishIssueCli.js`) can only create a new post — it has no read/update path for an existing one. Deliberately did **not** run it, to avoid creating a duplicate "Issue №1" post alongside whatever's already in the account. `ISSUE-01-for-beehiiv.html` is the copy-paste-ready version (has its own "select all, paste into beehiiv" instructions built into the page) — that's the intended path in.
+
+### Evidence
+- `LAUNCH.md`, `ISSUE-01-for-beehiiv.html`
+
+### Owner decision needed
+- None — the project owner reviewed and directed this content directly, round by round, this session.
+
+### Next agent
+- Codex: paste `ISSUE-01-for-beehiiv.html`'s content into the existing Beehiiv draft/post (replacing the intro through the disclaimer line; Headlines onward is unchanged) using the open Beehiiv browser session. Recompute the "3,022 days" figure against today's date before pasting if any time has passed. Then the project owner wants to move on to reframing Issue №2 as an immediate preview of the upcoming Madagascar/Guinea-Bissau/Russia matches, distinct in tone from Issue №1's origin story — not yet scoped, more to come.
+
 ### 2026-09-24 — Codex — comparative methods, Issue 2 cleanup, and Issue 3 draft
 
 Status: `READY_FOR_REVIEW`
