@@ -42,6 +42,18 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [ ] Graphics/video-clip production workflow — not started; needs either manual design each week or a templated approach
 - [x] First issue — Issue №1 ("The Origin Issue") posted across newsletter, X, and Instagram
 
+## Monetization
+- [ ] Beehiiv Ad Network — passive newsletter ad revenue once subscriber count clears Beehiiv's own eligibility threshold; no sales effort needed, it's a list-size gate
+- [ ] Paid subscriber tier (Beehiiv supports this natively) — candidate perks: early access to the weekly recap before X/IG, the full Big Board with source links, ad-free reading. Needs a price point and a clear value line over the free tier before launch
+- [ ] Affiliate links (Transfermarkt, football streaming, kit/merch) worked into newsletter "Quick Links" sections as relevant products come up — low effort, add opportunistically rather than forcing it
+- [ ] Print-on-demand merch storefront (Printful/Teespring or similar) using existing brand assets (`assets/profile_badge.png`, `assets/ig-carousel-tactics.png`) and the "RISE, EAGLES, RISE." campaign line — no upfront inventory cost
+- [ ] Syndication of original analysis (the Comparative Methods tab, the pool-vs-international-comparison blog piece) to larger Nigerian sports outlets as bylined guest pieces linking back to the site — a credibility/traffic play more than direct revenue
+- [ ] Sponsorships (boot brands, African fintech/betting, diaspora businesses) — **do not pursue until the entity question is resolved.** Sponsors typically require a real contracting party and tax ID, which raises the LLC/business-entity question already flagged in `anonymity-opsec.md`'s "If this takes off" section. Resolve that structurally before a sponsor conversation forces it, not during one
+- [ ] Betting-affiliate revenue specifically — handle with care rather than as a default option. The brand's credibility rests on "independent, receipts over vibes, not doing this for the NFF's benefit"; betting money is the one revenue path most likely to read as compromising that. Sequence it (if at all) after subscriptions/merch/affiliate links are established, and only on the project owner's explicit call
+
+### Suggested sequencing
+Lowest-friction first: affiliate links → merch storefront → paid subscriber tier → ad network (needs subscriber scale) → syndication → sponsorships (needs the entity/LLC question resolved first) → betting-adjacent revenue (owner call required, handle with care).
+
 ## Editorial / trust
 - [x] "This is opinion, not a neutral algorithm" made explicit, site-wide
 - [x] `verified_by_human` gate preserved for eligibility claims specifically — kept conceptually separate from ranking judgment calls, which are allowed to be subjective
