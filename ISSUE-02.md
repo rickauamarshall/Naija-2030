@@ -70,6 +70,7 @@ Rise, Eagles, Rise. One Pool. FWC30 Qualification at All Costs.
 - [NFF qualifier squad announcement](https://thenff.com/afcon-2027-race-chelle-invites-ndidi-osimhen-iwobi-21-others-for-barea-wild-dogs/)
 - [NFF Russia friendly squad announcement](https://thenff.com/international-friendly-ndidi-simon-nwabali-lead-super-eagles-to-nizhny-novgorod-for-russia/)
 - [CAF update on Osimhen's absence](https://www.cafonline.com/afcon2025/news/nigeria-confirm-osimhen-absence-for-opening-afcon-2027-qualifiers-as-striker-continues-recovery/)
+- [Live Super Eagles Tracker](https://supereaglestracker.com/)
 - Follow along on [X](https://x.com/SuperEaglesTrkr) and [Instagram](https://www.instagram.com/supereaglestracker/)
 
 ---
@@ -118,7 +119,7 @@ Rise, Eagles, Rise. One Pool. FWC30 Qualification at All Costs.
 
 > Full issue: [LINK]
 >
-> Follow the tracker on X and Instagram for verified updates through the window.
+> Follow the tracker on [X](https://x.com/SuperEaglesTrkr) and [Instagram](https://www.instagram.com/supereaglestracker/) for verified updates through the window. The live pool and depth chart are at [supereaglestracker.com](https://supereaglestracker.com/).
 
 > Rise, Eagles, Rise.
 
