@@ -4,6 +4,8 @@
 
 **September 24, 2026**
 
+Last issue, I told you why I built this. That story isn't going anywhere — but the reason it exists starts playing out for real tomorrow. Nigeria's first test of this AFCON 2027 qualifying campaign kicks off against Madagascar, with Guinea-Bissau and a Russia friendly right behind it. Here's what I'm actually watching for.
+
 Nigeria opens its 2027 Africa Cup of Nations qualifying campaign against Madagascar on Friday, September 25, then travels to Guinea-Bissau for the second match on Tuesday, September 29. A separate group will face Russia in Nizhny Novgorod on October 6.
 
 The three-match window gives us a useful view of Eric Chelle's approach: a competitive group for the qualifiers, followed by a wider look at the player pool.
