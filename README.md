@@ -8,6 +8,10 @@ For cross-agent coordination, read [`docs/agent-handoff.md`](docs/agent-handoff.
 
 For the reproducible cloud development environment and future protected publishing setup, read [`docs/cloud-environment.md`](docs/cloud-environment.md).
 
+## Copyright and reuse
+
+See [`COPYRIGHT.md`](COPYRIGHT.md). This repository is public for transparency and deployment, but no open-source license is granted for reuse of the project's original code, design, branding, editorial copy, rankings, or data presentation.
+
 ## What's in this repo
 
 | Path | What it is |

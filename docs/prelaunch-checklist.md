@@ -6,7 +6,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] Static prototype (`site/index.html`) — pool depth chart, Big Board, staff directory, "Elsewhere," "Why This Exists" tabs
 - [x] Header countdown clocks wired to real, confirmed fixture dates (Madagascar Sept 25, Guinea-Bissau MD2 Sept 29, Russia friendly Oct 6) — 2030 WCQ card stays a static "DATE TBD" since CAF hasn't published a calendar; no fake countdown shown
 - [x] Renamed the "Methodology" tab to "Why This Exists" and cut the ranking-formula breakdown and "A note on subjectivity" copy per project owner's call — just the mission statement stays. The verified/unverified/partial badges on the Big Board are the actual enforcement mechanism regardless of what explanatory copy sits next to them; this only removed prose, not the gate itself.
-- [ ] Live newsletter signup link in the ticker bar — currently a placeholder URL; replace it after the Beehiiv publication URL is finalized
+- [x] Live newsletter signup link in the ticker bar — points to `https://supereaglestracker.beehiiv.com/subscribe`
 - [x] X follow link in the ticker bar (`@SuperEaglesTrkr`)
 - [x] Instagram follow link in the ticker bar (`@supereaglestracker`)
 - [x] "Chelle's Squad" tab — the real, announced squad for each fixture window, cross-checked live against FORMATION/BOARD (computed at render time from a Set of pool names, not hardcoded) so the tracked/untracked badges can't silently go stale
@@ -16,7 +16,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] GitHub Pages deploy workflow added (`.github/workflows/pages.yml`) — **one manual step still needed**: repo Settings → Pages → Source → "GitHub Actions" (can't be set from a workflow file, needs a human with repo admin access to click it once). Once that's flipped, the site goes live at the repo's Pages URL on every push to `site/`.
 - [ ] Custom domain, if wanted — WHOIS privacy on registration (see `anonymity-opsec.md`)
 - [ ] Real view counter backend — current one uses the artifact-preview environment's `window.storage`, which won't exist once actually deployed (flagged in the original handover, still open)
-- [ ] Per-player source links (Transfermarkt profile, Wikidata item) so claims are auditable, not just asserted
+- [x] Per-player source links — verified Wikidata and official federation/competition/club links are attached where identities are clear; unresolved profiles remain visibly marked pending verification
 
 ## Data pipeline
 - [x] Wikidata discovery query (`data/nigeria_eligible_scan.rq`) + `fetch_wikidata.py`, runnable today
@@ -58,3 +58,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] Full project content transcribed and pushed by a Claude Code session sourced directly from this repo, after the originating session's credentials (pinned to the account's pre-rename name) couldn't reach it
 - [x] CI (tests + data validation), Dependabot, `SECURITY.md`
 - [ ] A future session's GitHub scope pointed at `rickauamarshall` from the start, so the cross-account push problem doesn't recur
+
+### Current source-audit gaps
+
+The following records still need identity/profile-level confirmation before a player-specific link is added: Isaac James, Samuel James, Victory Akpe, Abdullahi Bewene, and Chizzy Ezenwata. Do not substitute a same-name result or a generic search page.

@@ -70,6 +70,35 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-23 — Codex — source audit follow-up and launch checklist sync
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree
+
+### Changed
+- Updated `docs/prelaunch-checklist.md` to mark the live Beehiiv signup URL and source-link layer complete.
+- Recorded the remaining player-profile source gaps: Isaac James, Samuel James, Victory Akpe, Abdullahi Bewene, and Chizzy Ezenwata.
+
+### Checked
+- Confirmed `.github/workflows/pages.yml` is configured to deploy `site/` through GitHub Pages.
+- Confirmed the remaining deployment action requires a human to select GitHub Actions under Settings → Pages.
+
+### Findings
+- Official or authoritative links were added for George Ilenikhena, Moses Usor, and Stanley Nwabali where identity matches were clear.
+- No same-name or generic search result was promoted for the unresolved records.
+
+### Evidence
+- `site/index.html`
+- `docs/prelaunch-checklist.md`
+- `.github/workflows/pages.yml`
+
+### Owner decision needed
+- Review and approve the checklist/handoff documentation commit.
+- Enable GitHub Pages via repository Settings when ready.
+
+### Next agent
+- Commit the documentation sync after owner approval, then verify the deployed Pages URL.
+
 ### 2026-09-23 — Claude — review of Codex's tone/navigation pass (280c360) + Instagram link + one page-breaking fix
 
 Status: `READY_FOR_REVIEW`
