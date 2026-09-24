@@ -8,6 +8,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] Renamed the "Methodology" tab to "Why This Exists" and cut the ranking-formula breakdown and "A note on subjectivity" copy per project owner's call — just the mission statement stays. The verified/unverified/partial badges on the Big Board are the actual enforcement mechanism regardless of what explanatory copy sits next to them; this only removed prose, not the gate itself.
 - [ ] Live newsletter signup link in the ticker bar — currently a placeholder URL; replace it after the Beehiiv publication URL is finalized
 - [x] X follow link in the ticker bar (`@SuperEaglesTrkr`)
+- [x] Instagram follow link in the ticker bar (`@supereaglestracker`)
 - [x] "Chelle's Squad" tab — the real, announced squad for each fixture window, cross-checked live against FORMATION/BOARD (computed at render time from a Set of pool names, not hardcoded) so the tracked/untracked badges can't silently go stale
 - [x] Removed two literal `[Add: ...]` placeholder entries from the public Staff tab (Scouting & Data, Medical & Performance) — found by Codex's audit. Tracking the actual research gap here instead of leaving a raw TODO live: **still need real names for** (a) diaspora scouts/recruitment analysts at CIES or club scouting departments, (b) club-level sports scientists/physios of Nigerian origin. Add back as real entries once researched, not as placeholders.
 - [x] Masthead player count and Big Board rank-range header are now computed from the live `FORMATION`/`BOARD` arrays via JS, not hardcoded strings — can't drift out of sync with the data again the way "50 PLAYERS" / "(27–50)" did
@@ -32,19 +33,19 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] Scheduled GitHub Actions workflow for the weekly recap (Monday morning Spain time — see `anonymity-opsec.md`)
 - [ ] Real stats-provider integration — **nothing auto-posts until this exists**; today's Adeniran/LASK-Celtic line was hand-drafted through the real formatter as a one-off, not pulled from a live feed
 - [ ] Real X API credentials + posting-tier decision (check current pricing/limits before committing to a cadence)
-- [ ] `@SuperEaglesTrkr` account setup per `anonymity-opsec.md` (dedicated email, no personal photo, no early cross-linking, 2FA)
-- [ ] First live post
+- [ ] `@SuperEaglesTrkr` account setup per `anonymity-opsec.md` — account is live (Issue №1 posted), but dedicated-email/no-personal-photo/2FA compliance hasn't been confirmed here, so leaving this open rather than assuming
+- [x] First live post — Issue №1 posted to X. This was a manual post of the pre-drafted thread, not the automated stats feed; "Real stats-provider integration" above is still what's needed before anything auto-posts
 
 ## Newsletter
 - [x] Structure/plan drafted (`newsletter-plan.md`) — built from general newsletter conventions since the Nutmeg Soccer reference page was blocked by network egress in-session; revisit if you paste the actual text in
 - [x] Platform account created (beehiiv) — real publication URL still needed to wire up the site's Subscribe link (currently a TODO placeholder in `site/index.html`)
 - [ ] Graphics/video-clip production workflow — not started; needs either manual design each week or a templated approach
-- [ ] First issue
+- [x] First issue — Issue №1 ("The Origin Issue") posted across newsletter, X, and Instagram
 
 ## Editorial / trust
 - [x] "This is opinion, not a neutral algorithm" made explicit, site-wide
 - [x] `verified_by_human` gate preserved for eligibility claims specifically — kept conceptually separate from ranking judgment calls, which are allowed to be subjective
-- [ ] Adeniran's new Big Board rank — waiting on the project owner's call by the weekend
+- [ ] Adeniran's new Big Board rank — still open, awaiting the project owner's ranking call (no fixed date; the pool ranking is still being sorted)
 
 ## Anonymity / ops-sec
 - [x] Scope decided: public-facing only, not the private repo

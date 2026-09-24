@@ -70,6 +70,37 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-23 — Claude — review of Codex's tone/navigation pass (280c360) + Instagram link + one page-breaking fix
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree (uncommitted)
+
+### Changed
+- Added the Instagram follow link to the ticker bar (`instagram.com/supereaglestracker`), merged cleanly on top of Codex's masthead/ticker rewrite.
+- **Fixed a page-breaking bug in Codex's `280c360`:** the masthead rewrite deleted `<span id="totalPlayerCount">` from the `<h1>`, but the inline script still ran `document.getElementById('totalPlayerCount').textContent = ...` unconditionally. That threw on `null` and halted the rest of the single inline `<script>` block — which meant Chelle's Squad tab (now the *default landing tab*), the Chelle pitch view, the "recently lost" panel, the Elsewhere list, and the Staff directory all failed to render. Verified this in a real headless-browser run (Playwright via Chromium), not just by reading the diff. Fixed by restoring the live player-count span in the eyebrow line instead of the rewritten `<h1>` (keeps Codex's new headline copy intact, keeps the anti-drift live-count feature `prelaunch-checklist.md` already calls out as deliberate).
+- **Fixed a mobile layout bug:** the new "Chelle's Squad" pitch view reuses `.pitch-wrap`/`.rows`/`.row`, which were built for the 11-man FORMATION pitch (fixed counts, fixed height, no wrap). A real squad (up to 7 in a single position row) overflowed the container at mobile widths and got clipped off-screen entirely — confirmed 3 players (Isaac James, George Ilenikhena, Moses Usor) were fully invisible at 390px width. Added a scoped `.squad-pitch` modifier class (flex-wrap + auto height) applied only to the Chelle pitch markup, so the original FORMATION pitch is untouched.
+
+### Checked
+- Loaded the merged page in a real headless Chromium (Playwright) at desktop (1280px) and mobile (390px) widths, both before and after each fix.
+- Confirmed zero `pageerror`/console errors post-fix, `totalPlayerCount` renders "38", and all five tabs (chelle/pool/staff/elsewhere/about) render non-empty content when clicked through.
+- Confirmed no more horizontal row overflow on the Chelle pitch at 390px (`scrollWidth === clientWidth` on all four position rows).
+- `scripts/validate.py` still passes: 26 pool + 12 board, no dupes/overlap, ranks 27–38 intact.
+
+### Findings
+- Not fixed, flagging instead — copy accuracy: the Chelle's Squad tab header reads "Chelle's September Friendly Squad," but the pitch view renders `CHELLE_SQUAD`'s first entry, which is the AFCON 2027 Qualifying squad (Madagascar/Guinea-Bissau — competitive, not a friendly). The actual friendly (Russia, Oct 6) isn't in September and isn't shown in the pitch at all, only in the list below. Worth a copy fix or retitle.
+- Not fixed, flagging instead — "FWC30" in the new H1 ("FWC30 QUALIFICATION AT ALL COSTS") is a nonstandard abbreviation (presumably "World Cup 2030") that a first-time visitor won't parse. Consider spelling it out at least once near the top.
+- No objection to the named-individual → generic "PROFILE TO RECRUIT" swap in the Staff tab (Akpan/Omosegbon/Onyewu/Edu) — the removed entries were flagged in the prior staff-note as unverified against an official roster page, so genericizing pending verification is the more defensible call, and it's within Codex's stated remit (source verification, release readiness). Not re-litigating it.
+
+### Evidence
+- `site/index.html` (masthead eyebrow, `.squad-pitch` CSS block, Chelle pitch markup)
+- Playwright/Chromium headless runs against a local `python3 -m http.server` — not committed, verification only
+
+### Owner decision needed
+- None for the fixes above (bug fixes, not content judgment calls). The two "Findings" copy items are small editorial calls Codex or you may want to make.
+
+### Next agent
+- Codex: pull this commit once pushed, sanity-check the two fixes against intent (esp. whether the live player-count belongs in the eyebrow vs. elsewhere), and pick up the two flagged copy items if you agree they're worth fixing.
+
 ### 2026-09-23 — Codex — tone, navigation and squad-view pass
 
 Status: `READY_FOR_REVIEW`
