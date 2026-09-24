@@ -274,6 +274,9 @@
   .rank-num{ font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:14px; }
   .pname{ font-weight:600; }
   .pmeta{ font-size:11px; color:var(--ink-soft); }
+  .source-links{ margin-top:5px; font-size:10.5px; color:var(--ink-soft); }
+  .source-links a{ color:var(--gold); text-decoration:none; border-bottom:1px dotted currentColor; margin-right:8px; }
+  .source-links a:hover{ color:var(--clay); }
   .pos-chip{
     font-family:'IBM Plex Mono',monospace; font-size:10px; background:var(--pitch); color:var(--line);
     padding:2px 6px; border-radius:3px; display:inline-block;
@@ -324,8 +327,7 @@
   <div class="ticker-left">
     <div class="brandmark">SUPER EAGLES TRACKER ⚽ ONE POOL</div>
     <a class="ticker-link" href="https://x.com/SuperEaglesTrkr" target="_blank" rel="noopener">Follow @SuperEaglesTrkr</a>
-    <!-- TODO: replace with the real newsletter signup URL once the publication exists (beehiiv or similar) — see docs/newsletter-plan.md -->
-    <a class="ticker-link" href="https://TODO-newsletter-signup-url.example/subscribe" target="_blank" rel="noopener">Subscribe to the newsletter</a>
+    <a class="ticker-link" href="https://supereaglestracker.beehiiv.com/subscribe" target="_blank" rel="noopener">Subscribe to the newsletter</a>
   </div>
   <div class="views">PAGE VIEWS · <b class="mono" id="viewCount">—</b></div>
 </div>
@@ -668,6 +670,15 @@ function rivalCapsBadge(rc){
   const color = rc.switchEligible ? 'var(--gold)' : 'var(--clay)';
   return `<span class="elig-badge" style="background:${bg};color:${color};white-space:normal;">${rc.flag} ${rc.caps} CAP${rc.caps===1?'':'S'} FOR ${rc.fed.toUpperCase()} (${kindLabel}) · ${eligLabel}</span>`;
 }
+const SOURCE_URLS = {
+  nffQualifiers: 'https://thenff.com/afcon-2027-race-chelle-invites-ndidi-osimhen-iwobi-21-others-for-barea-wild-dogs/',
+  nffRussia: 'https://thenff.com/international-friendly-ndidi-simon-nwabali-lead-super-eagles-to-nizhny-novgorod-for-russia/',
+  cafOsimhen: 'https://www.cafonline.com/afcon2025/news/nigeria-confirm-osimhen-absence-for-opening-afcon-2027-qualifiers-as-striker-continues-recovery/'
+};
+function sourceLinks(sources){
+  if(!sources || !sources.length) return '';
+  return `<div class="source-links">Sources: ${sources.map(source => `<a href="${source.url}" target="_blank" rel="noopener">${source.label} ↗</a>`).join('')}</div>`;
+}
 function renderWatchNote(list, p){
   if(!p.watch && !p.rivalCaps) return;
   const note = document.createElement('li');
@@ -722,6 +733,7 @@ BOARD.forEach(p=>{
     <div>
       <div class="pname">${p.name}<span class="elig-badge ${eligClass}">${eligLabel}</span>${verifiedBadge}${rivalCapsBadge(p.rivalCaps)}</div>
       <div class="pmeta">${p.club}${p.note? ' · '+p.note : ''}</div>
+      ${sourceLinks(p.sources)}
     </div>
     <div class="mono" style="text-align:center;color:var(--ink-soft);">${p.age}</div>
     <div><span class="pos-chip">${p.pos}</span></div>
@@ -751,6 +763,18 @@ const CHELLE_SQUAD = {
     {name:'Kelechi Iheanacho', pos:'FWD'}
   ]
 };
+
+/* Official announcement sources are attached to the relevant squad cards.
+   Player-specific club, identity and market links will be added only after
+   each URL has been checked; no source is inferred from a name alone. */
+const qualifierSources = [{label:'NFF qualifier squad', url:SOURCE_URLS.nffQualifiers}];
+const russiaSources = [{label:'NFF Russia squad', url:SOURCE_URLS.nffRussia}];
+CHELLE_SQUAD[Object.keys(CHELLE_SQUAD)[0]].forEach(p => {
+  p.sources = p.name === 'Victor Osimhen'
+    ? [...qualifierSources, {label:'CAF injury update', url:SOURCE_URLS.cafOsimhen}]
+    : qualifierSources;
+});
+CHELLE_SQUAD[Object.keys(CHELLE_SQUAD)[1]].forEach(p => { p.sources = russiaSources; });
 
 const POOL_NAMES = new Set();
 FORMATION.forEach(row => row.slots.forEach(slot => {
@@ -785,6 +809,7 @@ Object.entries(CHELLE_SQUAD).forEach(([groupName, players]) => {
       <div class="name" style="font-size:13px;">${p.name}${p.captain ? ' <span class="mono" style="font-size:10px;color:var(--gold);">(C)</span>' : ''}</div>
       <div class="role" style="font-size:11px;">${p.pos}</div>
       <div class="tag" style="margin-top:6px;background:${onPool ? '#E5EFE7' : '#F6E7D8'};color:${onPool ? 'var(--up)' : 'var(--gold)'};">${onPool ? 'IN S.E.T. POOL' : 'NOT CURRENTLY IN POOL'}</div>
+      ${sourceLinks(p.sources)}
     `;
     grid.appendChild(card);
   });

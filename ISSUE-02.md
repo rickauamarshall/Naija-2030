@@ -1,99 +1,127 @@
-# Super Eagles Tracker — Issue №2
+# Super Eagles Tracker — Issue No. 2
 
-*[Masthead banner — swap in once the redesigned crest is ready]*
+*Squad week*
 
-**September 22, 2026**
+**September 23, 2026**
 
-Squad week. Chelle named two completely different Super Eagles groups in the space of seven days — one to win games, one to find the next names — and it's the clearest live example yet of the whole thesis this tracker runs on. Let's get into it.
+Nigeria opens its 2027 Africa Cup of Nations qualifying campaign against Madagascar on Friday, September 25, then travels to Guinea-Bissau for the second match on Tuesday, September 29. A separate group will face Russia in Nizhny Novgorod on October 6.
+
+The three-match window gives us a useful view of Eric Chelle's approach: a competitive group for the qualifiers, followed by a wider look at the player pool.
 
 ## Headlines
 
-- **Fri, Sept 25 — Madagascar (Uyo).** **Tue, Sept 29 — Guinea-Bissau (away).** AFCON 2027 Qualifying, Group L, Matchdays 1–2. **Tue, Oct 6 — Russia (friendly), Nizhny Novgorod.**
-- Osimhen's in the AFCON squad despite a groin/adductor issue that was expected to cost him 2–3 weeks. Chelle's "closely monitoring" him — this squad may not survive to kickoff intact.
-- Three uncapped debutants made the AFCON squad: **Isaac James**, **George Ilenikhena**, **Moses Usor**. None were on our board before this week — added now.
-- Russia squad is deliberately experimental: Osimhen, Lookman, Iwobi, Chukwueze all rested. Three more debuts — **Victory Akpe**, **Samuel James**, **Abdullahi Bewene** — get a first look.
-- NFF: still no FIFA Council decision. Same "expected in the coming days" line that's been circulating over a week now.
+- Nigeria's qualifier squad was announced as a 24-player group led by Wilfred Ndidi, Stanley Nwabali, Alex Iwobi, Ademola Lookman, Moses Simon, and Samuel Chukwueze.
+- Victor Osimhen was subsequently ruled out of the Madagascar and Guinea-Bissau matches while recovering from a muscle strain. His availability for the Russia friendly remains uncertain.
+- Isaac James, George Ilhenikhena, and Moses Usor received first invitations to the senior group for the qualifiers.
+- The Russia group includes further first-time camp selections, including goalkeeper Samuel James and defender Victory Akpe, alongside a number of younger options.
+- The split between the qualifier group and the Russia group creates a clear opportunity to assess both immediate needs and the next tier.
 
-## Feature of the Week: The Talent Was Never the Problem
+## Feature of the Week: A Wider Pool Needs a Clear Process
 
-Every conversation about why Nigeria keeps missing World Cups eventually lands on the same idea: not enough scouting, not enough discipline about who's actually available. I think that's backwards, and this week's squad news is a good way to show why.
+Nigeria does not need a larger list for its own sake. It needs a reliable way to identify the right players, understand their current level, follow their development, and bring them into the conversation at the right time.
 
-Start with the number that actually stopped me: Mauricio Pochettino evaluated more than 60 candidates across 19 months, 8 training camps, and 24 matches before naming his USMNT's final 26 for this summer's World Cup. That's not a squad announcement. That's a multi-year process with a paper trail. Nigeria's entire "wider pool" apparatus, by comparison, is a fast-moving news cycle and this newsletter — which is exactly why we exist, but it's also the honest gap.
+That is the value of this international window. The qualifier group is built around the players Chelle trusts for competitive matches. The Russia group creates room for additional evaluation. Both groups matter, but they answer different questions.
 
-Here's the case that made me actually sit with this, though: Italy. Roberto Mancini built a deliberate pipeline of *oriundi* — dual nationals, mostly Argentine and Brazilian-Italian — specifically to get to them before other federations did. Mateo Retegui is the headline: developed entirely in Argentina, Italian citizenship through a grandmother, now a senior Azzurri forward Mancini secured by moving early. That's the exact playbook Italy is running *against* Nigeria right now — Honest Ahanor, Jeff Ekhator, Luca Koleosho, Michael Kayode are all being chased by the federation that industrialized this move. Italy isn't beating Nigeria on talent identification. They're beating Nigeria on process speed, using a method they perfected by doing it to other countries first.
+The first question is immediate: can Nigeria start the AFCON qualifying campaign well against Madagascar and Guinea-Bissau? The second is longer-term: which players can become credible options before the next major selection decision?
 
-And here's the twist worth sitting with, because it's the part that actually reframes the whole argument: despite all of that pipeline discipline, Italy is not automatically at the World Cup. They're in the playoffs — same as always. So pool depth, even *well-run* pool depth, isn't destiny. It buys you options. It doesn't buy you results. Which means the real question for Nigeria isn't "do we have enough talent" — on the evidence, clearly yes — it's whether anyone's actually running the process Pochettino ran, or the pipeline Mancini built, instead of reacting to news as it breaks.
+Those questions should be connected. A player should not be called in simply because he is new, and established players should not be treated as permanent solutions without regard to form. A strong pool gives the coach more meaningful choices while protecting the team from short-term injuries, loss of form, and late eligibility decisions.
 
-We're not claiming this newsletter is that process. We're claiming someone should be running one, and until they are, we're the closest thing keeping score.
+That is the purpose of the tracker. It is not a competing selection process. It is a public record of the available conversation, built from reported developments, verified information, and clearly marked areas that still need confirmation.
 
-## Squad Watch: What Chelle Actually Picked
+## Squad Watch
 
-**AFCON qualifiers (Madagascar/Guinea-Bissau).** Full-strength: Osimhen, Lookman, Iwobi, Chukwueze, Nwabali, Ndidi (captain). Recalls for Okoye, Bassey, Osayi-Samuel, Onyeka, Akor Adams, Arokodare, Ajayi. Aina back after missing recent camps; Fredrick back from injury. Debuts for James, Ilenikhena, Usor.
+### AFCON qualifiers: Madagascar and Guinea-Bissau
 
-**Russia friendly.** A different group entirely: Iheanacho recalled, Akpe/James/Bewene debut, Ndidi captains again with Moses Simon and Nwabali as the senior heads in a young room.
+The qualifier group includes established leaders and several players receiving a new opportunity in the senior setup. Ndidi is captain, while Nwabali, Iwobi, Lookman, Moses Simon, and Chukwueze are among the experienced options named by the NFF.
 
-**Where our own board had gaps, said plainly:** none of the six debutants above were tracked here before this week. A site built on "we know this pool better than the NFF does" has to own it when the NFF's own coach finds players first. Isaac James, Ilenikhena, and Usor are added to the Big Board now (ranks 36–38) — club and profile details still marked TBD pending real verification, not guessed at.
+Osimhen was included in the original announcement but was later confirmed unavailable for these two matches because of his muscle injury. That changes the attacking picture and places more responsibility on the other forwards in the group.
 
-## Going Into the Break: What We're Watching
+The first-time invitations for Isaac James, George Ilhenikhena, and Moses Usor are also worth watching. Their inclusion is a reminder that the pool can change quickly when a coach is willing to look beyond the most familiar names.
 
-- **Group L is unforgiving.** Co-host Tanzania advances automatically; Nigeria needs to be the best of the rest. Start flat against Madagascar and the group gets hard fast.
-- **Osimhen's fitness is the real subplot.** If he's not right, this becomes a very different squad by kickoff — and a real early test of the pool's actual depth, not just its theoretical depth.
-- **The Russia friendly is the audition, not the test.** Chelle's using it exactly the way our Big Board thesis says a federation should: low-stakes minutes for the next tier. Worth more attention than a friendly usually gets.
-- A good window looks like: two results from Madagascar/Guinea-Bissau, no fresh injuries, and at least one Russia debutant giving Chelle a real selection headache going into November.
+### Russia: a separate evaluation group
+
+The Russia friendly offers a different type of opportunity. The group includes senior experience through Ndidi, Moses Simon, and Nwabali, while also bringing in first-time camp selections such as Samuel James and Victory Akpe.
+
+The result should not be judged only by the score. The more useful questions are whether the new players adapt to the level, whether the group offers credible depth in key positions, and whether any selection becomes difficult for Chelle later in the cycle.
+
+## Elsewhere in Nigerian Football
+
+The central story this week is the senior team window, but the wider pool remains active beyond the players named in the two squads. Club minutes, positional changes, injuries, and federation contact can all change the picture before the next international break.
+
+We will keep separating verified announcements from reported developments and unresolved questions. That distinction matters most when a player is young or has more than one international pathway.
+
+## Going Into the Window
+
+- **The opening result matters.** Nigeria needs a composed start against Madagascar and a strong performance away to Guinea-Bissau.
+- **Osimhen's absence changes the attacking balance.** The response from the rest of the forward group will be one of the central storylines.
+- **The Russia friendly has a different job.** It is a chance to evaluate options who may not otherwise receive senior minutes.
+- **The pool should be judged over time.** One call-up is a signal, not a conclusion. Form, minutes, development, and eligibility all need to be followed.
+
+## Our Take
+
+The best outcome from this window is not simply three positive results. It is a clearer picture of the players Chelle trusts now, the players he wants to assess next, and the areas where Nigeria still needs more depth.
+
+One pool. FWC30 qualification at all costs.
 
 ## Quick Links
 
-- Player/club sourcing: cross-checked against Transfermarkt and club statements — per-player source links are on the site build list
-- Corrections, tips, disagreement: reply to this email
-- Follow along: `@SuperEaglesTrkr`
+- [NFF qualifier squad announcement](https://thenff.com/afcon-2027-race-chelle-invites-ndidi-osimhen-iwobi-21-others-for-barea-wild-dogs/)
+- [NFF Russia friendly squad announcement](https://thenff.com/international-friendly-ndidi-simon-nwabali-lead-super-eagles-to-nizhny-novgorod-for-russia/)
+- [CAF update on Osimhen's absence](https://www.cafonline.com/afcon2025/news/nigeria-confirm-osimhen-absence-for-opening-afcon-2027-qualifiers-as-striker-continues-recovery/)
+- Follow along on [X](https://x.com/SuperEaglesTrkr) and [Instagram](https://www.instagram.com/supereaglestracker/)
 
 ---
 
-## X Thread
+## X Thread Draft
 
-**Tweet 1 (hook):**
-> Chelle named two completely different Super Eagles squads in one week.
->
-> One to win games. One to find the next names.
->
-> Here's what both tell us — and where we got caught flat-footed. 🧵
+**Post 1:**
 
-**Tweet 2:**
-> The real squad, for Madagascar (Fri) and Guinea-Bissau (Tue): Osimhen, Lookman, Iwobi, Chukwueze, Ndidi as captain.
+> Nigeria has three international matches ahead: Madagascar, Guinea-Bissau, and Russia.
 >
-> Osimhen's carrying an injury that was supposed to cost him 2-3 weeks. He's in anyway. "Closely monitoring" — translation: this squad might not survive to kickoff.
+> The first two are qualifiers. The third is a separate opportunity to evaluate more of the pool.
+>
+> Here is what the window tells us. 🧵
 
-**Tweet 3:**
-> Three uncapped debutants made the AFCON squad: Isaac James, George Ilenikhena, Moses Usor. None were on our board before this week. Added now — no pretending otherwise.
+**Post 2:**
 
-**Tweet 4:**
-> For the Russia friendly (Oct 6): totally different group. Osimhen, Lookman, Iwobi, Chukwueze all rested. Three more debuts — Akpe, James, Bewene. This is the Big Board thesis playing out live.
+> Nigeria's qualifier group is led by Ndidi, Nwabali, Iwobi, Lookman, Moses Simon, and Chukwueze.
+>
+> Victor Osimhen was later ruled out of both matches while recovering from a muscle strain.
 
-**Tweet 5:**
-> Pochettino evaluated 60+ USMNT candidates over 19 months before naming 26. Italy built a whole pipeline to poach dual nationals before rivals could — and is now running that exact playbook against Nigeria.
->
-> Even then, Italy's stuck in World Cup playoffs. Pool depth ≠ destiny.
+**Post 3:**
 
-**Tweet 6 (CTA):**
-> Full breakdown + free weekly newsletter: [LINK]
+> Isaac James, George Ilhenikhena, and Moses Usor received first invitations to the senior group for the qualifiers.
 >
-> Built to pressure the NFF, not speak for it.
+> The important question is not only who is new. It is how quickly new options can become reliable options.
 
-## Instagram Post
+**Post 4:**
 
-**Caption:**
-> Two Super Eagles squads, one week. 🦅
+> The Russia group offers a different kind of test, with further first-time camp selections including Samuel James and Victory Akpe.
 >
-> The real one (Madagascar/Guinea-Bissau, this week): Osimhen, Lookman, Iwobi, Chukwueze, Ndidi.
->
-> The other one (Russia, Oct 6) is an audition — 3 fresh uncapped names getting their first look.
->
-> Pochettino evaluated 60+ USMNT candidates over 19 months before naming 26. Italy built a whole pipeline to poach dual nationals early — and is running it against Nigeria right now (Ahanor, Ekhator, Koleosho, Kayode).
->
-> We track the gaps too: 6 names we hadn't caught before this week, now on the board.
->
-> Link in bio for the full breakdown + the NFF presidency update.
->
-> #SuperEagles #SuperEaglesTracker #NFF #AFCON2027
+> The score will matter less than the information Chelle gets from the players.
 
-**Suggested visual:** a two-panel graphic — left "AFCON SQUAD" with the 5 headline names, right "RUSSIA SQUAD" with the 3 debutants, on-brand palette (pitch green `#0E3B2E`, gold `#C99B3F`, clay `#A6432D`). Still not built — hold on this until the crest redesign lands, so the graphic and the new logo match rather than shipping two different looks back to back.
+**Post 5:**
+
+> A wider pool is useful only when it is tracked properly: current form, minutes, development, and eligibility all matter.
+>
+> One pool. FWC30 qualification at all costs.
+
+**Post 6:**
+
+> Full issue: [LINK]
+>
+> Follow the tracker on X and Instagram for verified updates through the window.
+
+## Instagram Caption Draft
+
+> Three matches. Two different selection questions. 🦅
+>
+> Nigeria opens AFCON 2027 qualifying against Madagascar and Guinea-Bissau before a separate group faces Russia in October.
+>
+> Issue No. 2 looks at the qualifier group, the wider evaluation group, and what this window tells us about the Super Eagles pool.
+>
+> Read the full issue through the link in our bio.
+>
+> One pool. FWC30 qualification at all costs.
+>
+> #SuperEagles #NigeriaFootball #AfricanFootball #WorldCup2030 #SuperEaglesTracker

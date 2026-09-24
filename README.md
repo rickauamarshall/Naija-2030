@@ -16,7 +16,7 @@ For the reproducible cloud development environment and future protected publishi
 | `data/nigeria_eligible_scan.rq` | Wikidata SPARQL query for discovering Nigeria-eligible, uncapped footballers. Paste into query.wikidata.org, no setup needed. |
 | `scripts/` | The discovery/enrichment/classification pipeline. `fetch_wikidata.py` runs today; the rest is stubbed pending a Transfermarkt data-source decision — see `CLAUDE.md`. |
 | `server/` | The match-day tweet-feed service — formats and (once wired to real API keys) posts a stat-line for pool players after each match, plus weekly recap generation. Runs in mock mode out of the box. |
-| `docs/` | X/social strategy, weekly content calendar, newsletter plan, anonymity/ops-sec checklist, prelaunch checklist. |
+| `docs/` | X/Instagram editorial strategy, weekly content calendar, newsletter plan, anonymity/ops-sec checklist, prelaunch checklist. |
 
 ## Quick start
 

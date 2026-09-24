@@ -1,5 +1,7 @@
 # X strategy & weekly content calendar
 
+Cross-platform monitoring and the Instagram workflow are defined in [`social-editorial.md`](social-editorial.md). This document remains the X-specific calendar and content-pillar reference.
+
 ## Positioning
 
 Super Eagles Tracker is a data-forward, receipts-first fan account — not a hot-takes account, not an NFF mouthpiece, not an anonymous complaint page. The voice earns trust the same way the site does: numbers first, sourced, transparent about what's verified vs. not. That's also what makes it *hard to dismiss* — the whole point of "legitimacy for leverage" is that a federation, a journalist, or a rival account can't wave it away as noise. Every post should survive the question "could this be screenshotted and stand up?"
