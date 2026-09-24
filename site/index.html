@@ -276,6 +276,9 @@
   .methods-view .staff-card .source-links{ border-top:1px solid var(--paper-2); padding-top:8px; margin-top:12px; }
   .methods-view .methods-commercial{ max-width:820px; margin-top:20px; border-left:4px solid var(--pitch); }
   @media (max-width:700px){ .methods-view .methods-lens{ grid-template-columns:1fr; } }
+  .methods-view .cabinet-groups{ display:block; column-count:2; column-gap:18px; }
+  .methods-view .cabinet-groups .cabinet-group{ break-inside:avoid; -webkit-column-break-inside:avoid; margin-bottom:18px; }
+  @media (max-width:900px){ .methods-view .cabinet-groups{ column-count:1; } }
 
   /* ---- BIG BOARD ---- */
   .board{
@@ -512,7 +515,6 @@
     </div>
 
     <div class="cabinet-groups">
-    <div>
       <div class="cabinet-group">
           <h3 data-national-team="Germany" data-flag="🇩🇪" data-code="DE"><span class="national-flag" aria-hidden="true">🇩🇪</span><span class="country-code">DE</span> Germany</h3>
           <div class="staff-card" style="border-left:4px solid #DD0000;">
@@ -546,9 +548,7 @@
             <div class="source-links"><a href="https://www.cbssports.com/soccer/news/fbi-investigates-argentina-football-association-alleged-money-laundering-in-u-s-2026/" target="_blank" rel="noopener">CBS Sports: FBI investigation into the AFA</a></div>
           </div>
         </div>
-      </div>
 
-      <div>
         <div class="cabinet-group">
           <h3 data-national-team="United States" data-flag="🇺🇸" data-code="US"><span class="national-flag" aria-hidden="true">🇺🇸</span><span class="country-code">US</span> United States</h3>
           <div class="staff-card" style="border-left:4px solid #3C3B6E;">
@@ -592,7 +592,6 @@
             <div class="source-links"><a href="https://www.espn.com/soccer/story/_/id/45167982/brazil-court-ousts-cbf-president-days-ancelotti-appointment" target="_blank" rel="noopener">ESPN: Brazil court ousts CBF president</a></div>
           </div>
         </div>
-      </div>
     </div>
 
     <div class="staff-card methods-commercial">
