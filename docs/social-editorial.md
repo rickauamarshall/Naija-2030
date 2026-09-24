@@ -23,6 +23,8 @@ Each useful development should be assigned one label before it is reused:
 - **Editorial angle:** a defensible interpretation of verified information.
 - **Potential newsletter item:** material that deserves fuller context than a social post allows.
 
+Recurring editorial lens: club achievement is a starting point for evaluation, not a guarantee of international influence. When reviewing a player, distinguish club output from national-team role, tactical fit, availability, combinations, and performance under pressure. Repeated patterns across cycles should be identified with evidence, not implied from one match or one headline.
+
 Eligibility changes remain permanently human-gated. No account post, feed item, or automated classifier may move a player to OPEN, WATCH, or TIED without human review and a recorded source.
 
 ## Platform roles
@@ -47,6 +49,8 @@ The newsletter is the weekly source of considered analysis:
 6. Update the site or pool only after the underlying data and editorial decision are reviewed.
 
 The same fact can appear on all three channels, but the copy should be adapted to the platform. Do not copy a newsletter paragraph into a social caption or turn a social rumor into newsletter fact.
+
+Owner-authored review scripts and inserted analysis are part of the editorial record. Preserve them when adapting a draft; edit around them for clarity and sourcing rather than deleting them as placeholder text.
 
 ## Matchday workflow
 

@@ -2,7 +2,7 @@
 
 *Squad week*
 
-**September 23, 2026**
+**September 24, 2026**
 
 Nigeria opens its 2027 Africa Cup of Nations qualifying campaign against Madagascar on Friday, September 25, then travels to Guinea-Bissau for the second match on Tuesday, September 29. A separate group will face Russia in Nizhny Novgorod on October 6.
 
@@ -12,7 +12,7 @@ The three-match window gives us a useful view of Eric Chelle's approach: a compe
 
 - Nigeria's qualifier squad was announced as a 24-player group led by Wilfred Ndidi, Stanley Nwabali, Alex Iwobi, Ademola Lookman, Moses Simon, and Samuel Chukwueze.
 - Victor Osimhen was subsequently ruled out of the Madagascar and Guinea-Bissau matches while recovering from a muscle strain. His availability for the Russia friendly remains uncertain.
-- Isaac James, George Ilhenikhena, and Moses Usor received first invitations to the senior group for the qualifiers.
+- Isaac James, George Ilenikhena, and Moses Usor are among the newer names in the senior group for the qualifiers.
 - The Russia group includes further first-time camp selections, including goalkeeper Samuel James and defender Victory Akpe, alongside a number of younger options.
 - The split between the qualifier group and the Russia group creates a clear opportunity to assess both immediate needs and the next tier.
 
@@ -26,6 +26,8 @@ The first question is immediate: can Nigeria start the AFCON qualifying campaign
 
 Those questions should be connected. A player should not be called in simply because he is new, and established players should not be treated as permanent solutions without regard to form. A strong pool gives the coach more meaningful choices while protecting the team from short-term injuries, loss of form, and late eligibility decisions.
 
+Club achievement should open the international conversation, not close it. Honors and individual awards are important evidence of a player's level, but they do not remove the need to assess how that player contributes for Nigeria when the stakes rise. The same standard should apply to every position: current form, tactical role, combinations, availability, and performance under pressure all belong in the next selection decision.
+
 That is the purpose of the tracker. It is not a competing selection process. It is a public record of the available conversation, built from reported developments, verified information, and clearly marked areas that still need confirmation.
 
 ## Squad Watch
@@ -36,7 +38,7 @@ The qualifier group includes established leaders and several players receiving a
 
 Osimhen was included in the original announcement but was later confirmed unavailable for these two matches because of his muscle injury. That changes the attacking picture and places more responsibility on the other forwards in the group.
 
-The first-time invitations for Isaac James, George Ilhenikhena, and Moses Usor are also worth watching. Their inclusion is a reminder that the pool can change quickly when a coach is willing to look beyond the most familiar names.
+The inclusion of Isaac James, George Ilenikhena, and Moses Usor is also worth watching. Their presence is a reminder that the pool can change quickly when a coach is willing to look beyond the most familiar names.
 
 ### Russia: a separate evaluation group
 
@@ -90,7 +92,7 @@ One pool. FWC30 qualification at all costs.
 
 **Post 3:**
 
-> Isaac James, George Ilhenikhena, and Moses Usor received first invitations to the senior group for the qualifiers.
+> Isaac James, George Ilenikhena, and Moses Usor are among the newer names in the senior group for the qualifiers.
 >
 > The important question is not only who is new. It is how quickly new options can become reliable options.
 
@@ -107,6 +109,12 @@ One pool. FWC30 qualification at all costs.
 > One pool. FWC30 qualification at all costs.
 
 **Post 6:**
+
+> Club success should open the international conversation, not close it.
+>
+> The useful question is whether a player's form, role, and combinations travel when the stakes rise. That standard should apply across the pool.
+
+**Post 7:**
 
 > Full issue: [LINK]
 >

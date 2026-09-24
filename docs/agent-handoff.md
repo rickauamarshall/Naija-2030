@@ -70,6 +70,57 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-24 — Codex — comparative methods, Issue 2 cleanup, and Issue 3 draft
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree
+
+### Changed
+- Added a `Comparative Methods` tab to `site/index.html`, comparing Nigeria's player-identification and roster-construction questions with official federation material from Germany, Spain, Morocco, Japan, the United States, Norway, Argentina, and Senegal.
+- Framed the comparison as a testable working hypothesis about continuity, identification, eligibility management, roster construction, and feedback, rather than a claim that any single factor explains Nigeria's recent underachievement.
+- Added the Klopp/DFB two-squad example: the Russia evaluation group is useful only when each player has a defined question, meaningful minutes, and a documented next step.
+- Corrected Issue 2's Ilenikhena spelling and softened the “first invitations” wording to “among the newer names.”
+- Added `ISSUE-03.md` as a post-window draft centered on verified results, pool movement, and the depth chart after the qualifying window.
+- Added a recurring editorial lens for Issue 3 and future coverage: club achievement is the starting point for evaluation, not a guarantee of international influence; compare club output with national-team role, tactical fit, combinations, availability, and high-stakes performance.
+- Added guidance to preserve owner-authored review scripts and inserted analysis when adapting drafts, and to use verified event data or reputable advanced metrics when assessing Chelle's style and player fit.
+- Added the same lens to `docs/social-editorial.md` so social posts, newsletters, and site updates can track repeated positive or negative patterns across cycles.
+- Added `assets/ig-carousel-tactics.png`, an original rights-safe tactics graphic for the Instagram carousel concept.
+- Standardized the Beehiiv Issue 2 header treatment: SET logo centered at 30% width, with the header settings to be reused for future issues. Beehiiv does not expose a reusable header-template control in the current editor, so the specification is recorded here instead.
+- Removed the project owner's personal FIFA match-commissioner reference from the Beehiiv Issue 2 draft. The site's general independence disclosure remains.
+
+### Checked
+- Ran the repository data validator after the site edit: formation/pool counts, board ranks, duplicate checks, and overlap checks remain intact.
+- Confirmed the public site contains no personal FIFA match-commissioner or WC26 reference.
+- Confirmed Issue 3 is explicitly marked as a draft and retains placeholders until official match results and player performances are verified.
+- Confirmed the owner-authored review sentence remains in the Beehiiv draft after the copy pass.
+
+### Findings
+- Germany's two-group window is not a direct template for Nigeria. Its value is the operating discipline around the split: a defined window, player movement, a development horizon, and follow-up.
+- The comparison should continue to test who owns identification, how information moves from clubs and diaspora networks into selection, and whether each camp changes the next decision.
+- Issue 3 should not be published until the Madagascar, Guinea-Bissau, and Russia details are verified against official or authoritative sources.
+
+### Evidence
+- `site/index.html`
+- `ISSUE-02.md`
+- `ISSUE-03.md`
+- `docs/social-editorial.md`
+- `assets/ig-carousel-tactics.png`
+- DFB: https://www.dfb.de/news/klopp-names-first-squad-as-germany-head-coach
+- RFEF: https://rfef.es/es/noticias/la-rfef-organiza-la-i-jornada-talento-descubrir-para-avanzar-junto-las-selecciones
+- FRMF: https://frmf.ma/fr/articles/la-fifa-soutient-le-programme-de-formation-des-talents-mene-par-la-frmf
+- JFA: https://www.jfa.jp/eng/news/00036317/
+- U.S. Soccer: https://www.ussoccer.com/talent-identification/talent-identification-centers
+- NFF Norway: https://www.fotball.no/barn-og-ungdom/landslagsskolen/ledelse/spilleroppfolging-og-rapportering/
+- AFA: https://www.afa.com.ar/es/posts/programa-de-desarrollo-de-selecciones-juveniles-etapa-1
+- FSF: https://www.fsfoot.sn/wp-content/uploads/2024/07/Rapport_Activites_2023.pdf
+
+### Owner decision needed
+- Review the comparative-methods tab and the Issue 3 structure.
+- Approve one coherent commit containing the current Issue 2, Issue 3, site, and handoff changes.
+
+### Next agent
+- Run the full repository checks, then commit and push after owner approval. Claude should pull the commit and review the public-facing methods copy.
+
 ### 2026-09-24 — Codex — domain, Pages, and registrar security sync
 
 Status: `READY_FOR_REVIEW`
