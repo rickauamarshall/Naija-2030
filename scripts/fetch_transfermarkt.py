@@ -1,20 +1,12 @@
 """
-fetch_transfermarkt.py — SKELETON, NOT FUNCTIONAL YET
+fetch_transfermarkt.py — intentionally disabled
 
-Transfermarkt has no official public API. Before writing this file for real,
-decide which path you're taking, because they have real tradeoffs:
+Transfermarkt has no official public API, and its current terms prohibit bots,
+spiders, screen scraping, and automated copying. This module remains as a
+compatibility stub so older pipeline references fail safely rather than
+silently introducing a prohibited scraper.
 
-  1. Community scraper library (fastest to start with):
-     Search GitHub for actively-maintained projects like
-     "transfermarkt-scraper" or "transfermarkt-datasets" — quality and
-     upkeep varies, check last-commit dates before trusting one.
-     Respect Transfermarkt's robots.txt and terms of service. Cache
-     every response locally and re-fetch on a weekly schedule at most,
-     not on every pipeline run — hammering their servers will get your
-     IP blocked and is the kind of thing that kills a project's ability
-     to ship on time.
-
-  2. Paid data feed (the "actually sustainable" path):
+  Licensed data feed (the sustainable path):
      If this project gets real traffic, look at licensed football data
      providers (Wyscout, Opta, Sofascore's partner API, etc). Costs
      money but removes the scraping-fragility problem entirely.
@@ -46,8 +38,8 @@ import sys
 
 def get_player_market_data(name: str, date_of_birth: str) -> dict | None:
     raise NotImplementedError(
-        "Pick a Transfermarkt data source (see module docstring) and implement this. "
-        "Do not scrape without caching and rate-limiting — see the caveats above."
+        "Transfermarkt automation is disabled. Use scripts/enrich_free_sources.py "
+        "for Wikidata/API-Football, or obtain a licensed data source."
     )
 
 

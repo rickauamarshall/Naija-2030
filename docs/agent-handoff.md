@@ -70,6 +70,35 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-24 — Claude — reconciled a parallel chat-environment branch into the repo (Elsewhere, Comparative Methods, Board/Formation swap)
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree (uncommitted)
+
+### Changed
+- **Context:** the project owner had been continuing work on this same project in a separate claude.ai chat session (no git access, per that session's own `SESSION_SUMMARY_FOR_CLAUDE_CODE.md`), disconnected from this repo the whole time. They shared two zip exports of that session's state; this entry reconciles the parts of it explicitly approved for merge.
+- `site/index.html` — **DIASPORA_ELSEWHERE** expanded from 6 to 26 entries (David Alaba, Manuel Akanji, Karim Adeyemi, Dominic Solanke, Hal Robson-Kanu, Angelo Ogbonna, and 14 more) — purely additive, the original 6 overlapped by name exactly.
+- `site/index.html` — **Comparative Methods tab** content fully replaced: was federation-process case studies sourced from official pages (Germany/Spain/Morocco/Japan/USA/Norway/Argentina/Senegal); now outcome-based case studies tagged positive/negative/mixed, grounded in the actual, just-finished 2026 World Cup results (Germany/Morocco/Argentina/USA/Spain/France/Brazil). Reused the existing `.cabinet-group`/`.staff-card` markup pattern rather than importing the other branch's separate `.comp-card` CSS system, to stay visually consistent with the rest of the site. This was a deliberate replacement, not an addition — the project owner's call, since running both sets side by side would have been redundant (both covered Germany and Argentina with different takes) and inconsistent in style.
+- `site/index.html` — **FORMATION/BOARD swap**: Akor Adams (already Wikidata-mapped in `WIKIDATA_SOURCES`, previously untracked) promoted into FORMATION as Ademola Lookman's depth, displacing Kelechi Iheanacho, who moves to BOARD at the new rank 39. This wasn't an arbitrary substitution — it's corroborated by this repo's own `ISSUE-02.md`: Akor Adams is in Chelle's actual AFCON qualifying squad, Iheanacho is only in the lower-stakes Russia friendly (evaluation) squad. Board is now 13 entries, ranks 27–39.
+- `scripts/validate.py` — bumped `EXPECTED_BOARD_RANK_END` to 39, and **fixed a separate hardcoded `!= 12` board-count check** that wasn't derived from the rank-range constants — the same class of staleness bug this project has caught before (the "50 PLAYERS" hardcode). Now computed from `EXPECTED_BOARD_RANK_END - EXPECTED_BOARD_RANK_START + 1`.
+
+### Checked
+- `scripts/validate.py` passes: 26 pool + 13 board, no dupes/overlap, ranks 27–39 intact, starters GK1/DEF4/MID4/FWD2.
+- Full headless-browser (Playwright/Chromium) pass: zero console/page errors across all six tabs; confirmed Akor Adams renders correctly in Lookman's depth panel (with his Wikidata source link auto-populating), Iheanacho correctly renders in the Board list and not in the FORMATION pitch view, Elsewhere shows all 26 entries, Comparative Methods shows the new seven cases with no leftover old content.
+- Explicitly did **not** merge several other things from the other branch's zips — flagged to the project owner as superseded or too high-risk for a blind merge: the old "NAIJA 2030"/"Shadow Pool" branding, `LAUNCH.md` (untouched since Sept 18 in that branch, fully superseded by this repo's personal-voice rewrite), `CLAUDE.md`/`README.md`'s older file-layout descriptions, the un-anonymized "Baba Omosegbon" staff bio (this repo already genericized that), and — most importantly — that branch's independently-verified 24-entry Big Board (ranks 27–50), which has real conflicts with this repo's own verification history (a "Chibby Nwoko" where we have "Chibuike Nwaiwu"; Michael Kayode listed as an open Board candidate there while our own Eligibility Watchlist has Italy actively working to lock him in). That board was left as a research lead list, not merged.
+
+### Findings
+- The two independently-verified Big Boards agreeing on 8/12 names (Oyebade, Adeniran, Adewumi, Ilenikhena, Usor, Tyrique George, Ezenwata, Troost-Ekong) is a good cross-validation signal, but the disagreements are real and unresolved — worth a dedicated pass if the project owner wants to reconcile further.
+
+### Evidence
+- `site/index.html`, `scripts/validate.py`
+
+### Owner decision needed
+- None for what's described here — implemented per explicit direction. The other branch's larger Big Board and its remaining un-merged content are still open if the owner wants to revisit them later.
+
+### Next agent
+- Codex: sanity-check the FORMATION/BOARD swap and the new Comparative Methods content against intent. If you want to pursue reconciling the other branch's 24-entry Big Board, start with the Nwoko/Nwaiwu and Kayode conflicts described above rather than trusting either branch's `verified` flag blindly.
+
 ### 2026-09-24 — Claude — Codex reported not seeing recent pushes; diagnosis for Codex to check
 
 Status: `BLOCKED`

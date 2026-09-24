@@ -258,6 +258,7 @@
   .depth-list li .club{ font-size:11px; color:var(--ink-soft); }
   .depth-list li .val{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--up); }
   .depth-list li.flag-age .val{ color:var(--clay); }
+  .national-flag{ display:inline-block; font-size:20px; line-height:1; margin-right:6px; vertical-align:-2px; }
 
   /* ---- BIG BOARD ---- */
   .board{
@@ -347,7 +348,7 @@
   <div class="masthead-inner">
     <div class="eyebrow">// TRACKING THE BEST AVAILABLE SUPER EAGLES · <span id="totalPlayerCount">—</span> PLAYERS TRACKED · CYCLE 2030</div>
     <h1 class="title"><em>RISE, EAGLES, RISE.</em><br>ONE POOL. FWC30 QUALIFICATION AT ALL COSTS.</h1>
-    <p class="sub">A weekly view of Nigeria's player pool, including established internationals, emerging players and eligible dual nationals. Form, market value and eligibility context in one place. Independent and not affiliated with the NFF.</p>
+    <p class="sub">A periodic view of Nigeria's player pool, including established internationals, emerging players and eligible dual nationals. Form, market value and eligibility context in one place. Independent and not affiliated with the NFF.</p>
 
     <div class="clocks">
       <div class="clock-card">
@@ -400,6 +401,7 @@
           <div>
             <h2>Starting XI + Depth <span class="mono" style="color:var(--ink-soft);font-size:13px;">(4-4-2)</span></h2>
             <p>Tap a shirt to see who's stacked behind them. Green value = trending up this week, red = aging out of the 2030 cycle.</p>
+            <p style="font-size:11.5px;color:var(--ink-soft);margin-top:6px;">⚠ Eligible dual nationals are tracked here until they're officially cap-tied elsewhere — not a moment before. Once that happens, see the "Recently lost" panel on the Big Board.</p>
           </div>
         </div>
         <div class="pitch-wrap">
@@ -418,7 +420,7 @@
         <div class="section-head">
           <div>
             <h2>The Big Board <span class="mono" style="color:var(--ink-soft);font-size:13px;" id="boardRangeLabel">(—)</span></h2>
-            <p>Everyone else in the pool, ranked. Risers and fallers update weekly off form, transfer value, and eligibility urgency.</p>
+            <p>Everyone else in the pool, ranked. Risers and fallers update periodically off form, transfer value, and eligibility urgency.</p>
           </div>
         </div>
         <div class="legend">
@@ -468,7 +470,7 @@
     <div class="section-head">
       <div>
         <h2>Nigerian Descent, Other Flags</h2>
-        <p>Players of Nigerian descent who represent other national teams.</p>
+        <p>A running list of notable players of Nigerian descent who represent other national teams — growing as new ones are found and verified.</p>
       </div>
     </div>
     <div id="elsewhereList" style="display:flex;flex-direction:column;gap:10px;max-width:640px;"></div>
@@ -478,108 +480,112 @@
   <section class="view" id="methods">
     <div class="section-head">
       <div>
-        <h2>How Strong Federations Build the Pool</h2>
-        <p>A working comparison of identification, development, roster construction and feedback. The point is scrutiny, not imitation.</p>
+        <h2>What This Year's World Cup Actually Taught Us</h2>
+        <p>Case studies from federations whose reform, recruitment, financial oversight, and coaching decisions shaped how their 2026 World Cup actually went. The point is what's transferable to Nigeria's own reform, not a scoreboard of who did better.</p>
       </div>
     </div>
 
     <div class="staff-card" style="max-width:780px;border-left:4px solid var(--gold);margin-bottom:18px;">
       <p style="font-size:14px;line-height:1.7;color:var(--ink);">
-        Nigeria's challenge is not a shortage of footballers. It is whether the federation can turn a deep, international player base into a stable set of choices at the right time. The working hypothesis is that recent underachievement has exposed weaknesses in continuity, player identification, eligibility management, roster construction and feedback between windows. Those are hypotheses to test against evidence, not conclusions to announce in advance.
+        Nigeria's challenge is not a shortage of footballers. It's whether the federation can turn a deep player base into a stable, well-run process — on the pitch and off it. The seven cases below aren't a ranking; they're evidence, tagged by what actually happened when each federation's choices met the World Cup's actual pressure test.
       </p>
     </div>
 
     <div class="cabinet-groups">
       <div>
         <div class="cabinet-group">
-          <h3>Germany · Klopp</h3>
-          <div class="staff-card">
-            <div class="role">A deliberate two-squad international window</div>
-            <p class="fit">The DFB named 44 players across two groups for four Nations League matches. The first group handled the opening two games; a further 20 players joined for the next phase, with players moving in and out of the wider plan. Klopp described the aim as preparing players to compete at the top over the next two or three years.</p>
-            <p class="fit"><b>Lesson for Nigeria:</b> the Russia group can be a genuine evaluation unit, but only if each player has a defined question, meaningful minutes, and a documented next step. It should not be a disconnected B-team.</p>
-            <div class="source-links"><a href="https://www.dfb.de/news/klopp-names-first-squad-as-germany-head-coach" target="_blank" rel="noopener">DFB squad structure</a></div>
+          <h3 data-national-team="Germany">Germany</h3>
+          <div class="staff-card" style="border-left:4px solid #DD0000;">
+            <div class="role">Structural reform, delivered 14 years later</div>
+            <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Reform mandated 2001, four years after Euro 2000; paid off at the 2014 World Cup — 25 years start to finish</div>
+            <p class="fit">After a group-stage exit at Euro 2000 — a squad averaging 31 years old with only one player under 21 — the DFB mandated in 2001 that every Bundesliga and 2. Bundesliga club operate a licensed, standards-audited youth academy as a condition of their pro license. Clubs spent over €1.5 billion on youth infrastructure in the years that followed, building 390 regional talent bases (one within 25km of virtually every young player) staffed by 1,200 DFB-employed coaches, backed by €48 million a year in combined DFB-and-league funding. Twenty-one of the 23 players who won the 2014 World Cup came directly through that system.</p>
+            <p class="fit"><b>Lesson for Nigeria:</b> structural reform only pays off if it's funded and enforced long enough to outlast several coaching cycles and a few bad tournaments in between. A single academy standard, applied at every club — not just the biggest ones — beats a handful of showcase programs.</p>
+            <div class="source-links"><a href="https://www.dfl.de/en/topics/youth-academies/a-brief-history-of-german-youth-academies/" target="_blank" rel="noopener">DFL: history of German youth academies</a></div>
           </div>
         </div>
 
         <div class="cabinet-group">
-          <h3>Spain</h3>
-          <div class="staff-card">
-            <div class="role">Common standards across a distributed football system</div>
-            <p class="fit">The RFEF works with regional federations, scouts and youth national-team staff around shared identification and development methods. That creates a pathway from local observation to national selection rather than leaving discovery to isolated relationships.</p>
-            <div class="source-links"><a href="https://rfef.es/es/noticias/la-rfef-organiza-la-i-jornada-talento-descubrir-para-avanzar-junto-las-selecciones" target="_blank" rel="noopener">RFEF talent framework</a></div>
+          <h3 data-national-team="Morocco">Morocco</h3>
+          <div class="staff-card" style="border-left:4px solid #C1272D;">
+            <div class="role">A diaspora pipeline built over a decade</div>
+            <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Diaspora scouting operation launched 2014; still expanding as of the 2026 World Cup</div>
+            <p class="fit">The Royal Moroccan Football Federation (FRMF) began building a dedicated diaspora-scouting operation in 2014 and now maintains a database of nearly 3,000 players of Moroccan heritage across Europe — identifying promising players as young as eight or nine, formally tracking them from around age 12. It's not just legal-eligibility outreach; federation officials build relationships with families over years. Nineteen of Morocco's 26-man 2026 World Cup squad were born outside the kingdom, up from 14 at the 2022 tournament.</p>
+            <p class="fit"><b>Lesson for Nigeria:</b> this is close to the literal blueprint for what this tracker is trying to do informally with a spreadsheet and a newsletter. Morocco professionalized diaspora scouting into a funded federation department over a decade; Nigeria is still doing it ad hoc, case by case, in the press. The gap between "we have a bigger diaspora pool than Morocco" and "we have a functioning pipeline to it" is the whole ballgame.</p>
+            <div class="source-links"><a href="https://en.hespress.com/141949-the-long-game-how-morocco-scouts-and-recruits-europes-top-moroccan-talents.html" target="_blank" rel="noopener">Hespress: how Morocco scouts its diaspora</a></div>
           </div>
         </div>
 
         <div class="cabinet-group">
-          <h3>Morocco</h3>
-          <div class="staff-card">
-            <div class="role">National plan, regional reach, club investment</div>
-            <p class="fit">The FRMF combines a national youth-talent program with regionalization, club support and a dedicated identification structure. Its model connects federation strategy to the clubs where players are actually developed.</p>
-            <div class="source-links"><a href="https://frmf.ma/fr/articles/la-fifa-soutient-le-programme-de-formation-des-talents-mene-par-la-frmf" target="_blank" rel="noopener">FRMF talent program</a></div>
-          </div>
-        </div>
-
-        <div class="cabinet-group">
-          <h3>Japan</h3>
-          <div class="staff-card">
-            <div class="role">A national pathway that also reaches overseas Japanese talent</div>
-            <p class="fit">The JFA runs national training-center and elite programs, then extends the pathway abroad through its Future Camp for Japanese-heritage players living overseas. Identification is connected to development, not treated as a one-time invitation.</p>
-            <div class="source-links"><a href="https://www.jfa.jp/eng/news/00036317/" target="_blank" rel="noopener">JFA Future Camp</a></div>
+          <h3 data-national-team="Argentina">Argentina</h3>
+          <div class="staff-card" style="border-left:4px solid #74ACDF;">
+            <div class="role">On-field success can shield financial dysfunction</div>
+            <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 FBI/DOJ probe reported 2025–2026, still active as of this writing; domestic raid Dec 9, 2025</div>
+            <p class="fit">Argentina is the reigning World Cup runner-up (lost the 2026 final 1-0 to Spain) and won the 2022 World Cup under the same federation leadership. That federation, the AFA, is simultaneously the subject of a preliminary FBI/DOJ investigation into roughly $300 million in transactions run through a Florida shell company tied to its commercial contracts, on top of a separate December 2025 domestic raid on AFA headquarters and more than 30 clubs over an unrelated money-laundering probe. Argentine clubs later went on strike in solidarity with AFA president Claudio Tapia over a further domestic tax-evasion investigation, rather than push for accountability.</p>
+            <p class="fit"><b>Lesson for Nigeria:</b> on-field success can actively shield financial dysfunction instead of exposing it — nobody questions the books while the trophies keep coming. Nigeria's NFF crisis is the opposite situation (poor results forcing scrutiny), which is actually the healthier order of operations. Reform underway now should build oversight strong enough to survive the next AFCON win, not just the current losing streak.</p>
+            <div class="source-links"><a href="https://www.cbssports.com/soccer/news/fbi-investigates-argentina-football-association-alleged-money-laundering-in-u-s-2026/" target="_blank" rel="noopener">CBS Sports: FBI investigation into the AFA</a></div>
           </div>
         </div>
       </div>
 
       <div>
         <div class="cabinet-group">
-          <h3>United States</h3>
-          <div class="staff-card">
-            <div class="role">Repeatable identification centers and multiple-national tracking</div>
-            <p class="fit">U.S. Soccer uses regular Talent ID Centers, regional staff, club recommendations and a formal dual-and-multiple-nationals pathway. The system creates repeated touchpoints and a shared language for comparing players across a large geography.</p>
-            <div class="source-links"><a href="https://www.ussoccer.com/talent-identification/talent-identification-centers" target="_blank" rel="noopener">U.S. Soccer Talent ID</a></div>
+          <h3 data-national-team="United States">United States</h3>
+          <div class="staff-card" style="border-left:4px solid #3C3B6E;">
+            <div class="role">Talent without a coherent pathway underneath it</div>
+            <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Missed the 2018 World Cup; pathway consolidation announced Aug 29, 2026, integration begins Sept 1, 2026</div>
+            <p class="fit">The USMNT missed the 2018 World Cup entirely and qualified automatically for 2026 only as co-host, not through competition. For years, the development pathway underneath the national team was a costly, fragmented "pay-to-play" system split across competing bodies. On August 29, 2026, U.S. Soccer and US Youth Soccer announced a two-year integration bringing USYS — 2.7 million registered players — inside the federation, part of a broader "Pathways Strategy" aimed at unifying the fragmented system.</p>
+            <p class="fit"><b>Lesson for Nigeria:</b> population size and raw talent don't convert into results by themselves if the pathway underneath is fragmented or exclusionary. Nigeria's fragmentation looks different — underfunded grassroots academies and NPFL clubs operating in isolation from each other and from the diaspora effort — but the underlying lesson is the same: a big talent pool with no coherent pipeline just produces missed opportunities, not results.</p>
+            <div class="source-links"><a href="https://www.ussoccer.com/stories/2026/08/federation/us-soccer-us-youth-soccer-announce-historic-integration-to-strengthen-soccer-in-america" target="_blank" rel="noopener">U.S. Soccer: Pathways Strategy announcement</a></div>
           </div>
         </div>
 
         <div class="cabinet-group">
-          <h3>Norway</h3>
-          <div class="staff-card">
-            <div class="role">Club-to-federation reporting and staged progression</div>
-            <p class="fit">Norway's Landslagsskolen moves players through zone, county, regional and national levels. The federation gathers current club information before camps and sends written feedback back to clubs and players afterward.</p>
-            <div class="source-links"><a href="https://www.fotball.no/barn-og-ungdom/landslagsskolen/ledelse/spilleroppfolging-og-rapportering/" target="_blank" rel="noopener">NFF player follow-up</a></div>
+          <h3 data-national-team="Spain">Spain</h3>
+          <div class="staff-card" style="border-left:4px solid #AA151B;">
+            <div class="role">A technical identity taught the same way for two decades</div>
+            <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Won the 2026 World Cup final, July 19, 2026</div>
+            <p class="fit">Spain beat Argentina 1-0 after extra time on July 19, 2026 — Ferran Torres' 106th-minute winner, with Argentina down to ten men after Enzo Fernández's second yellow card — becoming the first nation to simultaneously hold the men's and women's World Cup titles, on top of the 2024 European Championship, a 38-match unbeaten run. The result is the product of a possession-based, positionally disciplined technical style Spain's federation has maintained and refined for two decades, taught identically from youth level up.</p>
+            <p class="fit"><b>Lesson for Nigeria:</b> a consistent technical identity, taught the same way from youth to the senior team, compounds over a decade in a way that talent alone doesn't. Nigeria has produced real youth-level success before (multiple FIFA U-17 World Cup titles) without it translating into a coherent senior identity — the players were good, but there was no shared style connecting age groups.</p>
+            <div class="source-links"><a href="https://www.aljazeera.com/sports/2026/7/19/spain-battle-past-10-man-argentina-1-0-in-extra-time-to-win-2026-world-cup" target="_blank" rel="noopener">Al Jazeera: 2026 World Cup final report</a></div>
           </div>
         </div>
 
         <div class="cabinet-group">
-          <h3>Argentina</h3>
-          <div class="staff-card">
-            <div class="role">Methodology, scouting and professional integration</div>
-            <p class="fit">The AFA's youth-development program links a federation game model to coach education, scouting and coordination with professional football. The important feature is alignment: identification is not separated from the football the federation wants to play.</p>
-            <div class="source-links"><a href="https://www.afa.com.ar/es/posts/programa-de-desarrollo-de-selecciones-juveniles-etapa-1" target="_blank" rel="noopener">AFA youth program</a></div>
+          <h3 data-national-team="France">France</h3>
+          <div class="staff-card" style="border-left:4px solid #0055A4;">
+            <div class="role">Elite talent isn't sufficient on its own</div>
+            <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Lost the semifinal 2-0 to Spain, July 14, 2026; Deschamps' tenure since 2012 ends after this World Cup</div>
+            <p class="fit">France entered the 2026 World Cup as favorites after a dominant run to the semifinal, then lost 2-0 to Spain on July 14 — a Mikel Oyarzabal penalty and a Pedro Porro strike — in what French media widely described as a collapse. Didier Deschamps had one more match left, the third-place playoff, but confirmed the 2026 World Cup as his last tournament in charge after taking over in 2012.</p>
+            <p class="fit"><b>Lesson for Nigeria:</b> elite individual talent isn't sufficient without a coherent tactical plan underneath it — a cautionary tale specifically relevant to a "dream team" approach built around star recruitment. Recruiting Osimhen-and-Lookman-level talent solves one problem, but not the coaching continuity and tactical identity problem underneath it.</p>
+            <div class="source-links"><a href="https://www.cbssports.com/soccer/news/didier-deschamps-confirms-that-2026-world-cup-will-be-his-last-as-france-national-team-boss" target="_blank" rel="noopener">CBS Sports: Deschamps confirms his exit</a></div>
           </div>
         </div>
 
         <div class="cabinet-group">
-          <h3>Senegal</h3>
-          <div class="staff-card">
-            <div class="role">Regional phases and a clearer national funnel</div>
-            <p class="fit">The FSF's activity reporting describes regional national phases, talent detection and a federal academy. Its recent senior success is not proof that every process is perfect, but it offers a useful comparison for how a smaller federation can make the domestic funnel visible and repeatable.</p>
-            <div class="source-links"><a href="https://www.fsfoot.sn/wp-content/uploads/2024/07/Rapport_Activites_2023.pdf" target="_blank" rel="noopener">FSF activity report</a></div>
+          <h3 data-national-team="Brazil">Brazil</h3>
+          <div class="staff-card" style="border-left:4px solid #009739;">
+            <div class="role">Federation dysfunction destabilizes everything downstream</div>
+            <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Ancelotti hired, CBF crisis erupted May 2025; eliminated Round of 16, July 5, 2026</div>
+            <p class="fit">The CBF pursued Carlo Ancelotti for two years before finally landing him, set to take over May 26, 2025 — immediately overshadowed by a domestic political crisis: a Rio court nullified CBF president Ednaldo Rodrigues' leadership days after the appointment was announced, over allegations he forged a predecessor's signature to secure his own re-election through 2030. Samir Xaud took over as CBF president to stabilize the federation. Brazil were then eliminated in the Round of 16 at the 2026 World Cup, losing 1-2 to Norway — Erling Haaland scored twice — despite a stoppage-time Neymar penalty.</p>
+            <p class="fit"><b>Lesson for Nigeria, cutting two ways:</b> federation political dysfunction doesn't stay contained to the boardroom — it destabilizes the actual coaching search and appointment process, precisely the risk in Nigeria's own NFF crisis. The counter-lesson is still worth holding onto: a federation that commits to a real multi-year coaching cycle, instead of firing after one bad result, is practicing a discipline the NFF has historically lacked.</p>
+            <div class="source-links"><a href="https://www.espn.com/soccer/story/_/id/45167982/brazil-court-ousts-cbf-president-days-ancelotti-appointment" target="_blank" rel="noopener">ESPN: Brazil court ousts CBF president</a></div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="staff-card" style="max-width:780px;margin-top:18px;border-left:4px solid var(--pitch);">
-      <h3 style="font-size:15px;margin-bottom:8px;">What SET will keep testing</h3>
+      <h3 style="font-size:15px;margin-bottom:8px;">What we'll keep testing</h3>
       <ul style="padding-left:18px;font-size:13px;line-height:1.65;color:var(--ink-soft);">
         <li>Does every evaluation camp produce a clear football decision, not just a list of attendees?</li>
         <li>Is there a common technical spine across senior, youth, scouting and diaspora work?</li>
         <li>Are eligible players being contacted early enough to build trust before a selection decision?</li>
         <li>Does each window create a feedback loop into the next roster and the wider pool?</li>
         <li>Does club form translate into international influence when the stakes rise?</li>
-        <li>Do the data and match evidence support the combinations the team is asking players to execute?</li>
+        <li>Is financial and governance oversight strong enough to survive both winning and losing streaks?</li>
       </ul>
-      <p class="fit">Geography, money and football culture are different across these countries. The useful comparison is the operating discipline: who owns identification, how information moves, how players are evaluated, and what happens after the camp.</p>
-      <p class="fit">A strong club season is an invitation to investigate, not a guarantee of international impact. SET will track that translation over time, alongside tactical fit, availability, combinations, and the evidence that a player can contribute when the pressure is highest.</p>
+      <p class="fit">Geography, money and football culture are different across these seven federations. The useful comparison is the operating discipline: who owns identification, how information moves, how reform is funded and enforced, and what happens after a coach is hired or a tournament ends badly.</p>
+      <p class="fit">A strong club season, or a single good World Cup, is an invitation to investigate — not proof that the underlying process is sound. We'll track that translation over time, the same way we track the pool itself.</p>
     </div>
   </section>
 
@@ -606,17 +612,17 @@
 <script>
 /* ---------------- VIEW COUNTER ---------------- */
 (async function(){
+  // Set this after the Cloudflare Worker/KV endpoint is deployed; GitHub
+  // Pages itself cannot persist a shared counter.
+  const VISITOR_COUNTER_ENDPOINT = '';
   try{
-    let count = 0;
-    try{
-      const res = await window.storage.get('supereaglestracker_views', true);
-      count = parseInt(res.value,10) || 0;
-    }catch(e){ count = 0; }
-    count += 1;
-    await window.storage.set('supereaglestracker_views', String(count), true);
-    document.getElementById('viewCount').textContent = count.toLocaleString();
+    if(!VISITOR_COUNTER_ENDPOINT) throw new Error('counter endpoint not configured');
+    const res = await fetch(VISITOR_COUNTER_ENDPOINT, {method:'POST', mode:'cors'});
+    if(!res.ok) throw new Error(`counter returned ${res.status}`);
+    const data = await res.json();
+    document.getElementById('viewCount').textContent = Number(data.count).toLocaleString();
   }catch(e){
-    document.getElementById('viewCount').textContent = '1';
+    document.getElementById('viewCount').textContent = '—';
   }
 })();
 
@@ -673,9 +679,8 @@ setInterval(tick, 60000);
    for the placeholder-data purge and pool-verification commits) - not
    illustrative filler. Per-entry verified/partial/false badges on the
    Big Board are the actual accuracy signal; entries marked TBD are
-   genuinely unresolved, not placeholders. Still due for a real
-   Transfermarkt/Wikidata-backed pipeline (scripts/) instead of hand
-   research - see CLAUDE.md "Data vendor decisions." */
+   genuinely unresolved, not placeholders. The free-source enrichment path
+   lives in scripts/; official links remain the evidence layer. */
 const FORMATION = [
   {pos:'GK', slots:[
     {main:{name:'Maduka Okoye', age:26, club:'Udinese', val:'€10m', trend:'up'}, depth:[
@@ -699,14 +704,14 @@ const FORMATION = [
     ]}
   ]},
   {pos:'MID', slots:[
-    {main:{name:'Alex Iwobi', age:29, club:'Fulham', val:'€22m', trend:'up'}, depth:[
-      {name:'Ethan Nwaneri', age:19, club:'Marseille (loan, Arsenal)', val:'€40m', trend:'up', watch:'Igbo-Nigerian father. England U21 international but uncapped at senior level. Family has reportedly opened the door to NFF talks.'}
+    {main:{name:'Ethan Nwaneri', age:19, club:'Marseille (loan, Arsenal)', val:'€40m', trend:'up', watch:'Igbo-Nigerian father. England U21 international but uncapped at senior level. Family has reportedly opened the door to NFF talks — real and live, but a notch below Ngumoha\'s urgency since he hasn\'t been drawn into a senior setup elsewhere.'}, depth:[
+      {name:'Alex Iwobi', age:29, club:'Fulham', val:'€22m', trend:'up'}
     ]},
-    {main:{name:'Wilfred Ndidi', age:29, club:'Besiktas', val:'€10m', trend:'flat'}, depth:[
-      {name:'Frank Onyeka', age:28, club:'Coventry City', val:'€18m', trend:'up'}
+    {main:{name:'Frank Onyeka', age:28, club:'Coventry City', val:'€18m', trend:'up'}, depth:[
+      {name:'Wilfred Ndidi', age:29, club:'Besiktas', val:'€10m', trend:'flat'}
     ]},
     {main:{name:'Raphael Onyedika', age:24, club:'Eintracht Frankfurt', val:'€22m', trend:'up'}, depth:[
-      {name:'Peter Etebo', age:30, club:'Gençlerbirliği', val:'€3m', trend:'down'}
+      {name:'Lesley Ugochukwu', age:22, club:'Galatasaray (loan from Burnley)', val:'TBD', trend:'down', watch:'Real setback: France U21 named him in their squad for 2027 Euro U21 qualifying (announced Sept 18, 2026), despite July reports he\'d started pursuing a Nigerian passport. No official change-of-association step has actually happened yet. His Nigeria tie is through his uncle, ex-Super Eagle Onyekachi Apam. Trending the wrong way, not confirmed progress.'}
     ]},
     {main:{name:'Rio Ngumoha', age:17, club:'Liverpool', val:'€25m', trend:'up', rivalCaps:{fed:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', caps:1, kind:'friendly', switchEligible:true}, watch:'This is now urgent, not hypothetical: made his senior England debut off the bench vs. New Zealand, June 2026 (a friendly — didn\'t cap-tie him). But Tuchel has since called him into England\'s actual competitive UEFA Nations League squad. If he plays in 3 of those 4 matches, he is permanently lost to Nigeria. Nigerian father, Guadeloupean mother, also France-eligible. This is the pool\'s single most time-critical case right now, ahead of Ahanor.'}, depth:[
       {name:'Samuel Chukwueze', age:26, club:'AC Milan', val:'€20m', trend:'flat'},
@@ -719,29 +724,31 @@ const FORMATION = [
       {name:'Jeff Ekhator', age:19, club:'Juventus', val:'€7m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:1, kind:'friendly', switchEligible:true}, watch:'Debut vs. Greece, June 7 2026 — recorded an assist. Born Nov 2006, well under 21 — still eligible for a FIFA one-time switch despite that cap.'}
     ]},
     {main:{name:'Ademola Lookman', age:28, club:'Atlético Madrid', val:'€45m', trend:'up'}, depth:[
-      {name:'Kelechi Iheanacho', age:29, club:'Bursaspor', val:'€6m', trend:'down'}
+      {name:'Akor Adams', age:26, club:'Venezia', val:'€17m', trend:'up', watch:'Already in Chelle\'s actual AFCON qualifying squad for Madagascar/Guinea-Bissau — ahead of Iheanacho in the real pecking order behind Osimhen/Lookman, not just on this site.'}
     ]}
   ]}
 ];
 
 const BOARD = [
-  {rank:27, name:'Rayan Oyebade', age:19, pos:'DEF', club:'West Ham United', val:'€1.2m', move:-2, elig:'watch', note:'Already turned out for Greece U19 in 2025 after England youth honours — a near-miss case.', verified:true},
-  {rank:28, name:'Samuel Adeniran', age:27, pos:'FWD', club:'LASK', val:'€1.5m', move:1, elig:'open', note:'USA-born, Nigeria-eligible, fully uncapped. Turns 28 in September — depth for now, not a 2030 cornerstone.', verified:true},
-  {rank:29, name:'Oluwaseun Adewumi', age:21, pos:'MID', club:'Hertha BSC (loan, Burnley)', val:'€800k', move:3, elig:'watch', note:'Born Lagos, Nigeria. Austrian citizenship, Austria U21 setup — fully uncapped at senior level.', verified:true},
-  {rank:30, name:'Chibuike Nwaiwu', age:22, pos:'DEF', club:'Trabzonspor', val:'€6.5m', move:0, elig:'open', note:'Center-back, joined Trabzonspor Jan 2026 (previously Wolfsberger AC, Enyimba, Heartland Owerri). Received a provisional Super Eagles call-up for the 2025 AFCON but hasn\'t made his senior debut yet.', verified:true},
-  {rank:31, name:'Tyrique George', age:19, pos:'FWD', club:'Chelsea (loan)', val:'€18m', move:0, elig:'watch', note:'Reported Nigerian heritage — age, exact eligibility status, and parental origin still need verification before this goes further.', verified:'partial'},
+  {rank:27, name:'Samuel Adeniran', age:27, pos:'FWD', club:'LASK', val:'€1.5m', move:1, elig:'open', note:'USA-born, Nigeria-eligible, fully uncapped. Scored twice for LASK in their Champions League playoff win over Celtic (5-1 second leg, 5-4 agg, Aug 25, 2026) — including a 109th-minute extra-time winner, completing the largest comeback in UEFA Champions League qualifying playoff history and sending LASK into the league phase. Fractured his cheekbone in the following Champions League opener at AEK Athens, had surgery Aug 28, and made his return Sept 15 off the bench in a 3-3 draw at Hartberg.', verified:true},
+  {rank:28, name:'Oluwaseun Adewumi', age:21, pos:'MID', club:'Hertha BSC (loan, Burnley)', val:'€800k', move:3, elig:'watch', note:'Born Lagos, Nigeria. Austrian citizenship, Austria U21 setup — fully uncapped at senior level.', verified:true},
+  {rank:29, name:'Chibuike Nwaiwu', age:22, pos:'DEF', club:'Trabzonspor', val:'€6.5m', move:0, elig:'open', note:'Center-back, joined Trabzonspor Jan 2026 (previously Wolfsberger AC, Enyimba, Heartland Owerri). Received a provisional Super Eagles call-up for the 2025 AFCON but hasn\'t made his senior debut yet.', verified:true},
+  {rank:30, name:'Tyrique George', age:19, pos:'FWD', club:'Chelsea (loan)', val:'€18m', move:0, elig:'watch', note:'Reported Nigerian heritage — age, exact eligibility status, and parental origin still need verification before this goes further.', verified:'partial'},
+  {rank:31, name:'Rayan Oyebade', age:19, pos:'DEF', club:'West Ham United', val:'€1.2m', move:-2, elig:'watch', note:'Already turned out for Greece U19 in 2025 after England youth honours — a near-miss case. Moved down this edition as the board weighs current senior-level trajectory and verified opportunity.', verified:true},
   {rank:32, name:'Chizzy Ezenwata', age:18, pos:'FWD', club:'Chelsea', val:'€3m', move:0, elig:'watch', note:'Reportedly flirted with Nigeria before an England U18 call-up — needs a proper verification pass, not just press mentions.', verified:'partial'},
   {rank:33, name:'William Troost-Ekong', age:32, pos:'DEF', club:'Besiktas', val:'€2m', move:-4, elig:'open', note:'Veteran leadership, but the 2030 cycle needs to belong to the players below him, not above him.', verified:true},
   {rank:34, name:'David Ozoh', age:21, pos:'MID', club:'Derby County', val:'TBD', move:0, elig:'open', note:'Born Valencia; permanent move to Derby County (from Crystal Palace) completed Sept 2026. Agreed to switch to Nigeria after meeting Chelle toward the end of last season — not a "this week" story, despite how it first got reported to us. Doesn\'t need FIFA clearance, just a letter of release from the English FA (uncapped by England at any level). Chelle is hopeful he\'s cleared before the November window, initially at U23 level for the AFCON U23 qualifiers, not the senior squad.', verified:false},
-  {rank:35, name:'Lesley Ugochukwu', age:22, pos:'MID', club:'Galatasaray (loan from Burnley)', val:'TBD', move:-3, elig:'watch', note:'Real setback: France U21 named him in their squad for 2027 Euro U21 qualifying (announced Sept 18, 2026), despite July reports he\'d started pursuing a Nigerian passport. No official change-of-association step has actually happened yet. His Nigeria tie is through his uncle, ex-Super Eagle Onyekachi Apam. Downgraded from "open" to "watch" — this is trending the wrong way, not confirmed progress.', verified:'partial'},
+  {rank:35, name:'Peter Etebo', age:30, pos:'MID', club:'Gençlerbirliği', val:'€3m', move:-3, elig:'open', note:'Established Super Eagles international, but at 30 and now in Turkey, Ugochukwu\'s rising profile pushed ahead of him in Onyedika\'s midfield depth. Tracked here rather than quietly dropped, same as Troost-Ekong and Iheanacho below.', verified:true},
   {rank:36, name:'Isaac James', age:'TBD', pos:'DEF', club:'TBD (Portugal)', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
   {rank:37, name:'George Ilenikhena', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
-  {rank:38, name:'Moses Usor', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false}
+  {rank:38, name:'Moses Usor', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
+  {rank:39, name:'Kelechi Iheanacho', age:29, pos:'FWD', club:'Bursaspor', val:'€6m', move:-1, elig:'open', note:'Still a full, capped Super Eagles international, but at 29 and now in Turkey he\'s in the Russia friendly (evaluation) squad, not the AFCON qualifying squad — Akor Adams has moved ahead of him in the pool\'s FWD depth. Tracked here rather than quietly dropped, same as Troost-Ekong below.', verified:true},
+  {rank:40, name:'Michael Kayode', age:21, pos:'DEF', club:'Brentford', val:'€35m', move:0, elig:'open', note:'Both parents Nigerian. Left out of Italy\'s World Cup qualifying playoff squad by Gennaro Gattuso and remains eligible to switch — uncapped at senior level. The NFF has secured Eric Chelle\'s personal backing and arranged a face-to-face meeting in London to make the pitch directly. One of the more advanced real recruitment pushes in the pool right now, not just a rumor.', verified:true}
 ];
 
 const LOST_TO_RIVALS = [
-  {name:'Nnamdi Collins', now:'Germany', detail:'Made senior competitive debut vs Slovakia, Sept 2025 (2026 WCQ) — permanently cap-tied.'},
-  {name:'Carney Chukwuemeka', now:'Austria', detail:'Nigeria was genuinely in the running — born in Vienna to Nigerian parents. Completed a FIFA-approved switch to Austria in March 2026 and debuted vs. Ghana. A real, recent loss, not a hypothetical one.'}
+  {name:'Nnamdi Collins', now:'Germany', flag:'🇩🇪', detail:'Made senior competitive debut vs Slovakia, Sept 2025 (2026 WCQ) — permanently cap-tied.'},
+  {name:'Carney Chukwuemeka', now:'Austria', flag:'🇦🇹', detail:'Nigeria was genuinely in the running — born in Vienna to Nigerian parents. Completed a FIFA-approved switch to Austria in March 2026 and debuted vs. Ghana. A real, recent loss, not a hypothetical one.'}
 ];
 
 /* Uncapped/dual-national cases that resolved IN Nigeria's favor — the mirror
@@ -755,13 +762,57 @@ const WON_FROM_RIVALS = [
    before Nigeria could realistically have been in the conversation — informational,
    not part of the active pool or the "recently lost" urgency list. */
 const DIASPORA_ELSEWHERE = [
-  {name:'Bukayo Saka', team:'England', detail:'Born in Ealing to Yoruba Nigerian parents. Eligible for Nigeria, chose England, debuted 2020.'},
-  {name:'Eberechi Eze', team:'England', detail:'Igbo-Nigerian parents. Debuted for England in 2023, started at the 2026 World Cup.'},
-  {name:'Jamal Musiala', team:'Germany', detail:'Born in Stuttgart to a Nigerian father and German mother. Chose Germany in 2021 and became a senior international.'},
-  {name:'Noni Madueke', team:'England', detail:'Nigerian parents, developed via PSV and Chelsea. Debuted for England Sept 2024.'},
-  {name:'Folarin Balogun', team:'United States', detail:'Born in Brooklyn to Nigerian parents. Used a FIFA one-time switch from England to the USMNT in 2023 — now their starting No. 9.'},
-  {name:'Michael Olise', team:'France', detail:'Nigerian father, Algerian mother. Born and developed in England, debuted for France in 2024.'}
+  {name:'Bukayo Saka', team:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', detail:'Born in Ealing to Yoruba Nigerian parents. Eligible for Nigeria, chose England, debuted 2020.'},
+  {name:'Eberechi Eze', team:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', detail:'Igbo-Nigerian parents. Debuted for England in 2023, started at the 2026 World Cup.'},
+  {name:'Jamal Musiala', team:'Germany', flag:'🇩🇪', detail:'Born in Stuttgart to a Nigerian father and German mother. Chose Germany in 2021 and became a senior international.'},
+  {name:'Noni Madueke', team:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', detail:'Nigerian parents, developed via PSV and Chelsea. Debuted for England Sept 2024.'},
+  {name:'Folarin Balogun', team:'United States', flag:'🇺🇸', detail:'Born in Brooklyn to Nigerian parents. Used a FIFA one-time switch from England to the USMNT in 2023 — now their starting No. 9.'},
+  {name:'Michael Olise', team:'France', flag:'🇫🇷', detail:'Nigerian father, Algerian mother. Born and developed in England, debuted for France in 2024, started their 2026 semifinal run.'},
+  {name:'David Alaba', team:'Austria', flag:'🇦🇹', detail:'Son of a Yoruba Nigerian father from Ogere, Ogun State, and a Filipino mother. Born and raised in Vienna, 113+ caps for Austria since 2009.'},
+  {name:'Lukas Nmecha', team:'Germany', flag:'🇩🇪', detail:'German mother, Nigerian father. Played England at multiple youth levels before settling on Germany, debuting for them in 2023.'},
+  {name:'Joshua Zirkzee', team:'Netherlands', flag:'🇳🇱', detail:'Dutch father, Nigerian mother. Received a late Euro 2024 call-up and has stuck with the Netherlands since.'},
+  {name:'Noah Okafor', team:'Switzerland', flag:'🇨🇭', detail:'Nigerian father, Swiss mother — similar profile to teammate Manuel Akanji, who is also of Nigerian descent.'},
+  {name:'Manuel Akanji', team:'Switzerland', flag:'🇨🇭', detail:'Born in Zürich to a Nigerian father and Swiss mother. Established Switzerland and Manchester City defender.'},
+  {name:'Promise David', team:'Canada', flag:'🇨🇦', detail:'Nigerian-born forward, part of Canada\'s 2026 World Cup squad — one of three Nigeria-eligible players on their roster.'},
+  {name:'Owen Goodman', team:'Canada', flag:'🇨🇦', detail:'Nigeria-eligible goalkeeper who committed to Canada; part of their 2026 World Cup squad alongside Promise David.'},
+  {name:'Samuel Adekugbe', team:'Canada', flag:'🇨🇦', detail:'Born in England to Nigerian parents, developed through Vancouver Whitecaps, debuted for Canada in 2015.'},
+  {name:'Karim Adeyemi', team:'Germany', flag:'🇩🇪', detail:'Born in Munich to a Nigerian father who moved to Germany to pursue a football career.'},
+  {name:'Angelo Ogbonna', team:'Italy', flag:'🇮🇹', detail:'Parents immigrated from Nigeria to Italy in 1983. Obtained Italian citizenship at 18, long-time Italy international.'},
+  {name:'Michael Folorunsho', team:'Italy', flag:'🇮🇹', detail:'Born in Rome to Nigerian parents, developed in Italy\'s lower leagues before breaking into Serie A with Hellas Verona.'},
+  {name:'Karim Onisiwo', team:'Austria', flag:'🇦🇹', detail:'Nigerian father, Austrian mother. Long-serving Austria international, plays for Mainz in the Bundesliga.'},
+  {name:'Chukwubuike Junior Adamu', team:'Austria', flag:'🇦🇹', detail:'Born in northern Nigeria, raised mostly in Austria. Already has senior Austria caps.'},
+  {name:'Dominic Solanke', team:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', detail:'Nigerian father, English mother. Established England international, plays for Bournemouth.'},
+  {name:'Arnaut Danjuma', team:'Netherlands', flag:'🇳🇱', detail:'Born in Lagos to a Dutch father and Nigerian mother. Established Netherlands international.'},
+  {name:'Hal Robson-Kanu', team:'Wales', flag:'🏴󠁧󠁢󠁷󠁬󠁳󠁿', detail:'Nigerian father, English mother. Scored the winner in Wales\' famous Euro 2016 win over Belgium; could have chosen England or Nigeria.'},
+  {name:'Emmanuel Olisadebe', team:'Poland', flag:'🇵🇱', detail:'Born in Warri, Nigeria. Naturalized Polish citizen, became the first Black player to represent Poland\'s national team in 2000 — a historic, early case of the pattern this site now tracks in reverse.'},
+  {name:'Thomas Sowunmi', team:'Hungary', flag:'🇭🇺', detail:'Born in Lagos to a Nigerian father and Hungarian mother.'},
+  {name:'Chiedozie Ogbene', team:'Republic of Ireland', flag:'🇮🇪', detail:'Born in Lagos, moved to Ireland as a child. Approached the Irish federation himself in 2020 and has been a regular international since 2021.'},
+  {name:'Jaden Umeh', team:'Republic of Ireland', flag:'🇮🇪', detail:'Born in Cork to Nigerian parents. Progressed through Ireland\'s youth teams to a senior call-up and debut in 2026, now on Benfica\'s books.'}
 ];
+
+/* One explicit flag registry keeps the Elsewhere cards and Comparative
+   Methods headings consistent. Records may retain a legacy `flag` value while
+   being migrated, but new records should provide only their national-team
+   name and let this registry supply the display flag. */
+const NATIONAL_FLAGS = Object.freeze({
+  'Argentina':'🇦🇷', 'Austria':'🇦🇹', 'Brazil':'🇧🇷', 'Canada':'🇨🇦',
+  'England':'🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'France':'🇫🇷', 'Germany':'🇩🇪', 'Hungary':'🇭🇺',
+  'Italy':'🇮🇹', 'Japan':'🇯🇵', 'Morocco':'🇲🇦', 'Netherlands':'🇳🇱',
+  'Norway':'🇳🇴', 'Poland':'🇵🇱', 'Republic of Ireland':'🇮🇪', 'Senegal':'🇸🇳',
+  'Spain':'🇪🇸', 'Switzerland':'🇨🇭', 'United States':'🇺🇸', 'Wales':'🏴󠁧󠁢󠁷󠁬󠁳󠁿'
+});
+function nationalFlag(team, fallback=''){
+  return NATIONAL_FLAGS[team] || fallback;
+}
+document.querySelectorAll('[data-national-team]').forEach((heading)=>{
+  const flag = nationalFlag(heading.dataset.nationalTeam);
+  if(!flag) return;
+  const badge = document.createElement('span');
+  badge.className = 'national-flag';
+  badge.setAttribute('aria-hidden', 'true');
+  badge.textContent = `${flag} `;
+  heading.prepend(badge);
+});
 
 /* Exact Wikidata matches confirmed during the source audit. Keep this map
    explicit: a search result is not enough when names are ambiguous. */
@@ -1050,7 +1101,7 @@ LOST_TO_RIVALS.forEach(p=>{
   row.style.fontSize = '12.5px';
   row.style.marginBottom = '6px';
   row.style.lineHeight = '1.4';
-  row.innerHTML = `<b>${p.name}</b> → now ${p.now}. <span style="color:var(--ink-soft);">${p.detail}</span>`;
+  row.innerHTML = `<b>${p.name}</b> → now ${nationalFlag(p.now, p.flag)} ${p.now}. <span style="color:var(--ink-soft);">${p.detail}</span>`;
   lostWrap.appendChild(row);
 });
 document.getElementById('boardList').after(lostWrap);
@@ -1079,7 +1130,7 @@ DIASPORA_ELSEWHERE.forEach(p=>{
   const card = document.createElement('div');
   card.className = 'staff-card';
   card.innerHTML = `
-    <div class="name">${p.name} <span class="mono" style="font-size:11px;color:var(--ink-soft);font-weight:400;">→ ${p.team}</span></div>
+    <div class="name">${p.name} <span class="mono" style="font-size:11px;color:var(--ink-soft);font-weight:400;">→ ${nationalFlag(p.team, p.flag)} ${p.team}</span></div>
     <div class="fit" style="margin-top:6px;">${p.detail}</div>
   `;
   elsewhereEl.appendChild(card);

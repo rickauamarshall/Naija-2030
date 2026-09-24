@@ -15,6 +15,7 @@ __pycache__/
 .venv/
 venv/
 scripts/candidates.db
+.cache/
 
 # OS
 .DS_Store
