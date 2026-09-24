@@ -27,7 +27,7 @@ SITE_PATH = Path(__file__).parent.parent / "site" / "index.html"
 EXPECTED_STARTERS = {"GK": 1, "DEF": 4, "MID": 4, "FWD": 2}
 EXPECTED_RESERVES = {"GK": 2, "DEF": 5, "MID": 5, "FWD": 3}
 EXPECTED_BOARD_RANK_START = 27
-EXPECTED_BOARD_RANK_END = 39
+EXPECTED_BOARD_RANK_END = 40
 
 
 def extract_block(text: str, start_marker: str) -> str:
