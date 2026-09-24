@@ -70,6 +70,34 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-24 — Codex — domain, Pages, and registrar security sync
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree
+
+### Changed
+- Synced `docs/prelaunch-checklist.md` with the completed public infrastructure work.
+- Recorded the live GitHub Pages custom domain, DNS setup, Beehiiv signup URL, and Cloudflare Registrar privacy/renewal status.
+
+### Checked
+- `supereaglestracker.com` has four GitHub Pages apex A records and a DNS-only `www` CNAME to `rickauamarshall.github.io`.
+- GitHub Pages accepted the custom domain and reported a successful DNS check; HTTPS certificate issuance is still completing.
+- Cloudflare shows WHOIS redaction enabled, auto-renew enabled, and the Fadius domains untouched with no DNS records added.
+
+### Findings
+- The Fadius domains (`fadius.app`, `fadius.net`, and `fadius.us`) remain separate from Super Eagles Tracker and were not modified.
+- No credentials, tokens, contact data, or browser exports were added to the repository.
+
+### Evidence
+- GitHub Pages settings: `https://github.com/rickauamarshall/Naija-2030/settings/pages`
+- Cloudflare Registrar settings and DNS dashboard, reviewed in the owner’s authenticated browser session.
+
+### Owner decision needed
+- Approve this documentation-only sync for commit and push.
+
+### Next agent
+- After approval, commit and push the checklist/handoff sync, then perform public HTTPS and site QA.
+
 ### 2026-09-23 — Codex — source audit follow-up and launch checklist sync
 
 Status: `READY_FOR_REVIEW`

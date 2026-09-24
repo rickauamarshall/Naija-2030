@@ -13,8 +13,8 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] Removed two literal `[Add: ...]` placeholder entries from the public Staff tab (Scouting & Data, Medical & Performance) — found by Codex's audit. Tracking the actual research gap here instead of leaving a raw TODO live: **still need real names for** (a) diaspora scouts/recruitment analysts at CIES or club scouting departments, (b) club-level sports scientists/physios of Nigerian origin. Add back as real entries once researched, not as placeholders.
 - [x] Masthead player count and Big Board rank-range header are now computed from the live `FORMATION`/`BOARD` arrays via JS, not hardcoded strings — can't drift out of sync with the data again the way "50 PLAYERS" / "(27–50)" did
 - [x] `server/src/config/pool.js` was badly stale (still had all 17 purged fabricated names, including the Iheukwumere misattribution, plus 6 stale club names) — resynced by hand to match the current 38-player site pool. Its own header comment still flags the real fix: generate this file from `site/index.html` instead of hand-maintaining both in parallel.
-- [x] GitHub Pages deploy workflow added (`.github/workflows/pages.yml`) — **one manual step still needed**: repo Settings → Pages → Source → "GitHub Actions" (can't be set from a workflow file, needs a human with repo admin access to click it once). Once that's flipped, the site goes live at the repo's Pages URL on every push to `site/`.
-- [ ] Custom domain, if wanted — WHOIS privacy on registration (see `anonymity-opsec.md`)
+- [x] GitHub Pages deploy workflow added (`.github/workflows/pages.yml`) and Pages source set to GitHub Actions; the site is live at `https://supereaglestracker.com/`.
+- [x] Custom domain configured: `supereaglestracker.com` uses the four GitHub Pages apex A records plus the DNS-only `www` CNAME; GitHub DNS check has succeeded and HTTPS certificate provisioning is in progress.
 - [ ] Real view counter backend — current one uses the artifact-preview environment's `window.storage`, which won't exist once actually deployed (flagged in the original handover, still open)
 - [x] Per-player source links — verified Wikidata and official federation/competition/club links are attached where identities are clear; unresolved profiles remain visibly marked pending verification
 
@@ -38,7 +38,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 
 ## Newsletter
 - [x] Structure/plan drafted (`newsletter-plan.md`) — built from general newsletter conventions since the Nutmeg Soccer reference page was blocked by network egress in-session; revisit if you paste the actual text in
-- [x] Platform account created (beehiiv) — real publication URL still needed to wire up the site's Subscribe link (currently a TODO placeholder in `site/index.html`)
+- [x] Platform account created (beehiiv) — site Subscribe link points to `https://supereaglestracker.beehiiv.com/subscribe`
 - [ ] Graphics/video-clip production workflow — not started; needs either manual design each week or a templated approach
 - [x] First issue — Issue №1 ("The Origin Issue") posted across newsletter, X, and Instagram
 
@@ -51,7 +51,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] Scope decided: public-facing only, not the private repo
 - [x] Posting-time misdirection (Spain mornings) designed and scheduled
 - [x] GitHub account renamed in place (`rickauamarshall`) — repo-level, so lower priority under the scope above anyway
-- [ ] Domain WHOIS privacy, once/if a domain is bought
+- [x] Domain WHOIS privacy enabled by default through Cloudflare Registrar for `supereaglestracker.com`; registrar auto-renew is enabled and the domain is transfer-locked during its initial registration period
 
 ## Repo / infra
 - [x] `naija-2030` repo created on GitHub (by the project owner)
