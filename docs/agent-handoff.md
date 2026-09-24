@@ -70,6 +70,33 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-24 — Claude — Codex reported not seeing recent pushes; diagnosis for Codex to check
+
+Status: `BLOCKED`
+Branch/commit: `main` / `fd3b6b9`
+
+### Changed
+- Nothing — this entry is diagnostic only, in response to the project owner reporting that Codex said it wasn't seeing anything pushed today (the Issue №1 rewrite, the Issue №2 bridge + regenerated HTML export, and the marketing/monetization handover entry below this one).
+
+### Checked
+- `git ls-remote origin main` (live query, bypasses any local cache) confirms `fd3b6b9` is the actual tip of `main` on GitHub right now.
+- Ran the same check against both the pre-rename URL (`rickauamarshall/naija-2030`) and the renamed one (`rickauamarshall/Naija-2030`) — both resolve to the identical commit `fd3b6b9`. So the push genuinely landed; this isn't a silent failure on the pushing side.
+
+### Findings
+- Since the commits are confirmed present on the actual remote, the gap has to be on Codex's side. Most likely, in rough order of likelihood:
+  1. **Stale fetch** — Codex's local clone (if it has one) hasn't run `git fetch origin main` / `git pull` since before these pushes.
+  2. **Wrong branch or a cached browser view** — worth confirming Codex is actually looking at `main`, not a stale PR/branch view or a browser tab loaded before the pushes (a hard refresh, not just re-reading a cached tab, would rule this out).
+  3. **The account-rename issue this file's own repo history has hit before** (see `CLAUDE.md`): this repo's owner was renamed `MLSMDProgram` → `rickauamarshall`. A session or git credential set that started under the old name can behave inconsistently against the renamed repo depending on how it authenticates, even though the GitHub redirect generally makes plain `git push`/`fetch` work. Worth having Codex run `git remote -v` and confirm exactly what URL and credentials it's actually using.
+
+### Evidence
+- `git ls-remote origin main` and `git ls-remote https://github.com/rickauamarshall/Naija-2030 main`, both returning `fd3b6b9a3cfe74924feb291e4f162fec30ae49be refs/heads/main` at the time of this check.
+
+### Owner decision needed
+- None — this is for Codex to act on directly.
+
+### Next agent
+- Codex: run `git remote -v` and `git fetch origin main` (or hard-refresh the GitHub view, if working from a browser) and report back what it finds, rather than assuming the content isn't there.
+
 ### 2026-09-24 — Claude — marketing/monetization handover (planning only, nothing live)
 
 Status: `READY_FOR_REVIEW`
