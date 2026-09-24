@@ -259,6 +259,23 @@
   .depth-list li .val{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--up); }
   .depth-list li.flag-age .val{ color:var(--clay); }
   .national-flag{ display:inline-block; font-size:20px; line-height:1; margin-right:6px; vertical-align:-2px; }
+  .country-code{ font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:.06em; color:var(--ink-soft); vertical-align:2px; }
+  .methods-view .section-head{ max-width:820px; }
+  .methods-view .section-head p{ max-width:720px; font-size:13px; line-height:1.5; }
+  .methods-view .methods-intro{ max-width:820px; padding:16px 18px; margin-bottom:20px; border-left:4px solid var(--gold); }
+  .methods-view .methods-intro p{ margin:0; font-size:14px; line-height:1.6; }
+  .methods-view .methods-lens{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
+  .methods-view .methods-lens div{ background:rgba(255,255,255,.55); border:1px solid var(--paper-2); border-radius:6px; padding:9px 10px; }
+  .methods-view .methods-lens b{ display:block; font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--gold); text-transform:uppercase; letter-spacing:.05em; margin-bottom:3px; }
+  .methods-view .methods-lens span{ font-size:11.5px; color:var(--ink-soft); line-height:1.35; }
+  .methods-view .cabinet-group h3{ display:flex; align-items:center; gap:0; font-size:14px; margin:4px 0 8px; }
+  .methods-view .staff-card{ padding:16px 18px; margin-bottom:16px; }
+  .methods-view .staff-card .role{ font-size:14px; color:var(--ink); line-height:1.25; }
+  .methods-view .staff-card .mono{ background:var(--paper-2); border-radius:4px; padding:6px 8px; line-height:1.35; }
+  .methods-view .staff-card .fit{ font-size:12px; line-height:1.55; margin-top:10px; }
+  .methods-view .staff-card .source-links{ border-top:1px solid var(--paper-2); padding-top:8px; margin-top:12px; }
+  .methods-view .methods-commercial{ max-width:820px; margin-top:20px; border-left:4px solid var(--pitch); }
+  @media (max-width:700px){ .methods-view .methods-lens{ grid-template-columns:1fr; } }
 
   /* ---- BIG BOARD ---- */
   .board{
@@ -477,35 +494,39 @@
   </section>
 
   <!-- ================= COMPARATIVE METHODS VIEW ================= -->
-  <section class="view" id="methods">
+  <section class="view methods-view" id="methods">
     <div class="section-head">
       <div>
-        <h2>What This Year's World Cup Actually Taught Us</h2>
-        <p>Case studies from federations whose reform, recruitment, financial oversight, and coaching decisions shaped how their 2026 World Cup actually went. The point is what's transferable to Nigeria's own reform, not a scoreboard of who did better.</p>
+        <h2>Comparative Methods</h2>
+        <p>Seven federation case studies, read for operating habits rather than copied formulas. The question is simple: what helps a country turn talent into a reliable national-team process?</p>
       </div>
     </div>
 
-    <div class="staff-card" style="max-width:780px;border-left:4px solid var(--gold);margin-bottom:18px;">
-      <p style="font-size:14px;line-height:1.7;color:var(--ink);">
-        Nigeria's challenge is not a shortage of footballers. It's whether the federation can turn a deep player base into a stable, well-run process — on the pitch and off it. The seven cases below aren't a ranking; they're evidence, tagged by what actually happened when each federation's choices met the World Cup's actual pressure test.
-      </p>
+    <div class="staff-card methods-intro">
+      <p>Nigeria's challenge is not a shortage of footballers. It is whether the federation can turn a deep player base into a stable, well-run process on and off the pitch.</p>
+      <div class="methods-lens">
+        <div><b>Identify</b><span>Who finds the player, and how early?</span></div>
+        <div><b>Develop</b><span>What shared football language follows them?</span></div>
+        <div><b>Decide</b><span>How does evidence become a roster choice?</span></div>
+      </div>
     </div>
 
     <div class="cabinet-groups">
-      <div>
-        <div class="cabinet-group">
-          <h3 data-national-team="Germany">Germany</h3>
+    <div>
+      <div class="cabinet-group">
+          <h3 data-national-team="Germany" data-flag="🇩🇪" data-code="DE"><span class="national-flag" aria-hidden="true">🇩🇪</span><span class="country-code">DE</span> Germany</h3>
           <div class="staff-card" style="border-left:4px solid #DD0000;">
             <div class="role">Structural reform, delivered 14 years later</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Reform mandated 2001, four years after Euro 2000; paid off at the 2014 World Cup — 25 years start to finish</div>
             <p class="fit">After a group-stage exit at Euro 2000 — a squad averaging 31 years old with only one player under 21 — the DFB mandated in 2001 that every Bundesliga and 2. Bundesliga club operate a licensed, standards-audited youth academy as a condition of their pro license. Clubs spent over €1.5 billion on youth infrastructure in the years that followed, building 390 regional talent bases (one within 25km of virtually every young player) staffed by 1,200 DFB-employed coaches, backed by €48 million a year in combined DFB-and-league funding. Twenty-one of the 23 players who won the 2014 World Cup came directly through that system.</p>
             <p class="fit"><b>Lesson for Nigeria:</b> structural reform only pays off if it's funded and enforced long enough to outlast several coaching cycles and a few bad tournaments in between. A single academy standard, applied at every club — not just the biggest ones — beats a handful of showcase programs.</p>
-            <div class="source-links"><a href="https://www.dfl.de/en/topics/youth-academies/a-brief-history-of-german-youth-academies/" target="_blank" rel="noopener">DFL: history of German youth academies</a></div>
+            <p class="fit"><b>The Klopp parallel:</b> Klopp's first Germany window used an expansive pool of 44 players across two squads for four Nations League matches: 24 players for the opening two games, then 20 more for the next phase. He described the aim as focusing on what Germany has and preparing players to compete at the top over the next two or three years. That is a useful analog for Chelle's evaluation-heavy window: start broad, give each player a real question and meaningful minutes, then record what carries into the next camp.</p>
+            <div class="source-links"><a href="https://www.dfl.de/en/topics/youth-academies/a-brief-history-of-german-youth-academies/" target="_blank" rel="noopener">DFL: history of German youth academies</a><a href="https://www.dfb.de/news/klopp-explains-first-squad-selection-we-saw-something-in-them" target="_blank" rel="noopener">DFB: Klopp explains the 44-player approach</a></div>
           </div>
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="Morocco">Morocco</h3>
+          <h3 data-national-team="Morocco" data-flag="🇲🇦" data-code="MA"><span class="national-flag" aria-hidden="true">🇲🇦</span><span class="country-code">MA</span> Morocco</h3>
           <div class="staff-card" style="border-left:4px solid #C1272D;">
             <div class="role">A diaspora pipeline built over a decade</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Diaspora scouting operation launched 2014; still expanding as of the 2026 World Cup</div>
@@ -516,7 +537,7 @@
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="Argentina">Argentina</h3>
+          <h3 data-national-team="Argentina" data-flag="🇦🇷" data-code="AR"><span class="national-flag" aria-hidden="true">🇦🇷</span><span class="country-code">AR</span> Argentina</h3>
           <div class="staff-card" style="border-left:4px solid #74ACDF;">
             <div class="role">On-field success can shield financial dysfunction</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 FBI/DOJ probe reported 2025–2026, still active as of this writing; domestic raid Dec 9, 2025</div>
@@ -529,7 +550,7 @@
 
       <div>
         <div class="cabinet-group">
-          <h3 data-national-team="United States">United States</h3>
+          <h3 data-national-team="United States" data-flag="🇺🇸" data-code="US"><span class="national-flag" aria-hidden="true">🇺🇸</span><span class="country-code">US</span> United States</h3>
           <div class="staff-card" style="border-left:4px solid #3C3B6E;">
             <div class="role">Talent without a coherent pathway underneath it</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Missed the 2018 World Cup; pathway consolidation announced Aug 29, 2026, integration begins Sept 1, 2026</div>
@@ -540,7 +561,7 @@
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="Spain">Spain</h3>
+          <h3 data-national-team="Spain" data-flag="🇪🇸" data-code="ES"><span class="national-flag" aria-hidden="true">🇪🇸</span><span class="country-code">ES</span> Spain</h3>
           <div class="staff-card" style="border-left:4px solid #AA151B;">
             <div class="role">A technical identity taught the same way for two decades</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Won the 2026 World Cup final, July 19, 2026</div>
@@ -551,7 +572,7 @@
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="France">France</h3>
+          <h3 data-national-team="France" data-flag="🇫🇷" data-code="FR"><span class="national-flag" aria-hidden="true">🇫🇷</span><span class="country-code">FR</span> France</h3>
           <div class="staff-card" style="border-left:4px solid #0055A4;">
             <div class="role">Elite talent isn't sufficient on its own</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Lost the semifinal 2-0 to Spain, July 14, 2026; Deschamps' tenure since 2012 ends after this World Cup</div>
@@ -562,7 +583,7 @@
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="Brazil">Brazil</h3>
+          <h3 data-national-team="Brazil" data-flag="🇧🇷" data-code="BR"><span class="national-flag" aria-hidden="true">🇧🇷</span><span class="country-code">BR</span> Brazil</h3>
           <div class="staff-card" style="border-left:4px solid #009739;">
             <div class="role">Federation dysfunction destabilizes everything downstream</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Ancelotti hired, CBF crisis erupted May 2025; eliminated Round of 16, July 5, 2026</div>
@@ -572,6 +593,14 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="staff-card methods-commercial">
+      <div class="role">Commercial and diaspora lens</div>
+      <p class="fit"><b>Argentina:</b> the AFA established a Miami base to put commercial, media, marketing, ticketing and scouting activity closer to its North American audience. The principle is useful for Nigeria: keep the football identity and accountability at home, while giving the diaspora a professional place to participate, buy in and build partnerships.</p>
+      <p class="fit"><b>United States:</b> U.S. Soccer's commercial operation treats federation rights, fan engagement and major partnerships as infrastructure, not an afterthought. Nigeria could adapt that model through a small, accountable international office or diaspora council, beginning in the United States and connecting sponsors, supporters, former players and football professionals back to the federation's work at home.</p>
+      <p class="fit"><b>The guardrail:</b> international reach should diversify revenue and relationships without moving decision-making away from Nigeria or weakening financial oversight. A Miami presence can be a bridge to home, not a substitute for it.</p>
+      <div class="source-links"><a href="https://www.afa.com.ar/Sitio/posts/inauguracion-de-las-oficinas-de-la-afa-en-miami" target="_blank" rel="noopener">AFA: Miami office</a><a href="https://www.ussoccer.com/executive-leadership/david-wright" target="_blank" rel="noopener">U.S. Soccer: commercial infrastructure</a></div>
     </div>
 
     <div class="staff-card" style="max-width:780px;margin-top:18px;border-left:4px solid var(--pitch);">
@@ -699,8 +728,8 @@ const FORMATION = [
     {main:{name:'Honest Ahanor', age:18, club:'Crystal Palace (loan from Chelsea)', val:'€35m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:2, kind:'friendly', switchEligible:true}, watch:'Sub vs Luxembourg, started vs Greece — both friendlies. Still eligible for a FIFA one-time switch (under 21, ≤3 caps, no competitive caps). Biggest urgency case in the pool — this is an active, formal mechanism, not just hope.'}, depth:[
       {name:'Benjamin Fredrick', age:20, club:'FCV Dender EH', val:'€3m', trend:'up', watch:'Simoiben Academy product (Moses Simon\'s academy). Already made his senior Nigeria debut in the May 2025 Unity Cup final vs. Jamaica — not actually uncapped, unlike most of this depth list. Club corrected from a stale "Standard Liège" listing.'}
     ]},
-    {main:{name:'Zaidu Sanusi', age:27, club:'Porto', val:'€8m', trend:'flat'}, depth:[
-      {name:'Emeka Adiele', age:18, club:'FC Utrecht (on loan, Burton Albion)', val:'€1.5m', trend:'up', watch:'Left West Ham for Utrecht on a 4-year deal, currently on loan to Burton Albion — club corrected from a stale "West Ham" listing. England U17/U18 international, Nigeria-eligible, fully uncapped at senior level for either.'}
+    {main:{name:'Michael Kayode', age:21, club:'Brentford', val:'€35m', trend:'up', watch:'Both parents Nigerian. Left out of Italy\'s World Cup qualifying playoff squad by Gennaro Gattuso and remains eligible to switch — uncapped at senior level. The NFF has secured Eric Chelle\'s personal backing and arranged a face-to-face meeting in London to make the pitch directly.'}, depth:[
+      {name:'Zaidu Sanusi', age:27, club:'Porto', val:'€8m', trend:'flat'}
     ]}
   ]},
   {pos:'MID', slots:[
@@ -743,7 +772,7 @@ const BOARD = [
   {rank:37, name:'George Ilenikhena', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
   {rank:38, name:'Moses Usor', age:'TBD', pos:'FWD', club:'TBD', val:'TBD', move:0, elig:'open', note:'First senior call-up, named in Chelle\'s squad for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Club and full profile not yet independently verified.', verified:false},
   {rank:39, name:'Kelechi Iheanacho', age:29, pos:'FWD', club:'Bursaspor', val:'€6m', move:-1, elig:'open', note:'Still a full, capped Super Eagles international, but at 29 and now in Turkey he\'s in the Russia friendly (evaluation) squad, not the AFCON qualifying squad — Akor Adams has moved ahead of him in the pool\'s FWD depth. Tracked here rather than quietly dropped, same as Troost-Ekong below.', verified:true},
-  {rank:40, name:'Michael Kayode', age:21, pos:'DEF', club:'Brentford', val:'€35m', move:0, elig:'open', note:'Both parents Nigerian. Left out of Italy\'s World Cup qualifying playoff squad by Gennaro Gattuso and remains eligible to switch — uncapped at senior level. The NFF has secured Eric Chelle\'s personal backing and arranged a face-to-face meeting in London to make the pitch directly. One of the more advanced real recruitment pushes in the pool right now, not just a rumor.', verified:true}
+  {rank:40, name:'Emeka Adiele', age:18, pos:'DEF', club:'FC Utrecht (on loan, Burton Albion)', val:'€1.5m', move:0, elig:'watch', note:'Left West Ham for Utrecht on a 4-year deal, currently on loan to Burton Albion — club corrected from a stale "West Ham" listing. England U17/U18 international, Nigeria-eligible, fully uncapped at senior level for either.', verified:true}
 ];
 
 const LOST_TO_RIVALS = [
@@ -804,14 +833,12 @@ const NATIONAL_FLAGS = Object.freeze({
 function nationalFlag(team, fallback=''){
   return NATIONAL_FLAGS[team] || fallback;
 }
-document.querySelectorAll('[data-national-team]').forEach((heading)=>{
-  const flag = nationalFlag(heading.dataset.nationalTeam);
-  if(!flag) return;
-  const badge = document.createElement('span');
-  badge.className = 'national-flag';
-  badge.setAttribute('aria-hidden', 'true');
-  badge.textContent = `${flag} `;
-  heading.prepend(badge);
+const NATIONAL_CODES = Object.freeze({
+  'Argentina':'AR', 'Austria':'AT', 'Brazil':'BR', 'Canada':'CA', 'England':'ENG',
+  'France':'FR', 'Germany':'DE', 'Hungary':'HU', 'Italy':'IT', 'Japan':'JP',
+  'Morocco':'MA', 'Netherlands':'NL', 'Norway':'NO', 'Poland':'PL',
+  'Republic of Ireland':'IRL', 'Senegal':'SN', 'Spain':'ES', 'Switzerland':'CH',
+  'United States':'US', 'Wales':'WAL'
 });
 
 /* Exact Wikidata matches confirmed during the source audit. Keep this map
@@ -1130,7 +1157,7 @@ DIASPORA_ELSEWHERE.forEach(p=>{
   const card = document.createElement('div');
   card.className = 'staff-card';
   card.innerHTML = `
-    <div class="name">${p.name} <span class="mono" style="font-size:11px;color:var(--ink-soft);font-weight:400;">→ ${nationalFlag(p.team, p.flag)} ${p.team}</span></div>
+    <div class="name">${p.name} <span class="mono" style="font-size:11px;color:var(--ink-soft);font-weight:400;">→ <span class="national-flag" aria-hidden="true">${nationalFlag(p.team, p.flag)}</span><span class="country-code">${NATIONAL_CODES[p.team] || ''}</span> ${p.team}</span></div>
     <div class="fit" style="margin-top:6px;">${p.detail}</div>
   `;
   elsewhereEl.appendChild(card);
