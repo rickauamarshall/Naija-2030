@@ -214,6 +214,13 @@
   .squad-pitch{ min-height:auto; }
   .squad-pitch .rows{ height:auto; gap:18px; }
   .squad-pitch .row{ flex-wrap:wrap; row-gap:14px; }
+  /* Below 700px, a 4-slot row (DEF/MID) can't fit on one line - left to
+     itself, flex-wrap breaks it 3-then-1, which visually collides with
+     the pitch's halfway line and no longer reads as a 4-4-2 shape. Force
+     an even 2x2 wrap instead so the formation shape stays recognizable. */
+  @media (max-width:700px){
+    .squad-pitch .row .slot{ flex:0 1 45%; max-width:45%; }
+  }
   .badge{
     width:52px; height:52px; border-radius:50%;
     background:var(--paper);
