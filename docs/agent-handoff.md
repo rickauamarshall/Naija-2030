@@ -70,6 +70,31 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-24 — Claude — marketing/monetization handover (planning only, nothing live)
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / see below — some referenced files are still uncommitted
+
+### Changed
+- `docs/prelaunch-checklist.md`: added a **Monetization** section (already committed, `0229131`). Candidate paths: Beehiiv Ad Network (needs subscriber scale), a paid Beehiiv subscriber tier (early access / full Big Board / ad-free — price point undecided), opportunistic affiliate links in newsletter Quick Links, a print-on-demand merch storefront, syndicating the original analysis (Comparative Methods tab, the pool-vs-international-comparison blog piece) to bigger Nigerian outlets as bylined pieces linking back, sponsorships, and betting-affiliate revenue specifically. Suggested lowest-to-highest-friction order: affiliate links → merch → paid tier → ad network → syndication → sponsorships → betting-adjacent.
+- `docs/merch-concepts.md` + `assets/merch/*.svg` (six design previews: tee front/back, hoodie front/back, cap, sticker sheet): **drafted but still uncommitted, and merch is currently on hold per the project owner's explicit call.** Don't treat these as in-progress work to pick up — they're parked until the owner says otherwise.
+
+### Findings
+- Two things flagged deliberately and **not** built into any design: (1) `assets/profile_badge.png` (the circular crest with the AFCON-champion star band) reads like an official federation badge — fine as a social avatar, a different risk level on sellable merchandise given the project's no-real-crest / no-implied-affiliation rule, so none of the merch designs use it. (2) No player counts on physical goods — the pool size has already gone stale in public copy once before (the "50 PLAYERS" bug), and merch can't be live-updated the way the site can.
+- Sponsorships were flagged as blocked on a real question, not just a nice-to-have: sponsors typically need a contracting entity and tax ID, which raises the LLC/business-entity question already sitting (unresolved) in `anonymity-opsec.md`'s "If this takes off" section. That should get resolved deliberately before a sponsor conversation forces it.
+- Betting-affiliate revenue was flagged as the one path most likely to undercut the brand's "independent, not doing this for the NFF's benefit" credibility — recommended sequencing it last, if at all, and only on explicit owner sign-off, not as a default monetization option.
+- My recommended starting point when asked directly: merch storefront + opportunistic affiliate links first — both need no new entity/account-risk decisions and no subscriber scale, unlike the ad network or paid tier.
+
+### Evidence
+- `docs/prelaunch-checklist.md` (Monetization section)
+- `docs/merch-concepts.md`, `assets/merch/*.svg` (uncommitted, on hold)
+
+### Owner decision needed
+- None right now — merch is explicitly paused by the owner's own call; nothing here needs action until they revisit it.
+
+### Next agent
+- Don't pick up merch or monetization work without checking with the project owner first — it's parked, not blocked on technical work.
+
 ### 2026-09-24 — Claude — Issue №1 rewritten in first-person, ready to paste into Beehiiv
 
 Status: `READY_FOR_REVIEW`
