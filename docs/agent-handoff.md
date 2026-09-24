@@ -86,6 +86,7 @@ Branch/commit: `main` / working tree
 - Added the same lens to `docs/social-editorial.md` so social posts, newsletters, and site updates can track repeated positive or negative patterns across cycles.
 - Added `assets/ig-carousel-tactics.png`, an original rights-safe tactics graphic for the Instagram carousel concept.
 - Standardized the Beehiiv Issue 2 header treatment: SET logo centered at 30% width, with the header settings to be reused for future issues. Beehiiv does not expose a reusable header-template control in the current editor, so the specification is recorded here instead.
+- Updated the site masthead to use “RISE, EAGLES, RISE.” as the short campaign line while retaining “ONE POOL. FWC30 QUALIFICATION AT ALL COSTS.” as the full qualification mantra.
 - Removed the project owner's personal FIFA match-commissioner reference from the Beehiiv Issue 2 draft. The site's general independence disclosure remains.
 
 ### Checked
@@ -93,6 +94,7 @@ Branch/commit: `main` / working tree
 - Confirmed the public site contains no personal FIFA match-commissioner or WC26 reference.
 - Confirmed Issue 3 is explicitly marked as a draft and retains placeholders until official match results and player performances are verified.
 - Confirmed the owner-authored review sentence remains in the Beehiiv draft after the copy pass.
+- Kept the visitor counter as a real analytics decision rather than adding a misleading client-only counter. A privacy-conscious provider or first-party analytics setup is still needed before implementation.
 
 ### Findings
 - Germany's two-group window is not a direct template for Nigeria. Its value is the operating discipline around the split: a defined window, player movement, a development horizon, and follow-up.

@@ -63,7 +63,7 @@ We will keep separating verified announcements from reported developments and un
 
 The best outcome from this window is not simply three positive results. It is a clearer picture of the players Chelle trusts now, the players he wants to assess next, and the areas where Nigeria still needs more depth.
 
-One pool. FWC30 qualification at all costs.
+Rise, Eagles, Rise. One Pool. FWC30 Qualification at All Costs.
 
 ## Quick Links
 
@@ -106,7 +106,7 @@ One pool. FWC30 qualification at all costs.
 
 > A wider pool is useful only when it is tracked properly: current form, minutes, development, and eligibility all matter.
 >
-> One pool. FWC30 qualification at all costs.
+> Rise, Eagles, Rise. One Pool. FWC30 Qualification at All Costs.
 
 **Post 6:**
 
@@ -120,6 +120,8 @@ One pool. FWC30 qualification at all costs.
 >
 > Follow the tracker on X and Instagram for verified updates through the window.
 
+> Rise, Eagles, Rise.
+
 ## Instagram Caption Draft
 
 > Three matches. Two different selection questions. 🦅
@@ -130,6 +132,6 @@ One pool. FWC30 qualification at all costs.
 >
 > Read the full issue through the link in our bio.
 >
-> One pool. FWC30 qualification at all costs.
+> Rise, Eagles, Rise. One Pool. FWC30 Qualification at All Costs.
 >
 > #SuperEagles #NigeriaFootball #AfricanFootball #WorldCup2030 #SuperEaglesTracker

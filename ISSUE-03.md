@@ -59,7 +59,7 @@ The live tracker has one job after a window like this: show how the evidence cha
 
 The first verdict should be measured. Results matter, but the more useful question is whether Nigeria leaves the window with clearer answers and a stronger set of choices for the road ahead.
 
-One pool. FWC30 qualification at all costs.
+Rise, Eagles, Rise. One Pool. FWC30 Qualification at All Costs.
 
 ## Editorial notes for the next cycle
 
