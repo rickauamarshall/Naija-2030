@@ -6,7 +6,13 @@
 
 ---
 
-Nigeria has missed the last two World Cups. Not for lack of talent — for lack of anyone publicly keeping score. That's what this is: a weekly, receipts-first look at the players Nigeria could call on and the federation trying to reform itself around them. Independent. Not affiliated with the NFF, CAF, or FIFA. Let's get into it.
+*[Editorial note: recheck this figure against the site's live "days since 2018" counter right before sending — it moves daily.]* It's been 3,022 days since the Super Eagles last played in a World Cup.
+
+I was born in Nigeria. My family moved to the United States by way of Canada in the early 1990s, and even as transplants in a new place, our sense of Nigerian pride and identity never left us — never more than when we gathered around the television watching the Super Eagles take on the best in the world at the 1994 World Cup, and again at the 1996 Olympics, both hosted right here in the country we'd just moved to.
+
+Nigeria has been a giant of African football for as long as I can remember. But lately, it's a resting giant. Missing the last two World Cups isn't a rough patch — it's a crisis, and it deserves to be treated like one.
+
+That's not a random thing to say before launching a depth chart and a ranked board of players. It's the reason this exists. If the talent is still there — and it plainly is — then someone has to keep honest, public score of it, and of the federation trying to find its way back. That's what this is: a weekly, receipts-first look at the players Nigeria could call on and the federation trying to reform itself around them. Independent. Not affiliated with the NFF, CAF, or FIFA. Let's get into it.
 
 ## Headlines
 
