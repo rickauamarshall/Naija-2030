@@ -70,6 +70,37 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-25 — Codex — visitor counter backend scaffold
+
+Status: `NEEDS_OWNER_DECISION`
+Branch/commit: `main` / working tree (uncommitted)
+
+### Changed
+- Added `workers/visitor-counter/` with a Cloudflare Worker and SQLite-backed Durable Object.
+- The endpoint supports aggregate `GET` and `POST` operations and rejects browser requests from origins other than `https://supereaglestracker.com`.
+- Added deployment and test instructions. The site endpoint remains unconfigured until the Worker is deployed and tested.
+
+### Checked
+- `node --check workers/visitor-counter/src/index.js` passes.
+- `git diff --check` passes.
+- No credentials, IP addresses, cookies, user agents, or visitor profiles are stored by the implementation.
+
+### Findings
+- The counter cannot become live from GitHub Pages alone; it needs a deployed Cloudflare Worker and Durable Object binding.
+- The public site should only be pointed to the Worker after a successful authenticated deployment and GET/POST smoke test.
+
+### Evidence
+- `workers/visitor-counter/wrangler.toml`
+- `workers/visitor-counter/src/index.js`
+- `workers/visitor-counter/README.md`
+- Cloudflare Durable Objects counter guidance: https://developers.cloudflare.com/durable-objects/examples/build-a-counter/
+
+### Owner decision needed
+- Deploy the Worker from the authenticated Cloudflare account, then approve connecting its URL to the public site.
+
+### Next agent
+- Review the scaffold, deploy it from the owner’s Cloudflare session, smoke-test the endpoint, and update `site/index.html` with the confirmed Worker URL.
+
 ### 2026-09-25 — Codex — live certificate and visitor counter verification request
 
 Status: `NEEDS_OWNER_DECISION`
