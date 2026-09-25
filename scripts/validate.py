@@ -25,7 +25,7 @@ from pathlib import Path
 
 SITE_PATH = Path(__file__).parent.parent / "site" / "index.html"
 EXPECTED_STARTERS = {"GK": 1, "DEF": 4, "MID": 4, "FWD": 2}
-EXPECTED_RESERVES = {"GK": 2, "DEF": 6, "MID": 5, "FWD": 4}
+EXPECTED_RESERVES = {"GK": 2, "DEF": 6, "MID": 5, "FWD": 5}
 EXPECTED_BOARD_RANK_START = 27
 EXPECTED_BOARD_RANK_END = 42
 

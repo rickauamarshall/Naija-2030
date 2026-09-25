@@ -267,6 +267,18 @@
   .depth-list li.flag-age .val{ color:var(--clay); }
   .national-flag{ display:inline-block; font-size:20px; line-height:1; margin-right:6px; vertical-align:-2px; }
   .country-code{ font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:.06em; color:var(--ink-soft); vertical-align:2px; }
+  .flag-swatch{ display:inline-block; width:24px; height:16px; margin-right:5px; border:1px solid rgba(20,32,26,.28); border-radius:2px; vertical-align:-2px; box-shadow:0 1px 1px rgba(20,32,26,.12); }
+  .flag-generic{ background:linear-gradient(135deg,#d8e3dc 0 50%,#9fb8aa 50%); }
+  .flag-de{ background:linear-gradient(#111 0 33%,#d00 33% 66%,#ffce00 66%); }
+  .flag-ma{ background:#c1272d; position:relative; }
+  .flag-ma::after{ content:'☆'; color:#16864a; position:absolute; inset:0; text-align:center; line-height:14px; font-size:13px; }
+  .flag-ar{ background:linear-gradient(#75aadb 0 33%,#fff 33% 66%,#75aadb 66%); }
+  .flag-us{ background:repeating-linear-gradient(#b22234 0 2px,#fff 2px 4px); position:relative; }
+  .flag-us::after{ content:''; position:absolute; left:0; top:0; width:9px; height:8px; background:#3c3b6e; }
+  .flag-es{ background:linear-gradient(#aa151b 0 25%,#f1bf00 25% 75%,#aa151b 75%); }
+  .flag-fr{ background:linear-gradient(90deg,#0055a4 0 33%,#fff 33% 66%,#ef4135 66%); }
+  .flag-br{ background:#009739; position:relative; }
+  .flag-br::after{ content:''; position:absolute; left:5px; top:3px; width:12px; height:8px; background:#ffdf00; transform:rotate(25deg); }
   .methods-view .section-head{ max-width:820px; }
   .methods-view .section-head p{ max-width:720px; font-size:13px; line-height:1.5; }
   .methods-view .methods-intro{ max-width:820px; padding:16px 18px; margin-bottom:20px; border-left:4px solid var(--gold); }
@@ -523,7 +535,7 @@
 
     <div class="cabinet-groups">
       <div class="cabinet-group">
-          <h3 data-national-team="Germany" data-flag="🇩🇪" data-code="DE"><span class="national-flag" aria-hidden="true">🇩🇪</span><span class="country-code">DE</span> Germany</h3>
+          <h3 data-national-team="Germany" data-code="DE"><span class="flag-swatch flag-de" aria-label="Germany flag"></span><span class="country-code">DE</span> Germany</h3>
           <div class="staff-card" style="border-left:4px solid #DD0000;">
             <div class="role">Structural reform, delivered 14 years later</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Reform mandated 2001, four years after Euro 2000; paid off at the 2014 World Cup — 25 years start to finish</div>
@@ -535,7 +547,7 @@
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="Morocco" data-flag="🇲🇦" data-code="MA"><span class="national-flag" aria-hidden="true">🇲🇦</span><span class="country-code">MA</span> Morocco</h3>
+          <h3 data-national-team="Morocco" data-code="MA"><span class="flag-swatch flag-ma" aria-label="Morocco flag"></span><span class="country-code">MA</span> Morocco</h3>
           <div class="staff-card" style="border-left:4px solid #C1272D;">
             <div class="role">A diaspora pipeline built over a decade</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Diaspora scouting operation launched 2014; still expanding as of the 2026 World Cup</div>
@@ -546,7 +558,7 @@
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="Argentina" data-flag="🇦🇷" data-code="AR"><span class="national-flag" aria-hidden="true">🇦🇷</span><span class="country-code">AR</span> Argentina</h3>
+          <h3 data-national-team="Argentina" data-code="AR"><span class="flag-swatch flag-ar" aria-label="Argentina flag"></span><span class="country-code">AR</span> Argentina</h3>
           <div class="staff-card" style="border-left:4px solid #74ACDF;">
             <div class="role">On-field success can shield financial dysfunction</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 FBI/DOJ probe reported 2025–2026, still active as of this writing; domestic raid Dec 9, 2025</div>
@@ -557,7 +569,7 @@
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="United States" data-flag="🇺🇸" data-code="US"><span class="national-flag" aria-hidden="true">🇺🇸</span><span class="country-code">US</span> United States</h3>
+          <h3 data-national-team="United States" data-code="US"><span class="flag-swatch flag-us" aria-label="United States flag"></span><span class="country-code">US</span> United States</h3>
           <div class="staff-card" style="border-left:4px solid #3C3B6E;">
             <div class="role">Talent without a coherent pathway underneath it</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Missed the 2018 World Cup; pathway consolidation announced Aug 29, 2026, integration begins Sept 1, 2026</div>
@@ -568,7 +580,7 @@
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="Spain" data-flag="🇪🇸" data-code="ES"><span class="national-flag" aria-hidden="true">🇪🇸</span><span class="country-code">ES</span> Spain</h3>
+          <h3 data-national-team="Spain" data-code="ES"><span class="flag-swatch flag-es" aria-label="Spain flag"></span><span class="country-code">ES</span> Spain</h3>
           <div class="staff-card" style="border-left:4px solid #AA151B;">
             <div class="role">A technical identity taught the same way for two decades</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Won the 2026 World Cup final, July 19, 2026</div>
@@ -579,7 +591,7 @@
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="France" data-flag="🇫🇷" data-code="FR"><span class="national-flag" aria-hidden="true">🇫🇷</span><span class="country-code">FR</span> France</h3>
+          <h3 data-national-team="France" data-code="FR"><span class="flag-swatch flag-fr" aria-label="France flag"></span><span class="country-code">FR</span> France</h3>
           <div class="staff-card" style="border-left:4px solid #0055A4;">
             <div class="role">Elite talent isn't sufficient on its own</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Lost the semifinal 2-0 to Spain, July 14, 2026; Deschamps' tenure since 2012 ends after this World Cup</div>
@@ -590,7 +602,7 @@
         </div>
 
         <div class="cabinet-group">
-          <h3 data-national-team="Brazil" data-flag="🇧🇷" data-code="BR"><span class="national-flag" aria-hidden="true">🇧🇷</span><span class="country-code">BR</span> Brazil</h3>
+          <h3 data-national-team="Brazil" data-code="BR"><span class="flag-swatch flag-br" aria-label="Brazil flag"></span><span class="country-code">BR</span> Brazil</h3>
           <div class="staff-card" style="border-left:4px solid #009739;">
             <div class="role">Federation dysfunction destabilizes everything downstream</div>
             <div class="mono" style="font-size:10.5px;color:var(--ink-soft);margin:4px 0 8px;">📅 Ancelotti hired, CBF crisis erupted May 2025; eliminated Round of 16, July 5, 2026</div>
@@ -720,20 +732,20 @@ const FORMATION = [
   {pos:'GK', slots:[
     {main:{name:'Maduka Okoye', age:26, club:'Udinese', val:'$8.1m', trend:'up'}, depth:[
       {name:'Stanley Nwabali', age:29, club:'Chippa United', val:'$1.1m', trend:'flat'},
-      {name:'Samuel James', age:'TBD', club:'TBD (Finland)', val:'TBD', trend:'up', watch:'First call-up for the Oct 6 Russia friendly (experimental squad). Replaces a prior entry (Adewale Adeyinka) removed from this slot — he\'s a real player but already a capped senior Super Eagle at Akwa United, not an uncapped reserve; the site had him at the wrong club entirely (Nice) with no such role. Club/profile here still needs independent verification.'}
+      {name:'Samuel James', age:20, club:'SJK (Finland)', val:'TBD', trend:'up', watch:'First senior Nigeria call-up for the Oct 6 Russia friendly. SJK identifies him as Samuel Friday James, a Nigerian goalkeeper who joined from Mavlon FC; the NFF lists him in the Russia squad. Replaces a prior entry (Adewale Adeyinka) removed from this slot — he\'s a real player but already a capped senior Super Eagle at Akwa United, not an uncapped reserve.'}
     ]}
   ]},
   {pos:'DEF', slots:[
     {main:{name:'Ola Aina', age:29, club:'Nottingham Forest', val:'$22.8m', trend:'up'}, depth:[
-      {name:'Bright Osayi-Samuel', age:28, club:'Birmingham City', val:'$6m', trend:'flat'},
-      {name:'Semi Ajayi', age:32, club:'Hull City', val:'$1m', trend:'up', watch:'50+ caps, established Super Eagles international ("The Tower") — actually in Chelle\'s AFCON qualifying squad for Madagascar/Guinea-Bissau, not a speculative addition. In form for Hull City this season.'}
+      {name:'Bright Osayi-Samuel', age:28, club:'Birmingham City', val:'$6m', trend:'flat'}
     ]},
     {main:{name:'Calvin Bassey', age:26, club:'Fulham', val:'$32m', trend:'up'}, depth:[
       {name:'Ifeanyi Ndukwe', age:18, club:'Levante (on loan from Liverpool)', val:'$2.3m', trend:'up', watch:'Tri-national (Nigeria/Austria/Russia). Liverpool signing, currently leaning Austria at youth level — still uncapped at senior level.'},
       {name:'Tosin Adarabioyo', age:28, club:'Chelsea', val:'$19.4m', trend:'flat', watch:'Has said "yes" to Nigeria more than once since 2024, then gone quiet each time — reportedly no active contact with the NFF as of mid-2026. Fully uncapped by anyone. Real, but stalled.'}
     ]},
     {main:{name:'Honest Ahanor', age:18, club:'Crystal Palace (loan from Chelsea)', val:'$27.1m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:2, kind:'friendly', switchEligible:true}, watch:'Sub vs Luxembourg, started vs Greece — both friendlies. Still eligible for a FIFA one-time switch (under 21, ≤3 caps, no competitive caps). Biggest urgency case in the pool — this is an active, formal mechanism, not just hope.'}, depth:[
-      {name:'Benjamin Fredrick', age:20, club:'FCV Dender EH', val:'$460k', trend:'up', watch:'Simoiben Academy product (Moses Simon\'s academy). Already made his senior Nigeria debut in the May 2025 Unity Cup final vs. Jamaica — not actually uncapped, unlike most of this depth list. Club corrected from a stale "Standard Liège" listing.'}
+      {name:'Benjamin Fredrick', age:20, club:'FCV Dender EH', val:'$460k', trend:'up', watch:'Simoiben Academy product (Moses Simon\'s academy). Already made his senior Nigeria debut in the May 2025 Unity Cup final vs. Jamaica — not actually uncapped, unlike most of this depth list. Club corrected from a stale "Standard Liège" listing.'},
+      {name:'Semi Ajayi', age:32, club:'Hull City', val:'$1m', trend:'up', watch:'50+ caps, established Super Eagles international ("The Tower") — in Chelle\'s AFCON qualifying squad for Madagascar/Guinea-Bissau, not a speculative addition. In form for Hull City this season.'}
     ]},
     {main:{name:'Michael Kayode', age:21, club:'Brentford', val:'$40m', trend:'up', watch:'Both parents Nigerian. Left out of Italy\'s World Cup qualifying playoff squad by Gennaro Gattuso and remains eligible to switch — uncapped at senior level. The NFF has secured Eric Chelle\'s personal backing and arranged a face-to-face meeting in London. One of the most advanced real recruitment pushes in the pool right now.'}, depth:[
       {name:'Zaidu Sanusi', age:27, club:'Porto', val:'$1.8m', trend:'flat'}
@@ -757,11 +769,12 @@ const FORMATION = [
   {pos:'FWD', slots:[
     {main:{name:'Victor Osimhen', age:27, club:'Galatasaray', val:'$88.6m', trend:'up'}, depth:[
       {name:'Taiwo Awoniyi', age:28, club:'Coventry City', val:'$9.1m', trend:'flat'},
-      {name:'Jeff Ekhator', age:19, club:'Juventus', val:'$20.5m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:1, kind:'friendly', switchEligible:true}, watch:'Debut vs. Greece, June 7 2026 — recorded an assist. Born Nov 2006, well under 21 — still eligible for a FIFA one-time switch despite that cap.'},
-      {name:'Tolu Arokodare', age:25, club:'Ajax (loan from Wolves)', val:'$22.9m', trend:'up', watch:'10 caps, 2 goals, 2025 Nigerian "Ebony Shoe" winner — established international, in Chelle\'s AFCON qualifying squad. Reportedly managing a fitness issue heading into this camp, worth watching.'}
+      {name:'Jeff Ekhator', age:19, club:'Juventus', val:'$20.5m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:1, kind:'friendly', switchEligible:true}, watch:'Debut vs. Greece, June 7 2026 — recorded an assist. Born Nov 2006, well under 21 — still eligible for a FIFA one-time switch despite that cap.'}
     ]},
     {main:{name:'Ademola Lookman', age:28, club:'Atlético Madrid', val:'$44.6m', trend:'up'}, depth:[
-      {name:'Akor Adams', age:26, club:'Venezia', val:'$17.1m', trend:'up', watch:'Already in Chelle\'s actual AFCON qualifying squad for Madagascar/Guinea-Bissau — ahead of Iheanacho in the real pecking order behind Osimhen/Lookman, not just on this site.'}
+      {name:'Akor Adams', age:26, club:'Venezia', val:'$17.1m', trend:'up', watch:'Already in Chelle\'s actual AFCON qualifying squad for Madagascar/Guinea-Bissau — ahead of Iheanacho in the real pecking order behind Osimhen/Lookman, not just on this site.'},
+      {name:'Tolu Arokodare', age:25, club:'Ajax (loan from Wolves)', val:'$22.9m', trend:'up', watch:'10 caps, 2 goals, 2025 Nigerian "Ebony Shoe" winner — established international, in Chelle\'s AFCON qualifying squad. Reportedly managing a fitness issue heading into this camp, worth watching.'},
+      {name:'Gift Orban', age:24, club:'Amedspor (loan from Hoffenheim)', val:'$7.6m', trend:'up', watch:'Nigerian forward, born July 17, 2002. Joined Amedspor on a one-year loan from Hoffenheim with a purchase option in July 2026. Seven goals and two assists in six Süper Lig appearances through Sept. 20 — a strong current run that still needs to translate into sustained international-level performance.'}
     ]}
   ]}
 ];
@@ -781,8 +794,8 @@ const BOARD = [
   {rank:38, name:'George Ilenikhena', age:20, pos:'FWD', club:'Al-Ittihad (Saudi Pro League)', val:'$13.7m', move:1, elig:'open', note:'Born Aug 16, 2006, in Lagos. First senior call-up for the Sept 2026 AFCON qualifiers. Moved to Al-Ittihad from AS Monaco (51 apps, 10 goals, 2 assists there) — since joining, 6 goals and 2 assists in 9 appearances across all competitions. Club corrected from an earlier TBD/Monaco listing.', verified:true},
   {rank:39, name:'Moses Usor', age:24, pos:'FWD', club:'LASK', val:'$6.8m', move:1, elig:'open', note:'Born Feb 5, 2002. Winger, first senior call-up for the Sept 2026 AFCON qualifiers, called up to replace injured Brighton winger Femi Azeez, after a strong start to the 2026/27 season at LASK. Club and age corrected from an earlier full-TBD listing.', verified:true},
   {rank:40, name:'Emeka Adiele', age:18, pos:'DEF', club:'FC Utrecht (on loan, Burton Albion)', val:'$740k', move:0, elig:'open', note:'Left West Ham for Utrecht on a 4-year deal, currently on loan to Burton Albion — club corrected from a stale "West Ham" listing. England U17/U18 international, Nigeria-eligible, fully uncapped at senior level for either. Moved down from Sanusi\'s FORMATION depth to make room for Michael Kayode.', verified:true},
-  {rank:41, name:'Victory Akpe', age:20, pos:'DEF', club:'FC Basel', val:'$2.3m', move:0, elig:'open', note:'Born Jul 19, 2006 in Abuja. Fast rise through Banga Gargždai (Lithuania) and Zalaegerszegi (Hungary) before a ~€3m move to Basel, where he has started every league match since joining. First senior Nigeria call-up, for the Oct 6 Russia friendly. No sign of a rival-federation youth cap found, but not exhaustively ruled out — flagging pending a fuller check rather than asserting it.', verified:false},
-  {rank:42, name:'Abdullahi Bewene', age:21, pos:'DEF', club:'Baník Ostrava', val:'$970k', move:0, elig:'open', note:'Born Nov 29, 2004 in Abuja. Right wing-back, just signed a 5-year deal with Baník Ostrava through 2031. Named in Chelle\'s squad for the Oct 6 Russia friendly, but his own club initially withheld him from the AFCON qualifiers — reads like a newcomer being eased in. Unresolved discrepancy: at least one source describes him as already having debuted for Nigeria (vs. Poland), which would contradict the "first call-up" framing used elsewhere. Not resolving this by inference — needs a direct source check before his cap status is stated either way.', verified:false}
+  {rank:41, name:'Victory Akpe', age:20, pos:'DEF', club:'FC Basel', val:'$2.3m', move:0, elig:'open', note:'Born Jul 19, 2006 in Abuja. Defender with Nigeria nationality on the Swiss league profile; joined Basel after spells in Lithuania and Hungary. Received his first senior Nigeria call-up for the Oct 6 Russia friendly.', verified:true},
+  {rank:42, name:'Abdullahi Bewene', age:21, pos:'DEF', club:'Baník Ostrava', val:'$970k', move:0, elig:'open', note:'Born Nov 29, 2004 in Abuja. Right wing-back, signed through 2031 by Baník Ostrava. The NFF match report confirms he made his Nigeria debut against Poland, resolving the earlier discrepancy in the record.', verified:true}
 ];
 
 const LOST_TO_RIVALS = [
@@ -851,6 +864,11 @@ const NATIONAL_CODES = Object.freeze({
   'Republic of Ireland':'IRL', 'Senegal':'SN', 'Spain':'ES', 'Switzerland':'CH',
   'United States':'US', 'Wales':'WAL'
 });
+const NATIONAL_FLAG_CLASSES = Object.freeze({
+  'Argentina':'flag-ar', 'Brazil':'flag-br', 'France':'flag-fr', 'Germany':'flag-de',
+  'Morocco':'flag-ma', 'Spain':'flag-es', 'United States':'flag-us'
+});
+function nationalFlagClass(team){ return NATIONAL_FLAG_CLASSES[team] || 'flag-generic'; }
 
 /* Exact Wikidata matches confirmed during the source audit. Keep this map
    explicit: a search result is not enough when names are ambiguous. */
@@ -881,12 +899,21 @@ function attachWikidataSource(player){
 const VERIFIED_PLAYER_SOURCES = {
   'George Ilenikhena': {label:'AS Monaco player profile', url:'https://www.asmonaco.com/en/joueurs/george-ilenikhena'},
   'Moses Usor': {label:'UEFA player profile', url:'https://www.uefa.com/uefachampionsleague/clubs/players/250174644--moses-usor/'},
-  'Stanley Nwabali': {label:'NFF squad announcement', url:'https://thenff.com/international-friendly-ndidi-simon-nwabali-lead-super-eagles-to-nizhny-novgorod-for-russia/'}
+  'Stanley Nwabali': {label:'NFF squad announcement', url:'https://thenff.com/international-friendly-ndidi-simon-nwabali-lead-super-eagles-to-nizhny-novgorod-for-russia/'},
+  'Samuel James': {label:'SJK player announcement', url:'https://sjk.fi/uutiset/maalivahti-samuel-james-ja-sjk-tekivat-pelaajasopimuksen/'},
+  'Victory Akpe': {label:'Swiss league player profile', url:'https://sfl.ch/players/victory-akpe'},
+  'Abdullahi Bewene': {label:'Baník Ostrava profile', url:'https://www.fcb.cz/clanek.asp?id=12269'},
+  'Gift Orban': [
+    {label:'Amedspor announcement', url:'https://www.amedspor.com.tr/index.php/news/gift-orban-amedsporda'},
+    {label:'Bundesliga player profile', url:'https://www.bundesliga.com/en/bundesliga/player/gift-orban'}
+  ]
 };
 function attachVerifiedPlayerSource(player){
   const source = VERIFIED_PLAYER_SOURCES[player.name];
-  if(!source || (player.sources || []).some(s=>s.url===source.url)) return;
-  player.sources = [...(player.sources || []), source];
+  if(!source) return;
+  const sources = Array.isArray(source) ? source : [source];
+  const existing = new Set((player.sources || []).map(s=>s.url));
+  player.sources = [...(player.sources || []), ...sources.filter(s=>!existing.has(s.url))];
 }
 FORMATION.forEach(row => row.slots.forEach(slot => {
   attachWikidataSource(slot.main);
@@ -1168,7 +1195,7 @@ DIASPORA_ELSEWHERE.forEach(p=>{
   const card = document.createElement('div');
   card.className = 'staff-card';
   card.innerHTML = `
-    <div class="name">${p.name} <span class="mono" style="font-size:11px;color:var(--ink-soft);font-weight:400;">→ <span class="national-flag" aria-hidden="true">${nationalFlag(p.team, p.flag)}</span><span class="country-code">${NATIONAL_CODES[p.team] || ''}</span> ${p.team}</span></div>
+    <div class="name">${p.name} <span class="mono" style="font-size:11px;color:var(--ink-soft);font-weight:400;">→ <span class="flag-swatch ${nationalFlagClass(p.team)}" aria-label="${p.team} flag"></span><span class="country-code">${NATIONAL_CODES[p.team] || ''}</span> ${p.team}</span></div>
     <div class="fit" style="margin-top:6px;">${p.detail}</div>
   `;
   elsewhereEl.appendChild(card);

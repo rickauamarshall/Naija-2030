@@ -7,8 +7,8 @@
  * to fill in once a real stats provider is wired up (see CLAUDE.md "Data
  * vendor decisions").
  *
- * Transcribed directly from site/index.html as of this writing (26
- * FORMATION + 12 BOARD = 38 total) — this will drift as the pool
+ * Transcribed directly from site/index.html as of this writing (27
+ * FORMATION + 12 BOARD = 39 total) — this will drift as the pool
  * changes. Next step is generating this file from the site data instead
  * of hand-maintaining both in parallel; until then, re-sync by hand
  * whenever FORMATION/BOARD changes (scripts/validate.py catches
@@ -47,6 +47,7 @@ const POOL = [
   { name: 'Awoniyi', fullName: 'Taiwo Awoniyi', shortClub: 'Coventry', position: 'FWD', providerPlayerId: null },
   { name: 'Ekhator', fullName: 'Jeff Ekhator', shortClub: 'Juventus', position: 'FWD', providerPlayerId: null },
   { name: 'Iheanacho', fullName: 'Kelechi Iheanacho', shortClub: 'Bursaspor', position: 'FWD', providerPlayerId: null },
+  { name: 'Orban', fullName: 'Gift Orban', shortClub: 'Amedspor', position: 'FWD', providerPlayerId: null },
 
   // --- BOARD (12 entries, ranks 27-38 - see site/index.html, not a fixed range) ---
   { name: 'Oyebade', fullName: 'Rayan Oyebade', shortClub: 'West Ham', position: 'DEF', providerPlayerId: null },

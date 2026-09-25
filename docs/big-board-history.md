@@ -2,6 +2,10 @@
 
 A running record of Big Board (and FORMATION pool) rank changes, for tracking and record-keeping — not a public-facing feature. Add a new dated entry at the top each time rankings are adjusted, promoted/demoted, or a player is added/removed. Don't duplicate exact player counts here — those live in `docs/prelaunch-checklist.md` and `scripts/validate.py`, and go stale if hand-copied into a second place.
 
+### 2026-09-25 — Added Gift Orban to Lookman's depth
+
+- FORMATION: added Gift Orban as No. 3 in Ademola Lookman's forward depth, behind Akor Adams and Tolu Arokodare. The 24-year-old Nigerian forward joined Amedspor on a one-year loan from Hoffenheim with a purchase option in July 2026. Current-season form is documented with an official Amedspor transfer announcement and a Bundesliga player profile; market value is a September snapshot and should be refreshed with the next enrichment pass.
+
 ## Format
 
 ```md
@@ -39,6 +43,11 @@ A running record of Big Board (and FORMATION pool) rank changes, for tracking an
 
 - `site/index.html` had diverged from `origin/main`: this session's own later commit (`e2e1753`) had independently re-verified all 6 remaining unconfirmed Board entries (Tyrique George, Chizzy Ezenwata, David Ozoh, Isaac James, George Ilenikhena, Moses Usor) via live search and flipped them to `verified:true` with sourced detail, while `origin/main`'s parallel edit (from Codex) still had those same 6 entries as `verified:'partial'`/`false` from before that research pass. Resolved by keeping this session's fully-verified version rather than blending two different reordering/verification states — confirmed against `docs/agent-handoff.md`'s handoff log and the `e2e1753` commit message before trusting it over the more cautious `origin/main` side.
 - Also updated `docs/prelaunch-checklist.md`'s "Current source-audit gaps" note, which had gone stale (written before the verification pass): dropped Isaac James and Chizzy Ezenwata from the open-gaps list, kept Samuel James/Victory Akpe/Abdullahi Bewene (Chelle's Squad-only entries with no sourced Board/FORMATION profile yet).
+
+### 2026-09-25 — Rebalanced depth and closed remaining source gaps
+
+- FORMATION: moved Semi Ajayi from behind Ola Aina to behind Honest Ahanor, and moved Tolu Arokodare from behind Victor Osimhen to third in Ademola Lookman's forward depth.
+- Source audit: added official/club source links for Samuel James, Victory Akpe, and Abdullahi Bewene. The NFF's Poland match report confirms Bewene's senior debut, resolving the previous cap-status discrepancy; all three records are now marked verified where they appear on the public site.
 - Kayode's watch note: kept this session's slightly longer version (one extra closing sentence) over `origin/main`'s near-identical wording — no factual disagreement, just completeness.
 - Verified post-merge: `python3 scripts/validate.py` passes (26 pool + 14 board, ranks 27-40 intact, no dupes/overlap, GK1/DEF4/MID4/FWD2), and `node --check` on the extracted inline `<script>` block confirms no syntax errors.
 
