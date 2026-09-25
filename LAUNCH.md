@@ -45,10 +45,10 @@ Where the dual-national cases actually stand, not where the hope says they stand
 - 🔴 **Lesley Ugochukwu** (Galatasaray, loan from Burnley) — real setback: named in France's U21 squad Sept 18, despite July reports he'd started pursuing a Nigerian passport. No official change-of-association step has happened.
 - 🟢 **Arthur Okonkwo** (Wrexham GK) — FIFA approved his switch back in April. Older news than it sounds, but still one of the clean wins.
 - 🔴 **Honest Ahanor** (Crystal Palace, loan from Chelsea) — two senior friendly caps for Italy, but at 18 with only 2 caps he's still eligible for FIFA's one-time-switch rule.
-- 🔴 **Jeff Ekhator** (Juventus) — already made his senior Italy debut (June 7, friendly). Not uncapped anymore, but the same one-time-switch mechanism as Ahanor still applies.
+- 🔴 **Jeff Ekhator** (Juventus) — made his senior Italy debut June 7 against Greece, a friendly, and recorded an assist. Not uncapped anymore, but born November 2006 — well under 21 — so the same FIFA one-time-switch mechanism as Ahanor still applies.
 - 🔴 **Luca Koleosho, Michael Kayode** — Italy reportedly moving to lock in both as they rebuild.
 - 🔴 **Noah Atubolu** (Freiburg GK) — omitted from Germany's actual World Cup squad, still hasn't played a competitive senior match for them. Door's open, not being pushed on.
-- 🟡 **Samuel Aghehowa** (Porto) — flagging this one as genuinely unresolved: different sources gave us 1, 2, and 4 caps for Spain, and if his senior debut really was a competitive Nations League match in Nov 2024, the age math on FIFA's one-time-switch window gets tight fast. Needs a real verification pass before we say anything more definite. Not adding to the board until that happens.
+- ⚫ **Samu Aghehowa** (Porto) — cap-tied to Spain. Four senior caps, the most recent in the June 5 Nations League semifinal against France — past the threshold for a FIFA one-time switch. No longer Nigeria-eligible.
 
 ## Quick Links
 
