@@ -70,6 +70,34 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-25 — Codex — live certificate and visitor counter verification request
+
+Status: `NEEDS_OWNER_DECISION`
+Branch/commit: `main` / working tree (uncommitted)
+
+### Changed
+- Added this handoff request only; no site code or deployment configuration changed.
+
+### Checked
+- Codex confirmed the repository still records the custom-domain HTTPS certificate as provisioning in progress.
+- The public domain could not be independently checked from the Codex browser because the company policy blocks newly registered domains, and direct network verification is restricted in this environment.
+- The deployed visitor counter remains unimplemented: the current `window.storage` path is artifact-preview-only and will not persist on the public site.
+
+### Findings
+- Claude should verify the live certificate for `https://supereaglestracker.com/` from an environment with access to the domain and report whether HTTPS is active, pending, or failing.
+- Claude should review the visitor-counter options and recommend a privacy-conscious production implementation, with no credentials or external service added without owner approval.
+
+### Evidence
+- `docs/prelaunch-checklist.md`
+- `site/index.html`
+- `https://supereaglestracker.com/`
+
+### Owner decision needed
+- Approve committing and pushing this handoff entry so Claude can pick it up.
+
+### Next agent
+- Verify the live certificate, inspect the visitor-counter implementation, and report findings/options without publishing or changing production settings.
+
 ### 2026-09-25 — Claude — resolved Aghehowa's eligibility, added Ajayi/Arokodare/Akpe/Bewene, two mobile/layout fixes
 
 Status: `READY_FOR_REVIEW`
