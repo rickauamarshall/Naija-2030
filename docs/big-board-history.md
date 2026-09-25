@@ -13,6 +13,16 @@ A running record of Big Board (and FORMATION pool) rank changes, for tracking an
 
 ## Log
 
+### 2026-09-25 — Market-value pass: converted to USD, refreshed all 44 values, Tyrique George club correction
+
+- Per explicit direction ("just do a normal Google search," not an automated Transfermarkt integration), manually researched a current market value for every FORMATION/BOARD player via search - not `scripts/fetch_transfermarkt.py`, which stays a disabled stub per `CLAUDE.md`'s hard rule against automating Transfermarkt access. Where a result explicitly attributed a figure to Transfermarkt, used that; otherwise fell back to FotMob, then Soccerway, in that order. This is a one-time manual snapshot, not a live feed - values will drift and need another pass eventually.
+- Converted every value from EUR (and one GBP figure, Iheanacho) to USD at the Sept 25, 2026 rates (EUR/USD 1.1384, GBP/USD ~1.334) per explicit direction to standardize on dollars.
+- Several values moved a lot from what was on the site (all were manually-entered estimates, not sourced from this pass): Taiwo Awoniyi $9.1m (was more than double that), Benjamin Fredrick $460k (was ~6x that), Peter Etebo $270k (was ~10x that), Frank Onyeka $7.6m (was more than double), Zaidu Sanusi $1.8m (was ~4x that), Kelechi Iheanacho $3.4m (was ~1.8x that), Rayan Oyebade $150k (was ~8x that), Emeka Adiele $740k (was ~2x that) - and the reverse for Jeff Ekhator, now $20.5m (was undervalued at the equivalent of ~$8m), tied to his real €16.4m Juventus fee.
+- Filled in real numbers for five entries that were `TBD`: Lesley Ugochukwu $26.7m, David Ozoh $2.3m, Isaac James $680k, George Ilenikhena $13.7m, Abdullahi Bewene $970k.
+- Chizzy Ezenwata moved the other way, from a manually-set $3m-equivalent to `TBD` - no market value exists anywhere for a 17-year-old who hasn't made a senior appearance, and the site shouldn't assert one that isn't backed by anything findable. Samuel James stays `TBD` for the same reason (obscure third-tier Finnish club).
+- **Tyrique George: corrected from "Chelsea" to "Everton."** He signed a permanent four-year deal (to June 2030) in July 2026 - not on loan, as an earlier pass on this site had it. Value updated to $23.5m alongside the club fix.
+- Two things flagged but deliberately not changed: Victor Osimhen (one outlier source claimed a "doubled to €150m" Transfermarkt value after his Galatasaray move - not trusted against everything else found, which clustered around the site's existing $75m-equivalent) and William Troost-Ekong (search results described a club move that looked like a name collision with a different player - his Besiktas listing was left alone rather than acted on from ambiguous data).
+
 ### 2026-09-25 — Resolved Samu Aghehowa's eligibility: cap-tied to Spain, moved to Lost to Rivals
 
 - Aghehowa (Porto forward, born Samu Omorodion, switched to his mother's surname Sept 2026) had been flagged as "genuinely unresolved" since Issue №1/LAUNCH.md — conflicting cap counts across sources (1, 2, 4) and whether his Nov 2024 Nations League debut vs. Switzerland was competitive. He was never added to FORMATION/BOARD pending that resolution — see `docs/agent-handoff.md`'s outstanding-audit-items note.
