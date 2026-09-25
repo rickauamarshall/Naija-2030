@@ -13,6 +13,12 @@ A running record of Big Board (and FORMATION pool) rank changes, for tracking an
 
 ## Log
 
+### 2026-09-25 — Added Ajayi/Arokodare to FORMATION, Akpe/Bewene to Board
+
+- FORMATION: Semi Ajayi (DEF, 32, Hull City, 50+ caps) added as depth alongside Bright Osayi-Samuel under Ola Aina's slot, and Tolu Arokodare (FWD, 25, Ajax loan from Wolves, 10 caps) added as depth alongside Awoniyi/Ekhator under Osimhen's slot. Both are established, capped Super Eagles internationals actually in Chelle's AFCON qualifying squad — not eligibility cases — who were missing from the tracked pool entirely. `scripts/validate.py`'s `EXPECTED_RESERVES` bumped DEF 5→6 and FWD 3→4 to match; the FORMATION total-count check, previously hardcoded to `26`, is now derived from `EXPECTED_STARTERS`/`EXPECTED_RESERVES` (same fix class as the earlier board-count hardcode) so it can't go stale silently.
+- Board: added Victory Akpe (rank 41, DEF, FC Basel, `verified:false`) and Abdullahi Bewene (rank 42, DEF, Baník Ostrava, `verified:false`) — both first-time Chelle call-ups (Russia friendly) missing from the pool. `EXPECTED_BOARD_RANK_END` bumped 40→42. Bewene's note explicitly flags an unresolved discrepancy: one source describes him as already having debuted for Nigeria (vs. Poland), contradicting the "first call-up" framing used elsewhere — not resolved by inference, needs a direct source check.
+- `docs/prelaunch-checklist.md`'s source-audit-gaps note updated to add Akpe and Bewene as open gaps.
+
 ### 2026-09-24 — Merge conflict resolved in favor of the fully-verified Board (14 entries, ranks 27-40)
 
 - `site/index.html` had diverged from `origin/main`: this session's own later commit (`e2e1753`) had independently re-verified all 6 remaining unconfirmed Board entries (Tyrique George, Chizzy Ezenwata, David Ozoh, Isaac James, George Ilenikhena, Moses Usor) via live search and flipped them to `verified:true` with sourced detail, while `origin/main`'s parallel edit (from Codex) still had those same 6 entries as `verified:'partial'`/`false` from before that research pass. Resolved by keeping this session's fully-verified version rather than blending two different reordering/verification states — confirmed against `docs/agent-handoff.md`'s handoff log and the `e2e1753` commit message before trusting it over the more cautious `origin/main` side.

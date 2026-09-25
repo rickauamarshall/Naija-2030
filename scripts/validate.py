@@ -25,9 +25,9 @@ from pathlib import Path
 
 SITE_PATH = Path(__file__).parent.parent / "site" / "index.html"
 EXPECTED_STARTERS = {"GK": 1, "DEF": 4, "MID": 4, "FWD": 2}
-EXPECTED_RESERVES = {"GK": 2, "DEF": 5, "MID": 5, "FWD": 3}
+EXPECTED_RESERVES = {"GK": 2, "DEF": 6, "MID": 5, "FWD": 4}
 EXPECTED_BOARD_RANK_START = 27
-EXPECTED_BOARD_RANK_END = 40
+EXPECTED_BOARD_RANK_END = 42
 
 
 def extract_block(text: str, start_marker: str) -> str:
@@ -77,9 +77,10 @@ def main() -> int:
         ok = False
         print(f"FAIL: player(s) appear in both FORMATION and BOARD: {sorted(overlap)}")
 
-    if len(formation_names) != 26:
+    expected_formation_count = sum(EXPECTED_STARTERS.values()) + sum(EXPECTED_RESERVES.values())
+    if len(formation_names) != expected_formation_count:
         ok = False
-        print(f"FAIL: FORMATION has {len(formation_names)} players, expected 26")
+        print(f"FAIL: FORMATION has {len(formation_names)} players, expected {expected_formation_count}")
     expected_board_count = EXPECTED_BOARD_RANK_END - EXPECTED_BOARD_RANK_START + 1
     if len(board_names) != expected_board_count:
         ok = False

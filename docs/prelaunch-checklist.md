@@ -73,4 +73,4 @@ Lowest-friction first: affiliate links → merch storefront → paid subscriber 
 
 ### Current source-audit gaps
 
-The following records still need identity/profile-level confirmation before a player-specific link is added: Samuel James, Victory Akpe, and Abdullahi Bewene (all Chelle's Squad-only entries, not yet in FORMATION/BOARD with sourced detail). Isaac James and Chizzy Ezenwata were independently re-verified and are no longer gaps — see Board ranks 37 and 31, and `docs/big-board-history.md`. Do not substitute a same-name result or a generic search page.
+The following records still need identity/profile-level confirmation before a player-specific link is added: Samuel James (Chelle's Squad-only, not yet in FORMATION/BOARD with sourced detail), and Victory Akpe and Abdullahi Bewene (added to the Board at ranks 41-42 as `verified:false` — Bewene specifically has an unresolved cap-status discrepancy, see `docs/big-board-history.md`). Isaac James and Chizzy Ezenwata were independently re-verified and are no longer gaps — see Board ranks 37 and 31. Do not substitute a same-name result or a generic search page.

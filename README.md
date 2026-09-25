@@ -48,7 +48,7 @@ To go live, copy `.env.example` to `.env` and fill in real X API + stats-provide
 
 All player data lives in plain JS arrays near the bottom of `site/index.html`:
 
-- **`FORMATION`** — the 26-man pool (11 starters + 15 reserves), drawn as the pitch depth chart.
+- **`FORMATION`** — the main pool (11 starters + reserves), drawn as the pitch depth chart. Size isn't fixed — run `python3 scripts/validate.py` for the current true count rather than trusting a number here.
 - **`BOARD`** — the next tier, ranked, with weekly movement arrows. Size and rank range aren't fixed — run `python3 scripts/validate.py` for the current true count rather than trusting a number here.
 - **`LOST_TO_RIVALS`** / **`DIASPORA_ELSEWHERE`** — informational panels. One is "we were in the running and lost," the other is "never a realistic target." See `CLAUDE.md` for why that distinction matters and must be kept.
 
