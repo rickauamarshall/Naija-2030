@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <!-- PREVIEW ONLY — see docs/merch-concepts.md "Before you upload anything" -->
+  <style>
+    .mono { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+    .word { font-family: 'Oswald', 'Arial Narrow', sans-serif; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; fill: #14201A; }
+  </style>
+
+  <!-- Wordmark sticker -->
+  <rect x="20" y="20" width="360" height="120" rx="12" fill="#F1EDE1" stroke="#14201A" stroke-width="3"/>
+  <text x="200" y="90" text-anchor="middle" class="word" font-size="34">Super Eagles</text>
+  <text x="200" y="125" text-anchor="middle" class="word" font-size="34">Tracker</text>
+
+  <!-- VERIFIED badge -->
+  <rect x="420" y="20" width="230" height="80" rx="40" fill="#3E7A54"/>
+  <text x="535" y="70" text-anchor="middle" class="mono" font-size="26" fill="#F1EDE1">Verified</text>
+
+  <!-- WATCH badge -->
+  <rect x="680" y="20" width="200" height="80" rx="40" fill="#C99B3F"/>
+  <text x="780" y="70" text-anchor="middle" class="mono" font-size="26" fill="#14201A">Watch</text>
+
+  <!-- TBD badge -->
+  <rect x="910" y="20" width="180" height="80" rx="40" fill="#A6432D"/>
+  <text x="1000" y="70" text-anchor="middle" class="mono" font-size="26" fill="#F1EDE1">TBD</text>
+
+  <!-- Campaign line sticker -->
+  <rect x="20" y="170" width="1160" height="100" rx="12" fill="#0E3B2E"/>
+  <text x="600" y="238" text-anchor="middle" class="word" font-size="46" style="fill:#C99B3F">Rise, Eagles, Rise.</text>
+
+  <!-- Small tagline sticker -->
+  <rect x="20" y="300" width="420" height="80" rx="12" fill="#F1EDE1" stroke="#0E3B2E" stroke-width="3"/>
+  <text x="230" y="352" text-anchor="middle" class="mono" font-size="24" fill="#0E3B2E">One Pool. Zero Excuses.</text>
+</svg>

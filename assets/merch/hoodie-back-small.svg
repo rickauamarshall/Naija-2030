@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260">
+  <!-- PREVIEW ONLY — see docs/merch-concepts.md "Before you upload anything" -->
+  <style>
+    .sub { font-family: 'Oswald', 'Arial Narrow', sans-serif; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; fill: #F1EDE1; }
+  </style>
+  <text x="600" y="150" text-anchor="middle" class="sub" font-size="54">FWC30 Qualification at All Costs.</text>
+</svg>

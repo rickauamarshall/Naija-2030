@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500">
+  <!-- PREVIEW ONLY — see docs/merch-concepts.md "Before you upload anything" -->
+  <style>
+    .word { font-family: 'Oswald', 'Arial Narrow', sans-serif; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; fill: #C99B3F; }
+  </style>
+  <text x="500" y="270" text-anchor="middle" class="word" font-size="72">Rise, Eagles, Rise.</text>
+</svg>

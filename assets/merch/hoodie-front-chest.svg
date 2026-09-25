@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400">
+  <!-- PREVIEW ONLY — see docs/merch-concepts.md "Before you upload anything" -->
+  <style>
+    .headline { font-family: 'Oswald', 'Arial Narrow', sans-serif; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; fill: #C99B3F; }
+  </style>
+  <text x="500" y="230" text-anchor="middle" class="headline" font-size="130">One Pool.</text>
+</svg>

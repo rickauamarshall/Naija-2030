@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" width="1200" height="1400">
+  <!-- PREVIEW ONLY — see docs/merch-concepts.md "Before you upload anything" -->
+  <style>
+    .headline { font-family: 'Oswald', 'Arial Narrow', sans-serif; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; fill: #C99B3F; }
+    .sub { font-family: 'Oswald', 'Arial Narrow', sans-serif; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; fill: #F1EDE1; }
+    .mono { font-family: 'IBM Plex Mono', 'Courier New', monospace; letter-spacing: 0.1em; text-transform: uppercase; fill: #F1EDE1; opacity: 0.75; }
+  </style>
+  <text x="600" y="480" text-anchor="middle" class="mono" font-size="26">// Tracking the best available Super Eagles</text>
+  <text x="600" y="620" text-anchor="middle" class="headline" font-size="110">Rise,</text>
+  <text x="600" y="740" text-anchor="middle" class="headline" font-size="110">Eagles,</text>
+  <text x="600" y="860" text-anchor="middle" class="headline" font-size="110">Rise.</text>
+  <text x="600" y="960" text-anchor="middle" class="sub" font-size="46">One Pool.</text>
+  <text x="600" y="1020" text-anchor="middle" class="sub" font-size="46">FWC30 Qualification at All Costs.</text>
+</svg>

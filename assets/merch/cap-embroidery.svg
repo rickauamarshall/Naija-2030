@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160" width="900" height="160">
+  <!-- PREVIEW ONLY — embroidery needs simplifying further, see docs/merch-concepts.md -->
+  <style>
+    .mono { font-family: 'IBM Plex Mono', 'Courier New', monospace; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; fill: #C99B3F; }
+  </style>
+  <text x="450" y="100" text-anchor="middle" class="mono" font-size="48">One Pool. Zero Excuses.</text>
+</svg>
