@@ -70,6 +70,35 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-25 — Claude — resolved Aghehowa's eligibility, added Ajayi/Arokodare/Akpe/Bewene, two mobile/layout fixes
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / `10ce64d`, `d1751bc`, plus this pass (Aghehowa)
+
+### Changed
+- Resolved the outstanding Aghehowa audit item flagged below (2026-09-23 entry): Samu Aghehowa (Porto, born Samu Omorodion) is now confirmed cap-tied to Spain (4 senior caps, most recent a June 5 2026 Nations League semifinal vs. France — past the 3-competitive-cap threshold) via multiple independent, dated sources. Moved to `LOST_TO_RIVALS` on the site. See `docs/big-board-history.md` for the full source basis.
+- Added Semi Ajayi and Tolu Arokodare (established, capped internationals Chelle actually called up, missing from the tracked pool) to FORMATION depth; added Victory Akpe and Abdullahi Bewene (first-time call-ups) to the Board at ranks 41-42, `verified:false`. `scripts/validate.py` updated to match, including de-hardcoding the FORMATION total-count check.
+- Fixed two live layout bugs: the Comparative Methods tab's lopsided two-column split (now a balanced CSS multi-column layout), and Chelle's Squad pitch losing its 4-4-2 shape on mobile (a 4-item DEF/MID row was wrapping 3-then-1 instead of an even 2x2).
+
+### Checked
+- `scripts/validate.py` passes: 28 pool + 16 board, no dupes/overlap, ranks 27-42 intact, starters GK1/DEF4/MID4/FWD2.
+- `node --check` on the extracted inline `<script>` block after each edit.
+- Playwright/Chromium headless screenshots at 1400px and 390px for both layout fixes, confirming the actual visual result rather than just the diff.
+
+### Findings
+- None of Aghehowa's Nigeria-eligibility window remains open — this is a closed case now, not a watchlist item.
+
+### Evidence
+- `site/index.html` (`LOST_TO_RIVALS`, `FORMATION`, `BOARD`)
+- `docs/big-board-history.md`
+- AllNigeriaSoccer's dedicated Aghehowa eligibility coverage, Yahoo Sports' cap-count piece (see `docs/big-board-history.md` for the full citation trail)
+
+### Owner decision needed
+- None for what's described here — implemented per explicit direction this session.
+
+### Next agent
+- The Transfermarkt market-value cross-reference request from this session was **not** built — see the reply in-session for why (repo's own hard rule against automating Transfermarkt access). If revisited, start from `scripts/enrich_free_sources.py` (the sanctioned Wikidata/API-Football path) rather than Transfermarkt.
+
 ### 2026-09-24 — Claude — reconciled a parallel chat-environment branch into the repo (Elsewhere, Comparative Methods, Board/Formation swap)
 
 Status: `READY_FOR_REVIEW`

@@ -13,6 +13,12 @@ A running record of Big Board (and FORMATION pool) rank changes, for tracking an
 
 ## Log
 
+### 2026-09-25 — Resolved Samu Aghehowa's eligibility: cap-tied to Spain, moved to Lost to Rivals
+
+- Aghehowa (Porto forward, born Samu Omorodion, switched to his mother's surname Sept 2026) had been flagged as "genuinely unresolved" since Issue №1/LAUNCH.md — conflicting cap counts across sources (1, 2, 4) and whether his Nov 2024 Nations League debut vs. Switzerland was competitive. He was never added to FORMATION/BOARD pending that resolution — see `docs/agent-handoff.md`'s outstanding-audit-items note.
+- Now settled via multiple independent, dated sources (AllNigeriaSoccer's dedicated eligibility piece, Yahoo Sports, others): 4 senior caps for Spain, most recently a June 5, 2026 Nations League semifinal vs. France — past the 3-competitive-cap FIFA one-time-switch threshold. Permanently cap-tied to Spain, no longer Nigeria-eligible.
+- Added to `LOST_TO_RIVALS` on the site (real near-miss, not a `DIASPORA_ELSEWHERE` case — Nigeria was genuinely in the conversation, unlike players who committed elsewhere long before that was realistic).
+
 ### 2026-09-25 — Added Ajayi/Arokodare to FORMATION, Akpe/Bewene to Board
 
 - FORMATION: Semi Ajayi (DEF, 32, Hull City, 50+ caps) added as depth alongside Bright Osayi-Samuel under Ola Aina's slot, and Tolu Arokodare (FWD, 25, Ajax loan from Wolves, 10 caps) added as depth alongside Awoniyi/Ekhator under Osimhen's slot. Both are established, capped Super Eagles internationals actually in Chelle's AFCON qualifying squad — not eligibility cases — who were missing from the tracked pool entirely. `scripts/validate.py`'s `EXPECTED_RESERVES` bumped DEF 5→6 and FWD 3→4 to match; the FORMATION total-count check, previously hardcoded to `26`, is now derived from `EXPECTED_STARTERS`/`EXPECTED_RESERVES` (same fix class as the earlier board-count hardcode) so it can't go stale silently.
