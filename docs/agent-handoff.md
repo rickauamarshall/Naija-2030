@@ -70,6 +70,31 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-26 — Claude — flagging three discrepancies found reviewing Codex's last sync, not resolved by inference
+
+Status: `NEEDS_OWNER_DECISION`
+Branch/commit: `main` / `363a070` (discrepancies are in history already merged; this entry doesn't change site data)
+
+### Changed
+- Nothing in site data — this is a flag-only entry per Rule 7 (preserve the conflict in the record, don't resolve it by inference).
+
+### Findings
+1. **`server/src/config/pool.js` is structurally wrong, not just stale (third time this file has drifted).** After the `a3d8319` resync: Sanusi, Iwobi, and Ndidi are listed as FORMATION starters, but on the live site the actual starters are Kayode (LB), Nwaneri (MID), and Onyeka (MID) - Sanusi/Iwobi/Ndidi are all depth. Etebo, Iheanacho, and Adiele are listed under FORMATION reserves, but all three are actually Board players (ranks 34, 35, 40). Ajayi, Arokodare, Akpe, and Bewene are missing entirely. The file's own header comment claims "27 FORMATION + 12 BOARD = 39 total" - the real count at the time of the sync was 29 + 16 = 45. The file's own comment already warns "don't let it happen again silently" from the last two times this happened.
+2. **Abdullahi Bewene's note cites evidence it doesn't link.** The note says "The NFF match report confirms he made his Nigeria debut against Poland," but the only URL attached in `VERIFIED_PLAYER_SOURCES['Abdullahi Bewene']` is a Baník Ostrava club-profile page, not an NFF match report. Can't tell from the repo alone whether an NFF report was actually checked and just not linked, or whether the claim is stated more confidently than the attached evidence supports.
+3. **Victory Akpe's `verified` flag flipped false→true while the note got thinner, not thicker.** The previous version had a specific, honest caveat ("no sign of a rival-federation youth cap found, but not exhaustively ruled out"). The current version drops that caveat and shortens the bio, with nothing in the commit explaining that the rival-cap question was actually resolved rather than just dropped.
+
+### Evidence
+- `server/src/config/pool.js` vs. `site/index.html`'s live FORMATION/BOARD arrays (compare directly, counts drift fast).
+- `git diff ff37e54 5d377d0 -- site/index.html` for the Bewene/Akpe note changes.
+- `docs/big-board-history.md`'s 2026-09-25 entries for the state before this sync landed.
+
+### Owner decision needed
+- Whether Codex re-checks Bewene's actual source (does an NFF match report exist, or should the claim be softened to match the club-profile link that's actually there) and re-confirms or restores the Akpe rival-cap caveat, versus Claude doing that re-check instead.
+- Whether to greenlight building a `pool.js` generator now (proposed separately, not yet started) instead of hand-syncing a fourth time.
+
+### Next agent
+- Don't hand-edit `pool.js` again without either fixing the generator gap first or re-deriving every entry from the current live site/index.html arrays - a partial hand-fix here is exactly how the first two drifts happened.
+
 ### 2026-09-25 — Codex — visitor counter backend scaffold
 
 Status: `NEEDS_OWNER_DECISION`
