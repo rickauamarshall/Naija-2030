@@ -48,6 +48,9 @@ Where the dual-national cases actually stand, not where the hope says they stand
 - 🔴 **Jeff Ekhator** (Juventus) — made his senior Italy debut June 7 against Greece, a friendly, and recorded an assist. Not uncapped anymore, but born November 2006 — well under 21 — so the same FIFA one-time-switch mechanism as Ahanor still applies.
 - 🔴 **Luca Koleosho, Michael Kayode** — Italy reportedly moving to lock in both as they rebuild.
 - 🔴 **Noah Atubolu** (Freiburg GK) — omitted from Germany's actual World Cup squad, still hasn't played a competitive senior match for them. Door's open, not being pushed on.
+
+## Lost to Rivals
+
 - ⚫ **Samu Aghehowa** (Porto) — cap-tied to Spain. Four senior caps, the most recent in the June 5 Nations League semifinal against France — past the threshold for a FIFA one-time switch. No longer Nigeria-eligible.
 
 ## Quick Links
