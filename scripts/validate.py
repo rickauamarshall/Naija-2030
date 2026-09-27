@@ -27,7 +27,7 @@ SITE_PATH = Path(__file__).parent.parent / "site" / "index.html"
 EXPECTED_STARTERS = {"GK": 1, "DEF": 4, "MID": 4, "FWD": 2}
 EXPECTED_RESERVES = {"GK": 2, "DEF": 6, "MID": 5, "FWD": 5}
 EXPECTED_BOARD_RANK_START = 27
-EXPECTED_BOARD_RANK_END = 42
+EXPECTED_BOARD_RANK_END = 46
 
 
 def extract_block(text: str, start_marker: str) -> str:
@@ -61,7 +61,9 @@ def main() -> int:
     board_block = extract_block(text, "const BOARD = [")
 
     formation_names = extract_names(formation_block)
-    board_names = extract_names(board_block)
+    board_push = re.search(r"BOARD\.push\((.*?)\);", text, re.S)
+    board_extra = board_push.group(1) if board_push else ""
+    board_names = extract_names(board_block) + extract_names(board_extra)
 
     formation_dupes = find_dupes(formation_names)
     board_dupes = find_dupes(board_names)
@@ -86,7 +88,19 @@ def main() -> int:
         ok = False
         print(f"FAIL: BOARD has {len(board_names)} players, expected {expected_board_count}")
 
-    ranks = sorted(int(r) for r in re.findall(r"rank:(\d+)", board_block))
+    update_block_match = re.search(r"const BOARD_UPDATES = \{(.*?)\};", text, re.S)
+    rank_updates = {
+        name: int(rank)
+        for name, rank in re.findall(
+            r"'([^']+)': \{rank:(\d+)", update_block_match.group(1)
+        )
+    } if update_block_match else {}
+    base_ranked = re.findall(r"\{rank:(\d+),\s*name:'([^']+)'", board_block)
+    extra_ranked = re.findall(r"\{rank:(\d+),\s*name:'([^']+)'", board_extra)
+    ranks = sorted(
+        [rank_updates.get(name, int(rank)) for rank, name in base_ranked]
+        + [int(rank) for rank, _ in extra_ranked]
+    )
     expected_ranks = list(range(EXPECTED_BOARD_RANK_START, EXPECTED_BOARD_RANK_END + 1))
     if ranks != expected_ranks:
         ok = False

@@ -1,5 +1,11 @@
 # Big Board history
 
+### 2026-09-25 — Re-ranked board and added Yohanna/prospects
+
+- Zadok Yohanna added at No. 29 with a $20.8m value, converted from Transfermarkt’s €18m market value using the September 15 EUR/USD reference.
+- George Ilenikhena moved to No. 30, with Moses Usor at No. 31 and Samuel Adeniran at No. 32. Victory Akpe and Rayan Oyebade exchanged places, with Oyebade labeled a prospect.
+- Added Landon Emenalo, Emmanuel Ekong, and Shalom Ekong at Nos. 44–46 as prospects. Their values remain TBD pending reliable public valuation data.
+
 A running record of Big Board (and FORMATION pool) rank changes, for tracking and record-keeping — not a public-facing feature. Add a new dated entry at the top each time rankings are adjusted, promoted/demoted, or a player is added/removed. Don't duplicate exact player counts here — those live in `docs/prelaunch-checklist.md` and `scripts/validate.py`, and go stale if hand-copied into a second place.
 
 ### 2026-09-25 — Added Gift Orban to Lookman's depth

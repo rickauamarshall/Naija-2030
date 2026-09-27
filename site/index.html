@@ -787,8 +787,8 @@ const BOARD = [
   {rank:31, name:'Chizzy Ezenwata', age:18, pos:'FWD', club:'Chelsea', val:'TBD', move:1, elig:'watch', note:'Born to a Cameroonian mother and Nigerian father — also eligible for the Indomitable Lions. Chelsea\'s all-time U18 top scorer (30 goals, 10 assists in 2024/25) at just 16. Currently at England U17/U18 level, and Chelsea have reportedly blocked him from joining a Nigeria U20 training camp — a real sign the club is steering his development toward England, not just press speculation. No market value listed on any tracked source yet, consistent with an academy player who hasn\'t made a senior appearance.', verified:true},
   {rank:32, name:'William Troost-Ekong', age:32, pos:'DEF', club:'Besiktas', val:'$1.1m', move:-3, elig:'open', note:'Veteran leadership, but the 2030 cycle needs to belong to the players below him, not above him.', verified:true},
   {rank:33, name:'David Ozoh', age:21, pos:'MID', club:'Derby County', val:'$2.3m', move:1, elig:'open', note:'Born May 6, 2005 in Valencia, Spain, to Nigerian parents — also eligible for Spain — moved to England at age 8. Permanent move to Derby County (from Crystal Palace) completed Sept 2026. Made 5 appearances for England U18, all friendlies, not competitive — so no cap-tie risk there. Doesn\'t need FIFA clearance, just a release letter from the English FA; that process is underway with no sign the FA will block it.', verified:true},
-  {rank:34, name:'Peter Etebo', age:30, pos:'MID', club:'Gençlerbirliği', val:'$270k', move:-3, elig:'open', note:'Established Super Eagles international, but at 30 and now in Turkey, Ugochukwu\'s rising profile pushed ahead of him in Onyedika\'s midfield depth. Tracked here rather than quietly dropped, same as Troost-Ekong and Iheanacho.', verified:true},
-  {rank:35, name:'Kelechi Iheanacho', age:29, pos:'FWD', club:'Bursaspor', val:'$3.4m', move:-4, elig:'open', note:'Still a full, capped Super Eagles international, but at 29 and now in Turkey he\'s in the Russia friendly (evaluation) squad, not the AFCON qualifying squad — Akor Adams has moved ahead of him in the pool\'s FWD depth. Tracked here rather than quietly dropped, same as Troost-Ekong.', verified:true},
+  {rank:34, name:'Peter Etebo', age:30, pos:'MID', club:'Gençlerbirliği', val:'$270k', move:-3, elig:'open', note:'Experienced Super Eagles midfielder now playing in Turkey.', verified:true},
+  {rank:35, name:'Kelechi Iheanacho', age:29, pos:'FWD', club:'Bursaspor', val:'$3.4m', move:-4, elig:'open', note:'Capped Super Eagles forward now playing in Turkey.', verified:true},
   {rank:36, name:'Oluwaseun Adewumi', age:21, pos:'MID', club:'Hertha BSC (loan, Burnley)', val:'$1.4m', move:-7, elig:'watch', note:'Born Lagos, Nigeria. Austrian citizenship, Austria U21 setup — fully uncapped at senior level.', verified:true},
   {rank:37, name:'Isaac James', age:22, pos:'DEF', club:'Alverca (Portugal)', val:'$680k', move:1, elig:'open', note:'Left-back, first senior call-up for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau — reportedly the first Nigerian player at Alverca to earn a Super Eagles invitation. Said he cried when he got the call. Club and profile now independently confirmed.', verified:true},
   {rank:38, name:'George Ilenikhena', age:20, pos:'FWD', club:'Al-Ittihad (Saudi Pro League)', val:'$13.7m', move:1, elig:'open', note:'Born Aug 16, 2006, in Lagos. First senior call-up for the Sept 2026 AFCON qualifiers. Moved to Al-Ittihad from AS Monaco (51 apps, 10 goals, 2 assists there) — since joining, 6 goals and 2 assists in 9 appearances across all competitions. Club corrected from an earlier TBD/Monaco listing.', verified:true},
@@ -797,6 +797,32 @@ const BOARD = [
   {rank:41, name:'Victory Akpe', age:20, pos:'DEF', club:'FC Basel', val:'$2.3m', move:0, elig:'open', note:'Born Jul 19, 2006 in Abuja. Defender with Nigeria nationality on the Swiss league profile; joined Basel after spells in Lithuania and Hungary. Received his first senior Nigeria call-up for the Oct 6 Russia friendly.', verified:true},
   {rank:42, name:'Abdullahi Bewene', age:21, pos:'DEF', club:'Baník Ostrava', val:'$970k', move:0, elig:'open', note:'Born Nov 29, 2004 in Abuja. Right wing-back, signed through 2031 by Baník Ostrava. The NFF match report confirms he made his Nigeria debut against Poland, resolving the earlier discrepancy in the record.', verified:true}
 ];
+
+const BOARD_UPDATES = {
+  'Rayan Oyebade': {rank:37, move:0, tag:'PROSPECT', note:'Young defender with Nigeria eligibility and a developing senior pathway.'},
+  'Samuel Adeniran': {rank:32, note:'LASK forward who scored twice in the club\'s Champions League qualifying comeback over Celtic, including the extra-time winner.'},
+  'Chibuike Nwaiwu': {rank:27},
+  'Tyrique George': {rank:28},
+  'Chizzy Ezenwata': {rank:35},
+  'William Troost-Ekong': {rank:41},
+  'David Ozoh': {rank:34},
+  'Peter Etebo': {rank:42},
+  'Kelechi Iheanacho': {rank:43, note:'Former Manchester City and Leicester City forward and a major Nigeria international, now with Bursaspor.'},
+  'Oluwaseun Adewumi': {rank:40},
+  'Isaac James': {rank:36},
+  'George Ilenikhena': {rank:30, move:2, note:'Called up for the September AFCON qualifiers and producing quickly in Saudi Arabia.'},
+  'Moses Usor': {rank:31, note:'LASK winger whose strong start to the 2026/27 season earned a first senior Nigeria call-up.'},
+  'Emeka Adiele': {rank:39, note:'England youth international and Nigeria-eligible defender.'},
+  'Victory Akpe': {rank:33, move:9},
+  'Abdullahi Bewene': {rank:38, move:4, note:'Right wing-back signed through 2031 by Baník Ostrava.'}
+};
+BOARD.forEach(player => Object.assign(player, BOARD_UPDATES[player.name] || {}));
+BOARD.push(
+  {rank:29, name:'Zadok Yohanna', age:19, pos:'FWD', club:'Brighton & Hove Albion', val:'$20.8m', move:1, elig:'open', note:'Brighton winger signed from AIK after an 18-appearance, five-goal, four-assist breakthrough season.', verified:true},
+  {rank:44, name:'Landon Emenalo', age:18, pos:'DEF', club:'Chelsea', val:'TBD', move:0, elig:'watch', note:'Chelsea academy defender with recent senior-squad involvement.', verified:true, tag:'PROSPECT'},
+  {rank:45, name:'Emmanuel Ekong', age:24, pos:'FWD', club:'Malmö FF', val:'TBD', move:0, elig:'watch', note:'Malmö attacker with Sweden youth involvement and Nigerian eligibility.', verified:true, tag:'PROSPECT'},
+  {rank:46, name:'Shalom Ekong', age:23, pos:'FWD', club:'GAIS', val:'TBD', move:0, elig:'watch', note:'Swedish-based forward with a strong recent scoring run.', verified:true, tag:'PROSPECT'}
+);
 
 const LOST_TO_RIVALS = [
   {name:'Nnamdi Collins', now:'Germany', flag:'🇩🇪', detail:'Made senior competitive debut vs Slovakia, Sept 2025 (2026 WCQ) — permanently cap-tied.'},
@@ -889,7 +915,9 @@ const WIKIDATA_SOURCES = {
   'Oluwaseun Adewumi': 'Q112112780', 'Moses Usor': 'Q113451992',
   'George Ilenikhena': 'Q116060328', 'Tyrique George': 'Q123002942',
   'Jeff Ekhator': 'Q128895710', 'Chibuike Nwaiwu': 'Q130235116',
-  'Rio Ngumoha': 'Q131466230', 'Rayan Oyebade': 'Q139899308'
+  'Rio Ngumoha': 'Q131466230', 'Rayan Oyebade': 'Q139899308',
+  'Landon Emenalo': 'Q132129020', 'Emmanuel Ekong': 'Q113971462',
+  'Shalom Ekong': 'Q135908896'
 };
 function attachWikidataSource(player){
   const id = WIKIDATA_SOURCES[player.name];
@@ -903,6 +931,11 @@ const VERIFIED_PLAYER_SOURCES = {
   'Samuel James': {label:'SJK player announcement', url:'https://sjk.fi/uutiset/maalivahti-samuel-james-ja-sjk-tekivat-pelaajasopimuksen/'},
   'Victory Akpe': {label:'Swiss league player profile', url:'https://sfl.ch/players/victory-akpe'},
   'Abdullahi Bewene': {label:'Baník Ostrava profile', url:'https://www.fcb.cz/clanek.asp?id=12269'},
+  'Zadok Yohanna': {label:'Brighton player profile', url:'https://www.brightonandhovealbion.com/player-detail-statistics-striker/700308'},
+  'Landon Emenalo': {label:'Chelsea player profile', url:'https://www.chelseafc.com/en/news/article/landon-emenalo-signs-new-chelsea-deal'},
+  'Emmanuel Ekong': {label:'Malmö FF player profile', url:'https://www.mff.se/en/team/men/players/emmanuel-ekong/'},
+  'Shalom Ekong': {label:'GAIS player profile', url:'https://www.gais.se/spelare/shalom-ekong'},
+  'Kelechi Iheanacho': {label:'Turkish Football Federation profile', url:'https://www.tff.org/Default.aspx?kisiId=2935087&pageId=526'},
   'Gift Orban': [
     {label:'Amedspor announcement', url:'https://www.amedspor.com.tr/index.php/news/gift-orban-amedsporda'},
     {label:'Bundesliga player profile', url:'https://www.bundesliga.com/en/bundesliga/player/gift-orban'}
@@ -1010,6 +1043,7 @@ FORMATION.forEach(row => row.slots.forEach(slot => {
 }));
 BOARD.forEach(attachWikidataSource);
 BOARD.forEach(attachVerifiedPlayerSource);
+BOARD.sort((a,b)=>a.rank-b.rank);
 
 BOARD.forEach(p=>{
   const row = document.createElement('div');
@@ -1024,7 +1058,7 @@ BOARD.forEach(p=>{
   row.innerHTML = `
     <div class="rank-num">${p.rank}</div>
     <div>
-      <div class="pname">${p.name}<span class="elig-badge ${eligClass}">${eligLabel}</span>${verifiedBadge}${rivalCapsBadge(p.rivalCaps)}</div>
+      <div class="pname">${p.name}<span class="elig-badge ${eligClass}">${eligLabel}</span>${p.tag ? '<span class="elig-badge" style="background:#e8e4d9;color:#8a8375;">'+p.tag+'</span>' : ''}${verifiedBadge}${rivalCapsBadge(p.rivalCaps)}</div>
       <div class="pmeta">${p.club}${p.note? ' · '+p.note : ''}</div>
       ${sourceLinks(p.sources)}
     </div>
