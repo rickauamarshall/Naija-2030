@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Super Eagles Tracker: Nigeria's Player Pool</title>
+<meta name="description" content="An independent tracker for Nigeria's Super Eagles player pool, Big Board, eligible dual nationals and technical staff.">
+<meta name="theme-color" content="#0E3B2E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Super Eagles Tracker: Nigeria's Player Pool">
+<meta property="og:description" content="Track Nigeria's current squad, wider player pool, eligible dual nationals and Big Board movement.">
+<meta property="og:url" content="https://supereaglestracker.com/">
+<meta property="og:image" content="https://supereaglestracker.com/profile_badge.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Super Eagles Tracker crest">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Super Eagles Tracker: Nigeria's Player Pool">
+<meta name="twitter:description" content="Track Nigeria's current squad, wider player pool, eligible dual nationals and Big Board movement.">
+<meta name="twitter:image" content="https://supereaglestracker.com/profile_badge.png">
+<link rel="icon" type="image/png" href="profile_badge.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -135,11 +150,52 @@
   .flip-unit{ font-size:10px; color:#CFE0D6; text-align:center; margin-top:4px; letter-spacing:0.06em; }
   .flip-group{ display:flex; flex-direction:column; align-items:center; }
   .clock-note{ font-size:11.5px; color:#9FB8AA; margin-top:10px; line-height:1.4; }
+  .result-score{
+    font-family:'Oswald',sans-serif;
+    font-size:28px;
+    color:var(--line);
+    letter-spacing:0.04em;
+  }
+
+  /* ===== LATEST ISSUE ===== */
+  .latest-issue{
+    border-top:1px solid var(--paper-2);
+    border-bottom:1px solid var(--paper-2);
+    padding:16px 0;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+  }
+  .latest-issue .kicker{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10px;
+    color:var(--clay);
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    margin-bottom:4px;
+  }
+  .latest-issue h2{ font-size:18px; }
+  .latest-issue p{ margin:4px 0 0; color:var(--ink-soft); font-size:12px; line-height:1.45; }
+  .latest-issue a{
+    flex:0 0 auto;
+    color:var(--pitch);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    font-weight:600;
+    text-decoration:none;
+    border-bottom:2px solid var(--gold);
+    padding-bottom:3px;
+  }
 
   /* ===== NAV ===== */
   nav.tabs{
     max-width:1180px; margin:0 auto;
     display:flex; gap:4px; padding:18px 28px 0;
+    overflow-x:auto;
+    white-space:nowrap;
+    scrollbar-width:thin;
   }
   nav.tabs button{
     font-family:'Oswald',sans-serif;
@@ -153,6 +209,7 @@
     margin-right:22px;
     color:var(--ink-soft);
     cursor:pointer;
+    flex:0 0 auto;
   }
   nav.tabs button.active{ color:var(--ink); border-bottom-color:var(--gold); }
 
@@ -175,6 +232,13 @@
     gap:22px;
   }
   @media (max-width:920px){ .split{ grid-template-columns:1fr; } }
+  @media (max-width:700px){
+    .ticker{ padding:10px 16px; }
+    header.masthead{ padding:30px 18px 24px; }
+    nav.tabs{ padding-left:18px; padding-right:18px; }
+    main{ padding-left:18px; padding-right:18px; }
+    .latest-issue{ align-items:flex-start; flex-direction:column; }
+  }
 
   /* ---- PITCH ---- */
   .pitch-wrap{
@@ -380,7 +444,6 @@
     <a class="ticker-link" href="https://www.instagram.com/supereaglestracker" target="_blank" rel="noopener">Instagram · @supereaglestracker</a>
     <a class="ticker-link" href="https://supereaglestracker.beehiiv.com/subscribe" target="_blank" rel="noopener">Newsletter · Subscribe</a>
   </div>
-  <div class="views">PAGE VIEWS · <b class="mono" id="viewCount">—</b></div>
 </div>
 
 <header class="masthead">
@@ -391,17 +454,17 @@
 
     <div class="clocks">
       <div class="clock-card">
-        <div class="label">Next Match · vs Madagascar (Uyo)</div>
-        <div class="flip-row" id="clockNextMatch"></div>
-        <div class="clock-note">AFCON 2027 Qualifying, Group L, Matchday 1. Fri Sept 25, 2026, 4:00 PM WAT, Godswill Akpabio Stadium.</div>
+        <div class="label">AFCON 2027 Qualifying · Matchday 1</div>
+        <div class="result-score">NIGERIA 2-1 MADAGASCAR</div>
+        <div class="clock-note">George Ilenikhena and Moses Usor scored on their Super Eagles debuts to complete the comeback in Uyo.</div>
       </div>
       <div class="clock-card">
         <div class="label">AFCON 2027 Qualifying · Matchday 2</div>
-        <div class="flip-row" id="clockAfcon"></div>
-        <div class="clock-note">vs Guinea-Bissau (away, Bissau), Tue Sept 29, 2026. Exact kickoff time not yet confirmed — counting down to matchday.</div>
+        <div class="result-score">GUINEA-BISSAU 3-0 NIGERIA</div>
+        <div class="clock-note">A comprehensive away defeat closed the qualifying window and sharpened the questions around selection, urgency and execution.</div>
       </div>
       <div class="clock-card">
-        <div class="label">Next Friendly · vs Russia</div>
+        <div class="label">Next Match · Friendly vs Russia</div>
         <div class="flip-row" id="clockFriendly"></div>
         <div class="clock-note">Tue Oct 6, 2026, Nizhny Novgorod Stadium, 6:00 PM Nigerian time. Second meeting in 16 months after the 1-1 draw in Moscow (June 2025).</div>
       </div>
@@ -430,6 +493,15 @@
 
 <main>
 
+  <aside class="latest-issue" aria-label="Latest newsletter issue">
+    <div>
+      <div class="kicker">Latest issue · No. 3</div>
+      <h2>Two Debutants, One Door Closed, and a 3-0 Warning</h2>
+      <p>What the AFCON qualifying window changed across Nigeria's player pool and Big Board.</p>
+    </div>
+    <a href="https://supereaglestracker.beehiiv.com/p/two-debutants-one-door-closed-and-a-3-0-warning" target="_blank" rel="noopener">READ ISSUE 3 ↗</a>
+  </aside>
+
   <!-- ================= POOL VIEW ================= -->
   <section class="view" id="pool">
     <div class="split">
@@ -455,7 +527,7 @@
       </div>
 
       <!-- BIG BOARD -->
-      <div>
+      <div id="big-board">
         <div class="section-head">
           <div>
             <h2>The Big Board <span class="mono" style="color:var(--ink-soft);font-size:13px;" id="boardRangeLabel">(—)</span></h2>
@@ -657,31 +729,26 @@
 <footer>SUPER EAGLES TRACKER IS A FAN-BUILT INDEPENDENT TRACKER · NOT AFFILIATED WITH THE NFF, CAF OR FIFA · PLAYER DATA IS INDEPENDENTLY RESEARCHED — VERIFICATION STATUS IS SHOWN PER ENTRY</footer>
 
 <script>
-/* ---------------- VIEW COUNTER ---------------- */
-(async function(){
-  // Set this after the Cloudflare Worker/KV endpoint is deployed; GitHub
-  // Pages itself cannot persist a shared counter.
-  const VISITOR_COUNTER_ENDPOINT = '';
-  try{
-    if(!VISITOR_COUNTER_ENDPOINT) throw new Error('counter endpoint not configured');
-    const res = await fetch(VISITOR_COUNTER_ENDPOINT, {method:'POST', mode:'cors'});
-    if(!res.ok) throw new Error(`counter returned ${res.status}`);
-    const data = await res.json();
-    document.getElementById('viewCount').textContent = Number(data.count).toLocaleString();
-  }catch(e){
-    document.getElementById('viewCount').textContent = '—';
-  }
-})();
-
 /* ---------------- TABS ---------------- */
-document.querySelectorAll('nav.tabs button').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));
-    document.querySelectorAll('section.view').forEach(s=>s.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.view).classList.add('active');
+function activateView(viewId){
+  document.querySelectorAll('nav.tabs button').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.view === viewId);
   });
+  document.querySelectorAll('section.view').forEach(section=>{
+    section.classList.toggle('active', section.id === viewId);
+  });
+}
+document.querySelectorAll('nav.tabs button').forEach(btn=>{
+  btn.addEventListener('click',()=>activateView(btn.dataset.view));
 });
+function openHashTarget(){
+  if(window.location.hash === '#big-board'){
+    activateView('pool');
+    requestAnimationFrame(()=>document.getElementById('big-board').scrollIntoView({behavior:'smooth', block:'start'}));
+  }
+}
+openHashTarget();
+window.addEventListener('hashchange', openHashTarget);
 
 /* ---------------- COUNTDOWN CLOCKS ---------------- */
 function renderFlip(el, days, hrs, mins){
@@ -706,11 +773,8 @@ function diffParts(target){
   return [days,hrs,mins];
 }
 function tick(){
-  // Confirmed fixtures only — no invented dates. Update these three the moment
-  // NFF/CAF confirm the next window; 2030 WCQ card stays a static "DATE TBD"
-  // until CAF actually publishes a qualifying calendar (see HTML above).
-  renderFlip(document.getElementById('clockNextMatch'), ...diffParts(new Date('2026-09-25T16:00:00+01:00')));
-  renderFlip(document.getElementById('clockAfcon'), ...diffParts(new Date('2026-09-29T00:00:00+01:00')));
+  // Confirmed fixtures only — no invented dates. The 2030 WCQ card stays a
+  // static "DATE TBD" until CAF publishes a qualifying calendar.
   renderFlip(document.getElementById('clockFriendly'), ...diffParts(new Date('2026-10-06T18:00:00+01:00')));
   // Time since last WC appearance (Nigeria's last finals: 2018 Russia, opening match June 16 2018)
   const since = new Date() - new Date('2018-06-16T00:00:00');
@@ -743,13 +807,11 @@ const FORMATION = [
       {name:'Ifeanyi Ndukwe', age:18, club:'Levante (on loan from Liverpool)', val:'$2.3m', trend:'up', watch:'Tri-national (Nigeria/Austria/Russia). Liverpool signing, currently leaning Austria at youth level — still uncapped at senior level.'},
       {name:'Tosin Adarabioyo', age:28, club:'Chelsea', val:'$19.4m', trend:'flat', watch:'Has said "yes" to Nigeria more than once since 2024, then gone quiet each time — reportedly no active contact with the NFF as of mid-2026. Fully uncapped by anyone. Real, but stalled.'}
     ]},
-    {main:{name:'Honest Ahanor', age:18, club:'Crystal Palace (loan from Chelsea)', val:'$27.1m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:2, kind:'friendly', switchEligible:true}, watch:'Sub vs Luxembourg, started vs Greece — both friendlies. Still eligible for a FIFA one-time switch (under 21, ≤3 caps, no competitive caps). Biggest urgency case in the pool — this is an active, formal mechanism, not just hope.'}, depth:[
+    {main:{name:'Honest Ahanor', age:18, club:'Crystal Palace (loan from Chelsea)', val:'$27.1m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:2, kind:'friendly', switchEligible:true}, watch:'Sub vs Luxembourg, started vs Greece — both friendlies. Called into Italy\'s Sept. 2026 Nations League squad but remained unused against Belgium and did not travel for the Türkiye match, so his total remains two friendly caps with no competitive minutes. His Nigeria route remains open.'}, depth:[
       {name:'Benjamin Fredrick', age:20, club:'FCV Dender EH', val:'$460k', trend:'up', watch:'Simoiben Academy product (Moses Simon\'s academy). Already made his senior Nigeria debut in the May 2025 Unity Cup final vs. Jamaica.'},
       {name:'Semi Ajayi', age:32, club:'Hull City', val:'$1m', trend:'up', watch:'50+ caps, established Super Eagles international ("The Tower") — in Chelle\'s AFCON qualifying squad for Madagascar/Guinea-Bissau, not a speculative addition. In form for Hull City this season.'}
     ]},
-    {main:{name:'Michael Kayode', age:21, club:'Brentford', val:'$40m', trend:'up', watch:'Both parents Nigerian. Left out of Italy\'s World Cup qualifying playoff squad by Gennaro Gattuso and remains eligible to switch — uncapped at senior level. The NFF has secured Eric Chelle\'s personal backing and arranged a face-to-face meeting in London. One of the most advanced real recruitment pushes in the pool right now.'}, depth:[
-      {name:'Zaidu Sanusi', age:27, club:'Porto', val:'$1.8m', trend:'flat'}
-    ]}
+    {main:{name:'Zaidu Sanusi', age:27, club:'Porto', val:'$1.8m', trend:'flat'}, depth:[]}
   ]},
   {pos:'MID', slots:[
     {main:{name:'Ethan Nwaneri', age:19, club:'Marseille (loan, Arsenal)', val:'$45.3m', trend:'up', watch:'Igbo-Nigerian father. England U21 international but uncapped at senior level. Family has reportedly opened the door to NFF talks — real and live, but a notch below Ngumoha\'s urgency since he hasn\'t been drawn into a senior setup elsewhere.'}, depth:[
@@ -825,6 +887,7 @@ BOARD.push(
 );
 
 const LOST_TO_RIVALS = [
+  {name:'Michael Kayode', now:'Italy', flag:'🇮🇹', detail:'Started and scored in the 27th minute of Italy\'s 4-1 Nations League win over Türkiye on Sept. 28, 2026. It was his first senior cap and an official competitive appearance; at age 22, he is outside FIFA\'s under-21 change-of-association exception and is now permanently cap-tied to Italy.'},
   {name:'Nnamdi Collins', now:'Germany', flag:'🇩🇪', detail:'Made senior competitive debut vs Slovakia, Sept 2025 (2026 WCQ) — permanently cap-tied.'},
   {name:'Carney Chukwuemeka', now:'Austria', flag:'🇦🇹', detail:'Nigeria was genuinely in the running — born in Vienna to Nigerian parents. Completed a FIFA-approved switch to Austria in March 2026 and debuted vs. Ghana. A real, recent loss, not a hypothetical one.'},
   {name:'Samu Aghehowa', now:'Spain', flag:'🇪🇸', detail:'Born in Melilla to Nigerian (Edo State) parents; played as Samu Omorodion before switching to his mother\'s surname in Sept 2026. This site flagged his case as genuinely unresolved for months (conflicting cap counts, and whether his Nov 2024 Nations League debut against Switzerland was competitive). Now settled: he has made 4 senior appearances for Spain, including a June 5, 2026 Nations League semifinal vs. France — past the 3-competitive-cap threshold, permanently cap-tied. Porto forward, later ruled out of the 2026 World Cup with an ACL injury (unrelated to eligibility, just for the record).'}
@@ -846,7 +909,7 @@ const DIASPORA_ELSEWHERE = [
   {name:'Jamal Musiala', team:'Germany', flag:'🇩🇪', detail:'Born in Stuttgart to a Nigerian father and German mother. Chose Germany in 2021 and became a senior international.'},
   {name:'Noni Madueke', team:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', detail:'Nigerian parents, developed via PSV and Chelsea. Debuted for England Sept 2024.'},
   {name:'Folarin Balogun', team:'United States', flag:'🇺🇸', detail:'Born in Brooklyn to Nigerian parents. Used a FIFA one-time switch from England to the USMNT in 2023 — now their starting No. 9.'},
-  {name:'Michael Olise', team:'France', flag:'🇫🇷', detail:'Nigerian father, Algerian mother. Born and developed in England, debuted for France in 2024, started their 2026 semifinal run.'},
+  {name:'Michael Olise', team:'France', flag:'🇫🇷', detail:'Nigerian father, Algerian mother. Born and developed in England, debuted for France in 2024 and started their 2026 World Cup semifinal run. Scored a headline-making 88th-minute solo winner against Belgium in the Nations League on Sept. 28, 2026.'},
   {name:'David Alaba', team:'Austria', flag:'🇦🇹', detail:'Son of a Yoruba Nigerian father from Ogere, Ogun State, and a Filipino mother. Born and raised in Vienna, 113+ caps for Austria since 2009.'},
   {name:'Lukas Nmecha', team:'Germany', flag:'🇩🇪', detail:'German mother, Nigerian father. Played England at multiple youth levels before settling on Germany, debuting for them in 2023.'},
   {name:'Joshua Zirkzee', team:'Netherlands', flag:'🇳🇱', detail:'Dutch father, Nigerian mother. Received a late Euro 2024 call-up and has stuck with the Netherlands since.'},
