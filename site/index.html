@@ -856,8 +856,8 @@ const BOARD = [
   {rank:38, name:'George Ilenikhena', age:20, pos:'FWD', club:'Al-Ittihad (Saudi Pro League)', val:'$13.7m', move:1, elig:'open', note:'Born Aug 16, 2006, in Lagos. First senior call-up for the Sept 2026 AFCON qualifiers. Moved to Al-Ittihad from AS Monaco (51 apps, 10 goals, 2 assists there) — since joining, 6 goals and 2 assists in 9 appearances across all competitions.', verified:true},
   {rank:39, name:'Moses Usor', age:24, pos:'FWD', club:'LASK', val:'$6.8m', move:1, elig:'open', note:'Born Feb 5, 2002. Winger, first senior call-up for the Sept 2026 AFCON qualifiers after a strong start to the 2026/27 season at LASK.', verified:true},
   {rank:40, name:'Emeka Adiele', age:18, pos:'DEF', club:'FC Utrecht (on loan, Burton Albion)', val:'$740k', move:0, elig:'open', note:'England U17/U18 international, Nigeria-eligible, and fully uncapped at senior level.', verified:true},
-  {rank:41, name:'Victory Akpe', age:20, pos:'DEF', club:'FC Basel', val:'$2.3m', move:0, elig:'open', note:'Born Jul 19, 2006 in Abuja. Defender with Nigeria nationality on the Swiss league profile; joined Basel after spells in Lithuania and Hungary. Received his first senior Nigeria call-up for the Oct 6 Russia friendly.', verified:true},
-  {rank:42, name:'Abdullahi Bewene', age:21, pos:'DEF', club:'Baník Ostrava', val:'$970k', move:0, elig:'open', note:'Born Nov 29, 2004 in Abuja. Right wing-back, signed through 2031 by Baník Ostrava. The NFF match report confirms he made his Nigeria debut against Poland, resolving the earlier discrepancy in the record.', verified:true}
+  {rank:41, name:'Victory Akpe', age:20, pos:'DEF', club:'FC Basel', val:'$2.3m', move:0, elig:'open', note:'Born Jul 19, 2006 in Abuja. Defender with Nigeria nationality on the Swiss league profile; joined Basel after spells in Lithuania and Hungary. Received his first senior Nigeria call-up for the Oct 6 Russia friendly. Searched for a rival-federation youth cap at Banga (Lithuania) or Zalaegerszeg (Hungary) and found none reported, but a clean search result isn\'t proof of absence — treating this as checked, not closed.', verified:true},
+  {rank:42, name:'Abdullahi Bewene', age:21, pos:'DEF', club:'Baník Ostrava', val:'$970k', move:0, elig:'open', note:'Born Nov 29, 2004 in Abuja. Right wing-back, signed through 2031 by Baník Ostrava. Debuted for Nigeria in the 2-2 friendly draw with Poland, June 3 2026 in Warsaw — played the full 90 minutes alongside Okoye and Ndidi, one of only three Nigerian players to do so.', verified:true}
 ];
 
 const BOARD_UPDATES = {
@@ -876,12 +876,12 @@ const BOARD_UPDATES = {
   'Moses Usor': {rank:31, note:'LASK winger whose strong start to the 2026/27 season earned a first senior Nigeria call-up.'},
   'Emeka Adiele': {rank:39, note:'England youth international and Nigeria-eligible defender.'},
   'Victory Akpe': {rank:33, move:9},
-  'Abdullahi Bewene': {rank:38, move:4, note:'Right wing-back signed through 2031 by Baník Ostrava.'}
+  'Abdullahi Bewene': {rank:38, move:4, note:'Right wing-back signed through 2031 by Baník Ostrava. Debuted for Nigeria vs. Poland, June 3 2026.'}
 };
 BOARD.forEach(player => Object.assign(player, BOARD_UPDATES[player.name] || {}));
 BOARD.push(
   {rank:29, name:'Zadok Yohanna', age:19, pos:'FWD', club:'Brighton & Hove Albion', val:'$20.8m', move:1, elig:'open', note:'Brighton winger signed from AIK after an 18-appearance, five-goal, four-assist breakthrough season.', verified:true},
-  {rank:44, name:'Landon Emenalo', age:18, pos:'DEF', club:'Chelsea', val:'TBD', move:0, elig:'watch', note:'Chelsea academy defender with recent senior-squad involvement.', verified:true, tag:'PROSPECT'},
+  {rank:44, name:'Landon Emenalo', age:18, pos:'DEF', club:'Celtic (loan from Chelsea)', val:'TBD', move:0, elig:'watch', note:'Chelsea academy defender, tri-national (USA/Nigeria/England) through father Michael Emenalo\'s Super Eagles career — born in Tucson, Arizona. Out on a season-long loan to Celtic since Sept 2026; club corrected from a stale "Chelsea" listing.', verified:true, tag:'PROSPECT'},
   {rank:45, name:'Emmanuel Ekong', age:24, pos:'FWD', club:'Malmö FF', val:'TBD', move:0, elig:'watch', note:'Malmö attacker with Sweden youth involvement and Nigerian eligibility.', verified:true},
   {rank:46, name:'Shalom Ekong', age:23, pos:'FWD', club:'GAIS', val:'TBD', move:0, elig:'watch', note:'Swedish-based forward with a strong recent scoring run.', verified:true}
 );
@@ -993,9 +993,15 @@ const VERIFIED_PLAYER_SOURCES = {
   'Stanley Nwabali': {label:'NFF squad announcement', url:'https://thenff.com/international-friendly-ndidi-simon-nwabali-lead-super-eagles-to-nizhny-novgorod-for-russia/'},
   'Samuel James': {label:'SJK player announcement', url:'https://sjk.fi/uutiset/maalivahti-samuel-james-ja-sjk-tekivat-pelaajasopimuksen/'},
   'Victory Akpe': {label:'Swiss league player profile', url:'https://sfl.ch/players/victory-akpe'},
-  'Abdullahi Bewene': {label:'Baník Ostrava profile', url:'https://www.fcb.cz/clanek.asp?id=12269'},
+  'Abdullahi Bewene': [
+    {label:'Baník Ostrava profile', url:'https://www.fcb.cz/clanek.asp?id=12269'},
+    {label:'Leadership: Bewene on his Nigeria debut', url:'https://leadership.ng/czech-side-banik-ostrava-hails-bewene-after-impressive-nigeria-debut/'}
+  ],
   'Zadok Yohanna': {label:'Brighton player profile', url:'https://www.brightonandhovealbion.com/player-detail-statistics-striker/700308'},
-  'Landon Emenalo': {label:'Chelsea player profile', url:'https://www.chelseafc.com/en/news/article/landon-emenalo-signs-new-chelsea-deal'},
+  'Landon Emenalo': [
+    {label:'Chelsea player profile', url:'https://www.chelseafc.com/en/news/article/landon-emenalo-signs-new-chelsea-deal'},
+    {label:'AllNigeriaSoccer: Celtic loan confirmed', url:'https://allnigeriasoccer.com/tri-national-defender-whose-father-played-for-nigeria-joins-celtic-on-loan-from-chelsea'}
+  ],
   'Emmanuel Ekong': {label:'Malmö FF player profile', url:'https://www.mff.se/en/team/men/players/emmanuel-ekong/'},
   'Shalom Ekong': {label:'GAIS player profile', url:'https://www.gais.se/spelare/shalom-ekong'},
   'Kelechi Iheanacho': {label:'Turkish Football Federation profile', url:'https://www.tff.org/Default.aspx?kisiId=2935087&pageId=526'},

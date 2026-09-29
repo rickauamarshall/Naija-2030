@@ -70,6 +70,36 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-09-29 — Claude — resolved all three flagged discrepancies, built the pool.js generator, fixed Emenalo's club
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree (pending commit)
+
+### Changed
+- **`server/src/config/pool.js` — built `scripts/generate_pool_config.js`** instead of hand-fixing a fourth time. It parses FORMATION/BOARD directly out of `site/index.html` (brace-depth-aware, so nested objects like `rivalCaps` don't break it), derives short names (auto-disambiguating surname collisions, e.g. "S. James"/"I. James", "E. Ekong"/"S. Ekong") and short club names, and preserves any existing `providerPlayerId` values across regeneration. Ran it; `pool.js` now correctly has 11 starters + 17 depth + 20 board = 48, matching `site/index.html` exactly (verified: `node --check`, loaded the module and confirmed 0 duplicate names, `cd server && node --test` all 11 tests pass).
+- **Victory Akpe** — restored an honest rival-cap caveat (searched specifically for Lithuania/Hungary youth caps, found none, but said so as "checked, not closed" rather than either omitting it or overclaiming certainty).
+- **Abdullahi Bewene** — the "NFF match report confirms..." claim was actually dead code (silently overridden by `BOARD_UPDATES`'s own shorter note at render time, so it was never shown to a real reader), but fixed both the base note and the `BOARD_UPDATES` override to state what's actually verified: his Poland debut (2-2 draw, June 3 2026, played full 90) is corroborated by multiple independent, dated Nigerian sports outlets, not by an NFF report specifically. Added a real citation for that instead of the unsupported claim.
+- **Landon Emenalo** — independently verified he's on a season-long loan to Celtic (since Sept 2026), not still at Chelsea as listed. Fixed the club field and added a corroborating source.
+
+### Checked
+- `python3 scripts/validate.py` passes: 28 pool + 20 board, no dupes/overlap, ranks 27-46 intact.
+- `node --check` on the extracted inline `<script>` block.
+- Independently verified via web search (not inference) before touching any of the four: Bewene's Poland debut, Emenalo's Celtic loan, and the absence of any findable Lithuania/Hungary youth cap for Akpe.
+
+### Findings
+- The Bewene case is a useful lesson: a wrong-looking claim in the source array can be functionally harmless (never rendered) while still being worth fixing, because the next person to read the raw data has no way to know that without tracing the `BOARD_UPDATES` override logic.
+
+### Evidence
+- `scripts/generate_pool_config.js`, `server/src/config/pool.js`
+- `site/index.html` (Akpe/Bewene/Emenalo notes and sources)
+- Leadership.ng and AllNigeriaSoccer citations now in `VERIFIED_PLAYER_SOURCES`
+
+### Owner decision needed
+- None - these were the three items already flagged as needing resolution, plus one new one (Emenalo) found and fixed in the same pass.
+
+### Next agent
+- Run `node scripts/generate_pool_config.js` after any future FORMATION/BOARD edit instead of hand-editing `server/src/config/pool.js`.
+
 ### 2026-09-26 — Claude — flagging three discrepancies found reviewing Codex's last sync, not resolved by inference
 
 Status: `NEEDS_OWNER_DECISION`

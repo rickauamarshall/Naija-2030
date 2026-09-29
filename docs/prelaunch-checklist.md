@@ -12,7 +12,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] "Chelle's Squad" tab — the real, announced squad for each fixture window, cross-checked live against FORMATION/BOARD (computed at render time from a Set of pool names, not hardcoded) so the tracked/untracked badges can't silently go stale
 - [x] Removed two literal `[Add: ...]` placeholder entries from the public Staff tab (Scouting & Data, Medical & Performance) — found by Codex's audit. Tracking the actual research gap here instead of leaving a raw TODO live: **still need real names for** (a) diaspora scouts/recruitment analysts at CIES or club scouting departments, (b) club-level sports scientists/physios of Nigerian origin. Add back as real entries once researched, not as placeholders.
 - [x] Masthead player count and Big Board rank-range header are now computed from the live `FORMATION`/`BOARD` arrays via JS, not hardcoded strings — can't drift out of sync with the data again the way "50 PLAYERS" / "(27–50)" did
-- [x] `server/src/config/pool.js` was badly stale (still had all 17 purged fabricated names, including the Iheukwumere misattribution, plus 6 stale club names) — resynced by hand to match the current 39-player site pool. Its own header comment still flags the real fix: generate this file from `site/index.html` instead of hand-maintaining both in parallel.
+- [x] `server/src/config/pool.js` was badly stale (still had all 17 purged fabricated names, including the Iheukwumere misattribution, plus 6 stale club names) — resynced by hand to match the current 39-player site pool. It went stale two more times after that hand-fix (wrong starters vs. depth, players in the wrong section) before `scripts/generate_pool_config.js` was built to actually derive it from `site/index.html` instead of hand-maintaining both in parallel. Run `node scripts/generate_pool_config.js` after any FORMATION/BOARD change — it preserves `providerPlayerId` values across regeneration.
 - [x] GitHub Pages deploy workflow added (`.github/workflows/pages.yml`) and Pages source set to GitHub Actions; the site is live at `https://supereaglestracker.com/`.
 - [x] Custom domain configured: `supereaglestracker.com` uses the four GitHub Pages apex A records plus the DNS-only `www` CNAME; GitHub DNS check has succeeded and HTTPS certificate provisioning is in progress.
 - [ ] Real view counter backend — current one uses the artifact-preview environment's `window.storage`, which won't exist once actually deployed (flagged in the original handover, still open)
@@ -28,7 +28,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 
 ## Tweet-feed / X automation
 - [x] Position-based formatter (GK/DEF/MID/FWD) — tested, matches the Osimhen reference example exactly
-- [x] Current 38-player pool config (`server/src/config/pool.js`)
+- [x] Current pool config (`server/src/config/pool.js`) — now generated, not hand-maintained; run `node scripts/generate_pool_config.js` after any pool change
 - [x] Mock provider, weekly recap aggregation, dry-run demo (`npm run demo`, `npm run recap`)
 - [x] Scheduled GitHub Actions workflow for the weekly recap (Monday morning Spain time — see `anonymity-opsec.md`)
 - [ ] Real stats-provider integration — **nothing auto-posts until this exists**; today's Adeniran/LASK-Celtic line was hand-drafted through the real formatter as a one-off, not pulled from a live feed
