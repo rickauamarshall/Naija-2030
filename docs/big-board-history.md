@@ -1,5 +1,10 @@
 # Big Board history
 
+### 2026-10-05 — Added Femi Azeez at No. 30
+
+- Femi Azeez added at No. 30 as a Brighton & Hove Albion forward/winger after his Millwall-to-Brighton move, 2025/26 Championship production, and Nigeria Unity Cup debut impact. Marked as an injury-watch case because his Brighton start and recent Super Eagles availability were delayed by recovery.
+- George Ilenikhena, Moses Usor, Samuel Adeniran, Victory Akpe, David Ozoh, Chizzy Ezenwata, Isaac James, Rayan Oyebade, and Abdullahi Bewene each moved down one slot to keep the board sequence intact.
+
 ### 2026-09-25 — Re-ranked board and added Yohanna/prospects
 
 - Zadok Yohanna added at No. 29 with a $20.8m value, converted from Transfermarkt’s €18m market value using the September 15 EUR/USD reference.
