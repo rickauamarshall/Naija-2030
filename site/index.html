@@ -861,29 +861,30 @@ const BOARD = [
 ];
 
 const BOARD_UPDATES = {
-  'Rayan Oyebade': {rank:37, move:0, tag:'PROSPECT', note:'Young defender with Nigeria eligibility and a developing senior pathway.'},
-  'Samuel Adeniran': {rank:32, note:'LASK forward who scored twice in the club\'s Champions League qualifying comeback over Celtic, including the extra-time winner.'},
+  'Rayan Oyebade': {rank:38, move:0, tag:'PROSPECT', note:'Young defender with Nigeria eligibility and a developing senior pathway.'},
+  'Samuel Adeniran': {rank:33, note:'LASK forward who scored twice in the club\'s Champions League qualifying comeback over Celtic, including the extra-time winner.'},
   'Chibuike Nwaiwu': {rank:27},
   'Tyrique George': {rank:28},
-  'Chizzy Ezenwata': {rank:35},
-  'William Troost-Ekong': {rank:41},
-  'David Ozoh': {rank:34},
-  'Peter Etebo': {rank:42},
-  'Kelechi Iheanacho': {rank:43, note:'Former Manchester City and Leicester City forward and a major Nigeria international, now with Bursaspor.'},
-  'Oluwaseun Adewumi': {rank:40},
-  'Isaac James': {rank:36},
-  'George Ilenikhena': {rank:30, move:2, note:'Called up for the September AFCON qualifiers and producing quickly in Saudi Arabia.'},
-  'Moses Usor': {rank:31, note:'LASK winger whose strong start to the 2026/27 season earned a first senior Nigeria call-up.'},
-  'Emeka Adiele': {rank:39, note:'England youth international and Nigeria-eligible defender.'},
-  'Victory Akpe': {rank:33, move:9},
-  'Abdullahi Bewene': {rank:38, move:4, note:'Right wing-back signed through 2031 by Baník Ostrava. Debuted for Nigeria vs. Poland, June 3 2026.'}
+  'Chizzy Ezenwata': {rank:36},
+  'William Troost-Ekong': {rank:42},
+  'David Ozoh': {rank:35},
+  'Peter Etebo': {rank:43},
+  'Kelechi Iheanacho': {rank:44, note:'Former Manchester City and Leicester City forward and a major Nigeria international, now with Bursaspor.'},
+  'Oluwaseun Adewumi': {rank:41},
+  'Isaac James': {rank:37},
+  'George Ilenikhena': {rank:31, move:2, note:'Called up for the September AFCON qualifiers and producing quickly in Saudi Arabia.'},
+  'Moses Usor': {rank:32, note:'LASK winger whose strong start to the 2026/27 season earned a first senior Nigeria call-up.'},
+  'Emeka Adiele': {rank:40, note:'England youth international and Nigeria-eligible defender.'},
+  'Victory Akpe': {rank:34, move:9},
+  'Abdullahi Bewene': {rank:39, move:4, note:'Right wing-back signed through 2031 by Baník Ostrava. Debuted for Nigeria vs. Poland, June 3 2026.'}
 };
 BOARD.forEach(player => Object.assign(player, BOARD_UPDATES[player.name] || {}));
 BOARD.push(
   {rank:29, name:'Zadok Yohanna', age:19, pos:'FWD', club:'Brighton & Hove Albion', val:'$20.8m', move:1, elig:'open', note:'Brighton winger signed from AIK after an 18-appearance, five-goal, four-assist breakthrough season.', verified:true},
-  {rank:44, name:'Landon Emenalo', age:18, pos:'DEF', club:'Celtic (loan from Chelsea)', val:'TBD', move:0, elig:'watch', note:'Chelsea academy defender, tri-national (USA/Nigeria/England) through father Michael Emenalo\'s Super Eagles career — born in Tucson, Arizona. Out on a season-long loan to Celtic since Sept 2026; club corrected from a stale "Chelsea" listing.', verified:true, tag:'PROSPECT'},
-  {rank:45, name:'Emmanuel Ekong', age:24, pos:'FWD', club:'Malmö FF', val:'TBD', move:0, elig:'watch', note:'Malmö attacker with Sweden youth involvement and Nigerian eligibility.', verified:true},
-  {rank:46, name:'Shalom Ekong', age:23, pos:'FWD', club:'GAIS', val:'TBD', move:0, elig:'watch', note:'Swedish-based forward with a strong recent scoring run.', verified:true}
+  {rank:30, name:'Femi Azeez', age:25, pos:'FWD', club:'Brighton & Hove Albion', val:'TBD', move:0, elig:'open', note:'Brighton winger signed from Millwall after an 11-goal, eight-assist Championship season. Scored twice on his Nigeria senior debut against Zimbabwe and assisted against Jamaica at the Unity Cup; currently an injury-watch case after his Brighton start was delayed.', verified:true},
+  {rank:45, name:'Landon Emenalo', age:18, pos:'DEF', club:'Celtic (loan from Chelsea)', val:'TBD', move:0, elig:'watch', note:'Chelsea academy defender, tri-national (USA/Nigeria/England) through father Michael Emenalo\'s Super Eagles career — born in Tucson, Arizona. Out on a season-long loan to Celtic since Sept 2026; club corrected from a stale "Chelsea" listing.', verified:true, tag:'PROSPECT'},
+  {rank:46, name:'Emmanuel Ekong', age:24, pos:'FWD', club:'Malmö FF', val:'TBD', move:0, elig:'watch', note:'Malmö attacker with Sweden youth involvement and Nigerian eligibility.', verified:true},
+  {rank:47, name:'Shalom Ekong', age:23, pos:'FWD', club:'GAIS', val:'TBD', move:0, elig:'watch', note:'Swedish-based forward with a strong recent scoring run.', verified:true}
 );
 
 const LOST_TO_RIVALS = [
@@ -998,6 +999,10 @@ const VERIFIED_PLAYER_SOURCES = {
     {label:'Leadership: Bewene on his Nigeria debut', url:'https://leadership.ng/czech-side-banik-ostrava-hails-bewene-after-impressive-nigeria-debut/'}
   ],
   'Zadok Yohanna': {label:'Brighton player profile', url:'https://www.brightonandhovealbion.com/player-detail-statistics-striker/700308'},
+  'Femi Azeez': [
+    {label:'Brighton signing announcement', url:'https://www.brightonandhovealbion.com/media-article/mft-transfer-news-femi-azeez-millwall-september-2026'},
+    {label:'Brighton player lowdown', url:'https://www.brightonandhovealbion.com/media-article/mft-lowdown-femi-azeez-pl-september-2026'}
+  ],
   'Landon Emenalo': [
     {label:'Chelsea player profile', url:'https://www.chelseafc.com/en/news/article/landon-emenalo-signs-new-chelsea-deal'},
     {label:'AllNigeriaSoccer: Celtic loan confirmed', url:'https://allnigeriasoccer.com/tri-national-defender-whose-father-played-for-nigeria-joins-celtic-on-loan-from-chelsea'}
@@ -1061,6 +1066,7 @@ function rivalCapsBadge(rc){
 const SOURCE_URLS = {
   nffQualifiers: 'https://thenff.com/afcon-2027-race-chelle-invites-ndidi-osimhen-iwobi-21-others-for-barea-wild-dogs/',
   nffRussia: 'https://thenff.com/international-friendly-ndidi-simon-nwabali-lead-super-eagles-to-nizhny-novgorod-for-russia/',
+  nffRussiaReduced: 'https://thenff.com/international-friendly-club-restrictions-injuries-weaken-nigeria-ahead-of-russia-clash/',
   cafOsimhen: 'https://www.cafonline.com/afcon2025/news/nigeria-confirm-osimhen-absence-for-opening-afcon-2027-qualifiers-as-striker-continues-recovery/'
 };
 function sourceLinks(sources){
@@ -1153,10 +1159,10 @@ const CHELLE_SQUAD = {
     {name:'Victor Osimhen', pos:'FWD'}, {name:'Ademola Lookman', pos:'FWD'}, {name:'Samuel Chukwueze', pos:'FWD'}, {name:'Akor Adams', pos:'FWD'}, {name:'Tolu Arokodare', pos:'FWD'}, {name:'George Ilenikhena', pos:'FWD'}, {name:'Moses Usor', pos:'FWD'}
   ],
   "Friendly vs Russia — Oct 6 (deliberately experimental squad)": [
-    {name:'Stanley Nwabali', pos:'GK'}, {name:'Samuel James', pos:'GK'},
-    {name:'Victory Akpe', pos:'DEF'}, {name:'Abdullahi Bewene', pos:'DEF'},
-    {name:'Wilfred Ndidi', pos:'MID', captain:true}, {name:'Moses Simon', pos:'MID'},
-    {name:'Kelechi Iheanacho', pos:'FWD'}
+    {name:'Michael Atata', pos:'GK'}, {name:'Samuel James', pos:'GK'}, {name:'Stanley Nwabali', pos:'GK'},
+    {name:'Kenneth Igboke', pos:'DEF'}, {name:'Isaac James', pos:'DEF'}, {name:'Benjamin Fredrick', pos:'DEF'}, {name:'Emmanuel Fernandez', pos:'DEF'}, {name:'Abdullahi Bewene', pos:'DEF'},
+    {name:'Chibuzo Nwoke', pos:'MID'}, {name:'Stephen Michael', pos:'MID'}, {name:'Igor Wilfred', pos:'MID'}, {name:'Aderemi Adeoye', pos:'MID'},
+    {name:'Kelechi Iheanacho', pos:'FWD'}, {name:'Moses Simon', pos:'FWD'}, {name:'Akor Adams', pos:'FWD'}, {name:'Peter Edokpolor', pos:'FWD'}, {name:'Abubakar Umar', pos:'FWD'}, {name:'Abdullahi Umar', pos:'FWD'}
   ]
 };
 
@@ -1164,7 +1170,10 @@ const CHELLE_SQUAD = {
    Player-specific club, identity and market links will be added only after
    each URL has been checked; no source is inferred from a name alone. */
 const qualifierSources = [{label:'NFF qualifier squad', url:SOURCE_URLS.nffQualifiers}];
-const russiaSources = [{label:'NFF Russia squad', url:SOURCE_URLS.nffRussia}];
+const russiaSources = [
+  {label:'NFF original Russia squad', url:SOURCE_URLS.nffRussia},
+  {label:'NFF reduced Russia squad', url:SOURCE_URLS.nffRussiaReduced}
+];
 CHELLE_SQUAD[Object.keys(CHELLE_SQUAD)[0]].forEach(p => {
   p.sources = p.name === 'Victor Osimhen'
     ? [...qualifierSources, {label:'CAF injury update', url:SOURCE_URLS.cafOsimhen}]
