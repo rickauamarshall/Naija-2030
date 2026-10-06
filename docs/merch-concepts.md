@@ -1,5 +1,7 @@
 # Merch concepts
 
+**Status: unblocked 2026-10-06** (explicit project-owner call) — this was on hold since the original monetization handover; it's now Phase 3 of the agreed marketing/monetization sequence (engagement → affiliate links → merch → everything else, see `prelaunch-checklist.md`). The plan below didn't need to change, it was just paused.
+
 Print-on-demand merch line for Super Eagles Tracker — no upfront inventory, launches off the existing brand assets and campaign line. This doc is the plan; the execution checklist at the bottom is what to actually do.
 
 ## Before you upload anything

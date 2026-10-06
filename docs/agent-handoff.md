@@ -70,6 +70,28 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+### 2026-10-06 — Claude — concrete marketing/monetization strategy agreed, merch hold lifted
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree (pending commit)
+
+### Changed
+- `docs/x-strategy.md` — added a concrete "Engagement action plan" section: a real target list of outlets/accounts (all independently covering stories this project also tracked - Bewene, Akpe, Kayode, Aghehowa), a specificity rule for replies, a cadence (3-5/day), and a tracking approach. This replaces the previous vague "engage authentically" growth tactic with something actually actionable.
+- `docs/prelaunch-checklist.md`'s Monetization section rewritten around the agreed phased sequence: **engagement → affiliate links → merch → paid tier → ad network → syndication → sponsorships → betting-adjacent**. Also dropped Transfermarkt from the affiliate-link candidate list - an affiliate relationship with them would hit the same access-terms problem as the scraping ban already in `CLAUDE.md`, even without automating anything.
+- `docs/merch-concepts.md` — **hold lifted, explicit project-owner call, 2026-10-06.** The plan itself (6 designs, pricing, 7-step execution checklist) didn't need changes, it was just paused. Marked unblocked as Phase 3 of the sequence above.
+
+### Findings
+- None of this touches player data, eligibility, or anything gated by `verified_by_human` - pure marketing/commerce planning, independent of the editorial pipeline.
+
+### Evidence
+- `docs/x-strategy.md`, `docs/prelaunch-checklist.md`, `docs/merch-concepts.md`
+
+### Owner decision needed
+- None for what's described here - implemented per explicit direction this session.
+
+### Next agent
+- Phase 3 (merch) execution checklist is in `docs/merch-concepts.md` and ready to start (Printful account under the project's dedicated email is step 1). Phase 2 (affiliate) needs one program picked and signed up for - see the candidates in `prelaunch-checklist.md`.
+
 ### 2026-09-29 — Claude — resolved all three flagged discrepancies, built the pool.js generator, fixed Emenalo's club
 
 Status: `READY_FOR_REVIEW`
