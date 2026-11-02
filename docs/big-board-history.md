@@ -1,5 +1,10 @@
 # Big Board history
 
+### 2026-11-01 — Added Francis Onyeka at No. 48
+
+- Francis Onyeka added at No. 48 as a `WATCH` prospect. Bundesliga identifies him as born in Gummersbach to Nigerian parents; he is at SV Elversberg on loan from Bayer Leverkusen and has Germany youth experience, including competitive youth internationals.
+- This is an identification update, not a claim of a Nigeria commitment. Any Nigeria route requires a formal eligibility/change-of-association review.
+
 ### 2026-10-05 — Added Femi Azeez at No. 30
 
 - Femi Azeez added at No. 30 as a Brighton & Hove Albion forward/winger after his Millwall-to-Brighton move, 2025/26 Championship production, and Nigeria Unity Cup debut impact. Marked as an injury-watch case because his Brighton start and recent Super Eagles availability were delayed by recovery.

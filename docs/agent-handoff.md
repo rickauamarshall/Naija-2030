@@ -39,6 +39,42 @@ This file is the shared coordination layer for Claude, Codex, and the project ow
 
 ## Handoff log
 
+## 2026-11-01 — Codex — Issue 8 audit and package refresh
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `codex/francis-onyeka-watch` / `working tree`
+
+### Changed
+- Rewrote Issue 8 and its social drafts around the completed audit.
+- Corrected current clubs for Tosin Adarabioyo, Benjamin Fredrick, Rayan Oyebade, and Emeka Adiele; updated Rio Ngumoha's England senior-cap context.
+- Added source links for those corrections and recorded Francis Onyeka in Big Board history.
+
+### Checked
+- FIFA's current Nigeria association page lists Ibrahim Gusau as NFF president; removed the stale “no president / acting administration” copy from Issue 8.
+- Kept Nwaneri as reported contact only, Francis as `WATCH`, and Ngumoha as `WATCH` pending a formal FIFA eligibility review.
+
+### Owner decision needed
+- Approve the uncommitted tracker and Issue 8 package for a single commit. Live publication still requires separate action-time approval.
+
+## 2026-11-01 — Codex — Francis Onyeka WATCH entry
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `codex/francis-onyeka-watch` / `working tree`
+
+### Changed
+- Added Francis Onyeka at the end of the Big Board as a `WATCH` prospect, with current loan club, Nigerian-parentage basis, Germany youth record, and a non-conclusive eligibility note.
+- Added Bundesliga and DFB source links to the player card.
+
+### Checked
+- Bundesliga reports that Onyeka was born in Gummersbach to Nigerian parents.
+- DFB lists him at SV Elversberg and records Germany youth appearances, including U21 Euro qualifying.
+
+### Owner decision needed
+- Review the entry and approve a commit if it should be merged to `main`.
+
+### Next agent
+- Keep Onyeka as `WATCH` unless formal Nigeria/FIFA eligibility developments are confirmed.
+
 Each agent adds a new entry at the top of the log after meaningful work. Do not edit or delete older entries except to correct an obvious factual or formatting error; add a follow-up entry instead.
 
 ### Template
