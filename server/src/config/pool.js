@@ -14,7 +14,7 @@
  * 2026-09-26 entry, for what that looked like: wrong starters vs. depth,
  * players in the wrong section, a stale count in this very comment).
  *
- * Current count: 28 FORMATION + 20 BOARD = 48 total.
+ * Current count: 28 FORMATION + 21 BOARD = 49 total.
  */
 const POOL = [
   // --- FORMATION: starters ---
@@ -23,7 +23,7 @@ const POOL = [
   { name: 'Bassey', fullName: 'Calvin Bassey', shortClub: 'Fulham', position: 'DEF', providerPlayerId: null },
   { name: 'Ahanor', fullName: 'Honest Ahanor', shortClub: 'Crystal Palace', position: 'DEF', providerPlayerId: null },
   { name: 'Sanusi', fullName: 'Zaidu Sanusi', shortClub: 'Porto', position: 'DEF', providerPlayerId: null },
-  { name: 'Nwaneri', fullName: 'Ethan Nwaneri', shortClub: 'Marseille', position: 'MID', providerPlayerId: null },
+  { name: 'Nwaneri', fullName: 'Ethan Nwaneri', shortClub: 'Borussia Dortmund', position: 'MID', providerPlayerId: null },
   { name: 'Onyeka', fullName: 'Frank Onyeka', shortClub: 'Coventry City', position: 'MID', providerPlayerId: null },
   { name: 'Onyedika', fullName: 'Raphael Onyedika', shortClub: 'Eintracht Frankfurt', position: 'MID', providerPlayerId: null },
   { name: 'Ngumoha', fullName: 'Rio Ngumoha', shortClub: 'Liverpool', position: 'MID', providerPlayerId: null },
@@ -49,7 +49,7 @@ const POOL = [
   { name: 'Arokodare', fullName: 'Tolu Arokodare', shortClub: 'Ajax', position: 'FWD', providerPlayerId: null },
   { name: 'Orban', fullName: 'Gift Orban', shortClub: 'Amedspor', position: 'FWD', providerPlayerId: null },
 
-  // --- BOARD (20 entries - see site/index.html for current ranks, not fixed) ---
+  // --- BOARD (21 entries - see site/index.html for current ranks, not fixed) ---
   { name: 'Oyebade', fullName: 'Rayan Oyebade', shortClub: 'West Ham', position: 'DEF', providerPlayerId: null },
   { name: 'Adeniran', fullName: 'Samuel Adeniran', shortClub: 'LASK', position: 'FWD', providerPlayerId: null },
   { name: 'Nwaiwu', fullName: 'Chibuike Nwaiwu', shortClub: 'Trabzonspor', position: 'DEF', providerPlayerId: null },
@@ -67,6 +67,7 @@ const POOL = [
   { name: 'Akpe', fullName: 'Victory Akpe', shortClub: 'FC Basel', position: 'DEF', providerPlayerId: null },
   { name: 'Bewene', fullName: 'Abdullahi Bewene', shortClub: 'Banik Ostrava', position: 'DEF', providerPlayerId: null },
   { name: 'Yohanna', fullName: 'Zadok Yohanna', shortClub: 'Brighton & Hove Albion', position: 'FWD', providerPlayerId: null },
+  { name: 'Azeez', fullName: 'Femi Azeez', shortClub: 'Brighton & Hove Albion', position: 'FWD', providerPlayerId: null },
   { name: 'Emenalo', fullName: 'Landon Emenalo', shortClub: 'Celtic', position: 'DEF', providerPlayerId: null },
   { name: 'E. Ekong', fullName: 'Emmanuel Ekong', shortClub: 'Malmo FF', position: 'FWD', providerPlayerId: null },
   { name: 'S. Ekong', fullName: 'Shalom Ekong', shortClub: 'GAIS', position: 'FWD', providerPlayerId: null },

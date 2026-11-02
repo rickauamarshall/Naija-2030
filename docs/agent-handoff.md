@@ -70,6 +70,62 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 
 ## Current handoff log
 
+## 2026-11-01 — Codex — Tanzania-window correction and Issue 8 update
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree
+
+### Changed
+- Corrected Ethan Nwaneri's current club to Borussia Dortmund (loan from Arsenal) in the site pool and generated server pool configuration.
+- Replaced the expired Russia fixture card with Nigeria–Tanzania fixtures on Nov. 13 in Uyo and Nov. 17 in Dar es Salaam.
+- Added the confirmed Tanzania window, Group L context, and matching X/Instagram copy to Issue 8 drafts.
+
+### Checked
+- CAF confirms the Nov. 9–17 FIFA window, Nigeria's Group L, and Tanzania's co-host qualification status.
+- NFF names the Nov. 13 Uyo and Nov. 17 Dar es Salaam fixtures.
+- `scripts/validate.py`, `node --check server/src/config/pool.js`, and `git diff --check` passed.
+
+### Findings
+- The full player-by-player audit remains in progress. No eligibility status or Big Board movement is being claimed or published from this change.
+
+### Evidence
+- https://thenff.com/pamoja-2027-race-eagles-falter-lose-0-3-to-wild-dogs-in-bissau/
+- https://www.cafonline.com/afcon2025/news/the-road-to-east-africa-mapped-out-the-qualifier-draw-for-the-totalenergies-caf-africa-cup-of-nations-pamoja-2027-concluded/
+
+### Owner decision needed
+- None for the scoped commit; approve individual social posts at publishing time.
+
+### Next agent
+- Complete the player audit before proposing further Big Board or eligibility changes.
+
+### 2026-10-18 — Codex — Issue 7 and social review drafts
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree
+
+### Changed
+- Added `ISSUE-07.md`, an unpublished review draft built around Lookman’s Champions League goal, Osimhen’s start against Barcelona, and Trabzonspor’s Conference League win.
+- Added `docs/issue-07-social-drafts-2026-10-18.md`, with an X thread, a seven-slide Instagram brief, caption, and publication-day fact-check gate.
+
+### Checked
+- Verified every included result or selection claim against the relevant club’s official reporting.
+- Confirmed Nwaiwu is currently No. 29 in local tracker data; no rank change was proposed.
+
+### Findings
+- Domestic fixtures falling October 17–19 were not safely complete/verified at drafting time. The issue uses a dedicated live-result insert instead of guessing at results, minutes, injuries, or selection conclusions.
+
+### Evidence
+- `ISSUE-07.md`; `docs/issue-07-social-drafts-2026-10-18.md`
+- Atlético: https://en.atleticodemadrid.com/postpartidos/atletico-de-madrid-manchester-utd-13-10-2026-21-00
+- Galatasaray: https://www.galatasaray.org/haber/futbol/sampiyonlar-ligi/galatasaray-1-4-barcelona/61129
+- Trabzonspor: https://www.trabzonspor.org.tr/tr/haberler/kups-2-4-trabzonspor-15-10-2026
+
+### Owner decision needed
+- Review editorial framing and approve the final facts, media, and publishing batch before any newsletter or social action.
+
+### Next agent
+- On publication day, complete the live-result insert from official reports; verify the approved Issue 7 URL and carousel artwork.
+
 ### 2026-10-06 — Claude — concrete marketing/monetization strategy agreed, merch hold lifted
 
 Status: `READY_FOR_REVIEW`

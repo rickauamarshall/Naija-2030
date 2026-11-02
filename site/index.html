@@ -464,9 +464,9 @@
         <div class="clock-note">A comprehensive away defeat closed the qualifying window and sharpened the questions around selection, urgency and execution.</div>
       </div>
       <div class="clock-card">
-        <div class="label">Next Match · Friendly vs Russia</div>
-        <div class="flip-row" id="clockFriendly"></div>
-        <div class="clock-note">Tue Oct 6, 2026, Nizhny Novgorod Stadium, 6:00 PM Nigerian time. Second meeting in 16 months after the 1-1 draw in Moscow (June 2025).</div>
+        <div class="label">Next Window · AFCON 2027 Qualifying</div>
+        <div class="result-score">NIGERIA vs TANZANIA · NOV. 13</div>
+        <div class="clock-note">Nigeria host Tanzania in Uyo on Nov. 13, then travel to Dar es Salaam for the return fixture on Nov. 17. Both matches fall in the Nov. 9–17 FIFA window.</div>
       </div>
       <div class="clock-card">
         <div class="label">2030 World Cup Qualifiers (CAF)</div>
@@ -775,7 +775,6 @@ function diffParts(target){
 function tick(){
   // Confirmed fixtures only — no invented dates. The 2030 WCQ card stays a
   // static "DATE TBD" until CAF publishes a qualifying calendar.
-  renderFlip(document.getElementById('clockFriendly'), ...diffParts(new Date('2026-10-06T18:00:00+01:00')));
   // Time since last WC appearance (Nigeria's last finals: 2018 Russia, opening match June 16 2018)
   const since = new Date() - new Date('2018-06-16T00:00:00');
   const d = Math.floor(since/86400000);
@@ -814,7 +813,7 @@ const FORMATION = [
     {main:{name:'Zaidu Sanusi', age:27, club:'Porto', val:'$1.8m', trend:'flat'}, depth:[]}
   ]},
   {pos:'MID', slots:[
-    {main:{name:'Ethan Nwaneri', age:19, club:'Marseille (loan, Arsenal)', val:'$45.3m', trend:'up', watch:'Igbo-Nigerian father. England U21 international but uncapped at senior level. Family has reportedly opened the door to NFF talks — real and live, but a notch below Ngumoha\'s urgency since he hasn\'t been drawn into a senior setup elsewhere.'}, depth:[
+    {main:{name:'Ethan Nwaneri', age:19, club:'Borussia Dortmund (loan from Arsenal)', val:'$45.3m', trend:'up', watch:'Igbo-Nigerian father. England U21 international but uncapped at senior level. Reported contact between Éric Chelle\'s camp and Nwaneri\'s representatives is a recruitment lead, not a commitment; no player or NFF confirmation has been located. Current club corrected to Borussia Dortmund, on loan from Arsenal.'}, depth:[
       {name:'Alex Iwobi', age:29, club:'Fulham', val:'$22.7m', trend:'up'}
     ]},
     {main:{name:'Frank Onyeka', age:28, club:'Coventry City', val:'$7.6m', trend:'up'}, depth:[
