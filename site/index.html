@@ -406,6 +406,21 @@
   .elig-open{ background:#E1EEE4; color:var(--up); }
   .elig-watch{ background:#F6E7D8; color:var(--gold); }
   .elig-tied{ background:#F1DAD3; color:var(--clay); }
+  .movement-card{
+    background:#fff; border:1px solid var(--paper-2); border-radius:8px;
+    margin-top:14px; padding:14px 16px;
+  }
+  .movement-card-head{ display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .movement-card h3{ font-size:14px; margin:0; }
+  .movement-card .stamp{ font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-soft); white-space:nowrap; }
+  .movement-card p{ font-size:11.5px; color:var(--ink-soft); line-height:1.45; margin:5px 0 0; }
+  .movement-table{ width:100%; border-collapse:collapse; margin-top:10px; font-size:12px; }
+  .movement-table th{ font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.05em; color:var(--ink-soft); text-align:left; text-transform:uppercase; padding:0 0 5px; }
+  .movement-table td{ border-top:1px solid var(--paper-2); padding:7px 0; vertical-align:top; }
+  .movement-table td:first-child{ font-weight:600; padding-right:12px; }
+  .movement-table .hold{ color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; font-size:11px; white-space:nowrap; }
+  .movement-table a{ color:var(--gold); text-decoration:none; border-bottom:1px dotted currentColor; }
+  @media (max-width:600px){ .movement-card-head{ align-items:flex-start; flex-direction:column; gap:3px; } .movement-table th:nth-child(2), .movement-table td:nth-child(2){ display:none; } }
 
   /* ===== TECH STAFF ===== */
   .cabinet-groups{ display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:18px; }
@@ -539,6 +554,21 @@
           <span><i class="dot" style="background:var(--gold)"></i>In another youth setup — window closing</span>
           <span><i class="dot" style="background:var(--clay)"></i>Cap-tied elsewhere</span>
         </div>
+        <section class="movement-card" aria-label="Issue 8 tracker movements">
+          <div class="movement-card-head">
+            <h3>Issue 8 tracker check</h3>
+            <span class="stamp">Nov. 6, 2026 · vs. Issue 6 baseline</span>
+          </div>
+          <p>No permanent Big Board rank change this issue. This card records the calls behind the board; the full dated ledger lives in the project history.</p>
+          <table class="movement-table">
+            <thead><tr><th>Player</th><th>Prior → now</th><th>Issue 8 call</th></tr></thead>
+            <tbody>
+              <tr><td>Tolu Arokodare</td><td class="hold">FWD depth 2 → 2</td><td>Window-only striker priority ↑ after his Ajax brace; <a href="https://english.ajax.nl/articles/ajax-overpower-ten-man-fc-midtjylland" target="_blank" rel="noopener">permanent pool order held</a>.</td></tr>
+              <tr><td>Gift Orban</td><td class="hold">FWD depth 3 → 3</td><td>Form flag added: 9G + 4A, then Galatasaray next. <a href="https://www.galatasaray.org/haber/futbol/maca-dogru-galatasaray-amed-sf/61323" target="_blank" rel="noopener">Rank held</a>.</td></tr>
+              <tr><td>Tyrique George</td><td class="hold">Board #28 → #28</td><td>Everton responsibility is rising; the England U21 recruitment context still sets the pace. <a href="https://www.evertonfc.com/news/2026/november/06/coventry-report/" target="_blank" rel="noopener">Rank held</a>.</td></tr>
+            </tbody>
+          </table>
+        </section>
         <div class="board" id="boardList" style="margin-top:12px;"></div>
       </div>
 

@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-06",
+  "issue": 8,
+  "status": "approved_editorial_check",
+  "comparison": "2026-10-12 Issue 6 baseline; Issue 7 had no dated snapshot",
+  "rankChangesApproved": false,
+  "publicCard": "Issue 8 tracker check",
+  "decisions": [
+    {
+      "player": "Tolu Arokodare",
+      "prior": "FWD depth 2",
+      "current": "FWD depth 2",
+      "editorialCall": "Temporary Tanzania-window striker priority ahead of Akor Adams after Ajax brace; no permanent pool-order change.",
+      "source": "https://english.ajax.nl/articles/ajax-overpower-ten-man-fc-midtjylland"
+    },
+    {
+      "player": "Gift Orban",
+      "prior": "FWD depth 3",
+      "current": "FWD depth 3",
+      "editorialCall": "Form flag added after 9 league goals and 4 assists; rank held pending further comparison.",
+      "source": "https://www.galatasaray.org/haber/futbol/maca-dogru-galatasaray-amed-sf/61323"
+    },
+    {
+      "player": "Tyrique George",
+      "prior": "Big Board #28",
+      "current": "Big Board #28",
+      "editorialCall": "Everton form note added; rank held because club output does not resolve the England U21 recruitment context.",
+      "source": "https://www.evertonfc.com/news/2026/november/06/coventry-report/"
+    }
+  ]
+}

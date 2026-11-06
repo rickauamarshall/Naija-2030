@@ -1,5 +1,13 @@
 # Big Board history
 
+### 2026-11-06 — Issue 8 tracker check: form calls logged, ranks held
+
+- No permanent Big Board or FORMATION rank changes approved. The public site now includes an Issue 8 tracker-check card with the prior/current placement, editorial call, and source for every reviewed player.
+- Tolu Arokodare remains second in Lookman’s forward-depth slot, but moves ahead of Akor Adams only in the temporary Tanzania-window striker discussion after his Ajax brace.
+- Gift Orban remains third in that forward depth; his 9G/4A Amedspor form is a tracked form flag, not an automatic promotion.
+- Tyrique George remains No. 28 on the Big Board. His Everton performance strengthens the case for continued recruitment attention without outrunning the England-U21 context.
+- Snapshot: `data/board-snapshots/2026-11-06-issue-08.json`. The comparison baseline remains Issue 6 because Issue 7 did not receive a dated snapshot.
+
 ### 2026-10-05 — Added Femi Azeez at No. 30
 
 - Femi Azeez added at No. 30 as a Brighton & Hove Albion forward/winger after his Millwall-to-Brighton move, 2025/26 Championship production, and Nigeria Unity Cup debut impact. Marked as an injury-watch case because his Brighton start and recent Super Eagles availability were delayed by recovery.
