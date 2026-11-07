@@ -1,5 +1,12 @@
 # Big Board history
 
+### 2026-11-07 — Tanzania squad reset: live pool and 1–49 Board refreshed
+
+- Rebased the public tracker as a 28-player on-field pool plus a ranked Board at Nos. 29–49. The on-field view is positional depth; the Board is the next group, so a Board placement is not a claim that a player is unavailable or discarded.
+- Arthur Okonkwo returns from the historical switch panel to goalkeeper depth following the official Tanzania call-up. Fisayo Dele-Bashiru, Alhassan Yusuf, Tochukwu Nnadi, and Mubarak Suleiman enter the live pool after official selection.
+- Chibuike Nwaiwu, Abdullahi Bewene, Isaac James, and David Ozoh move from the Board into current field depth. Frank Onyeka moves from field depth to Board No. 29 following omission from the Tanzania group; Samuel Chukwueze, Moses Usor, and George Ilenikhena begin the Board at Nos. 30–32.
+- Eligibility cases are deliberately not promoted on talent alone: Lesley Ugochukwu, Honest Ahanor, Rio Ngumoha, Tyrique George, Chizzy Ezenwata, Francis Onyeka, Rayan Oyebade, and Ifeanyi Ndukwe retain clear `WATCH` or `PROSPECT` labels. Source: NFF Tanzania roster, Nov. 7, 2026.
+
 ### 2026-11-06 — Issue 8 tracker check: form calls logged, ranks held
 
 - No permanent Big Board or FORMATION rank changes approved. The public site now includes an Issue 8 tracker-check card with the prior/current placement, editorial call, and source for every reviewed player.

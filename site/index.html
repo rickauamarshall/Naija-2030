@@ -557,9 +557,9 @@
         <section class="movement-card" aria-label="Issue 8 tracker movements">
           <div class="movement-card-head">
             <h3>Current tracker update</h3>
-            <span class="stamp">Nov. 7, 2026 · post–Issue 8</span>
+            <span class="stamp">Nov. 7, 2026 · Tanzania squad reset</span>
           </div>
-          <p>Current tracker calls are recorded here with the reason and the market-value cross-reference used for the displayed USD figure; the full dated ledger lives in the project history.</p>
+          <p>Current tracker calls are recorded here with the reason and the market-value cross-reference used for the displayed USD figure; the <a href="https://thenff.com/19698-2/" target="_blank" rel="noopener">official Tanzania squad</a> anchors this reset and the full dated ledger lives in the project history.</p>
           <table class="movement-table">
             <thead><tr><th>Player</th><th>Prior → now</th><th>Issue 8 call</th></tr></thead>
             <tbody>
@@ -568,6 +568,10 @@
               <tr><td>Gift Orban</td><td class="up">FWD depth → Osimhen lane</td><td>Active form wins the placement: 9G + 4A. Market value cross-check: €7m / displayed ≈ $7.6m.</td></tr>
               <tr><td>Jeff Ekhator</td><td class="hold">Board #43</td><td>Replaces Etebo’s Board slot: recruitment watch, not a current-form claim. Market value cross-check: €18m / displayed ≈ $20.5m.</td></tr>
               <tr><td>Kelechi Iheanacho</td><td class="up">Board → FWD depth</td><td>17 Bursaspor goals earn a form-led return to the field view. Market value cross-check: €3m / displayed ≈ $3.4m.</td></tr>
+              <tr><td>Arthur Okonkwo</td><td class="up">History panel → GK depth</td><td>Back in the active pool after his official Tanzania call-up. A completed switch is a live resource, not a closed historical case.</td></tr>
+              <tr><td>Fisayo Dele-Bashiru, Alhassan Yusuf, Tochukwu Nnadi &amp; Mubarak Suleiman</td><td class="up">Added</td><td>All are in the official Tanzania squad; Fisayo, Alhassan and Nnadi enter field depth, while Mubarak starts on the Board.</td></tr>
+              <tr><td>Frank Onyeka</td><td class="down">MID depth → Board #29</td><td>Competitive-squad omission is a current selection signal, not a removal from the Nigeria conversation.</td></tr>
+              <tr><td>Chibuike Nwaiwu &amp; Abdullahi Bewene</td><td class="up">Board → DEF depth</td><td>Both retained for Tanzania and now belong in the current on-field depth view.</td></tr>
             </tbody>
           </table>
         </section>
@@ -826,8 +830,8 @@ setInterval(tick, 60000);
 const FORMATION = [
   {pos:'GK', slots:[
     {main:{name:'Maduka Okoye', age:26, club:'Udinese', val:'$11.4m', trend:'up'}, depth:[
-      {name:'Stanley Nwabali', age:29, club:'Chippa United', val:'$900k', trend:'flat'},
-      {name:'Samuel James', age:20, club:'SJK (Finland)', val:'TBD', trend:'up', watch:'First senior Nigeria call-up for the Oct 6 Russia friendly. SJK identifies him as Samuel Friday James, a Nigerian goalkeeper who joined from Mavlon FC; the NFF lists him in the Russia squad. Replaces a prior entry (Adewale Adeyinka) removed from this slot — he\'s a real player but already a capped senior Super Eagle at Akwa United, not an uncapped reserve.'}
+      {name:'Arthur Okonkwo', age:24, club:'Charlton Athletic', val:'$5.7m', trend:'up', watch:'A completed Nigeria switch is now reflected as a live goalkeeper option. Selected for the Tanzania qualifiers, alongside Nwabali and Uzoho, in the official 24.'},
+      {name:'Stanley Nwabali', age:29, club:'Chippa United', val:'$900k', trend:'flat'}
     ]}
   ]},
   {pos:'DEF', slots:[
@@ -835,28 +839,29 @@ const FORMATION = [
       {name:'Bright Osayi-Samuel', age:28, club:'Birmingham City', val:'$4.6m', trend:'flat'}
     ]},
     {main:{name:'Calvin Bassey', age:26, club:'Fulham', val:'$32m', trend:'up'}, depth:[
-      {name:'Ifeanyi Ndukwe', age:18, club:'Levante (on loan from Liverpool)', val:'$3.4m', trend:'up', watch:'Tri-national (Nigeria/Austria/Russia). Liverpool signing, currently leaning Austria at youth level — still uncapped at senior level.'},
-      {name:'Tosin Adarabioyo', age:29, club:'Tottenham Hotspur', val:'$18.2m', trend:'flat', watch:'Joined Tottenham from Chelsea on Sept. 1, 2026. He remains uncapped at senior level; there is no current player or NFF confirmation of a Nigeria decision.'}
+      {name:'Isaac James', age:22, club:'Alverca (Portugal)', val:'$680k', trend:'up', watch:'First senior call-up for the September 2026 AFCON qualifiers; the Tanzania reset keeps him in the live defender conversation.'}
     ]},
-    {main:{name:'Honest Ahanor', age:18, club:'Crystal Palace (loan from Chelsea)', val:'$34.2m', trend:'up', rivalCaps:{fed:'Italy', flag:'🇮🇹', caps:2, kind:'friendly', switchEligible:true}, watch:'Sub vs Luxembourg, started vs Greece — both friendlies. Called into Italy\'s Sept. 2026 Nations League squad but remained unused against Belgium and did not travel for the Türkiye match, so his total remains two friendly caps with no competitive minutes. His Nigeria route remains open.'}, depth:[
+    {main:{name:'Chibuike Nwaiwu', age:22, club:'Trabzonspor', val:'$11.4m', trend:'up', watch:'Retained in the official Tanzania qualifying squad. The move from Board to field depth reflects an active senior Nigeria pathway, not a speculative call.'}, depth:[
       {name:'Benjamin Fredrick', age:21, club:'Brentford', val:'$700k', trend:'up', watch:'Promoted to Brentford\'s first-team squad and signed a new contract in July 2026. Simoiben Academy product who made his senior Nigeria debut in the May 2025 Unity Cup final vs. Jamaica.'},
       {name:'Semi Ajayi', age:32, club:'Hull City', val:'$800k', trend:'up', watch:'50+ caps, established Super Eagles international ("The Tower") — in Chelle\'s AFCON qualifying squad for Madagascar/Guinea-Bissau, not a speculative addition. In form for Hull City this season.'}
     ]},
-    {main:{name:'Zaidu Sanusi', age:27, club:'Porto', val:'$3.4m', trend:'flat'}, depth:[]}
+    {main:{name:'Zaidu Sanusi', age:27, club:'Porto', val:'$3.4m', trend:'flat'}, depth:[
+      {name:'Abdullahi Bewene', age:21, club:'Baník Ostrava', val:'$970k', trend:'up', watch:'Retained for Tanzania after his early senior Nigeria involvement; promoted from the Board into active wing-back depth.'}
+    ]}
   ]},
   {pos:'MID', slots:[
+    {main:{name:'Alex Iwobi', age:29, club:'Fulham', val:'$22.7m', trend:'up'}, depth:[
+      {name:'Raphael Onyedika', age:24, club:'Eintracht Frankfurt', val:'$25m', trend:'up'}
+    ]},
+    {main:{name:'Wilfred Ndidi', age:29, club:'Besiktas', val:'$11.6m', trend:'flat'}, depth:[
+      {name:'Alhassan Yusuf', age:26, club:'New England Revolution', val:'TBD', trend:'up', watch:'In the official Tanzania squad. Added as a live senior option; market value remains TBD pending the next attributable manual cross-check.'}
+    ]},
+    {main:{name:'Fisayo Dele-Bashiru', age:25, club:'Lazio', val:'$6.8m', trend:'up', watch:'Official Tanzania selection restores an established Nigeria international to the active field view.'}, depth:[
+      {name:'Tochukwu Nnadi', age:23, club:'Olympique Marseille', val:'TBD', trend:'up', watch:'Official Tanzania selection. Added as a live central-midfield option; market value remains TBD pending an attributable manual cross-check.'}
+    ]},
     {main:{name:'Ethan Nwaneri', age:19, club:'Borussia Dortmund (loan from Arsenal)', val:'$39.9m', trend:'up', watch:'Igbo-Nigerian father. England U21 international but uncapped at senior level. Reported contact between Éric Chelle\'s camp and Nwaneri\'s representatives is a recruitment lead, not a commitment; no player or NFF confirmation has been located. Current club corrected to Borussia Dortmund, on loan from Arsenal.'}, depth:[
-      {name:'Alex Iwobi', age:29, club:'Fulham', val:'$22.7m', trend:'up'}
-    ]},
-    {main:{name:'Frank Onyeka', age:28, club:'Coventry City', val:'$7.6m', trend:'up'}, depth:[
-      {name:'Wilfred Ndidi', age:29, club:'Besiktas', val:'$11.6m', trend:'flat'}
-    ]},
-    {main:{name:'Raphael Onyedika', age:24, club:'Eintracht Frankfurt', val:'$25m', trend:'up'}, depth:[
-      {name:'Lesley Ugochukwu', age:22, club:'Galatasaray (loan from Burnley)', val:'$25.1m', trend:'down', watch:'Real setback: France U21 named him in their squad for 2027 Euro U21 qualifying (announced Sept 18, 2026), despite July reports he\'d started pursuing a Nigerian passport. No official change-of-association step has actually happened yet. His Nigeria tie is through his uncle, ex-Super Eagle Onyekachi Apam. Trending the wrong way, not confirmed progress.'}
-    ]},
-    {main:{name:'Rio Ngumoha', age:18, club:'Liverpool', val:'$34.2m', trend:'up', rivalCaps:{fed:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', caps:3, kind:'mixed', switchEligible:true}, watch:'England\'s official profile lists three senior caps: one June friendly and subsequent Nations League appearances. He remains WATCH, not TIED: any Nigeria route needs a formal FIFA eligibility review rather than an assumption from cap totals. Nigerian father, Guadeloupean mother, also France-eligible.'}, depth:[
-      {name:'Samuel Chukwueze', age:26, club:'AC Milan', val:'$20.5m', trend:'flat'},
-      {name:'Moses Simon', age:30, club:'Paris FC', val:'$8m', trend:'flat'}
+      {name:'Mubarak Suleiman', age:24, club:'Slavia Prague', val:'TBD', trend:'up', watch:'Official Tanzania selection earns an initial active-pool place. Market value remains TBD pending an attributable manual cross-check.'},
+      {name:'David Ozoh', age:21, club:'Derby County', val:'$2.5m', trend:'up', watch:'Nigeria-eligible midfielder with England youth history; a credible U23 pathway case, now retained in live midfield depth.'}
     ]}
   ]},
   {pos:'FWD', slots:[
@@ -865,56 +870,36 @@ const FORMATION = [
       {name:'Gift Orban', age:24, club:'Amedspor (loan from Hoffenheim)', val:'$7.6m', trend:'up', watch:'Nigerian forward, born July 17, 2002. Joined Amedspor on a one-year loan from Hoffenheim with a purchase option in July 2026. Nine league goals and four assists make him the active form case in the current striker conversation.'}
     ]},
     {main:{name:'Ademola Lookman', age:28, club:'Atlético Madrid', val:'$44.6m', trend:'up'}, depth:[
+      {name:'Moses Simon', age:30, club:'Paris FC', val:'$8m', trend:'flat'},
       {name:'Akor Adams', age:26, club:'Venezia', val:'$17.1m', trend:'up', watch:'Already in Chelle\'s actual AFCON qualifying squad for Madagascar/Guinea-Bissau — ahead of Iheanacho in the real pecking order behind Osimhen/Lookman, not just on this site.'},
-      {name:'Tolu Arokodare', age:25, club:'Ajax (loan from Wolves)', val:'$22.9m', trend:'up', watch:'10 caps, 2 goals, 2025 Nigerian "Ebony Shoe" winner — established international, in Chelle\'s AFCON qualifying squad. Reportedly managing a fitness issue heading into this camp, worth watching.'},
-      {name:'Kelechi Iheanacho', age:29, club:'Bursaspor', val:'$3.4m', trend:'up', watch:'Back in on current production: 17 Bursaspor goals, including another on Nov. 6. Transfermarkt cross-check: €3m, displayed ≈ $3.4m. This is a form-led depth return, not a claim that he has leapfrogged every selected forward.'}
+      {name:'Tolu Arokodare', age:25, club:'Ajax (loan from Wolves)', val:'$22.9m', trend:'up', watch:'10 caps, 2 goals, 2025 Nigerian "Ebony Shoe" winner — established international, in Chelle\'s AFCON qualifying squad. Reportedly managing a fitness issue heading into this camp, worth watching.'}
     ]}
   ]}
 ];
 
 const BOARD = [
-  {rank:27, name:'Rayan Oyebade', age:19, pos:'DEF', club:'Southend United (loan from West Ham)', val:'TBD', move:-2, elig:'watch', note:'On season-long loan at Southend after Greece U19 involvement and England youth honours. A WATCH case, not a completed Nigeria pathway. No current attributable market value located in the November 7 manual check.', verified:true},
-  {rank:28, name:'Samuel Adeniran', age:27, pos:'FWD', club:'LASK', val:'$1.6m', move:1, elig:'open', note:'USA-born, Nigeria-eligible, fully uncapped. Scored twice for LASK in their Champions League playoff win over Celtic (5-1 second leg, 5-4 agg, Aug 25, 2026) — including a 109th-minute extra-time winner, completing the largest comeback in UEFA Champions League qualifying playoff history and sending LASK into the league phase. Fractured his cheekbone in the following Champions League opener at AEK Athens, had surgery Aug 28, and made his return Sept 15 off the bench in a 3-3 draw at Hartberg.', verified:true},
-  {rank:29, name:'Chibuike Nwaiwu', age:22, pos:'DEF', club:'Trabzonspor', val:'$11.4m', move:1, elig:'open', note:'Center-back, joined Trabzonspor Jan 2026 (previously Wolfsberger AC, Enyimba, Heartland Owerri). Received a provisional Super Eagles call-up for the 2025 AFCON but hasn\'t made his senior debut yet.', verified:true},
-  {rank:30, name:'Tyrique George', age:19, pos:'FWD', club:'Everton', val:'$23.5m', move:1, elig:'watch', note:'Born in Camden, London, to a Ghanaian mother and Nigerian father — full name Tyrique Aaron Delali Yusuff George. Eligible for Nigeria, Ghana, or England, but has broken into the England U21 setup (2 goals in 4 matches) and played a key role in their 2025 Euro U21 qualifiers. Uncapped at senior level for anyone, so the door is still open, but England has real momentum right now.', verified:true},
-  {rank:31, name:'Chizzy Ezenwata', age:18, pos:'FWD', club:'Chelsea', val:'TBD', move:1, elig:'watch', note:'Born to a Cameroonian mother and Nigerian father — also eligible for the Indomitable Lions. Chelsea\'s all-time U18 top scorer (30 goals, 10 assists in 2024/25) at just 16. Currently at England U17/U18 level, and Chelsea have reportedly blocked him from joining a Nigeria U20 training camp — a real sign the club is steering his development toward England, not just press speculation. No market value listed on any tracked source yet, consistent with an academy player who hasn\'t made a senior appearance.', verified:true},
-  {rank:32, name:'William Troost-Ekong', age:32, pos:'DEF', club:'Besiktas', val:'$1.1m', move:-3, elig:'open', note:'Veteran leadership, but the 2030 cycle needs to belong to the players below him, not above him.', verified:true},
-  {rank:33, name:'David Ozoh', age:21, pos:'MID', club:'Derby County', val:'$2.5m', move:1, elig:'open', note:'Born May 6, 2005 in Valencia, Spain, to Nigerian parents — also eligible for Spain — moved to England at age 8. Permanent move to Derby County (from Crystal Palace) completed Sept 2026. Made 5 appearances for England U18, all friendlies, not competitive — so no cap-tie risk there. Doesn\'t need FIFA clearance, just a release letter from the English FA; that process is underway with no sign the FA will block it.', verified:true},
-  {rank:36, name:'Oluwaseun Adewumi', age:21, pos:'MID', club:'Hertha BSC (loan, Burnley)', val:'$1.4m', move:-7, elig:'watch', note:'Born Lagos, Nigeria. Austrian citizenship, Austria U21 setup — fully uncapped at senior level.', verified:true},
-  {rank:37, name:'Isaac James', age:22, pos:'DEF', club:'Alverca (Portugal)', val:'$680k', move:1, elig:'open', note:'Left-back, first senior call-up for the Sept 2026 AFCON qualifiers vs. Madagascar/Guinea-Bissau. Said he cried when he got the call.', verified:true},
-  {rank:38, name:'George Ilenikhena', age:20, pos:'FWD', club:'Al-Ittihad (Saudi Pro League)', val:'$11.4m', move:1, elig:'open', note:'Born Aug 16, 2006, in Lagos. First senior call-up for the Sept 2026 AFCON qualifiers. Moved to Al-Ittihad from AS Monaco (51 apps, 10 goals, 2 assists there) — since joining, 6 goals and 2 assists in 9 appearances across all competitions.', verified:true},
-  {rank:39, name:'Moses Usor', age:24, pos:'FWD', club:'LASK', val:'$6.8m', move:1, elig:'open', note:'Born Feb 5, 2002. Winger, first senior call-up for the Sept 2026 AFCON qualifiers after a strong start to the 2026/27 season at LASK.', verified:true},
-  {rank:40, name:'Emeka Adiele', age:19, pos:'DEF', club:'Burton Albion (loan from FC Utrecht)', val:'$740k', move:0, elig:'open', note:'On season-long loan at Burton Albion from FC Utrecht. England youth international, Nigeria-eligible, and fully uncapped at senior level.', verified:true},
-  {rank:41, name:'Victory Akpe', age:20, pos:'DEF', club:'FC Basel', val:'$2.3m', move:0, elig:'open', note:'Born Jul 19, 2006 in Abuja. Defender with Nigeria nationality on the Swiss league profile; joined Basel after spells in Lithuania and Hungary. Received his first senior Nigeria call-up for the Oct 6 Russia friendly. Searched for a rival-federation youth cap at Banga (Lithuania) or Zalaegerszeg (Hungary) and found none reported, but a clean search result isn\'t proof of absence — treating this as checked, not closed.', verified:true},
-  {rank:42, name:'Abdullahi Bewene', age:21, pos:'DEF', club:'Baník Ostrava', val:'$970k', move:0, elig:'open', note:'Born Nov 29, 2004 in Abuja. Right wing-back, signed through 2031 by Baník Ostrava. Debuted for Nigeria in the 2-2 friendly draw with Poland, June 3 2026 in Warsaw — played the full 90 minutes alongside Okoye and Ndidi, one of only three Nigerian players to do so.', verified:true}
+  {rank:29, name:'Frank Onyeka', age:28, pos:'MID', club:'Coventry City', val:'$7.6m', move:-1, elig:'open', note:'Moves from field depth to the Board after the Tanzania competitive-squad omission. This is a current selection downgrade, not removal from the pool.', verified:true},
+  {rank:30, name:'Samuel Chukwueze', age:26, pos:'FWD', club:'AC Milan', val:'$20.5m', move:-1, elig:'open', note:'Injury-watch senior option. Kept high on the Board rather than field depth until availability is clearer.', verified:true},
+  {rank:31, name:'Moses Usor', age:24, pos:'FWD', club:'LASK', val:'$6.8m', move:1, elig:'open', note:'Retained in the official Tanzania squad and remains a live forward option.', verified:true},
+  {rank:32, name:'George Ilenikhena', age:20, pos:'FWD', club:'Al-Ittihad', val:'$11.4m', move:0, elig:'open', note:'First senior call-up this autumn; current selection competition keeps him on the Board rather than automatic field depth.', verified:true},
+  {rank:33, name:'William Troost-Ekong', age:32, pos:'DEF', club:'Besiktas', val:'$1.1m', move:-7, elig:'open', note:'Veteran leadership and a still-live senior option, but the 2030 cycle should increasingly belong to the players above him.', verified:true},
+  {rank:34, name:'Lesley Ugochukwu', age:22, pos:'MID', club:'Galatasaray (loan from Burnley)', val:'$25.1m', move:-1, elig:'watch', note:'France pathway momentum keeps this a recruitment watch, not active Nigeria depth.', verified:true, tag:'WATCH'},
+  {rank:35, name:'Honest Ahanor', age:18, pos:'DEF', club:'Crystal Palace (loan from Chelsea)', val:'$34.2m', move:-1, elig:'watch', note:'High-upside Italy pathway watch. Two friendly caps do not settle a Nigeria route; formal eligibility review would be required.', verified:true, tag:'WATCH'},
+  {rank:36, name:'Rio Ngumoha', age:18, pos:'FWD', club:'Liverpool', val:'$34.2m', move:-1, elig:'watch', note:'England senior momentum keeps this firmly WATCH, not a presumed Nigeria commitment.', verified:true, tag:'WATCH'},
+  {rank:37, name:'Tyrique George', age:19, pos:'FWD', club:'Everton', val:'$23.5m', move:0, elig:'watch', note:'Nigeria/Ghana/England-eligible winger; England U21 momentum remains the key recruitment context.', verified:true, tag:'WATCH'},
+  {rank:38, name:'Chizzy Ezenwata', age:18, pos:'FWD', club:'Chelsea', val:'TBD', move:0, elig:'watch', note:'Nigeria/Cameroon/England pathway watch; no current senior valuation or Nigeria commitment should be inferred.', verified:true, tag:'WATCH'},
+  {rank:39, name:'Samuel Adeniran', age:27, pos:'FWD', club:'LASK', val:'$1.6m', move:0, elig:'open', note:'USA-born, Nigeria-eligible and uncapped. Strong club form keeps him in the senior forward conversation.', verified:true},
+  {rank:40, name:'Oluwaseun Adewumi', age:21, pos:'MID', club:'Hertha BSC (loan from Burnley)', val:'$1.4m', move:1, elig:'watch', note:'Born in Lagos and involved with Austria U21; senior Nigeria route remains open but unconfirmed.', verified:true, tag:'WATCH'},
+  {rank:41, name:'Victory Akpe', age:20, pos:'DEF', club:'FC Basel', val:'$2.3m', move:0, elig:'open', note:'First senior Nigeria call-up this autumn; remains a credible defender-depth candidate.', verified:true},
+  {rank:42, name:'Zadok Yohanna', age:19, pos:'FWD', club:'Brighton & Hove Albion', val:'$20.8m', move:0, elig:'open', note:'Brighton winger with a developing Nigeria pathway.', verified:true},
+  {rank:43, name:'Jeff Ekhator', age:19, pos:'FWD', club:'Juventus', val:'$20.5m', move:0, elig:'watch', note:'Italy-friendly-switch watch; no fresh Nigeria recruitment progress is verified.', verified:true, tag:'WATCH'},
+  {rank:44, name:'Francis Onyeka', age:19, pos:'MID', club:'SV Elversberg (loan from Bayer Leverkusen)', val:'TBD', move:1, elig:'watch', note:'Named in reported U23 scouting coverage, but Germany youth involvement means this remains a formal-review WATCH case.', verified:true, tag:'WATCH'},
+  {rank:45, name:'Rayan Oyebade', age:19, pos:'DEF', club:'Southend United (loan from West Ham)', val:'TBD', move:-1, elig:'watch', note:'Greece youth involvement and no current attributable market value keep him in prospect territory.', verified:true, tag:'PROSPECT'},
+  {rank:46, name:'Ifeanyi Ndukwe', age:18, pos:'DEF', club:'Levante (on loan from Liverpool)', val:'$3.4m', move:-1, elig:'watch', note:'Austria youth pathway and no verified Nigeria commitment: prospect WATCH, not active field depth.', verified:true, tag:'WATCH'},
+  {rank:47, name:'Femi Azeez', age:25, pos:'FWD', club:'Brighton & Hove Albion', val:'TBD', move:0, elig:'open', note:'Nigeria senior-debut credentials keep him in the wider attacking Board despite current injury watch.', verified:true},
+  {rank:48, name:'Landon Emenalo', age:18, pos:'DEF', club:'Celtic (loan from Chelsea)', val:'TBD', move:-1, elig:'watch', note:'Tri-national Chelsea academy prospect; remains a labelled recruitment watch.', verified:true, tag:'PROSPECT'},
+  {rank:49, name:'Emmanuel Ekong', age:24, pos:'FWD', club:'Malmö FF', val:'TBD', move:-1, elig:'watch', note:'Sweden youth pathway and Nigerian eligibility; needs stronger senior recruitment evidence for a rise.', verified:true, tag:'WATCH'}
 ];
-
-const BOARD_UPDATES = {
-  'Rayan Oyebade': {rank:38, move:0, tag:'PROSPECT', note:'Young defender with Nigeria eligibility and a developing senior pathway.'},
-  'Samuel Adeniran': {rank:33, note:'LASK forward who scored twice in the club\'s Champions League qualifying comeback over Celtic, including the extra-time winner.'},
-  'Chibuike Nwaiwu': {rank:27},
-  'Tyrique George': {rank:28},
-  'Chizzy Ezenwata': {rank:36},
-  'William Troost-Ekong': {rank:42},
-  'David Ozoh': {rank:35},
-  'Oluwaseun Adewumi': {rank:41},
-  'Isaac James': {rank:37},
-  'George Ilenikhena': {rank:31, move:2, note:'Called up for the September AFCON qualifiers and producing quickly in Saudi Arabia.'},
-  'Moses Usor': {rank:32, note:'LASK winger whose strong start to the 2026/27 season earned a first senior Nigeria call-up.'},
-  'Emeka Adiele': {rank:40, note:'England youth international and Nigeria-eligible defender.'},
-  'Victory Akpe': {rank:34, move:9},
-  'Abdullahi Bewene': {rank:39, move:4, note:'Right wing-back signed through 2031 by Baník Ostrava. Debuted for Nigeria vs. Poland, June 3 2026.'}
-};
-BOARD.forEach(player => Object.assign(player, BOARD_UPDATES[player.name] || {}));
-BOARD.push(
-  {rank:29, name:'Zadok Yohanna', age:19, pos:'FWD', club:'Brighton & Hove Albion', val:'$20.8m', move:1, elig:'open', note:'Brighton winger signed from AIK after an 18-appearance, five-goal, four-assist breakthrough season.', verified:true},
-  {rank:30, name:'Femi Azeez', age:25, pos:'FWD', club:'Brighton & Hove Albion', val:'TBD', move:0, elig:'open', note:'Brighton winger signed from Millwall after an 11-goal, eight-assist Championship season. Scored twice on his Nigeria senior debut against Zimbabwe and assisted against Jamaica at the Unity Cup; currently an injury-watch case after his Brighton start was delayed.', verified:true},
-  {rank:43, name:'Jeff Ekhator', age:19, pos:'FWD', club:'Juventus', val:'$20.5m', move:0, elig:'watch', note:'Italy-friendly-switch watch, now taking Peter Etebo’s former Board position. One senior Italy friendly does not close the Nigeria route, but no fresh recruitment progress is verified. Transfermarkt’s latest listed value is €18m; displayed ≈ $20.5m.', verified:true, tag:'WATCH'},
-  {rank:44, name:'Landon Emenalo', age:18, pos:'DEF', club:'Celtic (loan from Chelsea)', val:'TBD', move:0, elig:'watch', note:'Chelsea academy defender, tri-national (USA/Nigeria/England) through father Michael Emenalo\'s Super Eagles career — born in Tucson, Arizona. Out on a season-long loan to Celtic since Sept 2026; club corrected from a stale "Chelsea" listing.', verified:true, tag:'PROSPECT'},
-  {rank:45, name:'Emmanuel Ekong', age:24, pos:'FWD', club:'Malmö FF', val:'TBD', move:0, elig:'watch', note:'Malmö attacker with Sweden youth involvement and Nigerian eligibility.', verified:true},
-  {rank:46, name:'Shalom Ekong', age:23, pos:'FWD', club:'GAIS', val:'TBD', move:0, elig:'watch', note:'Swedish-based forward with a strong recent scoring run.', verified:true},
-  {rank:47, name:'Francis Onyeka', age:19, pos:'MID', club:'SV Elversberg (loan from Bayer Leverkusen)', val:'TBD', move:0, elig:'watch', note:'Born in Gummersbach to Nigerian parents. Bayer Leverkusen midfielder on loan at SV Elversberg. Has represented Germany at youth level, including competitive youth internationals; any Nigeria route would require a formal eligibility/change-of-association review.', verified:true, tag:'PROSPECT'}
-);
 
 const LOST_TO_RIVALS = [
   {name:'Michael Kayode', now:'Italy', flag:'🇮🇹', detail:'Started and scored in the 27th minute of Italy\'s 4-1 Nations League win over Türkiye on Sept. 28, 2026. It was his first senior cap and an official competitive appearance; at age 22, he is outside FIFA\'s under-21 change-of-association exception and is now permanently cap-tied to Italy.'},
@@ -926,9 +911,7 @@ const LOST_TO_RIVALS = [
 /* Uncapped/dual-national cases that resolved IN Nigeria's favor — the mirror
    image of LOST_TO_RIVALS. A player graduates out of the active pool/board
    once their switch is actually cleared; this panel keeps the receipt. */
-const WON_FROM_RIVALS = [
-  {name:'Arthur Okonkwo', from:'England youth setup', detail:'Wrexham GK, born Camden to Nigerian parents. FIFA approved his switch April 6, 2026 (paperwork delays cost him the 2025 AFCON) — he\'s now a regular senior call-up. One of this project\'s clearest wins, even if it\'s no longer breaking news.'}
-];
+const WON_FROM_RIVALS = [];
 
 /* Players of Nigerian descent who committed to other senior national teams long
    before Nigeria could realistically have been in the conversation — informational,
@@ -1017,6 +1000,12 @@ function attachWikidataSource(player){
   player.sources = [...(player.sources || []), {label:'Wikidata', url:`https://www.wikidata.org/wiki/${id}`}];
 }
 const VERIFIED_PLAYER_SOURCES = {
+  'Arthur Okonkwo': {label:'NFF Tanzania squad', url:'https://thenff.com/19698-2/'},
+  'Fisayo Dele-Bashiru': {label:'NFF Tanzania squad', url:'https://thenff.com/19698-2/'},
+  'Alhassan Yusuf': {label:'NFF Tanzania squad', url:'https://thenff.com/19698-2/'},
+  'Tochukwu Nnadi': {label:'NFF Tanzania squad', url:'https://thenff.com/19698-2/'},
+  'Mubarak Suleiman': {label:'NFF Tanzania squad', url:'https://thenff.com/19698-2/'},
+  'Chibuike Nwaiwu': {label:'NFF Tanzania squad', url:'https://thenff.com/19698-2/'},
   'Tosin Adarabioyo': {label:'Tottenham signing announcement', url:'https://www.tottenhamhotspur.com/news/1088054/welcome-tosin-adarabioyo-joins-from-chelsea'},
   'Benjamin Fredrick': {label:'Brentford player profile', url:'https://www.brentfordfc.com/en/teams/mens/benjamin-fredrick?tab=bio'},
   'Rio Ngumoha': {label:'England senior profile', url:'https://www.northeurope.englandfootball.com/england/mens-senior-team/squad/Rio-Ngumoha'},
