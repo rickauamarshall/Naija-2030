@@ -7,6 +7,10 @@
 - Chibuike Nwaiwu, Abdullahi Bewene, Isaac James, and David Ozoh move from the Board into current field depth. Frank Onyeka moves from field depth to Board No. 29 following omission from the Tanzania group; Samuel Chukwueze, Moses Usor, and George Ilenikhena begin the Board at Nos. 30–32.
 - Eligibility cases are deliberately not promoted on talent alone: Lesley Ugochukwu, Honest Ahanor, Rio Ngumoha, Tyrique George, Chizzy Ezenwata, Francis Onyeka, Rayan Oyebade, and Ifeanyi Ndukwe retain clear `WATCH` or `PROSPECT` labels. Source: NFF Tanzania roster, Nov. 7, 2026.
 
+### 2026-11-07 — Arokodare moves ahead of Simon in Lookman depth
+
+- Tolu Arokodare is now second in Ademola Lookman’s forward-depth lane, ahead of Moses Simon. Akor Adams remains first in that lane.
+
 ### 2026-11-06 — Issue 8 tracker check: form calls logged, ranks held
 
 - No permanent Big Board or FORMATION rank changes approved. The public site now includes an Issue 8 tracker-check card with the prior/current placement, editorial call, and source for every reviewed player.
