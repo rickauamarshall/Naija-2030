@@ -12,7 +12,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] "Chelle's Squad" tab — the real, announced squad for each fixture window, cross-checked live against FORMATION/BOARD (computed at render time from a Set of pool names, not hardcoded) so the tracked/untracked badges can't silently go stale
 - [x] Removed two literal `[Add: ...]` placeholder entries from the public Staff tab (Scouting & Data, Medical & Performance) — found by Codex's audit. Tracking the actual research gap here instead of leaving a raw TODO live: **still need real names for** (a) diaspora scouts/recruitment analysts at CIES or club scouting departments, (b) club-level sports scientists/physios of Nigerian origin. Add back as real entries once researched, not as placeholders.
 - [x] Masthead player count and Big Board rank-range header are now computed from the live `FORMATION`/`BOARD` arrays via JS, not hardcoded strings — can't drift out of sync with the data again the way "50 PLAYERS" / "(27–50)" did
-- [x] `server/src/config/pool.js` was badly stale (still had all 17 purged fabricated names, including the Iheukwumere misattribution, plus 6 stale club names) — resynced by hand to match the current 39-player site pool. Its own header comment still flags the real fix: generate this file from `site/index.html` instead of hand-maintaining both in parallel.
+- [x] `server/src/config/pool.js` was badly stale (still had all 17 purged fabricated names, including the Iheukwumere misattribution, plus 6 stale club names) — resynced by hand to match the current 39-player site pool. It went stale two more times after that hand-fix (wrong starters vs. depth, players in the wrong section) before `scripts/generate_pool_config.js` was built to actually derive it from `site/index.html` instead of hand-maintaining both in parallel. Run `node scripts/generate_pool_config.js` after any FORMATION/BOARD change — it preserves `providerPlayerId` values across regeneration.
 - [x] GitHub Pages deploy workflow added (`.github/workflows/pages.yml`) and Pages source set to GitHub Actions; the site is live at `https://supereaglestracker.com/`.
 - [x] Custom domain configured: `supereaglestracker.com` uses the four GitHub Pages apex A records plus the DNS-only `www` CNAME; GitHub DNS check has succeeded and HTTPS certificate provisioning is in progress.
 - [ ] Real view counter backend — current one uses the artifact-preview environment's `window.storage`, which won't exist once actually deployed (flagged in the original handover, still open)
@@ -28,7 +28,7 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 
 ## Tweet-feed / X automation
 - [x] Position-based formatter (GK/DEF/MID/FWD) — tested, matches the Osimhen reference example exactly
-- [x] Current 38-player pool config (`server/src/config/pool.js`)
+- [x] Current pool config (`server/src/config/pool.js`) — now generated, not hand-maintained; run `node scripts/generate_pool_config.js` after any pool change
 - [x] Mock provider, weekly recap aggregation, dry-run demo (`npm run demo`, `npm run recap`)
 - [x] Scheduled GitHub Actions workflow for the weekly recap (Monday morning Spain time — see `anonymity-opsec.md`)
 - [ ] Real stats-provider integration — **nothing auto-posts until this exists**; today's Adeniran/LASK-Celtic line was hand-drafted through the real formatter as a one-off, not pulled from a live feed
@@ -43,16 +43,19 @@ Living done-vs-outstanding tracker — prefer this over re-deriving status from 
 - [x] First issue — Issue №1 ("The Origin Issue") posted across newsletter, X, and Instagram
 
 ## Monetization
-- [ ] Beehiiv Ad Network — passive newsletter ad revenue once subscriber count clears Beehiiv's own eligibility threshold; no sales effort needed, it's a list-size gate
-- [ ] Paid subscriber tier (Beehiiv supports this natively) — candidate perks: early access to the weekly recap before X/IG, the full Big Board with source links, ad-free reading. Needs a price point and a clear value line over the free tier before launch
-- [ ] Affiliate links (Transfermarkt, football streaming, kit/merch) worked into newsletter "Quick Links" sections as relevant products come up — low effort, add opportunistically rather than forcing it
-- [ ] Print-on-demand merch storefront (Printful/Teespring or similar) using existing brand assets (`assets/profile_badge.png`, `assets/ig-carousel-tactics.png`) and the "RISE, EAGLES, RISE." campaign line — no upfront inventory cost
-- [ ] Syndication of original analysis (the Comparative Methods tab, the pool-vs-international-comparison blog piece) to larger Nigerian sports outlets as bylined guest pieces linking back to the site — a credibility/traffic play more than direct revenue
-- [ ] Sponsorships (boot brands, African fintech/betting, diaspora businesses) — **do not pursue until the entity question is resolved.** Sponsors typically require a real contracting party and tax ID, which raises the LLC/business-entity question already flagged in `anonymity-opsec.md`'s "If this takes off" section. Resolve that structurally before a sponsor conversation forces it, not during one
-- [ ] Betting-affiliate revenue specifically — handle with care rather than as a default option. The brand's credibility rests on "independent, receipts over vibes, not doing this for the NFF's benefit"; betting money is the one revenue path most likely to read as compromising that. Sequence it (if at all) after subscriptions/merch/affiliate links are established, and only on the project owner's explicit call
 
-### Suggested sequencing
-Lowest-friction first: affiliate links → merch storefront → paid subscriber tier → ad network (needs subscriber scale) → syndication → sponsorships (needs the entity/LLC question resolved first) → betting-adjacent revenue (owner call required, handle with care).
+Concrete phased strategy agreed 2026-10-06 — engagement first (no product/entity needed), then affiliate links, then merch, then everything else in the order below. See `x-strategy.md`'s "Engagement action plan" for the engagement-phase specifics (target list, cadence, tracking).
+
+- [ ] **Phase 1 — Engagement.** Manual replies/comments on Nigerian football X accounts and outlets already covering this project's beat — see `x-strategy.md`. Zero cost, no entity needed, the actual growth lever right now given there's no automated posting yet.
+- [ ] **Phase 2 — Affiliate links.** Candidates in order of fit: (1) a football-streaming/subscription affiliate covering leagues casual fans can't easily find (Süper Lig, Saudi Pro League, AFCON qualifiers — several pool players play in exactly these); (2) a replica kit/jersey affiliate (Fanatics/Kitbag-style). **Not Transfermarkt** — an affiliate relationship with them would run into the same access-terms problem as the scraping ban already in `CLAUDE.md`, even without automating anything. Placement: newsletter "Quick Links" only, opportunistically, never forced into a week where it doesn't fit. Next concrete step: pick one program, sign up under the project's dedicated email (`anonymity-opsec.md`), test in one issue before a full rollout.
+- [ ] **Phase 3 — Print-on-demand merch storefront.** **Hold lifted 2026-10-06 (explicit project-owner call)** — full plan and 7-step execution checklist already written in `docs/merch-concepts.md` (6 designs, pricing, Printful under the project's dedicated email). Start there; nothing about the plan itself needs to change, it was just paused pending this decision.
+- [ ] Paid subscriber tier (Beehiiv supports this natively) — candidate perks: early access to the weekly recap before X/IG, the full Big Board with source links, ad-free reading. Needs a price point and a clear value line over the free tier before launch; revisit once the newsletter has a few more issues to show what subscribers would be paying for
+- [ ] Beehiiv Ad Network — passive newsletter ad revenue once subscriber count clears Beehiiv's own eligibility threshold; no sales effort needed, it's a list-size gate
+- [ ] Syndication of original analysis (the Comparative Methods tab, the pool-vs-international-comparison blog piece) to larger Nigerian sports outlets as bylined guest pieces linking back to the site — a credibility/traffic play more than direct revenue; sequenced after Phase 1 engagement specifically, since syndication pitches land better once those outlet relationships are real
+- [ ] Sponsorships (boot brands, African fintech/betting, diaspora businesses) — **do not pursue until the entity question is resolved.** Sponsors typically require a real contracting party and tax ID, which raises the LLC/business-entity question already flagged in `anonymity-opsec.md`'s "If this takes off" section. Resolve that structurally before a sponsor conversation forces it, not during one
+- [ ] Betting-affiliate revenue specifically — handle with care rather than as a default option. The brand's credibility rests on "independent, receipts over vibes, not doing this for the NFF's benefit"; betting money is the one revenue path most likely to read as compromising that. Sequence it (if at all) last, and only on the project owner's explicit call
+
+
 
 ## Editorial / trust
 - [x] "This is opinion, not a neutral algorithm" made explicit, site-wide

@@ -39,6 +39,42 @@ This file is the shared coordination layer for Claude, Codex, and the project ow
 
 ## Handoff log
 
+## 2026-11-01 — Codex — Issue 8 audit and package refresh
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `codex/francis-onyeka-watch` / `working tree`
+
+### Changed
+- Rewrote Issue 8 and its social drafts around the completed audit.
+- Corrected current clubs for Tosin Adarabioyo, Benjamin Fredrick, Rayan Oyebade, and Emeka Adiele; updated Rio Ngumoha's England senior-cap context.
+- Added source links for those corrections and recorded Francis Onyeka in Big Board history.
+
+### Checked
+- FIFA's current Nigeria association page lists Ibrahim Gusau as NFF president; removed the stale “no president / acting administration” copy from Issue 8.
+- Kept Nwaneri as reported contact only, Francis as `WATCH`, and Ngumoha as `WATCH` pending a formal FIFA eligibility review.
+
+### Owner decision needed
+- Approve the uncommitted tracker and Issue 8 package for a single commit. Live publication still requires separate action-time approval.
+
+## 2026-11-01 — Codex — Francis Onyeka WATCH entry
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `codex/francis-onyeka-watch` / `working tree`
+
+### Changed
+- Added Francis Onyeka at the end of the Big Board as a `WATCH` prospect, with current loan club, Nigerian-parentage basis, Germany youth record, and a non-conclusive eligibility note.
+- Added Bundesliga and DFB source links to the player card.
+
+### Checked
+- Bundesliga reports that Onyeka was born in Gummersbach to Nigerian parents.
+- DFB lists him at SV Elversberg and records Germany youth appearances, including U21 Euro qualifying.
+
+### Owner decision needed
+- Review the entry and approve a commit if it should be merged to `main`.
+
+### Next agent
+- Keep Onyeka as `WATCH` unless formal Nigeria/FIFA eligibility developments are confirmed.
+
 Each agent adds a new entry at the top of the log after meaningful work. Do not edit or delete older entries except to correct an obvious factual or formatting error; add a follow-up entry instead.
 
 ### Template
@@ -69,6 +105,114 @@ Branch/commit: `branch-name` / `commit-sha` (or `working tree`)
 ```
 
 ## Current handoff log
+
+## 2026-11-01 — Codex — Tanzania-window correction and Issue 8 update
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree
+
+### Changed
+- Corrected Ethan Nwaneri's current club to Borussia Dortmund (loan from Arsenal) in the site pool and generated server pool configuration.
+- Replaced the expired Russia fixture card with Nigeria–Tanzania fixtures on Nov. 13 in Uyo and Nov. 17 in Dar es Salaam.
+- Added the confirmed Tanzania window, Group L context, and matching X/Instagram copy to Issue 8 drafts.
+
+### Checked
+- CAF confirms the Nov. 9–17 FIFA window, Nigeria's Group L, and Tanzania's co-host qualification status.
+- NFF names the Nov. 13 Uyo and Nov. 17 Dar es Salaam fixtures.
+- `scripts/validate.py`, `node --check server/src/config/pool.js`, and `git diff --check` passed.
+
+### Findings
+- The full player-by-player audit remains in progress. No eligibility status or Big Board movement is being claimed or published from this change.
+
+### Evidence
+- https://thenff.com/pamoja-2027-race-eagles-falter-lose-0-3-to-wild-dogs-in-bissau/
+- https://www.cafonline.com/afcon2025/news/the-road-to-east-africa-mapped-out-the-qualifier-draw-for-the-totalenergies-caf-africa-cup-of-nations-pamoja-2027-concluded/
+
+### Owner decision needed
+- None for the scoped commit; approve individual social posts at publishing time.
+
+### Next agent
+- Complete the player audit before proposing further Big Board or eligibility changes.
+
+### 2026-10-18 — Codex — Issue 7 and social review drafts
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree
+
+### Changed
+- Added `ISSUE-07.md`, an unpublished review draft built around Lookman’s Champions League goal, Osimhen’s start against Barcelona, and Trabzonspor’s Conference League win.
+- Added `docs/issue-07-social-drafts-2026-10-18.md`, with an X thread, a seven-slide Instagram brief, caption, and publication-day fact-check gate.
+
+### Checked
+- Verified every included result or selection claim against the relevant club’s official reporting.
+- Confirmed Nwaiwu is currently No. 29 in local tracker data; no rank change was proposed.
+
+### Findings
+- Domestic fixtures falling October 17–19 were not safely complete/verified at drafting time. The issue uses a dedicated live-result insert instead of guessing at results, minutes, injuries, or selection conclusions.
+
+### Evidence
+- `ISSUE-07.md`; `docs/issue-07-social-drafts-2026-10-18.md`
+- Atlético: https://en.atleticodemadrid.com/postpartidos/atletico-de-madrid-manchester-utd-13-10-2026-21-00
+- Galatasaray: https://www.galatasaray.org/haber/futbol/sampiyonlar-ligi/galatasaray-1-4-barcelona/61129
+- Trabzonspor: https://www.trabzonspor.org.tr/tr/haberler/kups-2-4-trabzonspor-15-10-2026
+
+### Owner decision needed
+- Review editorial framing and approve the final facts, media, and publishing batch before any newsletter or social action.
+
+### Next agent
+- On publication day, complete the live-result insert from official reports; verify the approved Issue 7 URL and carousel artwork.
+
+### 2026-10-06 — Claude — concrete marketing/monetization strategy agreed, merch hold lifted
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree (pending commit)
+
+### Changed
+- `docs/x-strategy.md` — added a concrete "Engagement action plan" section: a real target list of outlets/accounts (all independently covering stories this project also tracked - Bewene, Akpe, Kayode, Aghehowa), a specificity rule for replies, a cadence (3-5/day), and a tracking approach. This replaces the previous vague "engage authentically" growth tactic with something actually actionable.
+- `docs/prelaunch-checklist.md`'s Monetization section rewritten around the agreed phased sequence: **engagement → affiliate links → merch → paid tier → ad network → syndication → sponsorships → betting-adjacent**. Also dropped Transfermarkt from the affiliate-link candidate list - an affiliate relationship with them would hit the same access-terms problem as the scraping ban already in `CLAUDE.md`, even without automating anything.
+- `docs/merch-concepts.md` — **hold lifted, explicit project-owner call, 2026-10-06.** The plan itself (6 designs, pricing, 7-step execution checklist) didn't need changes, it was just paused. Marked unblocked as Phase 3 of the sequence above.
+
+### Findings
+- None of this touches player data, eligibility, or anything gated by `verified_by_human` - pure marketing/commerce planning, independent of the editorial pipeline.
+
+### Evidence
+- `docs/x-strategy.md`, `docs/prelaunch-checklist.md`, `docs/merch-concepts.md`
+
+### Owner decision needed
+- None for what's described here - implemented per explicit direction this session.
+
+### Next agent
+- Phase 3 (merch) execution checklist is in `docs/merch-concepts.md` and ready to start (Printful account under the project's dedicated email is step 1). Phase 2 (affiliate) needs one program picked and signed up for - see the candidates in `prelaunch-checklist.md`.
+
+### 2026-09-29 — Claude — resolved all three flagged discrepancies, built the pool.js generator, fixed Emenalo's club
+
+Status: `READY_FOR_REVIEW`
+Branch/commit: `main` / working tree (pending commit)
+
+### Changed
+- **`server/src/config/pool.js` — built `scripts/generate_pool_config.js`** instead of hand-fixing a fourth time. It parses FORMATION/BOARD directly out of `site/index.html` (brace-depth-aware, so nested objects like `rivalCaps` don't break it), derives short names (auto-disambiguating surname collisions, e.g. "S. James"/"I. James", "E. Ekong"/"S. Ekong") and short club names, and preserves any existing `providerPlayerId` values across regeneration. Ran it; `pool.js` now correctly has 11 starters + 17 depth + 20 board = 48, matching `site/index.html` exactly (verified: `node --check`, loaded the module and confirmed 0 duplicate names, `cd server && node --test` all 11 tests pass).
+- **Victory Akpe** — restored an honest rival-cap caveat (searched specifically for Lithuania/Hungary youth caps, found none, but said so as "checked, not closed" rather than either omitting it or overclaiming certainty).
+- **Abdullahi Bewene** — the "NFF match report confirms..." claim was actually dead code (silently overridden by `BOARD_UPDATES`'s own shorter note at render time, so it was never shown to a real reader), but fixed both the base note and the `BOARD_UPDATES` override to state what's actually verified: his Poland debut (2-2 draw, June 3 2026, played full 90) is corroborated by multiple independent, dated Nigerian sports outlets, not by an NFF report specifically. Added a real citation for that instead of the unsupported claim.
+- **Landon Emenalo** — independently verified he's on a season-long loan to Celtic (since Sept 2026), not still at Chelsea as listed. Fixed the club field and added a corroborating source.
+
+### Checked
+- `python3 scripts/validate.py` passes: 28 pool + 20 board, no dupes/overlap, ranks 27-46 intact.
+- `node --check` on the extracted inline `<script>` block.
+- Independently verified via web search (not inference) before touching any of the four: Bewene's Poland debut, Emenalo's Celtic loan, and the absence of any findable Lithuania/Hungary youth cap for Akpe.
+
+### Findings
+- The Bewene case is a useful lesson: a wrong-looking claim in the source array can be functionally harmless (never rendered) while still being worth fixing, because the next person to read the raw data has no way to know that without tracing the `BOARD_UPDATES` override logic.
+
+### Evidence
+- `scripts/generate_pool_config.js`, `server/src/config/pool.js`
+- `site/index.html` (Akpe/Bewene/Emenalo notes and sources)
+- Leadership.ng and AllNigeriaSoccer citations now in `VERIFIED_PLAYER_SOURCES`
+
+### Owner decision needed
+- None - these were the three items already flagged as needing resolution, plus one new one (Emenalo) found and fixed in the same pass.
+
+### Next agent
+- Run `node scripts/generate_pool_config.js` after any future FORMATION/BOARD edit instead of hand-editing `server/src/config/pool.js`.
 
 ### 2026-09-26 — Claude — flagging three discrepancies found reviewing Codex's last sync, not resolved by inference
 

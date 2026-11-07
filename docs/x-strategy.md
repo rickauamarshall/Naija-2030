@@ -40,10 +40,32 @@ Newsletter (see `newsletter-plan.md`) ships weekly, timed just after the Monday 
 ## Growth tactics, roughly in order of leverage-per-effort
 
 1. **Nail the live feed first.** It's the lowest-effort-per-post pillar and the one that gives people a reason to *follow* rather than just see one viral thread. Get `server/` onto a real stats provider before investing heavily in the other pillars.
-2. **Engage authentically with existing Nigerian football Twitter** — journalists, other fan accounts, diaspora scouting accounts. Reply with real analysis, not just self-promotion. Credibility compounds through who engages with you, not just follower count.
+2. **Engage authentically with existing Nigerian football Twitter** — journalists, other fan accounts, diaspora scouting accounts. Reply with real analysis, not just self-promotion. Credibility compounds through who engages with you, not just follower count. See "Engagement action plan" below for the concrete version of this.
 3. **Let the methodology carry the account's authority.** Every ranking claim should be traceable to the published formula and to real sources (Transfermarkt links, Wikidata items) once `scripts/` is wired up — see CLAUDE.md's "Next steps" item on source links. An account that can always show its work survives its first big public disagreement; one that can't, doesn't.
 4. **Cross-promote with the newsletter and vice versa** — the newsletter is a natural pitch to other Nigerian football newsletters/podcasts (the kind of outlet the Nutmeg Soccer example represents) for a mention or swap once there's a few solid issues to point to.
 5. **Don't chase engagement-bait.** Hot takes and ragebait grow faster short-term and cost the account's credibility the first time it matters — and credibility is the entire point here, not follower count in isolation.
+
+## Engagement action plan (concrete, started 2026-10-06)
+
+This account has almost no automated posting yet (no live stats provider), so the actual growth lever right now is manual, relationship-based commenting and replying — not original-post volume. This is the first, lowest-cost phase of the broader marketing/monetization sequence (engagement → affiliate links → merch → everything else — see `prelaunch-checklist.md`'s Monetization section).
+
+**Target list** — outlets and accounts already demonstrably covering this exact beat (each one independently broke or covered a story this project also tracked: Bewene's debut, Akpe's move, Kayode's loss to Italy, Aghehowa's cap-tie):
+- AllNigeriaSoccer
+- Soccernet NG
+- OwnGoal Nigeria
+- Pulse Sports Nigeria
+- Sports247 Nigeria
+- Footballinnigeria.com.ng
+- Africa Top Sports
+- Plus 10-15 active Nigerian football fan/diaspora-scouting accounts, identified by who's genuinely engaging (not just following) the outlets above — build this sub-list as part of week one.
+
+**The rule, made concrete:** every reply/comment has to contain something only this project could say — a Big Board rank, a source link, a cross-reference ("flagged this eligibility risk three weeks ago"), a specific number. Generic reactions don't count and don't build the credibility the account exists for.
+
+**Cadence:** 3-5 substantive replies per day, tied to actual news as it breaks — not scheduled filler, not a quota padded with low-value comments.
+
+**Tracking:** a lightweight weekly log of which replies got picked up, quoted, or drove profile clicks, to learn what resonates. Not instrumented yet — add a simple log (even a markdown table in this repo, or a spreadsheet) once posting actually starts.
+
+**Guardrail:** no engagement-bait, no ragebait — short-term growth isn't worth the first real public disagreement going badly for an account whose whole value is "receipts, not vibes."
 
 ## What "leverage" should mean in practice
 
