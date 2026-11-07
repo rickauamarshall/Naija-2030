@@ -8,11 +8,11 @@
 
 The last European week before Tanzania had everything: Tolu Arokodare scoring twice, Moses Usor making things happen, Ademola Lookman walking into another big-game audition—and then the injury news landed like a cold bucket of water.
 
-Victor Osimhen is scheduled for left-knee surgery. Samuel Chukwueze is already in left-hip rehabilitation. Suddenly, the forward line is less of a luxury problem and more of a live puzzle. 🧩
+Victor Osimhen has undergone left-knee surgery. Samuel Chukwueze is already in left-hip rehabilitation. Suddenly, the forward line is less of a luxury problem and more of a live puzzle. 🧩
 
 ## The quick version
 
-- 🚨 **Osimhen:** Galatasaray found a loose body in his left knee after Stuttgart; surgery is scheduled for Saturday. No recovery timeline yet. [Club statement](https://x.com/GalatasaraySK/status/2118732661225029863)
+- 🚨 **Osimhen:** Galatasaray found a loose body in his left knee after Stuttgart; surgery was completed Nov. 7. No recovery timeline yet. [Club statement](https://www.galatasaray.org/haber/futbol/acibadem-saglik-raporu/acibadem-saglik-raporu/61333)
 - 🩹 **Chukwueze:** AC Milan confirmed successful left-hip surgery. His rehabilitation has begun. [Milan update](https://www.acmilan.com/en/news/articles/media/2026-11-04/official-statement-samuel-chukwueze)
 - 🔥 **Arokodare:** two goals in Ajax’s 6–1 win at Midtjylland. [Ajax report](https://english.ajax.nl/articles/ajax-overpower-ten-man-fc-midtjylland)
 - ⚡ **Usor + Adeniran:** assist and goal in LASK’s 4–0 win over Slovan. [LASK report](https://www.lask.at/de/m/news/gala-nacht-des-lask)
@@ -24,11 +24,11 @@ Victor Osimhen is scheduled for left-knee surgery. Samuel Chukwueze is already i
 
 ## 🚨 The headline nobody ordered
 
-Osimhen started as Galatasaray beat Stuttgart 2–0. By Friday, the club had announced a left-knee injury, MRI evidence of a loose body, and surgery for Saturday. He is out of Galatasaray’s Amed S.F. match; Nigeria have not yet announced his international status. [The club’s medical update](https://x.com/GalatasaraySK/status/2118732661225029863)
+Osimhen started as Galatasaray beat Stuttgart 2–0. The club then announced a left-knee injury, MRI evidence of a loose body, and—on Nov. 7—a successful operation. Galatasaray has supplied no recovery timeline; Nigeria have not yet announced his international status. [The club’s medical update](https://www.galatasaray.org/haber/futbol/acibadem-saglik-raporu/acibadem-saglik-raporu/61333)
 
 Chukwueze’s own window is already compromised. Milan say his left-hip tendon operation was successful and rehabilitation begins in Italy. Two established attackers, two different surgeries, one very awkward week for any selection meeting. [AC Milan](https://www.acmilan.com/en/news/articles/media/2026-11-04/official-statement-samuel-chukwueze)
 
-> **GIF / visual break:** a short “this escalated quickly” reaction GIF, followed by a clean, original SET availability card: **Osimhen — surgery scheduled | Chukwueze — rehabilitation | NFF squad — pending.**
+> **GIF / visual break:** a short “this escalated quickly” reaction GIF, followed by a clean, original SET availability card: **Osimhen — post-op | Chukwueze — rehabilitation | NFF squad — pending.**
 
 ## 🔥 The form file: who made noise?
 
@@ -74,13 +74,13 @@ The NFF has not published a November squad, a replacement, or a formal decision 
 - **Saturday — Ried vs. LASK:** Usor and Adeniran can make a good week look less accidental. [Fixtures](https://www.lask.at/en/w/matches/pros/fixtures/2026-2027)
 - **Sunday — Atlético vs. Barcelona:** Lookman’s role is the story. [Preview](https://www.atleticodemadrid.com/prepartidos/atletico-de-madrid-fc-barcelona-08-11-2026-22-15)
 - **Sunday — Twente vs. Ajax:** Arokodare gets one more club test after his brace. [Fixtures](https://english.ajax.nl/games/)
-- **Saturday — Galatasaray vs. Amed S.F.:** Orban gets the league’s sharpest possible test; Osimhen is out while preparing for surgery. [Preview](https://www.galatasaray.org/haber/futbol/maca-dogru-galatasaray-amed-sf/61323)
+- **Saturday — Galatasaray vs. Amed S.F.:** Orban gets the league’s sharpest possible test; Osimhen is out after surgery. [Preview](https://www.galatasaray.org/haber/futbol/maca-dogru-galatasaray-amed-sf/61323)
 
 ## 🎬 Watch / share / send us your take
 
 - [Arokodare’s Ajax report](https://english.ajax.nl/articles/ajax-overpower-ten-man-fc-midtjylland)
 - [LASK’s 4–0 report](https://www.lask.at/de/m/news/gala-nacht-des-lask)
-- [Galatasaray’s Osimhen medical update](https://x.com/GalatasaraySK/status/2118732661225029863)
+- [Galatasaray’s Osimhen medical update](https://www.galatasaray.org/haber/futbol/acibadem-saglik-raporu/acibadem-saglik-raporu/61333)
 
 Which name moves first if the squad needs an attacking rewrite? Reply with your pick—and, ideally, a clip or a reason better than “he has aura.”
 

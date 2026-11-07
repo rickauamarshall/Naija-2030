@@ -610,8 +610,8 @@
   <section class="view" id="elsewhere">
     <div class="section-head">
       <div>
-        <h2>Nigerian Descent, Other Flags</h2>
-        <p>A running list of notable players of Nigerian descent who represent other national teams — growing as new ones are found and verified.</p>
+        <h2>Current Players of Nigerian Descent, Other Flags</h2>
+        <p>A current-player directory of notable footballers of Nigerian descent who represent other national teams, organized by country. It is informational, not a list of Nigeria targets.</p>
       </div>
     </div>
     <div id="elsewhereList" style="display:flex;flex-direction:column;gap:10px;max-width:640px;"></div>
@@ -954,11 +954,10 @@ const DIASPORA_ELSEWHERE = [
   {name:'Michael Folorunsho', team:'Italy', flag:'🇮🇹', detail:'Born in Rome to Nigerian parents, developed in Italy\'s lower leagues before breaking into Serie A with Hellas Verona.'},
   {name:'Karim Onisiwo', team:'Austria', flag:'🇦🇹', detail:'Nigerian father, Austrian mother. Long-serving Austria international, plays for Mainz in the Bundesliga.'},
   {name:'Chukwubuike Junior Adamu', team:'Austria', flag:'🇦🇹', detail:'Born in northern Nigeria, raised mostly in Austria. Already has senior Austria caps.'},
+  {name:'Carney Chukwuemeka', team:'Austria', flag:'🇦🇹', detail:'Born in Vienna to Nigerian parents. A FIFA-approved switch from England to Austria was completed in March 2026; he scored on his Austria debut against Ghana. Also tracked separately as a recent Nigerian recruitment loss.'},
   {name:'Dominic Solanke', team:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', detail:'Nigerian father, English mother. Established England international, plays for Bournemouth.'},
+  {name:'Ross Barkley', team:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', detail:'Aston Villa midfielder and England international of Nigerian descent through his paternal grandfather.'},
   {name:'Arnaut Danjuma', team:'Netherlands', flag:'🇳🇱', detail:'Born in Lagos to a Dutch father and Nigerian mother. Established Netherlands international.'},
-  {name:'Hal Robson-Kanu', team:'Wales', flag:'🏴󠁧󠁢󠁷󠁬󠁳󠁿', detail:'Nigerian father, English mother. Scored the winner in Wales\' famous Euro 2016 win over Belgium; could have chosen England or Nigeria.'},
-  {name:'Emmanuel Olisadebe', team:'Poland', flag:'🇵🇱', detail:'Born in Warri, Nigeria. Naturalized Polish citizen, became the first Black player to represent Poland\'s national team in 2000 — a historic, early case of the pattern this site now tracks in reverse.'},
-  {name:'Thomas Sowunmi', team:'Hungary', flag:'🇭🇺', detail:'Born in Lagos to a Nigerian father and Hungarian mother.'},
   {name:'Chiedozie Ogbene', team:'Republic of Ireland', flag:'🇮🇪', detail:'Born in Lagos, moved to Ireland as a child. Approached the Irish federation himself in 2020 and has been a regular international since 2021.'},
   {name:'Jaden Umeh', team:'Republic of Ireland', flag:'🇮🇪', detail:'Born in Cork to Nigerian parents. Progressed through Ireland\'s youth teams to a senior call-up and debut in 2026, now on Benfica\'s books.'}
 ];
@@ -1342,14 +1341,28 @@ lostWrap.after(wonWrap);
 
 /* ---------------- ELSEWHERE LIST ---------------- */
 const elsewhereEl = document.getElementById('elsewhereList');
-DIASPORA_ELSEWHERE.forEach(p=>{
-  const card = document.createElement('div');
-  card.className = 'staff-card';
-  card.innerHTML = `
-    <div class="name">${p.name} <span class="mono" style="font-size:11px;color:var(--ink-soft);font-weight:400;">→ <span class="flag-swatch ${nationalFlagClass(p.team)}" aria-label="${p.team} flag"></span><span class="country-code">${NATIONAL_CODES[p.team] || ''}</span> ${p.team}</span></div>
-    <div class="fit" style="margin-top:6px;">${p.detail}</div>
-  `;
-  elsewhereEl.appendChild(card);
+const elsewhereByCountry = DIASPORA_ELSEWHERE
+  .slice()
+  .sort((a, b) => a.team.localeCompare(b.team) || a.name.localeCompare(b.name))
+  .reduce((groups, player) => {
+    (groups[player.team] ||= []).push(player);
+    return groups;
+  }, {});
+
+Object.entries(elsewhereByCountry).forEach(([team, players]) => {
+  const group = document.createElement('section');
+  group.className = 'cabinet-group';
+  group.innerHTML = `<h3><span class="flag-swatch ${nationalFlagClass(team)}" aria-label="${team} flag"></span><span class="country-code">${NATIONAL_CODES[team] || ''}</span> ${team}</h3>`;
+  players.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'staff-card';
+    card.innerHTML = `
+      <div class="name">${p.name}</div>
+      <div class="fit" style="margin-top:6px;">${p.detail}</div>
+    `;
+    group.appendChild(card);
+  });
+  elsewhereEl.appendChild(group);
 });
 
 /* ---------------- TECH STAFF DATA ---------------- */
